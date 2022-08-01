@@ -8,8 +8,6 @@ jobs:
 
       sudo: required
 
-      dist: trusty
-
       node_js: "12.18.4"
 
       addons:
