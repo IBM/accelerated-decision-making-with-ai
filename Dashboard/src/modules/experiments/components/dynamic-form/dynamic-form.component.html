@@ -1,0 +1,37 @@
+<!--
+  ~ Copyright 2022 IBM Corporation
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<div [formGroup]="form" *ngIf="executorRequirement.hidden === 'false' && category.includes(executorRequirement.category)">
+    <div [formGroupName]="formGroupName">
+        <div *ngIf="!executorRequirement.options || executorRequirement.options.length === 0; then textbox else dropdown"></div>
+        <ng-template #textbox>
+            <mat-form-field class="settings-select">
+                <mat-label [attr.for]="executorRequirement.name">Enter {{executorRequirement.description || executorRequirement.name}}</mat-label>
+                <input matInput [formControlName]="executorRequirement.name" [id]="executorRequirement.name" [type]="executorRequirement.type">
+                <mat-error>{{executorRequirement.name}} is required</mat-error>
+            </mat-form-field>
+        </ng-template>
+        <ng-template #dropdown>
+            <mat-form-field class="settings-select">
+                <mat-label [attr.for]="executorRequirement.name">Enter {{executorRequirement.description || executorRequirement.name}}</mat-label>
+                <mat-select [id]="executorRequirement.name" [formControlName]="executorRequirement.name">
+                  <mat-option *ngFor="let er of executorRequirement.options" [value]="er">{{er}}</mat-option>
+                </mat-select>
+                <mat-error>{{executorRequirement.name}} is required</mat-error>
+            </mat-form-field>
+        </ng-template>
+    </div>
+</div>

@@ -1,0 +1,162 @@
+---
+title: AppServer Setup
+description: Quick start guide for getting developers acclimated with the App Server of the Accelerated Decision Making with AI Project
+---
+
+import { OutboundLink } from "gatsby-plugin-google-analytics"
+
+<PageDescription>
+
+To setup the application server, follow the following steps:
+<AnchorLinks>
+  <AnchorLink>Encrypt master and server password </AnchorLink> 
+  <AnchorLink>Install mvn dependencies and package </AnchorLink>
+  <AnchorLink>Paste the Configurations YAML File </AnchorLink>  
+  <AnchorLink>Setup pgAdmin </AnchorLink>  
+  <AnchorLink>Run the Application Server </AnchorLink>  
+  
+</AnchorLinks>
+
+</PageDescription>
+
+
+## Encrypt master and server password 
+As described [here](https://maven.apache.org/guides/mini/guide-encryption.html), encrypt the master and server password to allow access to the ungana-models from Jfog Artifactory.
+
+1. **Create and encrypt master password with ** 
+
+   ```sh
+   mvn --encrypt-master-password
+   ```
+
+2. **Store the generated encypted master password in ** `${user.home}/.m2/settings-security.xml` **in this format **
+
+    ```xml path=settings-security.xml
+    <settingsSecurity>
+    <master>{ENCRYPTED_MASTER_PASSWORD}</master>
+    </settingsSecurity>
+    ```
+    **N.B **: If the .m2 folder does not exist, create it in the root directory then perform step 2
+
+3. **Create and encypt sever password with **
+    ```sh
+    mvn --encrypt-password
+    ```
+
+4. **Store the generated encypted server password in ** `${user.home}/.m2/settings.xml` **in this format **
+
+    ```xml path=settings.xml
+    <settings>
+                <servers>
+                    <server>
+                        <id>central</id>
+                        <username>SERVER_USERNAME</username>
+                        <password>{ENCRPTED_SERVER_PASSWORD}</password>
+                    </server>
+                    <server>
+                        <id>snapshots</id>
+                        <username>SERVER_USERNAME</username>
+                        <password>{ENCRPTED_SERVER_PASSWORD}</password>
+                    </server>
+                    <server>
+                        <id>na-artifactory</id>
+                        <username>SERVER_USERNAME</username>
+                        <password>{ENCRPTED_SERVER_PASSWORD}</password>
+                    </server>
+                    <server>
+                        <id>na-snapshots</id>
+                        <username>SERVER_USERNAME</username>
+                        <password>{ENCRPTED_SERVER_PASSWORD}</password>
+                    </server>
+                </servers>
+            </settings>
+    ```
+     
+
+## Install mvn dependencies and package
+In the AppServer directory, run the following command:
+```bash
+mvn clean package
+```
+
+## Create the configurations YAML file (application-local.yaml) using the following format:
+
+```yaml path=ADMAI/AppServer/src/main/resources/application-local.yaml
+    spring:
+        datasource:
+            jdbc-url: ${POSTGRES_URL}
+            username: ${POSTGRES_USERNAME}
+            password: ${POSTGRES_PASS}
+            driver-class-name: org.postgresql.Driver
+            platform: postgres
+            hikari:
+            connection-test-query: SELECT 1
+            connection-timeout: 60000
+            idle-timeout: 600000
+            max-lifetime: 1800000
+            maximum-pool-size: 20
+        jpa:
+            database: POSTGRESQL
+            show-sql: false
+            hibernate:
+            ddl-auto: update
+            properties:
+            hibernate:
+                dialect: org.hibernate.dialect.PostgreSQL95Dialect
+                format_sql: true
+                jdbc:
+                use_get_generated_keys: true
+                temp:
+                use_jdbc_metadata_defaults: false
+
+        app:
+        version: ${APP_VERSION}
+        hostname: ${HOSTNAME}
+        default_data_repo: ${COS_STORAGE}
+        default_environment_command_name: ${ENVIRONMENT_COMMAND_NAME}
+        job_batch_timeout: 12
+
+        authentication:
+        encryption:
+            key: ${ENCRYPTION_KEY}
+        key:
+            base64: ${KEY_64}
+            base64E: AQAB
+            base64N: ${KEY_64N}
+
+```
+Edit the credentials 
+
+**NOTE ** The `application-local.yaml` file is the configuration file used to setup the server and add a database.
+
+## Setup pgAdmin 
+Using the credentials in the application-local.yaml file `add a server` and `create a database`
+
+
+## Run the Application Server
+Run the TaskClerkMainApplication.java file 
+
+## Continue setting up...
+
+<Row>
+<Column colMd={4} colLg={4} noGutterMdLeft>
+<ArticleCard
+  title="The Dashboard"
+  href="/contribute/dashboard_setup"
+  color="dark"
+  actionIcon="arrowRight"
+>
+
+</ArticleCard>
+</Column>
+<Column colMd={4} colLg={4} noGutterMdLeft>
+<ArticleCard
+  title="The Job Deployment Service "
+  href="/contribute/jobdeploymentservice_setup"
+  
+  actionIcon="arrowRight"
+>
+
+</ArticleCard>
+</Column>
+</Row>

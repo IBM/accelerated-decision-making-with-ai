@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    jdbc-url: ${POSTGRES_URL}
+    username: ${POSTGRES_USERNAME}
+    password: ${POSTGRES_PASS}
+    driver-class-name: org.postgresql.Driver
+    platform: postgres
+    hikari:
+      connection-test-query: SELECT 1
+      connection-timeout: 60000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      maximum-pool-size: 20
+  jpa:
+    database: POSTGRESQL
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL95Dialect
+        format_sql: true
+        jdbc:
+          use_get_generated_keys: true
+        temp:
+          use_jdbc_metadata_defaults: false
+
+app:
+  version: ${APP_VERSION}
+  hostname: ${HOSTNAME}
+  default_data_repo: ${COS_STORAGE}
+  default_environment_command_name: ${ENVIRONMENT_COMMAND_NAME}
+  job_batch_timeout: 12
+
+authentication:
+  encryption:
+    key: ${ENCRYPTION_KEY}
+  key:
+    base64: ${KEY_64}
+    base64E: AQAB
+    base64N: ${KEY_64N}

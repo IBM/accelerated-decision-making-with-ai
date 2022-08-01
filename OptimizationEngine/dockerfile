@@ -1,0 +1,15 @@
+FROM python:3.8-slim
+
+ENV PYTHONUNBUFFERED True
+
+WORKDIR /app
+RUN chgrp -R 0 /app && chmod -R g=u /app
+
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+
+COPY utils.py utils.py
+COPY constants.py constants.py
+COPY evaluateAlgorithm.py evaluateAlgorithm.py
+
+CMD python3 evaluateAlgorithm.py

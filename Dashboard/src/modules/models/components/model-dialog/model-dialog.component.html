@@ -1,0 +1,115 @@
+<!--
+  ~ Copyright 2022 IBM Corporation
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<div *ngIf="data.type=='model'; then model"></div>
+<ng-template #model>
+  <h5 *ngIf="!data.model">Add Model</h5>
+  <h5 *ngIf="data.model">Edit Model</h5>
+  <mat-dialog-content>
+    <div class="container">
+      <form [formGroup]="formGroup" validate>
+        <div class="example-container">
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>Enter the official name of your model (no spaces)</mat-label>
+                <input matInput placeholder="Model name" formControlName="name" required>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>Short description of the model</mat-label>
+                <input matInput placeholder="Model description" formControlName="title" required>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>Enter the version of the model</mat-label>
+                <input matInput placeholder="Model Version" formControlName="version" required>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>Enter the author of the model version</mat-label>
+                <input matInput placeholder="Version Author" formControlName="versionAuthor" required>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>Enter the date of the model version</mat-label>
+                <input type="date" matInput placeholder="Version Date" formControlName="versionDate" required>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>Enter the GitHub url for the model code</mat-label>
+                <input matInput placeholder="Github url" formControlName="githubLink" required>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>Enter the URL of the model.py file (raw file)</mat-label>
+                <input matInput placeholder="Model url" formControlName="uri" required>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>Enter the URL of the requirements.txt file for your model.py file if any</mat-label>
+                <input matInput placeholder="Requirements" formControlName="runCommand">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>Enter the url of the model data provider service</mat-label>
+                <input matInput placeholder="Model Data Url" formControlName="modelDataUrl" required>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>Provide short description of the model data provided</mat-label>
+                <input matInput placeholder="Model Data Description" formControlName="modelDataDescription" required>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button type="submit" [disabled]="!formGroup.valid || submitted"  mat-raised-button
+            class="mat-raised-button mat-primary" (click)="onSubmit(formGroup.value)">Submit
+    </button>
+  </mat-dialog-actions>
+</ng-template>
+

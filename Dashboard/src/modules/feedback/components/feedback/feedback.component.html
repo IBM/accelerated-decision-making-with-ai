@@ -1,0 +1,79 @@
+<!--
+  ~ Copyright 2022 IBM Corporation
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<div class="nk-wrap ">
+  <div class="nk-content ">
+    <div class="container-fluid">
+      <div class="nk-content-body">
+        <div class="nk-block-between flex-wrap g-1 align-start"></div>
+        <div class="nk-block">
+          <div class="row g-5">
+            <div class="col-xl-5">
+              <br>
+              <p>Use the form below to provide your feedback: </p>
+              <form  [formGroup]="feedBackForm" (ngSubmit)="onSubmitFeedbackForm()">
+                <div class="form-group">
+                  <label class="form-label" for="full-name">Name</label>
+                  <div class="form-control-wrap">
+                    <input type="text" class="form-control" id="full-name" formControlName="name">
+                    <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                         class="alert alert-danger">
+                      <div *ngIf="name.errors.required">
+                        Name is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="email-address">Email address</label>
+                  <div class="form-control-wrap">
+                    <input type="text" class="form-control" id="email-address" formControlName="email">
+                    <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                         class="alert alert-danger">
+                      <div *ngIf="email.errors.required">
+                        Email is required.
+                      </div>
+                      <div *ngIf="email.errors.email">
+                        Email is incomplete.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="default-textarea">Provide feedback</label>
+                  <div class="form-control-wrap">
+                    <textarea class="form-control" id="default-textarea" formControlName="feedback"></textarea>
+                    <div *ngIf="feedback.invalid && (feedback.dirty || feedback.touched)"
+                         class="alert alert-danger">
+                      <div *ngIf="feedback.errors.required">
+                        Feedback message is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-outline-dark" [disabled]="!feedBackForm.valid">Send</button>
+                </div>
+              </form>
+              <br>
+              <!--<p>Please send us an email at: 	<b>wwcc19@ke.ibm.com</b></p>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

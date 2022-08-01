@@ -1,0 +1,9 @@
+optuna
+pandas
+requests
+gym
+gitpython
+wget
+numpy==1.22
+covasim
+ibm-cos-sdk

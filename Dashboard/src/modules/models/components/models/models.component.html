@@ -1,0 +1,226 @@
+<!--
+  ~ Copyright 2022 IBM Corporation
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<div class="nk-wrap ">
+  <div class="nk-content ">
+    <div class="container-fluid">
+      <div class="nk-content-body">
+        <div class="nk-block-between flex-wrap g-1 align-start">
+        </div>
+        <div class="nk-block">
+          <div class="row g-5">
+            <div class="col-xl-9 card-inner">
+              <div class="row">
+                <div class="col-xl-3 not_responsive">
+                  <div class="control-panel-form form-group">
+                    <div class="form-control-wrap">
+                      <mat-form-field class="settings-select" id="model-select">
+                        <mat-label>Select model</mat-label>
+                        <mat-select [(ngModel)]="currentModel" (selectionChange)="currentModelDropdownChangeListener($event)">
+                          <mat-option *ngFor="let obj of itemsDataSource.data" [value]="obj">{{obj.name}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-8 not_responsive">
+                  <form class="form-custom-style" [formGroup]="formGroup" validate>
+                    <div class="row">
+                      <div class="col-xl-4 not_responsive">
+                        <div class="control-panel-form form-group">
+                          <div class="form-control-wrap">
+                            <mat-form-field class="settings-select" id="admin-0-select">
+                              <mat-label>Select admin 0 (Country)</mat-label>
+                              <input #admin0 type="text" matInput formControlName="admin0" [matAutocomplete]="auto0" (keyup.enter)="admin0SelectionChange(auto0.options.first.value)">
+                              <mat-autocomplete autoActiveFirstOption #auto0="matAutocomplete">
+                                <mat-option *ngFor="let admin0 of filteredAdmin0Options | async" [value]="admin0.name" (click)="admin0SelectionChange(admin0)">
+                                  {{admin0.name}}
+                                </mat-option>
+                              </mat-autocomplete>
+                            </mat-form-field>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-xl-4 not_responsive">
+                        <div class="control-panel-form form-group">
+                          <div class="form-control-wrap">
+                            <mat-form-field class="settings-select" id="admin-1-select">
+                              <mat-label>Select admin 1 (Provinces/States/District/Counties)</mat-label>
+                              <input #admin1 type="text" matInput formControlName="admin1" [matAutocomplete]="auto1" (keyup.enter)="admin1SelectionChange(auto1.options.first.value)">
+                              <mat-autocomplete autoActiveFirstOption #auto1="matAutocomplete">
+                                <mat-option *ngFor="let admin1 of filteredAdmin1Options | async" [value]="admin1.name" (click)="admin1SelectionChange(admin1)">
+                                  {{admin1.name}}
+                                </mat-option>
+                              </mat-autocomplete>
+                            </mat-form-field>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-xl-4 not_responsive">
+                        <div class="control-panel-form form-group">
+                          <div class="form-control-wrap">
+                            <mat-form-field class="settings-select" id="admin-2-select">
+                              <mat-label>Select admin 2 (District/Counties/sub-counties)</mat-label>
+                              <input #admin2 type="text" matInput formControlName="admin2" [matAutocomplete]="auto2" (keyup.enter)="admin2SelectionChange(auto2.options.first.value)">
+                              <mat-autocomplete autoActiveFirstOption #auto2="matAutocomplete">
+                                <mat-option *ngFor="let admin2 of filteredAdmin2Options | async" [value]="admin2.name" (click)="admin2SelectionChange(admin2)">
+                                  {{admin2.name}}
+                                </mat-option>
+                              </mat-autocomplete>
+                            </mat-form-field>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-xl-1 wwcc-block-between rem-wrap align-start">
+                  <div>
+                    <button id="reset-countries-btn" type="button" class="btn btn-secondary" (click)="resetAdmin(-1)">
+                      <span class="material-icons">autorenew</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div id="map-wrap">
+<!--                <div>-->
+                  <app-simple-map [geoJson]="geoJson" [bounds]="bounds"></app-simple-map>
+                  <div class="info-position-right-top" >
+                    <app-map-details [isVisible]="isVisible"  (closeDetail)="closeDetail($event)"  (handleMapDetails)="handleMapDetails($event)"></app-map-details>
+<!--                  </div>-->
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3">
+              <div *ngIf="currentModel">
+                <div id="page-header-wrap">
+                  <h1>
+                    Selected Model
+                  </h1>
+                  <span class="fill-remaining-space"></span>
+                  <span class="add-models">
+                    <button *ngIf="(user | async).type == 'admai_admin' || (user | async).type == 'admai_ms'" id="add-model-button" class="btn btn-link" matTooltip="Edit model" (click)="openModelDialog(currentModel)">
+                      <i class="material-icons default-color" >edit</i>
+                    </button>
+                  </span>
+                </div>
+                <table class="table">
+                  <tr>
+                    <td>
+                      Model Name
+                    </td>
+                    <td>
+                      <span class="custom-text-overflow" *ngIf="currentModel.title">{{currentModel.title}}</span>
+                      <span class="custom-text-overflow" *ngIf="!currentModel.title">-</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Model Version
+                    </td>
+                    <td>
+                      <span class="custom-text-overflow" *ngIf="currentModel.version">{{currentModel.version}}</span>
+                      <span class="custom-text-overflow" *ngIf="!currentModel.version">-</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Version Date
+                    </td>
+                    <td>
+                      <span class="custom-text-overflow" *ngIf="currentModel.versionDate">{{currentModel.versionDate | date:'dd/MM/yyyy'}}</span>
+                      <span class="custom-text-overflow" *ngIf="!currentModel.versionDate">-</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Version Author
+                    </td>
+                    <td>
+                      <span class="custom-text-overflow" *ngIf="currentModel.versionAuthor">{{currentModel.versionAuthor}}</span>
+                      <span class="custom-text-overflow" *ngIf="!currentModel.versionAuthor">-</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Status
+                    </td>
+                    <td>
+                      <span [ngClass]="{
+                        'badge-demo-scheduled': !currentModel.active,
+                        'badge-demo-completed': currentModel.active
+                      }">
+                        {{getStatus(currentModel.active)}}
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div>
+                <div id="page-header-wrap">
+                  <h1>
+                    Environments
+                    <span *ngIf="rewardFunctionsDataSource && rewardFunctionsDataSource.data" class="models-number">({{rewardFunctionsDataSource.data.length}})</span>
+                  </h1>
+                  <span class="fill-remaining-space"></span>
+                  <span class="add-models">
+                    <button *ngIf="(user | async).type == 'admai_admin' || (user | async).type == 'admai_ms'" id="add-model-button" class="btn btn-link" matTooltip="Add new reward function" (click)="openRewardFunctionDialog()">
+                      <i class="material-icons default-color" >add_box</i>
+                    </button>
+                  </span>
+                </div>
+                <mat-table #rewardFunctionsSort="matSort" [dataSource]="rewardFunctionsDataSource" matSort id="clusters-table">
+                  <ng-container matColumnDef="id">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell>
+                    <mat-cell *matCellDef="let item"> {{item.id}}</mat-cell>
+                  </ng-container>
+
+                  <ng-container matColumnDef="title">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+                    <mat-cell *matCellDef="let item">
+                      <span class="custom-text-overflow" *ngIf="item.title">{{item.title}}</span>
+                      <span class="custom-text-overflow" *ngIf="!item.title">-</span>
+                    </mat-cell>
+                  </ng-container>
+
+                  <ng-container matColumnDef="action">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>Action</mat-header-cell>
+                    <mat-cell *matCellDef="let item" (click)="$event.stopPropagation()">
+                      <button *ngIf="(user | async).type == 'admai_admin' || (user | async).type == 'admai_ms'" class="btn btn-link" matTooltip="Edit" (click)="openRewardFunctionDialog(item)">
+                        <i class="material-icons default-color" >edit</i>
+                      </button>
+                    </mat-cell>
+                  </ng-container>
+
+                  <mat-header-row *matHeaderRowDef="displayedColumnsForRewardFunctions"></mat-header-row>
+                  <mat-row *matRowDef="let row; columns: displayedColumnsForRewardFunctions;"></mat-row>
+
+                </mat-table>
+                <mat-paginator #rewardFunctionsPaginator [pageSize]="2" [pageSizeOptions]="[2, 5, 10]"
+                               [showFirstLastButtons]="true"></mat-paginator>
+              </div>
+              <div class="button-wrap">
+                <button *ngIf="(user | async).type == 'admai_admin' || (user | async).type == 'admai_ms'" mat-raised-button color="primary" (click)="openModelDialog()" > Add New Model </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

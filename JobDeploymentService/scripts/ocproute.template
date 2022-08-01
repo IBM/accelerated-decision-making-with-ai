@@ -1,0 +1,12 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: <%= ENV["NAME"] %>
+  name: <%= ENV["NAME"] %>
+spec:
+  port:
+    targetPort: http
+  to:
+    kind: Service
+    name: <%= ENV["NAME"] %>

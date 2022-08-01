@@ -1,0 +1,108 @@
+<!--
+  ~ Copyright 2022 IBM Corporation
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<app-loader></app-loader>
+<div class="wwcc-app-root">
+  <div class="wwcc-main ">
+    <div class="wwcc-wrap">
+      <div class="wwcc-content ">
+        <div class="container-fluid">
+          <div class="wwcc-content-body">
+            <div *ngIf="(user | async)" class="wwcc-block-between flex-wrap align-start">
+              <div>
+                <h5 id="main-title">
+                  Interactive Dashboard for Accelerated Decision-making with AI (ADMAI)
+                </h5>
+                <div id="home-meta-container">
+                  <div class="note-text" id="last-update-text"> Updated: Jun 30, 2021 <span></span></div>
+                  <div id="meta-buttons-container">
+                    <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom-left"
+                            ngbPopover="Due to the various disease outbreaks, IBM is providing this interactive dashboard
+               as a service to the public, but this dashboard is not designed or intended to be a medical device or a
+                substitute for professional medical advice, diagnosis, treatment, or judgment.
+
+                IBM has compiled outcome data provided by multiple third-party sources including Wikipedia, governmental agencies and
+                 other public sources.
+
+                These sources update and report outcome data on various regular and irregular schedules, so from time to time there
+                 may be discrepancies between outcome data reported here and outcome data reported by individual sources. IBM makes
+                 efforts to provide up-to-date and accurate data as available and tries to verify Wikipedia data with data from
+                 governmental sources to minimize and correct errors. IBM does not warrant the accuracy, reliability, or completeness
+                 of the outcome data. The results of this dashboard are inherently speculative and the appropriate use of the
+                  results and decisions made based on the results are the responsibility of the user. IBM shall have no liability
+                  with respect to the results and decisions made based on the results. Please send any inquiries about the data
+                  presented here at: wwcc19@ke.ibm.com">
+                      Disclaimer
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+              <div class="row text-center g-1">
+                <div class="col-2 spacing">
+                  <div class="profile-stats">
+                    <span class="amount">{{1}}</span>
+                    <span class="sub-text">Domains</span>
+                  </div>
+                </div>
+                <div class="col-2 spacing">
+                  <div class="profile-stats">
+                    <span class="amount">{{modelStats}}</span>
+                    <span class="sub-text">Domain Models</span>
+                  </div>
+                </div>
+                <div class="col-2 spacing">
+                  <div class="profile-stats">
+                    <span class="amount">{{algorithmStats}}</span>
+                    <span class="sub-text">AI Algorithms</span>
+                  </div>
+                </div>
+                <div class="col-2 spacing">
+                  <div class="profile-stats">
+                    <span class="amount">{{locationStats}}</span>
+                    <span class="sub-text">Territories Covered</span>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="profile-stats">
+                    <span><p></p></span>
+                    <ng-template #popContent><div class="popover-body" [innerHTML]=completedRequestsNotification.popOverMsg></div></ng-template>
+                    <ng-template #popTitle><div class="popover-title"><b>Notifications (coming soon)</b></div></ng-template>
+                    <button type="button" class="btn btn-light" placement="bottom-right" [ngbPopover]="popContent"
+                            [popoverTitle]="popTitle" [disabled]="completedRequestsNotification.disabledButton">
+                      <mat-icon matBadge={{completedRequestsNotification.noOfNotifications}} matBadgeColor="accent">notifications</mat-icon>
+                    </button>
+
+                    <ng-template #userPopContent><div class="user-popover-body" [innerHTML]=userPop.msg></div></ng-template>
+                    <button type="button" class="btn btn-light" placement="bottom-right" [ngbPopover]="userPopContent">
+                      <mat-icon aria-hidden="false" aria-label="Example home icon" matBadge={{userPop.icon}} matBadgeColor="accent">person</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul *ngIf="(user | async)" ngbNav [activeId]="activeNgbNav" class="nav-tabs">
+              <li [ngbNavItem]="link.path" *ngFor="let link of links">
+                <a ngbNavLink routerLink="{{link.path}}">{{ link.title }}</a>
+              </li>
+            </ul>
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

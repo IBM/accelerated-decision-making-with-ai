@@ -1,0 +1,6 @@
+optuna
+pandas
+requests
+numpy
+cloudant
+gym

@@ -1,0 +1,4 @@
+{
+     "environment": "K8S",
+    "hostEndpoint": "http://localhost:7080"
+}

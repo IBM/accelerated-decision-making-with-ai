@@ -1,0 +1,254 @@
+/*!
+ * Copyright 2022 IBM Corporation
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+//Set Vars
+$settingsSelectWidth: 100% !important;
+
+//Use Vars
+.settings-select {
+  width: $settingsSelectWidth;
+}
+
+#page-header-wrap,
+.flex-wrapper {
+  display: flex;
+}
+
+#page-header-wrap h1 {
+  display: inline;
+  font-size: 24px;
+}
+
+#page-header-wrap mat-form-field,
+.page-header-wrap mat-form-field,
+.page-header-wrap button,
+.page-header-wrap table {
+  width: auto;
+  margin-right: 10px;
+}
+
+// #page-header-wrap mat-form-field{
+//   width: auto;
+//   margin-right: 10px;
+// }
+
+#page-header-wrap,
+.page-header-wrap {
+  padding: 10px 20px 10px 20px;
+}
+
+#page-header-wrap,
+.page-header-wrap,
+.flex-wrapper {
+  display: flex;
+}
+
+#page-header-wrap h1,
+.page-header-wrap h1 {
+  display: inline;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+#page-header-wrap h2,
+.page-header-wrap h2 {
+  display: inline;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.models-number{
+  font-size: 14px;
+  color: #888;
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.custom-text-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.custom-text-overflow:hover {
+  overflow: visible;
+  white-space: normal;
+}
+
+.default-color {
+  border-color: #3f51b5;
+  color: #3f51b5;
+}
+
+.custom-margin-form {
+  margin-top: 15px;
+}
+
+.custom-margin-divider {
+  margin-bottom: 15px;
+}
+
+#add-action-button {
+  float:right;
+  position: relative;
+  margin-bottom: -8px;
+  //font-size: 10px
+}
+
+.none-detected-div {
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+
+  padding: 20px 0 20px 20px;
+}
+
+.custom-wrapper-div {
+  height: 154px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-timeline-div {
+  margin: 0 16px 0 16px;
+}
+
+.center-header {
+  margin-top: 15px;
+  margin-bottom: -10px;
+}
+
+.my-mat-list {
+}
+
+.my-mat-list mat-list-item{
+  font-weight: bold;
+}
+
+.my-mat-list mat-divider{
+  margin: 0 15px 0 15px;
+}
+
+.chip-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0 16px 0;
+}
+
+.custom-wrapper-div {
+  height: 154px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-button {
+  color : rgba(0, 0, 0, 0.26);
+  background-color: transparent;
+}
+
+.custom-timeline-div {
+  margin: 0 16px 0 16px;
+}
+
+.custom-slider {
+  //margin-left: 15px;
+}
+
+.custom_table {
+  width: 97%;
+}
+
+.custom_table_cell {
+  width: 90%;
+}
+// We need to use ::ng-deep to overcome view encapsulation
+::ng-deep {
+  .custom-slider .ng5-slider .ng5-slider-bar {
+    background: #999;
+    height: 2px;
+  }
+  .custom-slider .ng5-slider .ng5-slider-selection {
+    background: #3f51b5;
+  }
+
+  .custom-slider .ng5-slider .ng5-slider-pointer {
+    width: 8px;
+    height: 16px;
+    top: auto; /* to remove the default positioning */
+    bottom: 0;
+    background-color: #3f51b5;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+
+  .custom-slider .ng5-slider .ng5-slider-pointer:after {
+    display: none;
+  }
+
+  .custom-slider .ng5-slider .ng5-slider-bubble {
+    bottom: 14px;
+  }
+
+  .custom-slider .ng5-slider .ng5-slider-limit {
+    font-weight: bold;
+    color: #3f51b5;
+  }
+
+  .custom-slider .ng5-slider .ng5-slider-tick {
+    width: 1px;
+    height: 10px;
+    margin-left: 4px;
+    border-radius: 0;
+    background: #999;
+    top: -1px;
+  }
+
+  .custom-slider .ng5-slider .ng5-slider-tick.ng5-slider-selected {
+    background: #3f51b5;
+  }
+}
+
+.wider-td {
+  width: 70%;
+}
+
+.lower-td {
+  width: 30%;
+}
+
+.align-interventions {
+  margin-top: 64px;
+}
+
+.fill-gap {
+  margin-left: 20px;
+}
+
+.custom-form-padding {
+  padding: 0 0 0 20px;
+}
+

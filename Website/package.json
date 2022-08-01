@@ -1,0 +1,34 @@
+{
+  "name": "example",
+  "private": true,
+  "version": "1.26.4",
+  "license": "Apache 2.0",
+  "description": "Accelerated Discovery with Artificial Intelligence",
+  "repository": "https://github.com/IBM/accelerated-decision-making-with-ai",
+  "scripts": {
+    "dev": "gatsby develop -H 0.0.0.0",
+    "dev:clean": "yarn clean && yarn develop",
+    "build": "gatsby build",
+    "build:clean": "yarn clean && gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"no test yet\" && exit 0",
+    "preDeploy": "npm run clean && gatsby build --prefix-paths",
+    "deploy": "npm run clean && gatsby build --prefix-paths && gh-pages -d public"
+  },
+  "dependencies": {
+    "@carbon/icons-react": "^10.15.0",
+    "carbon-components": "^10.17.0",
+    "classnames": "^2.2.6",
+    "dotenv": "^8.2.0",
+    "gatsby": "^2.20.4",
+    "gatsby-plugin-google-analytics": "^2.3.13",
+    "gatsby-theme-carbon": "^1.26.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "remark-grid-tables": "^2.1.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}

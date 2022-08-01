@@ -1,0 +1,179 @@
+<!--
+  ~ Copyright 2022 IBM Corporation
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<div class="nk-wrap ">
+  <div class="nk-content ">
+    <div class="container-fluid">
+      <div class="nk-content-body">
+        <div class="nk-block-between flex-wrap g-1 align-start">
+        </div>
+        <div class="nk-block">
+          <div class="row g-5">
+            <div class="col-xl-9  card-inner">
+              <div class="row">
+                <div class="col-xl-3 not_responsive">
+                  <div class="control-panel-form form-group">
+                    <div class="form-control-wrap">
+                      <mat-form-field class="settings-select">
+                        <mat-label>Select algorithm</mat-label>
+                        <mat-select [(ngModel)]="currentAlgorithm" (selectionChange)="currentAlgorithmDropdownChangeListener($event)">
+                          <mat-option *ngFor="let algorithm of algorithms" [value]="algorithm">{{algorithm.name}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-3 not_responsive">
+                  <div class="control-panel-form form-group">
+                    <div class="form-control-wrap">
+                      <mat-form-field class="settings-select">
+                        <mat-label>Select compare algorithms</mat-label>
+                        <mat-select [(ngModel)]="currentCompareAlgorithms" (selectionChange)="compareAlgorithmDropdownChangeListener($event)" multiple>
+                          <mat-option *ngFor="let algorithm of compareAlgorithms" [value]="algorithm">{{algorithm.name}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-2 not_responsive">
+                  <div class="control-panel-form form-group">
+                    <div class="form-control-wrap">
+                      <mat-form-field class="settings-select">
+                        <mat-label>Select environment</mat-label>
+                        <mat-select [(ngModel)]="currentEnvironment" (selectionChange)="currentEnvironmentDropdownChangeListener($event)">
+                          <mat-option *ngFor="let environment of environments" [value]="environment">{{environment.name}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-2 not_responsive">
+                  <div class="control-panel-form form-group">
+                    <div class="form-control-wrap">
+                      <mat-form-field class="settings-select">
+                        <mat-label>Select location</mat-label>
+                        <mat-select [(ngModel)]="currentLocation" (selectionChange)="currentLocationDropdownChangeListener($event)">
+                          <mat-option *ngFor="let location of locations" [value]="location">{{location.names}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-2 wwcc-block-between rem-wrap align-start">
+                  <div>
+                    <button id="search-results-btn" type="button" class="btn btn-secondary" (click)="searchResults()" [disabled]="searchDisable">
+                      <span class="material-icons">search</span>
+                    </button>
+                    <button id="refresh-results-btn" type="button" class="btn btn-secondary" (click)="resetFilters()">
+                      <span class="material-icons">autorenew</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="chart">
+                <app-chart
+                  [chartParameters]="chartParameters"
+                  [chartCallbackFunction]="myChartCallbackFunction"></app-chart>
+              </div>
+            </div>
+            <div class="col-xl-3">
+              <div *ngIf="currentAlgorithm">
+                <div id="page-header-wrap">
+                  <h1>
+                    Selected Algorithm
+                  </h1>
+                  <span class="fill-remaining-space"></span>
+                  <span>
+                    <button *ngIf="(user | async).type == 'admai_admin' || (user | async).type == 'admai_ds'" id="add-algorithm-button" class="btn btn-link" matTooltip="Edit algorithm" (click)="openAlgorithmDialog(currentAlgorithm)">
+                      <i class="material-icons default-color" >edit</i>
+                    </button>
+                  </span>
+                </div>
+                <table class="table">
+                  <tr>
+                    <td>
+                      Algorithm Name
+                    </td>
+                    <td>
+                      <span class="custom-text-overflow" *ngIf="currentAlgorithm.title">{{currentAlgorithm.name}}</span>
+                      <span class="custom-text-overflow" *ngIf="!currentAlgorithm.title">-</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Algorithm Version
+                    </td>
+                    <td>
+                      <span class="custom-text-overflow" *ngIf="currentAlgorithm.version">{{currentAlgorithm.version}}</span>
+                      <span class="custom-text-overflow" *ngIf="!currentAlgorithm.version">-</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Version Date
+                    </td>
+                    <td>
+                      <span class="custom-text-overflow" *ngIf="currentAlgorithm.versionDate">{{currentAlgorithm.versionDate | date:'dd/MM/yyyy'}}</span>
+                      <span class="custom-text-overflow" *ngIf="!currentAlgorithm.versionDate">-</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Version Author
+                    </td>
+                    <td>
+                      <span class="custom-text-overflow" *ngIf="currentAlgorithm.versionAuthor">{{currentAlgorithm.versionAuthor}}</span>
+                      <span class="custom-text-overflow" *ngIf="!currentAlgorithm.versionAuthor">-</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Accessed
+                    </td>
+                    <td>
+                      <span class="custom-text-overflow" *ngIf="currentAlgorithm.rating">{{currentAlgorithm.rating}}</span>
+                      <span class="custom-text-overflow" *ngIf="!currentAlgorithm.rating">-</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Status
+                    </td>
+                    <td>
+                      <span [ngClass]="{
+                        'badge-demo-scheduled': !currentAlgorithm.active,
+                        'badge-demo-completed': currentAlgorithm.active
+                      }">
+                        {{getStatus(currentAlgorithm.active)}}
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="button-wrap">
+                <button *ngIf="(user | async).type == 'admai_admin' || (user | async).type == 'admai_ds'" mat-raised-button color="primary" (click)="openAlgorithmDialog()" > Add New Algorithm </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

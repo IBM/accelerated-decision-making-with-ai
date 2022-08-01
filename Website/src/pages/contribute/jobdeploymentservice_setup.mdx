@@ -1,0 +1,117 @@
+---
+title: Job Deployment Service Setup
+description: Quick start guide for getting developers acclimated with the Job Deployment Service of the Accelerated Decision Making with AI Project
+---
+
+<PageDescription>
+
+This service is intended to enable deployment of a job within a Kubernetes cluster. The service is deployed into the cluster where the jobs will be deployed, so it is assumed that the appropriate credentials are available.
+
+The service itself has two endpoints, one to check if a particular job is currently running, and the other to deploy a new job given a specified json payload defining the image to be used, and the environment variables which should be injected at runtime.
+
+To setup the job deployment service, follow the following steps:
+<AnchorLinks>
+  <AnchorLink>Prepare the Container Image </AnchorLink> 
+  <AnchorLink>Deploy the Kubernetes Cluster</AnchorLink> 
+  
+</AnchorLinks>
+</PageDescription>
+
+## Prepare the Container Image(assuming IBM Container Registry)
+
+1. **Build the Docker image **
+    ```bash
+    docker build . -t us.icr.io</namespace/jobname:tag>
+    ```
+
+2. **Push the Docker image **
+    ```bash
+    docker push us.icr.io</namespace/jobname:tag>
+    ```
+    Alternatively you can use the `push_image.sh` to handle all transactions involved while pushing an image to the IBM Container registry. 
+
+    You can run the script by either:
+
+    i. **Providing all the environment variables inline, when running the script with the correct variables. ** e.g. in terminal run 
+    ```bash
+    sh ./push_image.sh <TARGET_IBM_CLOUD_URL> <TARGET_IBM_CLOUD_REGION <TARGET_IBM_CLOUD_GROUP> <IBM_CLOUD_APIKEY> <DOCKER_SERVER> <CONTAINER_REGISTRY_NAMESPACE> <IMAGE_NAME> <IMAGE_TAG>
+    ```
+   
+    
+    ii. **Creating a .env file to hold all the required environment variables. **
+    ```env path=.env
+    # Shared variables
+    DOCKER_SERVER=______
+    CONTAINER_REGISTRY_NAMESPACE=______
+    IMAGE_NAME=______
+    IMAGE_TAG=______
+
+    # Push image variables
+    TARGET_IBM_CLOUD_URL=______
+    TARGET_IBM_CLOUD_REGION=______
+    TARGET_IBM_CLOUD_GROUP=______
+    IBM_CLOUD_APIKEY=______
+
+    # Configure yaml files variables
+    NAME=______
+    IMAGE_PULL_SECRET_NAME=______
+    JOB_NAMESPACE=______
+    ```
+
+    Copy the above and save it as .env in the JobDeploymentService directory and provide all the variables. Finally, run the script by simply running `sh ./push_image.sh`
+
+If the  image already exists in the registry, opt to pull the image instead of pushing the Docker image.
+To pull the Docker image, execute;
+```bash
+docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+```
+
+## Kubernetes Cluster Deployment
+Start by generating and configuring the yaml files, by running the script `sh ./config_yaml_files.sh` if you already created the `.env` file above. 
+
+Otherwise, either create the `.env` file and supply the variables or supply the required environment variables inline when running the script.
+
+1. **Check for the clusters **
+    ```bash
+    kind get clusters
+    ```
+2. **If there are no clusters, create a new cluster with a name of your choice. ** i.e. admai
+    ```bash 
+    kind create cluster --name admai
+    ```
+
+3. **To allow minikube to access and pull the image in the IBM container registry, create an image pull secret, update it in the ** `.env` **file and update it in the ** `name` **tag of the ** `k8s.py` **file **
+    ```sh
+    kubectl create secret docker-registry <YOUR_SECRET_NAME> --docker-server=<YOUR_DOCKER_SERVER e.g. us.icr.io> --docker-username=iamapikey --docker-password=<YOUR_ACCOUNT_APIKEY> --docker-email=<YOUR_DOCKER_EMAIL>
+  
+4. **Navigate to the `JobDeploymentService` directory **
+    ```bash
+    cd JobDeploymentService
+    
+5. **Allow the system user to access cluster resources by running; **
+    ```bash
+    kubectl create -f ocprbac.yaml
+    ```
+6. **Create a deployment by executing; **
+    ```bash
+    kubectl create -f ocpdeploy.yaml
+    ```
+7. **Create a service by executing; **
+    ```bash
+    kubectl create -f mkbservice.yaml
+    ```
+8. **Check whether the pod is started by running; **
+    ```bash
+    kubectl get pods 
+    ```
+    If it is not started you can check more details using 
+    ```bash
+    kubectl describe pod <pod_name>.
+    ```
+    
+    If the pod is started, run 
+    ```bash
+    kubectl port-forward service/<service_name> 7080:8080 
+    ```
+
+To launch JobDeployment service on a web browser at `http://localhost:7080/ui`

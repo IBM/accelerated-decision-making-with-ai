@@ -1,0 +1,28 @@
+{
+    "environmentCommandName": "K8S_EXECUTOR",
+    "commandName": "Optimization Engine Executor",
+    "commandTemplate": "python3 evaluateAlgorithm.py",
+    "commandEntryPoint": "us.icr.io/admai/optimization-engine:latest",
+    "commandEntryPointURIExtension": "",
+    "commandContentType": "",
+    "expectedUserProvidedInputs": [
+      
+    ],
+    "systemDefaultInputs": [
+      
+    ],
+    "systemAutoFillInputs": {
+      
+    },
+    "commandSampleOutput": "",
+    "executionEnvironment": {
+      "createdAt": 1656582587568,
+      "updatedAt": 1656582587568,
+      "id": "8af0d08781b3e8d00181b40444b10000",
+      "environment": "K8S",
+      "hostEndpoint": "http://localhost:7080",
+      "authenticationEndpoint": null,
+      "hostUsername": null,
+      "hostPassword": null
+    }
+  }

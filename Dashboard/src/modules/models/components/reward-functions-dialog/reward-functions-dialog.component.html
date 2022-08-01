@@ -1,0 +1,122 @@
+<!--
+  ~ Copyright 2022 IBM Corporation
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<div *ngIf="data.type=='reward_function'; then reward_function"></div>
+<ng-template #reward_function>
+  <h5 *ngIf="!data.model">Add Reward Function</h5>
+  <h5 *ngIf="data.model">Edit Reward Function</h5>
+  <mat-dialog-content>
+    <div class="container">
+      <form [formGroup]="formGroup" validate>
+        <div class="example-container">
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>Enter the name of the environment</mat-label>
+                <input matInput placeholder="Environment Name" formControlName="name" required>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>Enter Class name of the Environment</mat-label>
+                <input matInput placeholder="Environment Class Name" formControlName="title" required>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field appearance="fill">
+                <mat-label>Select the Capabilities for the Environment</mat-label>
+                <mat-select formControlName="actions" multiple>
+                  <mat-select-trigger>
+                    {{formGroup.controls['actions'].value ? formGroup.controls['actions'].value[0] : ''}}
+                    <span *ngIf="formGroup.controls['actions'].value?.length > 1" class="additional-selection">
+                      (+{{formGroup.controls['actions'].value.length - 1}} {{formGroup.controls['actions'].value?.length === 2 ? 'other' : 'others'}})
+                    </span>
+                  </mat-select-trigger>
+                  <mat-option *ngFor="let ec of environmentCapabilities" [value]="ec">{{ec}}</mat-option>
+                </mat-select>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>Enter the GitHub Url for the environment</mat-label>
+                <input matInput placeholder="Github url" formControlName="githubLink" required>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>Enter the URL of the environment.py file (raw file)</mat-label>
+                <input matInput placeholder="Environment url" formControlName="uri" required>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>Enter the URL of the requirements.txt file for your environment.py file if any</mat-label>
+                <input matInput placeholder="Requirements" formControlName="runCommand">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>Enter the version of the environment</mat-label>
+                <input matInput placeholder="Environment Version" formControlName="version" required>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>Enter the author of the environment version</mat-label>
+                <input matInput placeholder="Version Author" formControlName="versionAuthor" required>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>Enter the date of the environment version</mat-label>
+                <input type="date" matInput placeholder="Version Date" formControlName="versionDate" required>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-label>Environment requirement json file</mat-label>
+                <input formControlName="executorRequirement" type='file' accept='application/json' (change)="onFileSelected($event)">
+                <mat-error>{{fileError}}</mat-error>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button type="submit" [disabled]="!formGroup.valid || submitted"  mat-raised-button
+            class="mat-raised-button mat-primary" (click)="onSubmit(formGroup.value)">Submit
+    </button>
+  </mat-dialog-actions>
+</ng-template>
+
+

@@ -1,0 +1,40 @@
+/*!
+ * Copyright 2022 IBM Corporation
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@import '~carbon-components/scss/globals/scss/layout';
+
+.page-header {
+  --height: 10rem;
+  height: 10rem;
+  height: var(--height);
+  background: $carbon--black-100;
+  color: $inverse-01;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-bottom: 1px solid $inverse-02;
+}
+
+.with-tabs {
+  height: calc(var(--height) - 3rem);
+}
+
+.text {
+  @include carbon--type-style('display-01', true);
+  margin-bottom: $spacing-07;
+  margin-top: auto;
+}

@@ -1,0 +1,6 @@
+optuna
+pandas
+requests
+numpy==1.22
+gym
+covasim

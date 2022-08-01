@@ -1,0 +1,6 @@
+{
+    "name": "COS",
+    "description": "string",
+    "hostEndPoint": "string",
+    "credentials": "<GET YOUR CREDENTIALS FROM IBM CLOUD COS>"
+  }

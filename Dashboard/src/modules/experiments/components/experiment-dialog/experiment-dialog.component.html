@@ -1,0 +1,264 @@
+<!--
+  ~ Copyright 2022 IBM Corporation
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<div *ngIf="data.type=='Single'; then single"></div>
+<div *ngIf="data.type=='Multiple'; then multiple"></div>
+<div *ngIf="data.type=='Continuous'; then continuous"></div>
+<ng-template #single>
+  <h5>Add Actions</h5>
+  <mat-dialog-content>
+    <div class="container">
+      <form [formGroup]="formGroup" validate>
+        <div class="example-container">
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-select placeholder="Select an action type" formControlName="modelName" required>
+                  <mat-option *ngFor="let actionType of actionTypes" [value]="actionType">{{actionType}}</mat-option>
+                </mat-select>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>Enter time</mat-label>
+                <input matInput readonly
+                       [min]="minDates()"
+                       [max]="maxDates()"
+                       [matDatepicker]="picker"  placeholder="Time" formControlName="time">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="row custom-spacer">
+            <div class="col-md-2">
+              Coverage Percentage
+            </div>
+            <div class="col-md-10">
+              <div class="custom-slider">
+                <ng5-slider formControlName="coverage" [options]="this.options"></ng5-slider>
+              </div>
+            </div>
+          </div>
+
+          <div class="button-custom-style">
+            <button mat-button mat-dialog-close>Cancel</button>
+            <button type="submit" [disabled]="!formGroup.valid || submitted"  mat-raised-button
+                    class="mat-raised-button mat-primary" (click)="onSubmit(formGroup.value)">Submit
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </mat-dialog-content>
+</ng-template>
+<ng-template #multiple>
+  <ng-container *ngIf="data.experiment.experiment_type=='Prediction'; then prediction else calibration"></ng-container>
+  <ng-template #prediction>
+    <h5>Define action space</h5>
+    <mat-dialog-content>
+      <div class="container">
+        <form [formGroup]="formGroup" validate>
+          <div class="example-container">
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field>
+                  <mat-select placeholder="Select an intervention" formControlName="interventionName" required>
+                    <mat-option *ngFor="let actionType of actionTypes" [value]="actionType">{{actionType}}</mat-option>
+                  </mat-select>
+                  <mat-error>This field is required</mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field>
+                  <mat-label>Enter the number of episodes</mat-label>
+                  <input matInput placeholder="Intervention episodes" formControlName="numberOfEpisodes" type="number" min="1" oninput="validity.valid||(value='');" required>
+                  <mat-error>This field is required</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field>
+                  <mat-label>Enter time</mat-label>
+                  <input matInput readonly
+                         [min]="minDates()"
+                         [max]="maxDates()"
+                         [matDatepicker]="picker"  placeholder="Time" formControlName="startDate">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                  <mat-error>This field is required</mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field>
+                  <mat-label>Enter the number of simulation years</mat-label>
+                  <input matInput placeholder="Simulation years" formControlName="numberOfSimulationYears" type="number" min="1" oninput="validity.valid||(value='');" required>
+                  <mat-error>This field is required</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field>
+                  <mat-label>Enter time resolution in weeks</mat-label>
+                  <input matInput placeholder="Time resolution in weeks" formControlName="dateStep" type="number" min="1" oninput="validity.valid||(value='');" required>
+                  <mat-error>This field is required</mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field>
+                  <mat-label>Enter the coverage resolution</mat-label>
+                  <input matInput placeholder="Coverage resolution as a percentage" formControlName="coverageStep" type="number" min="1" oninput="validity.valid||(value='');" required>
+                  <mat-error>This field is required</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row custom-spacer">
+              <div class="col-md-2">
+                Coverage Percentage
+              </div>
+              <div class="col-md-10">
+                <div class="custom-slider">
+                  <ng5-slider formControlName="coverageMinMax" [options]="this.options"></ng5-slider>
+                </div>
+              </div>
+            </div>
+            <div class="button-custom-style">
+              <button mat-button mat-dialog-close>Cancel</button>
+              <button type="submit" [disabled]="!formGroup.valid || submitted"  mat-raised-button
+                      class="mat-raised-button mat-primary" (click)="onSubmit(formGroup.value)">Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </mat-dialog-content>
+  </ng-template>
+  <ng-template #calibration>
+    <h5>Define parameter space</h5>
+    <mat-dialog-content>
+      <div class="container">
+        <form [formGroup]="formGroup" validate>
+          <div class="example-container">
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field>
+                  <mat-label>Start date</mat-label>
+                  <input matInput readonly
+                         [min]="minDates()"
+                         [max]="maxDates()"
+                         [matDatepicker]="picker"  placeholder="Date" formControlName="time">
+                  <mat-datepicker-toggle matSuffix [for]="picker" [disabled]="pickerDisabled"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                  <mat-error>This field is required</mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field>
+                  <mat-label>Enter the calibration duration in days</mat-label>
+                  <input matInput placeholder="Calibration duration" formControlName="numberOfSimulationYears" type="number" min="1" oninput="validity.valid||(value='');" required>
+                  <mat-error>This field is required</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field>
+                  <mat-label>Enter the beta window length in days</mat-label>
+                  <input matInput placeholder="Intervention episodes" formControlName="coverageStep" type="number" min="1" oninput="validity.valid||(value='');" required>
+                  <mat-error>This field is required</mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field>
+                  <mat-label>Enter the number of episodes</mat-label>
+                  <input matInput placeholder="Intervention episodes" formControlName="numberOfEpisodes" type="number" min="1" oninput="validity.valid||(value='');" required>
+                  <mat-error>This field is required</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="button-custom-style">
+              <button mat-button mat-dialog-close>Cancel</button>
+              <button type="submit" [disabled]="!formGroup.valid || submitted"  mat-raised-button
+                      class="mat-raised-button mat-primary" (click)="onSubmit(formGroup.value)">Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </mat-dialog-content>
+  </ng-template>
+
+</ng-template>
+<ng-template #continuous>
+  <h5>Define Actions</h5>
+  <mat-dialog-content>
+    <div class="container">
+      <form [formGroup]="formGroup" validate>
+        <div class="example-container">
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-select placeholder="Select actions" formControlName="modelName" required multiple>
+                  <mat-option *ngFor="let actionType of actionTypes" [value]="actionType">{{actionType}}</mat-option>
+                </mat-select>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>Start date</mat-label>
+                <input matInput readonly
+                       [min]="minDates()"
+                       [max]="maxDates()"
+                       [matDatepicker]="picker"  placeholder="Date" formControlName="time">
+                <mat-datepicker-toggle matSuffix [for]="picker" [disabled]="pickerDisabled"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>End date</mat-label>
+                <input matInput readonly
+                       [min]="minDates()"
+                       [max]="maxDates()"
+                       [matDatepicker]="picker2"  placeholder="Date" formControlName="timeEnd">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="button-custom-style">
+            <button mat-button mat-dialog-close>Cancel</button>
+            <button type="submit" [disabled]="!formGroup.valid || submitted"  mat-raised-button
+                    class="mat-raised-button mat-primary" (click)="onSubmit(formGroup.value)">Submit
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </mat-dialog-content>
+</ng-template>
+

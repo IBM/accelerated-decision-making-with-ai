@@ -1,0 +1,114 @@
+[
+  {
+    "name": "start_date",
+    "category": "parameter",
+    "type": "date",
+    "value": "2020-04-01",
+    "defaults": "2020-04-01",
+    "required": "true",
+    "hidden": "false",
+    "readonly": "true",
+    "description": "the start date for calibration"
+  },
+  {
+    "name": "end_date",
+    "category": "parameter",
+    "type": "date",
+    "defaults": "2021-04-01",
+    "required": "true",
+    "hidden": "false",
+    "readonly": "false",
+    "description": "the end date for calibration"
+  },
+  {
+    "name": "startpt",
+    "category": "parameter",
+    "type": "number",
+    "defaults": "0",
+    "required": "true",
+    "hidden": "false",
+    "readonly": "false",
+    "description": "number of days to exempt from the calibration start date"
+  },
+  {
+    "name": "numdays",
+    "category": "parameter",
+    "type": "number",
+    "defaults": "14",
+    "required": "true",
+    "hidden": "false",
+    "readonly": "false",
+    "description": "the calibration window length in days"
+  },
+  {
+    "name": "episode_num",
+    "category": "parameter",
+    "type": "number",
+    "defaults": "10",
+    "required": "true",
+    "hidden": "false",
+    "readonly": "false",
+    "description": "the number of calibration episodes"
+  },
+  {
+    "name": "maxpop",
+    "category": "parameter",
+    "type": "number",
+    "value": "10000000.0",
+    "defaults": "10000000.0",
+    "required": "true",
+    "hidden": "false",
+    "readonly": "true",
+    "description": "the maximum population"
+  },
+  {
+    "name": "beta",
+    "category": "optimization_parameter",
+    "type": "number",
+    "defaults": "3",
+    "required": "true",
+    "hidden": "false",
+    "readonly": "false",
+    "description": "the effective transmission rate parameter",
+    "optimizationEnvelope": {
+      "startDate": "2020-04-01",
+      "endDate": "",
+      "minValue": "0.0001",
+      "maxValue": "3",
+      "stepDays": "28",
+      "numberOfEpisodes": "6"
+    }
+  },
+  {
+    "name": "gamma",
+    "category": "optimization_parameter",
+    "type": "number",
+    "defaults": "0.2",
+    "required": "true",
+    "hidden": "false",
+    "readonly": "false",
+    "description": "recovery rate parameter",
+    "optimizationEnvelope": {
+      "startDate": "2020-04-01",
+      "endDate": "",
+      "minValue": "0.02",
+      "maxValue": "0.2"
+    }
+  },
+  {
+    "name": "d0",
+    "category": "optimization_parameter",
+    "type": "number",
+    "defaults": "0.01",
+    "required": "true",
+    "hidden": "false",
+    "readonly": "false",
+    "description": "death rate parameter",
+    "optimizationEnvelope": {
+      "startDate": "2020-04-01",
+      "endDate": "",
+      "minValue": "0",
+      "maxValue": "0.01"
+    }
+  }
+]

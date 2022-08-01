@@ -1,0 +1,108 @@
+/*!
+ * Copyright 2022 IBM Corporation
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.my-fixed-width {
+  width: 240px;
+  background-color: #fff;
+}
+
+table {
+  color: #999;
+}
+
+h6 {
+  color: #999;
+}
+
+.map-details-header {
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+}
+
+.map-details-body {
+  padding: 10px 10px 10px 10px;
+}
+
+.map-details-footer {
+  padding: 5px 10px 5px 10px;
+  text-align: right;
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+#add-location-button {
+  float:right;
+  position: relative;
+  //font-size: 20px
+}
+
+#page-header-wrap,
+.flex-wrapper {
+  display: flex;
+}
+
+#page-header-wrap h6 {
+  display: inline;
+  //font-size: 24px;
+}
+
+#page-header-wrap mat-form-field,
+.page-header-wrap mat-form-field,
+.page-header-wrap button,
+.page-header-wrap table {
+  width: auto;
+  //margin-right: 10px;
+}
+
+#page-header-wrap mat-form-field{
+  width: auto;
+  //margin-right: 10px;
+}
+
+#page-header-wrap,
+.page-header-wrap {
+  //padding: 10px 20px 10px 20px;
+}
+
+#page-header-wrap,
+.page-header-wrap,
+.flex-wrapper {
+  display: flex;
+}
+
+#page-header-wrap h6,
+.page-header-wrap h6 {
+  display: inline;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+#page-header-wrap h2,
+.page-header-wrap h2 {
+  display: inline;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.default-color {
+  border-color: #3f51b5;
+  color: #3f51b5;
+  font-size: 20px;
+}

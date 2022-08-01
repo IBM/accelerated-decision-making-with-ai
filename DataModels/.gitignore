@@ -1,0 +1,4 @@
+target/
+.idea/*
+ungana-models.iml
+.DS_Store

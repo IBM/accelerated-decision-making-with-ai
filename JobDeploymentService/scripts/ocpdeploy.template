@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: <%= ENV["NAME"] %>
+  labels:
+    app: <%= ENV["NAME"] %>
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: <%= ENV["NAME"] %>
+  template:
+    metadata:
+      labels:
+        app: <%= ENV["NAME"] %>
+    spec:
+      containers:
+        - name: <%= ENV["NAME"] %>
+          image: <%= ENV["DOCKER_SERVER"] %>/<%= ENV["CONTAINER_REGISTRY_NAMESPACE"] %>/<%= ENV["IMAGE_NAME"] %>:<%= ENV["IMAGE_TAG"] %>
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          env:
+            - name: JOB_NAMESPACE
+              value: <%= ENV["JOB_NAMESPACE"] %>
+      imagePullSecrets:
+        - name: <%= ENV["IMAGE_PULL_SECRET_NAME"] %>
+      restartPolicy: Always

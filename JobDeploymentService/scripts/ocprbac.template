@@ -1,0 +1,22 @@
+---
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: <%= ENV["NAME"] %>
+rules:
+- apiGroups: ["batch"]
+  resources: ["jobs"]
+  verbs: ["create", "list"]
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: <%= ENV["NAME"] %>
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: <%= ENV["JOB_NAMESPACE"] %>
+roleRef:
+  kind: ClusterRole
+  name: <%= ENV["NAME"] %>
+  apiGroup: rbac.authorization.k8s.io
