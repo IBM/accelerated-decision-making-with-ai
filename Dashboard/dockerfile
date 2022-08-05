@@ -5,6 +5,7 @@ COPY package.json package-lock.json ./
 RUN npm install
 COPY . .
 RUN npm run post-install-ibm-plex
+RUN npm run post-install-title-fontsize
 RUN > ./src/environments/environment.prod.ts
 RUN > ./src/environments/environment.ts
 RUN npm run build-production

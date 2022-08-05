@@ -14,7 +14,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "bundle-report": "ng build --prod --source-map && source-map-explorer dist/main.*.js",
-    "post-install-ibm-plex": "rm ./node_modules/@ibm/plex/scss/ibm-plex.scss ; cp ./scripts/custom_ibm-plex.scss ./node_modules/@ibm/plex/scss/ibm-plex.scss"
+    "post-install-ibm-plex": "rm ./node_modules/@ibm/plex/scss/ibm-plex.scss ; cp ./scripts/custom_ibm-plex.scss ./node_modules/@ibm/plex/scss/ibm-plex.scss",
+    "post-install-title-fontsize": "rm ./node_modules/swagger-ui-dist/swagger-ui.css ; cp ./scripts/custom_title-fontsize.scss ./node_modules/swagger-ui-dist/swagger-ui.css"
   },
   "private": true,
   "dependencies": {
