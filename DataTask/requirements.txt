@@ -1,0 +1,6 @@
+pandas
+requests
+wget
+os
+pytest
+plotly
