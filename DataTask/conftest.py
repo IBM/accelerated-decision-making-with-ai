@@ -41,3 +41,33 @@ def value_2() -> str:
 @pytest.fixture
 def ident() -> str:
     return "Ident"
+
+
+@pytest.fixture
+def territories_dict() -> list:
+    return [
+        {
+            "admin0_iso_name": "Uganda",
+            "admin0_iso2": "UG",
+            "admin0_iso3": "UGA",
+            "Population": 45741000,
+        },
+        {
+            "admin0_iso_name": "Congo (Kinshasa)",
+            "admin0_iso2": "CD",
+            "admin0_iso3": "COD",
+            "Population": 89561404,
+        },
+        {
+            "admin0_iso_name": "Senegal",
+            "admin0_iso2": "SN",
+            "admin0_iso3": "SEN",
+            "Population": 16743930,
+        },
+        {
+            "admin0_iso_name": "Nigeria",
+            "admin0_iso2": "NG",
+            "admin0_iso3": "NGA",
+            "Population": 206139587,
+        },
+    ]
