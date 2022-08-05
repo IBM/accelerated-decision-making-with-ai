@@ -19,6 +19,7 @@ def run_before_and_after_tests():
         "data/us_states_outcome.csv",
         "data/us_states_oxcgrt.csv",
         "data/world_oxcgrt.csv",
+        "data/wntrac_npi_index.csv",
     ]
     # Before test - If files exist, delete
     delete_if_exists(file_list)
