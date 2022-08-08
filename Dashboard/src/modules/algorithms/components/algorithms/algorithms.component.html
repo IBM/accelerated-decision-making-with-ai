@@ -28,7 +28,7 @@
                   <div class="control-panel-form form-group">
                     <div class="form-control-wrap">
                       <mat-form-field class="settings-select">
-                        <mat-label>Select algorithm</mat-label>
+                        <mat-label i18n="select algorithm|select algorithm label@@selectAlgorithmLabel">Select algorithm</mat-label>
                         <mat-select [(ngModel)]="currentAlgorithm" (selectionChange)="currentAlgorithmDropdownChangeListener($event)">
                           <mat-option *ngFor="let algorithm of algorithms" [value]="algorithm">{{algorithm.name}}</mat-option>
                         </mat-select>
@@ -41,7 +41,7 @@
                   <div class="control-panel-form form-group">
                     <div class="form-control-wrap">
                       <mat-form-field class="settings-select">
-                        <mat-label>Select compare algorithms</mat-label>
+                        <mat-label i18n="select compare algorithm|select compare algorithm label@@selectCompareAlgorithmsLabel">Select compare algorithms</mat-label>
                         <mat-select [(ngModel)]="currentCompareAlgorithms" (selectionChange)="compareAlgorithmDropdownChangeListener($event)" multiple>
                           <mat-option *ngFor="let algorithm of compareAlgorithms" [value]="algorithm">{{algorithm.name}}</mat-option>
                         </mat-select>
@@ -54,7 +54,7 @@
                   <div class="control-panel-form form-group">
                     <div class="form-control-wrap">
                       <mat-form-field class="settings-select">
-                        <mat-label>Select environment</mat-label>
+                        <mat-label i18n="select environment|select environment label@@selectEnvironmentLabel">Select environment</mat-label>
                         <mat-select [(ngModel)]="currentEnvironment" (selectionChange)="currentEnvironmentDropdownChangeListener($event)">
                           <mat-option *ngFor="let environment of environments" [value]="environment">{{environment.name}}</mat-option>
                         </mat-select>
@@ -67,7 +67,7 @@
                   <div class="control-panel-form form-group">
                     <div class="form-control-wrap">
                       <mat-form-field class="settings-select">
-                        <mat-label>Select location</mat-label>
+                        <mat-label i18n="select location|select location label@@selectLocationLabel">Select location</mat-label>
                         <mat-select [(ngModel)]="currentLocation" (selectionChange)="currentLocationDropdownChangeListener($event)">
                           <mat-option *ngFor="let location of locations" [value]="location">{{location.names}}</mat-option>
                         </mat-select>
@@ -96,7 +96,7 @@
             <div class="col-xl-3">
               <div *ngIf="currentAlgorithm">
                 <div id="page-header-wrap">
-                  <h1>
+                  <h1 i18n="selected algorithm|selected algorithm label@@selectedAlgorithmLabel">
                     Selected Algorithm
                   </h1>
                   <span class="fill-remaining-space"></span>
@@ -108,7 +108,7 @@
                 </div>
                 <table class="table">
                   <tr>
-                    <td>
+                    <td i18n="selected algorithm name|selected algorithm name label@@selectedAlgorithmName">
                       Algorithm Name
                     </td>
                     <td>
@@ -117,7 +117,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td i18n="selected algorithm version|selected algorithm version label@@selectedAlgorithmVersion">
                       Algorithm Version
                     </td>
                     <td>
@@ -126,7 +126,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td i18n="selected algorithm version date|selected algorithm version date label@@selectedAlgorithmVersionDate">
                       Version Date
                     </td>
                     <td>
@@ -135,7 +135,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td i18n="selected algorithm version author|selected algorithm version author label@@selectedAlgorithmVersionAuthor">
                       Version Author
                     </td>
                     <td>
@@ -144,7 +144,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td i18n="selected algorithm accessed date|selected algorithm accessed date label@@selectedAlgorithmAccessedDate">
                       Accessed
                     </td>
                     <td>
@@ -153,7 +153,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td i18n="selected algorithm status|selected algorithm status label@@selectedAlgorithmStatus">
                       Status
                     </td>
                     <td>
@@ -168,7 +168,7 @@
                 </table>
               </div>
               <div class="button-wrap">
-                <button *ngIf="(user | async).type == 'admai_admin' || (user | async).type == 'admai_ds'" mat-raised-button color="primary" (click)="openAlgorithmDialog()" > Add New Algorithm </button>
+                <button *ngIf="(user | async).type == 'admai_admin' || (user | async).type == 'admai_ds'" mat-raised-button color="primary" (click)="openAlgorithmDialog()" i18n="add new algorithm button|add new algorithm button@@addNewAlgorithmButton"> Add New Algorithm </button>
               </div>
             </div>
           </div>
