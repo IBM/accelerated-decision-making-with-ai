@@ -23,49 +23,49 @@
           <div class="row g-5">
             <div class="col-xl-5">
               <br>
-              <p>Use the form below to provide your feedback: </p>
+              <p i18n="feedback form|feedback form usage@@feedbackForm">Use the form below to provide your feedback: </p>
               <form  [formGroup]="feedBackForm" (ngSubmit)="onSubmitFeedbackForm()">
                 <div class="form-group">
-                  <label class="form-label" for="full-name">Name</label>
+                  <label class="form-label" for="full-name" i18n="name|name label@@nameLabel">Name</label>
                   <div class="form-control-wrap">
                     <input type="text" class="form-control" id="full-name" formControlName="name">
                     <div *ngIf="name.invalid && (name.dirty || name.touched)"
                          class="alert alert-danger">
-                      <div *ngIf="name.errors.required">
+                      <div *ngIf="name.errors.required" i18n="name is required|name field is required@@nameFieldError">
                         Name is required.
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="form-label" for="email-address">Email address</label>
+                  <label class="form-label" for="email-address" i18n="email address|email address label@@emailAddressLabel">Email address</label>
                   <div class="form-control-wrap">
                     <input type="text" class="form-control" id="email-address" formControlName="email">
                     <div *ngIf="email.invalid && (email.dirty || email.touched)"
                          class="alert alert-danger">
-                      <div *ngIf="email.errors.required">
+                      <div *ngIf="email.errors.required" i18n="email is required|email field is required@@emailFieldError">
                         Email is required.
                       </div>
-                      <div *ngIf="email.errors.email">
+                      <div *ngIf="email.errors.email" i18n="email is invalid|email field is invalid@@emailFieldIncompleteError">
                         Email is incomplete.
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="form-label" for="default-textarea">Provide feedback</label>
+                  <label class="form-label" for="default-textarea" i18n="provide feedback|provide feedback message@@provideFeedbackMessage">Provide feedback</label>
                   <div class="form-control-wrap">
                     <textarea class="form-control" id="default-textarea" formControlName="feedback"></textarea>
                     <div *ngIf="feedback.invalid && (feedback.dirty || feedback.touched)"
                          class="alert alert-danger">
-                      <div *ngIf="feedback.errors.required">
+                      <div *ngIf="feedback.errors.required" i18n="feedback is required|feedback field is required@@feedbackFieldError">
                         Feedback message is required.
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
-                  <button type="submit" class="btn btn-outline-dark" [disabled]="!feedBackForm.valid">Send</button>
+                  <button type="submit" class="btn btn-outline-dark" [disabled]="!feedBackForm.valid" i18n="send feedback|send feedback button@@sendFeedbackButton">Send</button>
                 </div>
               </form>
               <br>

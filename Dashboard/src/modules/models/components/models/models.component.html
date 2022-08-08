@@ -28,7 +28,7 @@
                   <div class="control-panel-form form-group">
                     <div class="form-control-wrap">
                       <mat-form-field class="settings-select" id="model-select">
-                        <mat-label>Select model</mat-label>
+                        <mat-label i18n="select model label|select model label@@selectModel">Select model</mat-label>
                         <mat-select [(ngModel)]="currentModel" (selectionChange)="currentModelDropdownChangeListener($event)">
                           <mat-option *ngFor="let obj of itemsDataSource.data" [value]="obj">{{obj.name}}</mat-option>
                         </mat-select>
@@ -43,7 +43,7 @@
                         <div class="control-panel-form form-group">
                           <div class="form-control-wrap">
                             <mat-form-field class="settings-select" id="admin-0-select">
-                              <mat-label>Select admin 0 (Country)</mat-label>
+                              <mat-label i18n="select admin 0|select a country@@selectCountry">Select admin 0 (Country)</mat-label>
                               <input #admin0 type="text" matInput formControlName="admin0" [matAutocomplete]="auto0" (keyup.enter)="admin0SelectionChange(auto0.options.first.value)">
                               <mat-autocomplete autoActiveFirstOption #auto0="matAutocomplete">
                                 <mat-option *ngFor="let admin0 of filteredAdmin0Options | async" [value]="admin0.name" (click)="admin0SelectionChange(admin0)">
@@ -59,7 +59,7 @@
                         <div class="control-panel-form form-group">
                           <div class="form-control-wrap">
                             <mat-form-field class="settings-select" id="admin-1-select">
-                              <mat-label>Select admin 1 (Provinces/States/District/Counties)</mat-label>
+                              <mat-label i18n="select admin 1|select a province or state or district or county @@selectState">Select admin 1 (Provinces/States/District/Counties)</mat-label>
                               <input #admin1 type="text" matInput formControlName="admin1" [matAutocomplete]="auto1" (keyup.enter)="admin1SelectionChange(auto1.options.first.value)">
                               <mat-autocomplete autoActiveFirstOption #auto1="matAutocomplete">
                                 <mat-option *ngFor="let admin1 of filteredAdmin1Options | async" [value]="admin1.name" (click)="admin1SelectionChange(admin1)">
@@ -75,7 +75,7 @@
                         <div class="control-panel-form form-group">
                           <div class="form-control-wrap">
                             <mat-form-field class="settings-select" id="admin-2-select">
-                              <mat-label>Select admin 2 (District/Counties/sub-counties)</mat-label>
+                              <mat-label i18n="select admin 2|select a sub county@@selectSubcounties">Select admin 2 (District/Counties/sub-counties)</mat-label>
                               <input #admin2 type="text" matInput formControlName="admin2" [matAutocomplete]="auto2" (keyup.enter)="admin2SelectionChange(auto2.options.first.value)">
                               <mat-autocomplete autoActiveFirstOption #auto2="matAutocomplete">
                                 <mat-option *ngFor="let admin2 of filteredAdmin2Options | async" [value]="admin2.name" (click)="admin2SelectionChange(admin2)">
@@ -109,7 +109,7 @@
             <div class="col-xl-3">
               <div *ngIf="currentModel">
                 <div id="page-header-wrap">
-                  <h1>
+                  <h1 i18n="selected model|selected model header@@selectedModelHeader">
                     Selected Model
                   </h1>
                   <span class="fill-remaining-space"></span>
@@ -121,7 +121,7 @@
                 </div>
                 <table class="table">
                   <tr>
-                    <td>
+                    <td i18n="model name column|selected model name column@@modelNameColumn">
                       Model Name
                     </td>
                     <td>
@@ -130,7 +130,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td i18n="model version column|selected model version column@@modelVersionColumn">
                       Model Version
                     </td>
                     <td>
@@ -139,7 +139,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td i18n="model version date column|selected model version date column@@modelVersionDateColumn">
                       Version Date
                     </td>
                     <td>
@@ -148,7 +148,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td i18n="model version author column|selected model version author column@@modelVersionAuthorColumn">
                       Version Author
                     </td>
                     <td>
@@ -157,7 +157,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td i18n="model status column|selected model status column@@modelStatusColumn">
                       Status
                     </td>
                     <td>
@@ -173,7 +173,7 @@
               </div>
               <div>
                 <div id="page-header-wrap">
-                  <h1>
+                  <h1 i18n="environments header|environments header@@environmentsHeader">
                     Environments
                     <span *ngIf="rewardFunctionsDataSource && rewardFunctionsDataSource.data" class="models-number">({{rewardFunctionsDataSource.data.length}})</span>
                   </h1>
@@ -186,12 +186,12 @@
                 </div>
                 <mat-table #rewardFunctionsSort="matSort" [dataSource]="rewardFunctionsDataSource" matSort id="clusters-table">
                   <ng-container matColumnDef="id">
-                    <mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell>
+                    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="id of the environment|id of the environmnet@@environmentId">ID</mat-header-cell>
                     <mat-cell *matCellDef="let item"> {{item.id}}</mat-cell>
                   </ng-container>
 
                   <ng-container matColumnDef="title">
-                    <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+                    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="name of the environment|name of the environmnet@@environmentName">Name</mat-header-cell>
                     <mat-cell *matCellDef="let item">
                       <span class="custom-text-overflow" *ngIf="item.title">{{item.title}}</span>
                       <span class="custom-text-overflow" *ngIf="!item.title">-</span>
@@ -199,7 +199,7 @@
                   </ng-container>
 
                   <ng-container matColumnDef="action">
-                    <mat-header-cell *matHeaderCellDef mat-sort-header>Action</mat-header-cell>
+                    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="action|view the environment@@environmentAction">Action</mat-header-cell>
                     <mat-cell *matCellDef="let item" (click)="$event.stopPropagation()">
                       <button *ngIf="(user | async).type == 'admai_admin' || (user | async).type == 'admai_ms'" class="btn btn-link" matTooltip="Edit" (click)="openRewardFunctionDialog(item)">
                         <i class="material-icons default-color" >edit</i>
@@ -215,7 +215,7 @@
                                [showFirstLastButtons]="true"></mat-paginator>
               </div>
               <div class="button-wrap">
-                <button *ngIf="(user | async).type == 'admai_admin' || (user | async).type == 'admai_ms'" mat-raised-button color="primary" (click)="openModelDialog()" > Add New Model </button>
+                <button *ngIf="(user | async).type == 'admai_admin' || (user | async).type == 'admai_ms'" mat-raised-button color="primary" (click)="openModelDialog()" i18n="add model button|add model button@@addModelButton"> Add New Model </button>
               </div>
             </div>
           </div>

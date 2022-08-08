@@ -16,8 +16,8 @@
 
 <div *ngIf="data.type=='location'; then location else dataRepositoryConfiguration"></div>
 <ng-template #location>
-  <h5 *ngIf="!data.modelMetadata.generalLocation">Add Location</h5>
-  <h5 *ngIf="data.modelMetadata.generalLocation">Edit Location</h5>
+  <h5 *ngIf="!data.modelMetadata.generalLocation" i18n="add location|add location header@@addLocationHeader">Add Location</h5>
+  <h5 *ngIf="data.modelMetadata.generalLocation" i18n="edit location|edit location header@@addLocationHeader">Edit Location</h5>
   <mat-dialog-content>
     <div class="container">
       <form [formGroup]="formGroup" validate>
@@ -25,36 +25,36 @@
           <div class="row">
             <div class="col-md-12">
               <mat-form-field>
-                <mat-label>Enter name of the location</mat-label>
+                <mat-label i18n="enter the name of the location|enter the name of the location@@enterLocationName">Enter name of the location</mat-label>
                 <input matInput placeholder="Location name" formControlName="names" required>
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <mat-form-field>
-                <mat-label>Enter the administration type of the location</mat-label>
+                <mat-label i18n="enter the administration type of the location|enter the administration type of the location@@enterLocationAdministrationType">Enter the administration type of the location</mat-label>
                 <input matInput placeholder="Admin type" formControlName="adminType" required>
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <mat-form-field>
-                <mat-label>Enter location details</mat-label>
+                <mat-label i18n="enter location details|enter location details@@enterLocationDetails">Enter location details</mat-label>
                 <input matInput placeholder="Located in" formControlName="locatedIn" required>
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <mat-form-field>
-                <mat-label>Enter ISO-3 code for the country where the location is located</mat-label>
+                <mat-label i18n="enter ISO-3 country code|enter ISO-3 country code@@enterLocationCountryCode">Enter ISO-3 code for the country where the location is located</mat-label>
                 <input matInput placeholder="Country" formControlName="country" required>
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
           </div>
@@ -63,14 +63,14 @@
     </div>
   </mat-dialog-content>
   <mat-dialog-actions align="end">
-    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button mat-dialog-close i18n="cancel button|cancel button@@cancelButton">Cancel</button>
     <button type="submit" [disabled]="!formGroup.valid || submitted"  mat-raised-button
-            class="mat-raised-button mat-primary" (click)="onSubmit(formGroup.value)">Submit
+            class="mat-raised-button mat-primary" (click)="onSubmit(formGroup.value)" i18n="submitButton|submitButton@@submitButton">Submit
     </button>
   </mat-dialog-actions>
 </ng-template>
 <ng-template #dataRepositoryConfiguration>
-  <h5>Add Model Data</h5>
+  <h5 i18n="add model data|add model data@@addModelData">Add Model Data</h5>
   <mat-dialog-content>
     <div class="container">
       <form [formGroup]="formGroup" validate>
@@ -78,25 +78,25 @@
           <div class="row">
             <div class="col-md-12">
               <mat-form-field>
-                <mat-label>Enter name data</mat-label>
+                <mat-label i18n="enter name data|enter name data@@enterNameData">Enter name data</mat-label>
                 <input matInput placeholder="Data name" formControlName="name" required>
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <mat-form-field>
-                <mat-label>Enter data description</mat-label>
+                <mat-label i18n="enter data description|enter data description@@enterDataDescription">Enter data description</mat-label>
                 <input matInput placeholder="Description" formControlName="description" required>
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <div class="select-file">
-                <mat-label>Select the data file </mat-label>
+                <mat-label i18n="select the data file|select the data file@@selectDataFile">Select the data file </mat-label>
                 <input type='file' accept='text/*,.xls,.xlsx,application/json,.csv' (change)="fileChanged($event)">
               </div>
             </div>
@@ -106,9 +106,9 @@
     </div>
   </mat-dialog-content>
   <mat-dialog-actions align="end">
-    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button mat-dialog-close i18n="cancel button|cancel button@@cancelButton">Cancel</button>
     <button type="submit" [disabled]="!formGroup.valid || submitted"  mat-raised-button
-            class="mat-raised-button mat-primary" (click)="onSubmit(formGroup.value)">Submit
+            class="mat-raised-button mat-primary" (click)="onSubmit(formGroup.value)" i18n="submitButton|submitButton@@submitButton">Submit
     </button>
   </mat-dialog-actions>
 </ng-template>

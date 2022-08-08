@@ -17,7 +17,7 @@
 <div [@visibilityChanged]="visibility" >
   <div *ngIf="modelMetadata && visibility === 'shown'" class="container my-fixed-width">
     <div id="page-header-wrap">
-      <h6>Location</h6>
+      <h6 i18n="location|location@@location">Location</h6>
       <span class="fill-remaining-space"></span>
       <span *ngIf="(user | async).type == 'admai_admin' || (user | async).type == 'admai_ms'">
         <button *ngIf="!modelMetadata.generalLocation" id="add-location-button" class="btn btn-link" matTooltip="Add location" (click)="addEditLocation(modelMetadata)">
@@ -32,27 +32,27 @@
     <div class="map-details-body">
       <table>
         <tr *ngIf="modelMetadata.name">
-          <td>Name: </td>
+          <td i18n="name|name@@Name">Name: </td>
           &nbsp;&nbsp;
           <td>{{modelMetadata.name}} </td>
         </tr>
         <tr *ngIf="modelMetadata.admin_type">
-          <td>Admin Type: </td>
+          <td i18n="admin type|admin type@@adminType">Admin Type: </td>
           &nbsp;&nbsp;
           <td>{{modelMetadata.admin_type}}</td>
         </tr>
         <tr *ngIf="modelMetadata.admin_level">
-          <td>Admin Level: </td>
+          <td i18n="admin level|admin level@@adminLevel">Admin Level: </td>
           &nbsp;&nbsp;
           <td>{{modelMetadata.admin_level}}</td>
         </tr>
         <tr *ngIf="modelMetadata.located_in">
-          <td>Located In: </td>
+          <td i18n="located in|located in@@locatedIn">Located In: </td>
           &nbsp;&nbsp;
           <td>{{modelMetadata.located_in}}</td>
         </tr>
         <tr *ngIf="modelMetadata.country">
-          <td>Country: </td>
+          <td i18n="country|country@@country">Country: </td>
           &nbsp;&nbsp;
           <td>{{modelMetadata.country}}</td>
         </tr>
@@ -67,27 +67,28 @@
     <div *ngIf="modelMetadata.generalLocation" class="map-details-body">
       <table>
         <tr *ngIf="(user | async).type == 'admai_admin' || (user | async).type == 'admai_ms'">
-          <td>Model data: </td>
-          <td><button mat-button mat-raised-button (click)="addModelData(modelMetadata)">Add</button></td>
+          <td i18n="model data|model data@@modelData">Model data: </td>
+          <td><button mat-button mat-raised-button (click)="addModelData(modelMetadata)" i18n="add button|add button@@addButton">Add</button></td>
         </tr>
         <br *ngIf="modelMetadata.localisedModelDriverDataExists && modelMetadata.provisioned">
         <tr *ngIf="modelMetadata.localisedModelDriverDataExists && modelMetadata.provisioned">
-          <td>Model results: </td>
-          <td><button mat-button mat-raised-button (click)="viewResults(modelMetadata)">View</button></td>
+          <td i18n="model results|model results@@modelResults">Model results: </td>
+          <td><button mat-button mat-raised-button (click)="viewResults(modelMetadata)" i18n="view button|view button@@viewButton">View</button></td>
         </tr>
         <br *ngIf="modelMetadata.localisedModelDriverDataExists && modelMetadata.provisioned">
         <tr *ngIf="modelMetadata.localisedModelDriverDataExists && modelMetadata.provisioned">
-          <td>Model experiments: </td>
-          <td><button mat-button mat-raised-button (click)="startExperiment(modelMetadata)">Start</button></td>
+          <td i18n="model experiments|model experiments@@modelExperiements"
+          >Model experiments: </td>
+          <td><button mat-button mat-raised-button (click)="startExperiment(modelMetadata)" i18n="start button|start button@@startButton">Start</button></td>
         </tr>
       </table>
     </div>
     <mat-divider></mat-divider>
     <div class="map-details-footer">
-      <button mat-button matTooltip="Close" (click)="close()">Exit</button>
+      <button mat-button matTooltip="Close" (click)="close()" i18n="exit button|exit button@@exitButton">Exit</button>
     </div>
   </div>
   <div *ngIf="!modelMetadata" class="container my-fixed-width">
-    <p class="map-details-header">Could not find location details!</p>
+    <p class="map-details-header" i18n="could not find location details|could not find location details@@couldNotFindLocationDetails">Could not find location details!</p>
   </div>
 </div>
