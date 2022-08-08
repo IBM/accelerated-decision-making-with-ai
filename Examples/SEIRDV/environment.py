@@ -34,8 +34,6 @@ class CUSTOMModelEnv_betalist(gym.Env):
         "low":[0,0,0], 
         "high":[1,1,1]
         }):
-        assert data["model_name"] in "SEIRDV", "This is not a valid model for this environment"
-        #seirdv
         self.userID = data["userID"] if "userID" in data else "61122946-1832-11ea-ssss-github"
         self.statedata = ["ds", "de", "di", "dr", "dd", "dv"]
         self.window = int(data["numdays"]) if "numdays" in data else 14
