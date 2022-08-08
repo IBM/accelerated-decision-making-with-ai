@@ -577,8 +577,6 @@ def load_mobility_data():
     Returns:
         pd.DataFrame: latest mobility dataset
     """
-
-    path = "./data/mobility_trends.csv"
     try:
         mobility_data_df = pd.read_csv("./data/mobility_trends.csv")
     except FileNotFoundError:
@@ -588,22 +586,20 @@ def load_mobility_data():
         google_data_url = (
             "https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv"
         )
+        wget.download(google_data_url, "./data/mobility_trends.csv")
+        mobility_data_df = pd.read_csv("./data/mobility_trends.csv")
+    mobility_data_df.rename(
+        columns={
+            "workplaces_percent_change_from_baseline": "workplaces",
+            "retail_and_recreation_percent_change_from_baseline": "retail_and_recreation",
+            "grocery_and_pharmacy_percent_change_from_baseline": "grocery_and_pharmacy",
+            "parks_percent_change_from_baseline": "parks",
+            "transit_stations_percent_change_from_baseline": "transit_stations",
+            "residential_percent_change_from_baseline": "residential",
+        },
+        inplace=True,
+    )
 
-        wget.download(google_data_url, path)
-        mobility_data_df = pd.read_csv(path)
-        mobility_data_df.rename(
-            columns={
-                "workplaces_percent_change_from_baseline": "workplaces",
-                "retail_and_recreation_percent_change_from_baseline": "retail_and_recreation",
-                "grocery_and_pharmacy_percent_change_from_baseline": "grocery_and_pharmacy",
-                "parks_percent_change_from_baseline": "parks",
-                "transit_stations_percent_change_from_baseline": "transit_stations",
-                "residential_percent_change_from_baseline": "residential",
-            },
-            inplace=True,
-        )
-
-    # save_csv_file(mobility_data_df, "./data/mobility_trends.csv")
     return mobility_data_df
 
 
@@ -748,7 +744,7 @@ def load_us_states_oxcgrt_df():
             "Missing OxCGRT US States data. Downloading from https://raw.githubusercontent.com/OxCGRT/USA-covid-policy/main/data/OxCGRT_US_latest.csv"
         )
         us_oxcgrt_data_url = "https://raw.githubusercontent.com/OxCGRT/USA-covid-policy/main/data/OxCGRT_US_latest.csv"
-        us_states_oxcgrt_df = pd.read_csv(us_oxcgrt_data_url, low_memory=False)
+        us_states_oxcgrt_df = pd.read_csv(us_oxcgrt_data_url)
         us_states_oxcgrt_df = us_states_oxcgrt_df[
             us_states_oxcgrt_df["RegionCode"].notna()
         ]
@@ -800,9 +796,7 @@ def download_csv_data_file(url: str):
         return
     else:
 
-        df = pd.read_csv(
-            io.StringIO(r.content.decode("utf-8")), na_filter=False, low_memory=False
-        )
+        df = pd.read_csv(io.StringIO(r.content.decode("utf-8")), na_filter=False)
         return df
 
 
