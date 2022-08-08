@@ -16,12 +16,12 @@
 
 <div *ngIf="data.type=='confirmation'; then confirmation"></div>
 <ng-template #confirmation>
-  <h1 mat-dialog-title>Please confirm...</h1>
+  <h1 mat-dialog-title i18n="please confirm|please confirm dialog title@@pleaseConfirmDialog">Please confirm...</h1>
   <div mat-dialog-content>
     <p class="text-style">{{data.confirmationMessage}}</p>
   </div>
   <div mat-dialog-actions align="end">
-    <button mat-button [mat-dialog-close]="false">No</button>
-    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Yes</button>
+    <button mat-button [mat-dialog-close]="false" i18n="No|No message@@noMessage">No</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial i18n="Yes|Yes message@@yesMessage">Yes</button>
   </div>
 </ng-template>

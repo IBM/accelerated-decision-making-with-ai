@@ -16,8 +16,8 @@
 
 <div *ngIf="data.type=='algorithm'; then algorithm"></div>
 <ng-template #algorithm>
-  <h5 *ngIf="!data.algorithm">Add Algorithm</h5>
-  <h5 *ngIf="data.algorithm">Edit Algorithm</h5>
+  <h5 *ngIf="!data.algorithm" i18n="add algorithm|add algorithm header@@addAlgorithmHeader">Add Algorithm</h5>
+  <h5 *ngIf="data.algorithm" i18n="edit algorithm|edit algorithm header@@editAlgorithmHeader">Edit Algorithm</h5>
   <mat-dialog-content>
     <div class="container">
       <form [formGroup]="formGroup" validate>
@@ -25,64 +25,64 @@
           <div class="row">
             <div class="col-md-6">
               <mat-form-field>
-                <mat-label>Enter name of the algorithm</mat-label>
+                <mat-label i18n="enter the name of the algorithm|enter the name of the algorithm@@enterAlgorithmName">Enter name of the algorithm</mat-label>
                 <input matInput placeholder="Algorithm Name" formControlName="name" required>
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
             <div class="col-md-6">
               <mat-form-field>
-                <mat-label>Enter the exact name of the Algorithm Class name</mat-label>
+                <mat-label i18n="enter the exact name of the algorithm class name|enter the exact name of the algorithm class name@@enterAlgorithmClassName">Enter the exact name of the Algorithm Class name</mat-label>
                 <input matInput placeholder="Algorithm Class Name" formControlName="title" required>
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <mat-form-field>
-                <mat-label>Enter the raw url of the algorithm.py file</mat-label>
+                <mat-label i18n="enter the raw url of the algorithm python file|enter the raw url of the algorithm python file@@enterAlgorithmRawUrl">Enter the raw url of the algorithm.py file</mat-label>
                 <input matInput placeholder="Algorithm url" formControlName="uri" required>
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
             <div class="col-md-6">
               <mat-form-field>
-                <mat-label>Enter the raw url of requiments.txt</mat-label>
+                <mat-label i18n="enter the raw url of the requirements text file|enter the raw url of the requirements text file@@enterRequirementsRawUrl">Enter the raw url of requiments.txt</mat-label>
                 <input matInput placeholder="Requirements" formControlName="requirements">
-                <!-- <mat-error>This field is required</mat-error> -->
+                <!-- <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error> -->
               </mat-form-field>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <mat-form-field>
-                <mat-label>Enter the GitHub url for the algorithm code</mat-label>
+                <mat-label i18n="enter the github url of the algorithm code|enter the github url of the algorithm code@@enterAlgorithmGithubUrl">Enter the GitHub url for the algorithm code</mat-label>
                 <input matInput placeholder="Github url" formControlName="githubLink" required>
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
             <div class="col-md-6">
               <mat-form-field>
-                <mat-label>Enter the version of the algorithm</mat-label>
+                <mat-label i18n="enter the version of the algorithm|enter the version of the algorithm@@enterAlgorithmVersion">Enter the version of the algorithm</mat-label>
                 <input matInput placeholder="Version" formControlName="version">
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <mat-form-field>
-                <mat-label>Enter the author of the algorithm version</mat-label>
+                <mat-label i18n="enter the author of the version of the algorithm|enter the author of the version of the algorithm@@enterAlgorithmVersionAuthor">Enter the author of the algorithm version</mat-label>
                 <input matInput placeholder="Version Author" formControlName="versionAuthor" required>
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
             <div class="col-md-6">
               <mat-form-field>
-                <mat-label>Enter the date of the model version</mat-label>
+                <mat-label  i18n="enter the date of the version of the algorithm|enter the date of the version of the algorithm@@enterAlgorithmVersionDate">Enter the date of the algorithm version</mat-label>
                 <input type="date" matInput placeholder="Version Date" formControlName="versionDate" required>
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
           </div>
@@ -91,9 +91,9 @@
     </div>
   </mat-dialog-content>
   <mat-dialog-actions align="end">
-    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button mat-dialog-close i18n="cancel button|cancel button@@cancelButton">Cancel</button>
     <button type="submit" [disabled]="!formGroup.valid || submitted"  mat-raised-button
-            class="mat-raised-button mat-primary" (click)="onSubmit(formGroup.value)">Submit
+            class="mat-raised-button mat-primary" (click)="onSubmit(formGroup.value)" i18n="submitButton|submitButton@@submitButton">Submit
     </button>
   </mat-dialog-actions>
 </ng-template>

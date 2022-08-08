@@ -28,7 +28,7 @@
                   <div class="control-panel-form form-group">
                     <div class="form-control-wrap">
                       <mat-form-field class="settings-select">
-                        <mat-label>Select model</mat-label>
+                        <mat-label i18n="select model label|select model label@@selectModel">Select model</mat-label>
                         <mat-select [(ngModel)]="currentModels" (selectionChange)="currentModelDropdownChangeListener($event)" multiple>
                           <mat-option *ngFor="let model of models" [value]="model">{{model.title}}</mat-option>
                         </mat-select>
@@ -41,7 +41,7 @@
                   <div class="control-panel-form form-group">
                     <div class="form-control-wrap">
                       <mat-form-field class="settings-select">
-                        <mat-label>Select location</mat-label>
+                        <mat-label i18n="select location label|select location label@@selectLocation">Select location</mat-label>
                         <mat-select #selectLocation [(ngModel)]="currentLocation" (selectionChange)="currentLocationDropdownChangeListener($event)" (click)="locationInputClick($event)">
                           <mat-option *ngFor="let location of locations" [value]="location">{{location.names}}</mat-option>
                         </mat-select>
@@ -54,7 +54,7 @@
                   <div class="control-panel-form form-group">
                     <div class="form-control-wrap">
                       <mat-form-field class="settings-select">
-                        <mat-label>Select outcome</mat-label>
+                        <mat-label i18n="select outcome label|select outcome label@@selectOutcome">Select outcome</mat-label>
                         <mat-select [(ngModel)]="currentDefaultExecutors[0]" (selectionChange)="currentDefaultExecutorsDropdownChangeListener($event)">
                           <mat-option *ngFor="let de of defaultExecutors" [value]="de">{{de}}</mat-option>
                         </mat-select>
@@ -84,7 +84,7 @@
             <div class="col-xl-3">
               <div>
                 <div id="page-header-wrap">
-                  <h1>
+                  <h1 i18n="requests header|requests header@@requestsHeader">
                     Requests
                     <span *ngIf="resultsRequestsDataSource && resultsRequestsDataSource.data" class="models-number">({{resultsRequestsDataSource.data.length}})</span>
                   </h1>
@@ -92,12 +92,12 @@
                 </div>
                 <mat-table #resultsRequestsSort="matSort" [dataSource]="resultsRequestsDataSource" matSort id="clusters-table">
                   <ng-container matColumnDef="id">
-                    <mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell>
+                    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="id|request id@@requestId">ID</mat-header-cell>
                     <mat-cell *matCellDef="let item"> {{item.time}}</mat-cell>
                   </ng-container>
 
                   <ng-container matColumnDef="type">
-                    <mat-header-cell *matHeaderCellDef mat-sort-header>Type</mat-header-cell>
+                    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="type|request type@@requestType">Type</mat-header-cell>
                     <mat-cell *matCellDef="let item">
                       <span class="custom-text-overflow" *ngIf="item.requestName">{{item.requestName}}</span>
                       <span class="custom-text-overflow" *ngIf="!item.requestName">-</span>
@@ -105,7 +105,7 @@
                   </ng-container>
 
                   <ng-container matColumnDef="status">
-                    <mat-header-cell *matHeaderCellDef mat-sort-header>Status</mat-header-cell>
+                    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="status|request status@@requestStatus">Status</mat-header-cell>
                     <mat-cell *matCellDef="let item">
                       <span [ngClass]="{
                         'badge-demo-scheduled': !item.status,
@@ -117,10 +117,10 @@
                   </ng-container>
 
                   <ng-container matColumnDef="action">
-                    <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
+                    <mat-header-cell *matHeaderCellDef i18n="action|request action@@requestAction">Action</mat-header-cell>
                     <mat-cell *matCellDef="let item" (click)="$event.stopPropagation()">
                       <button class="btn btn-link" matTooltip="Open" [disabled]="!item.status" (click)="viewResultsRequest(item)">
-                        <i class="material-icons default-color" >visibility</i>
+                        <i class="material-icons default-color" i18n="visibility|visibility@@visibility">visibility</i>
                       </button>
                     </mat-cell>
                   </ng-container>

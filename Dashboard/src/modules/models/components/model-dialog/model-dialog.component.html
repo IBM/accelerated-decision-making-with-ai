@@ -16,8 +16,8 @@
 
 <div *ngIf="data.type=='model'; then model"></div>
 <ng-template #model>
-  <h5 *ngIf="!data.model">Add Model</h5>
-  <h5 *ngIf="data.model">Edit Model</h5>
+  <h5 *ngIf="!data.model" i18n="add model|add model@@addModel">Add Model</h5>
+  <h5 *ngIf="data.model" i18n="edit model|edit model@@addModel">Edit Model</h5>
   <mat-dialog-content>
     <div class="container">
       <form [formGroup]="formGroup" validate>
@@ -25,62 +25,62 @@
           <div class="row">
             <div class="col-md-6">
               <mat-form-field>
-                <mat-label>Enter the official name of your model (no spaces)</mat-label>
+                <mat-label i18n="enter the official name of the model with no spaces|enter the official name of the model with no spaces@@modelOfficialName">Enter the official name of your model (no spaces)</mat-label>
                 <input matInput placeholder="Model name" formControlName="name" required>
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
             <div class="col-md-6">
               <mat-form-field>
-                <mat-label>Short description of the model</mat-label>
+                <mat-label i18n="short description of the model|short description of the model@@modelShortDescription">Short description of the model</mat-label>
                 <input matInput placeholder="Model description" formControlName="title" required>
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <mat-form-field>
-                <mat-label>Enter the version of the model</mat-label>
+                <mat-label i18n="enter the version of the model|enter the version of the model@@enterModelVersion">Enter the version of the model</mat-label>
                 <input matInput placeholder="Model Version" formControlName="version" required>
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
             <div class="col-md-6">
               <mat-form-field>
-                <mat-label>Enter the author of the model version</mat-label>
+                <mat-label i18n="enter the author of the model version|enter the author of the model version@@enterModelVersionAuthor">Enter the author of the model version</mat-label>
                 <input matInput placeholder="Version Author" formControlName="versionAuthor" required>
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <mat-form-field>
-                <mat-label>Enter the date of the model version</mat-label>
+                <mat-label i18n="enter the date of the model version|enter the date of the model version@@enterModelVersionDate">Enter the date of the model version</mat-label>
                 <input type="date" matInput placeholder="Version Date" formControlName="versionDate" required>
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
             <div class="col-md-6">
               <mat-form-field>
-                <mat-label>Enter the GitHub url for the model code</mat-label>
+                <mat-label i18n="enter the GitHub URL for the model code|enter the GitHub URL for the model code@@modelGithubUrl">Enter the GitHub url for the model code</mat-label>
                 <input matInput placeholder="Github url" formControlName="githubLink" required>
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <mat-form-field>
-                <mat-label>Enter the URL of the model.py file (raw file)</mat-label>
+                <mat-label i18n="enter the raw url of the model python file|enter the raw url of the model python file@@enterModelRawUrl">Enter the URL of the model.py file (raw file)</mat-label>
                 <input matInput placeholder="Model url" formControlName="uri" required>
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
             <div class="col-md-6">
               <mat-form-field>
-                <mat-label>Enter the URL of the requirements.txt file for your model.py file if any</mat-label>
+                <mat-label i18n="enter the raw url of the requirements text file if any|enter the raw url of the requirements text file for the model python file if any@@enterRequirementsRawUrl">Enter the URL of the requirements.txt file for your model.py file if any</mat-label>
                 <input matInput placeholder="Requirements" formControlName="runCommand">
               </mat-form-field>
             </div>
@@ -88,16 +88,16 @@
           <div class="row">
             <div class="col-md-6">
               <mat-form-field>
-                <mat-label>Enter the url of the model data provider service</mat-label>
+                <mat-label i18n="enter the url of the model data provider service|enter the url of the model data provider service@@enterModelDataProviderServiceUrl">Enter the url of the model data provider service</mat-label>
                 <input matInput placeholder="Model Data Url" formControlName="modelDataUrl" required>
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
             <div class="col-md-6">
               <mat-form-field>
-                <mat-label>Provide short description of the model data provided</mat-label>
+                <mat-label i18n="provide a short description of the model data provided|provide a short description of the model data provided@@provideShortModelDataDescription">Provide short description of the model data provided</mat-label>
                 <input matInput placeholder="Model Data Description" formControlName="modelDataDescription" required>
-                <mat-error>This field is required</mat-error>
+                <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
           </div>
@@ -106,9 +106,9 @@
     </div>
   </mat-dialog-content>
   <mat-dialog-actions align="end">
-    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button mat-dialog-close i18n="cancel button|cancel button@@cancelButton">Cancel</button>
     <button type="submit" [disabled]="!formGroup.valid || submitted"  mat-raised-button
-            class="mat-raised-button mat-primary" (click)="onSubmit(formGroup.value)">Submit
+            class="mat-raised-button mat-primary" (click)="onSubmit(formGroup.value)" i18n="submit button|submit button@@submitButton">Submit
     </button>
   </mat-dialog-actions>
 </ng-template>
