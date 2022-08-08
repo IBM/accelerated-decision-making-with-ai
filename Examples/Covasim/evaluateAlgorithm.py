@@ -14,6 +14,8 @@
 
 import environment
 import algorithm
+import pandas as pd
+import utils
 
 baseuri = "https://link-to-my-source-of-case-data"
 location = "UG"
@@ -23,7 +25,7 @@ episode_num = 10
 startpt = 10
 numdays = 14
 maxpop = 10000000.0
-model_name = "langatacovid19modelv1"
+model_name = "Covasim"
 userID = "61122946-1832-11ea-ssss-github"
 low=[0,0,0]
 high=[1,1,1]
@@ -46,4 +48,10 @@ data = {
 calibenv = environment.COVASIMModelEnv_betalist(data=data)
 a=algorithm.CustomAgent(calibenv, episode_num)
 results = a.generate()
-print(results)
+# print(results)
+
+# Step once with the best results
+calibenv.step(results[0][-1])
+
+# save results 
+utils.dbpush("", "", calibenv.actions_start_dates, calibenv.actions_end_dates, calibenv.action_names, a.study.trials_dataframe(), results, calibenv.states)

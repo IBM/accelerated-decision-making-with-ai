@@ -12,6 +12,7 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
+from time import strftime
 import gym
 import pandas as pd
 import numpy as np
@@ -25,7 +26,7 @@ class COVASIMModelEnv_betalist(gym.Env):
         "start_date": "2020-04-01",
         "end_date": "2021-04-01",
         "episode_num": "10",
-        "model_name":"SEIRDV",
+        "model_name":"Covasim",
         "userID":"61122946-1832-11ea-ssss-github", 
         "numdays":14, 
         "startpt":0,
@@ -33,10 +34,8 @@ class COVASIMModelEnv_betalist(gym.Env):
         "low":[0,0,0], 
         "high":[1,1,1]
         }):
-        # assert data["model_name"] in "Covasim", "This is not a valid model for this environment"
-        #seirdv
         self.userID = data["userID"] if "userID" in data else "61122946-1832-11ea-ssss-github"
-        self.statedata = ["ds", "de", "di", "dr", "dd", "dv"]
+        self.statedata = ["ds", "di", "dr", "dd"]
         self.window = int(data["numdays"]) if "numdays" in data else 14
         self.max_pop = float(data["maxpop"]) if "maxpop" in data else 10000000.0
         self.startpt = int(data["startpt"]) if "startpt" in data else 14
@@ -47,7 +46,14 @@ class COVASIMModelEnv_betalist(gym.Env):
 
         number_of_windows = int((datetime.datetime.strptime(end_date, "%Y-%m-%d") - datetime.datetime.strptime(start_date, "%Y-%m-%d")).days/self.window)
         self.duration = self.window * number_of_windows
-        self.action_space = gym.spaces.MultiDiscrete([20]*number_of_windows+[20])
+        self.action_names = np.array(["beta"]*number_of_windows+["d0"])
+        self.actions_start_dates = [(datetime.datetime.strptime(start_date, "%Y-%m-%d") + datetime.timedelta(i * self.window)).strftime("%Y-%m-%d") for i in range(number_of_windows)]+[start_date]
+        self.actions_end_dates = [(datetime.datetime.strptime(start_date, "%Y-%m-%d") + datetime.timedelta(((i+1) * self.window)-1)).strftime("%Y-%m-%d") for i in range(number_of_windows)] \
+        +[(datetime.datetime.strptime(start_date, "%Y-%m-%d") + datetime.timedelta(self.duration-1)).strftime("%Y-%m-%d")]
+
+        self.action_space = gym.spaces.Box(
+            low=np.array([0.0001]*number_of_windows+[0.5]), 
+            high=np.array([0.01]*number_of_windows+[1]), dtype=float)
 
         parms = '''
         [
@@ -55,18 +61,20 @@ class COVASIMModelEnv_betalist(gym.Env):
         ]
         '''
         self.parms = pd.read_json(parms)
-        driver_data = data["location"] + "/?startDate=" + data["start_date"]
-        casedata_ = pd.read_csv(data["baseuri"]+"casedata/csv/"+driver_data)
+        driver_data = location + "/?startDate=" + start_date
+        casedata_ = pd.read_csv(baseuri+"casedata/csv/"+driver_data)
 
         self.N = casedata_['population'].tolist()[self.startpt]
         self.output0 = casedata_['confirmed_cases'].tolist()[self.startpt:]
         self.output1 = casedata_['deaths'].tolist()[self.startpt:]
+
         assert self.duration <= len(self.output0), "Output0 length does not match the length of the model driver"
         assert self.duration <= len(self.output1), "Output1 length does not match the length of the model driver"
-        self.I0 = self.output0[self.startpt]
+        
         self.R0 = 0
         self.E0 = 0
         self.D0 = self.output1[self.startpt]
+        self.I0 = self.output0[self.startpt]-self.D0-self.R0
 
         if "susceptible" in self.parms.keys() and not np.isnan(self.parms["susceptible"][0]):
             self.S0 = self.parms["susceptible"][0]
@@ -94,36 +102,35 @@ class COVASIMModelEnv_betalist(gym.Env):
 
     def step(self, action):
         reward = None
+        action = np.array(action)
         assert self.action_space.contains(action), "Invalid action: %s"%action
         if len(self.states) <= self.duration:
 
             self.actions.append(action)
-
-            self.tempactions = np.abs(8/(np.array(action[:-1])+1)-.3)
-            d0 = 3/(action[-1] + .01)
-
             tmp = {}
             for ind in self.parms.keys():
                 if ind == "beta":
-                    tmp["beta"] = self.tempactions.tolist()
+                    tmp["beta"] = np.concatenate(([1],action[1:-1]/action[:-2])).tolist()
                 elif ind == "d0":
-                    tmp["d0"] = d0
+                    tmp["d0"] = action[-1]
+                elif ind == "beta0":
+                    tmp["beta0"] = action[0]
                 else:
                     tmp[ind] = self.parms[ind][0]
             tmp["beta_window"]=self.window
 
             results = model.run_model(tmp)
-            self.states = gym.spaces.utils.np.array([[i['days'],i['susceptible'],i['infectious'],i['recovered'],i['deaths']] for i in results])
-            self.states = self.states[:self.duration,:]
-            model_data = gym.spaces.utils.np.array([self.states[:,1:].sum(axis=1), self.states[:,3]]).T
+
+            self.states = pd.DataFrame(results)
+            model_data = gym.spaces.utils.np.array([self.states[['infectious','recovered','deaths']].sum(axis=1).values,self.states['deaths'].values]).T
             real_data = gym.spaces.utils.np.array([np.array(self.output0[:self.duration]), self.output1[:self.duration]]).T
 
             se = (real_data-model_data)**2
-            reward = np.sum(- np.sqrt(np.mean(se, axis=0)))
+            reward = - np.mean(np.sqrt(np.mean(se, axis=0))/(np.amax(real_data, axis=0)-np.amin(real_data, axis=0)))
             self.rewards.append(reward)
 
         done = True
-        state = self.states[-1]
+        state = self.states.iloc[-1].values
 
         return state, reward, done, {}
 
