@@ -131,3 +131,6 @@ dmypy.json
 .vscode
 
 .idea
+
+# Downloaded data for the pre-processing tasks
+DataTask/data/
