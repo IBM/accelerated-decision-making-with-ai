@@ -5,6 +5,8 @@
     "ng": "ng",
     "config": "ts-node ./scripts/set-env.ts",
     "start": "npm run config -- --environment=dev && ng serve --proxy-config config/webpack/proxy.json",
+    "start:fr": "ng serve --configuration=fr --proxy-config config/webpack/proxy.json",
+    "start:sw": "ng serve --configuration=sw --proxy-config config/webpack/proxy.json",
     "start-local": "npm run config -- --environment=dev && ng serve --proxy-config config/webpack/proxy_local.json",
     "build": "npm run config -- --environment=prod && ng build --prod --build-optimizer",
     "build-staging": "npm run config -- --environment=prod && ng build --prod --build-optimizer",
@@ -14,7 +16,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "bundle-report": "ng build --prod --source-map && source-map-explorer dist/main.*.js",
-    "post-install-ibm-plex": "rm ./node_modules/@ibm/plex/scss/ibm-plex.scss ; cp ./scripts/custom_ibm-plex.scss ./node_modules/@ibm/plex/scss/ibm-plex.scss"
+    "post-install-ibm-plex": "rm ./node_modules/@ibm/plex/scss/ibm-plex.scss ; cp ./scripts/custom_ibm-plex.scss ./node_modules/@ibm/plex/scss/ibm-plex.scss",
+    "extract": "ng extract-i18n --output-path=src/locale"
   },
   "private": true,
   "dependencies": {
