@@ -1,0 +1,2749 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="ngb.alert.close" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/alert/alert.ts</context>
+          <context context-type="linenumber">58,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.slide-number" datatype="html">
+        <source> Slide <x id="INTERPOLATION" equiv-text="private _pauseO"/> of <x id="INTERPOLATION_1" equiv-text="Subject(false);"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/carousel/carousel.ts</context>
+          <context context-type="linenumber">114,118</context>
+        </context-group>
+        <note priority="1" from="description">Currently selected slide number read by screen reader</note>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.previous" datatype="html">
+        <source>Previous</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/carousel/carousel.ts</context>
+          <context context-type="linenumber">132,133</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.next" datatype="html">
+        <source>Next</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/carousel/carousel.ts</context>
+          <context context-type="linenumber">147,151</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-month" datatype="html">
+        <source>Select month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/datepicker/datepicker-navigation-select.ts</context>
+          <context context-type="linenumber">43,47</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/datepicker/datepicker-navigation-select.ts</context>
+          <context context-type="linenumber">48,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-year" datatype="html">
+        <source>Select year</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/datepicker/datepicker-navigation-select.ts</context>
+          <context context-type="linenumber">59,63</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/datepicker/datepicker-navigation-select.ts</context>
+          <context context-type="linenumber">69,74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.previous-month" datatype="html">
+        <source>Previous month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">24,27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.next-month" datatype="html">
+        <source>Next month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">44,48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">57,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first" datatype="html">
+        <source>««</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">147,148</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous" datatype="html">
+        <source>«</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">153,154</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next" datatype="html">
+        <source>»</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">158,159</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last" datatype="html">
+        <source>»»</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">164,165</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first-aria" datatype="html">
+        <source>First</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">168,172</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous-aria" datatype="html">
+        <source>Previous</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">176,177</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next-aria" datatype="html">
+        <source>Next</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">188,189</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last-aria" datatype="html">
+        <source>Last</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">195,200</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.progressbar.value" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="turn this._max;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/progressbar/progressbar.ts</context>
+          <context context-type="linenumber">31,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.HH" datatype="html">
+        <source>HH</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.hours" datatype="html">
+        <source>Hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.MM" datatype="html">
+        <source>MM</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.minutes" datatype="html">
+        <source>Minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">57,58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-hours" datatype="html">
+        <source>Increment hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">62,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-hours" datatype="html">
+        <source>Decrement hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">67,68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-minutes" datatype="html">
+        <source>Increment minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">75,76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-minutes" datatype="html">
+        <source>Decrement minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.SS" datatype="html">
+        <source>SS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">85,87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.seconds" datatype="html">
+        <source>Seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">90,92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-seconds" datatype="html">
+        <source>Increment seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">98,99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-seconds" datatype="html">
+        <source>Decrement seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">105,109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.PM" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="sible.
+   */"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">125,130</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.AM" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="nts ControlValu"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">148,112</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.toast.close-aria" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/src/toast/toast.ts</context>
+          <context context-type="linenumber">76,85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="addAlgorithmHeader" datatype="html">
+        <source>Add Algorithm</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">add algorithm header</note>
+        <note priority="1" from="meaning">add algorithm</note>
+      </trans-unit>
+      <trans-unit id="editAlgorithmHeader" datatype="html">
+        <source>Edit Algorithm</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">edit algorithm header</note>
+        <note priority="1" from="meaning">edit algorithm</note>
+      </trans-unit>
+      <trans-unit id="enterAlgorithmName" datatype="html">
+        <source>Enter name of the algorithm</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">enter the name of the algorithm</note>
+        <note priority="1" from="meaning">enter the name of the algorithm</note>
+      </trans-unit>
+      <trans-unit id="fieldRequiredError" datatype="html">
+        <source>This field is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">113</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">122</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">129</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">170</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">177</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">186</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">193</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">222</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">234</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">248</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+        <note priority="1" from="description">required field error</note>
+        <note priority="1" from="meaning">required field</note>
+      </trans-unit>
+      <trans-unit id="enterAlgorithmClassName" datatype="html">
+        <source>Enter the exact name of the Algorithm Class name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">enter the exact name of the algorithm class name</note>
+        <note priority="1" from="meaning">enter the exact name of the algorithm class name</note>
+      </trans-unit>
+      <trans-unit id="enterAlgorithmRawUrl" datatype="html">
+        <source>Enter the raw url of the algorithm.py file</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <note priority="1" from="description">enter the raw url of the algorithm python file</note>
+        <note priority="1" from="meaning">enter the raw url of the algorithm python file</note>
+      </trans-unit>
+      <trans-unit id="enterRequirementsRawUrl" datatype="html">
+        <source>Enter the raw url of requiments.txt</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <note priority="1" from="description">enter the raw url of the requirements text file</note>
+        <note priority="1" from="meaning">enter the raw url of the requirements text file</note>
+      </trans-unit>
+      <trans-unit id="enterAlgorithmGithubUrl" datatype="html">
+        <source>Enter the GitHub url for the algorithm code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+        <note priority="1" from="description">enter the github url of the algorithm code</note>
+        <note priority="1" from="meaning">enter the github url of the algorithm code</note>
+      </trans-unit>
+      <trans-unit id="enterAlgorithmVersion" datatype="html">
+        <source>Enter the version of the algorithm</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <note priority="1" from="description">enter the version of the algorithm</note>
+        <note priority="1" from="meaning">enter the version of the algorithm</note>
+      </trans-unit>
+      <trans-unit id="enterAlgorithmVersionAuthor" datatype="html">
+        <source>Enter the author of the algorithm version</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+        <note priority="1" from="description">enter the author of the version of the algorithm</note>
+        <note priority="1" from="meaning">enter the author of the version of the algorithm</note>
+      </trans-unit>
+      <trans-unit id="enterAlgorithmVersionDate" datatype="html">
+        <source>Enter the date of the algorithm version</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <note priority="1" from="description">enter the date of the version of the algorithm</note>
+        <note priority="1" from="meaning">enter the date of the version of the algorithm</note>
+      </trans-unit>
+      <trans-unit id="cancelButton" datatype="html">
+        <source>Cancel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">144</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">198</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">254</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+        <note priority="1" from="description">cancel button</note>
+        <note priority="1" from="meaning">cancel button</note>
+      </trans-unit>
+      <trans-unit id="submitButton" datatype="html">
+        <source>Submit </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
+          <context context-type="linenumber">96,97</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">63,64</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">146,147</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">200,201</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">256,257</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
+          <context context-type="linenumber">68,69</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
+          <context context-type="linenumber">111,112</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">111,112</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">117,118</context>
+        </context-group>
+        <note priority="1" from="description">submitButton</note>
+        <note priority="1" from="meaning">submitButton</note>
+      </trans-unit>
+      <trans-unit id="selectAlgorithmLabel" datatype="html">
+        <source>Select algorithm</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description">select algorithm label</note>
+        <note priority="1" from="meaning">select algorithm</note>
+      </trans-unit>
+      <trans-unit id="selectCompareAlgorithmsLabel" datatype="html">
+        <source>Select compare algorithms</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <note priority="1" from="description">select compare algorithm label</note>
+        <note priority="1" from="meaning">select compare algorithm</note>
+      </trans-unit>
+      <trans-unit id="selectEnvironmentLabel" datatype="html">
+        <source>Select environment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <note priority="1" from="description">select environment label</note>
+        <note priority="1" from="meaning">select environment</note>
+      </trans-unit>
+      <trans-unit id="selectLocationLabel" datatype="html">
+        <source>Select location</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+        <note priority="1" from="description">select location label</note>
+        <note priority="1" from="meaning">select location</note>
+      </trans-unit>
+      <trans-unit id="selectedAlgorithmLabel" datatype="html">
+        <source> Selected Algorithm </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
+          <context context-type="linenumber">100,101</context>
+        </context-group>
+        <note priority="1" from="description">selected algorithm label</note>
+        <note priority="1" from="meaning">selected algorithm</note>
+      </trans-unit>
+      <trans-unit id="selectedAlgorithmName" datatype="html">
+        <source> Algorithm Name </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
+          <context context-type="linenumber">112,113</context>
+        </context-group>
+        <note priority="1" from="description">selected algorithm name label</note>
+        <note priority="1" from="meaning">selected algorithm name</note>
+      </trans-unit>
+      <trans-unit id="selectedAlgorithmVersion" datatype="html">
+        <source> Algorithm Version </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
+          <context context-type="linenumber">121,122</context>
+        </context-group>
+        <note priority="1" from="description">selected algorithm version label</note>
+        <note priority="1" from="meaning">selected algorithm version</note>
+      </trans-unit>
+      <trans-unit id="selectedAlgorithmVersionDate" datatype="html">
+        <source> Version Date </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
+          <context context-type="linenumber">130,131</context>
+        </context-group>
+        <note priority="1" from="description">selected algorithm version date label</note>
+        <note priority="1" from="meaning">selected algorithm version date</note>
+      </trans-unit>
+      <trans-unit id="selectedAlgorithmVersionAuthor" datatype="html">
+        <source> Version Author </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
+          <context context-type="linenumber">139,140</context>
+        </context-group>
+        <note priority="1" from="description">selected algorithm version author label</note>
+        <note priority="1" from="meaning">selected algorithm version author</note>
+      </trans-unit>
+      <trans-unit id="selectedAlgorithmAccessedDate" datatype="html">
+        <source> Accessed </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
+          <context context-type="linenumber">148,149</context>
+        </context-group>
+        <note priority="1" from="description">selected algorithm accessed date label</note>
+        <note priority="1" from="meaning">selected algorithm accessed date</note>
+      </trans-unit>
+      <trans-unit id="selectedAlgorithmStatus" datatype="html">
+        <source> Status </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
+          <context context-type="linenumber">157,158</context>
+        </context-group>
+        <note priority="1" from="description">selected algorithm status label</note>
+        <note priority="1" from="meaning">selected algorithm status</note>
+      </trans-unit>
+      <trans-unit id="addNewAlgorithmButton" datatype="html">
+        <source> Add New Algorithm </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
+          <context context-type="linenumber">171</context>
+        </context-group>
+        <note priority="1" from="description">add new algorithm button</note>
+        <note priority="1" from="meaning">add new algorithm button</note>
+      </trans-unit>
+      <trans-unit id="learningResultsError" datatype="html">
+        <source>Could not find learning results : </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">learning results error</note>
+        <note priority="1" from="meaning">learning results error</note>
+      </trans-unit>
+      <trans-unit id="algorithmCreationSuccess" datatype="html">
+        <source>Algorithm Creation Successful: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">algorithm creation success</note>
+        <note priority="1" from="meaning">algorithm creation success</note>
+      </trans-unit>
+      <trans-unit id="algorithmCreationFailed" datatype="html">
+        <source>Could not create algorithm!: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">algorithm creation failed</note>
+        <note priority="1" from="meaning">algorithm creation failed</note>
+      </trans-unit>
+      <trans-unit id="algorithmUpdateSuccess" datatype="html">
+        <source>Algorithm Update Successful: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">algorithm update success</note>
+        <note priority="1" from="meaning">algorithm update success</note>
+      </trans-unit>
+      <trans-unit id="algorithmUpdateFailed" datatype="html">
+        <source>&quot;Could not update algorithm!: &quot;</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">algorithm update failed</note>
+        <note priority="1" from="meaning">algorithm update failed</note>
+      </trans-unit>
+      <trans-unit id="enteredAlgorithmUpdateFailed" datatype="html">
+        <source>Entered Algorithm update failed.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">entered algorithm update failed</note>
+        <note priority="1" from="meaning">entered algorithm update failed</note>
+      </trans-unit>
+      <trans-unit id="loadAlgorithmsFailed" datatype="html">
+        <source>Could not algorithms, locations and/or environments data : </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">load algorithms failed</note>
+        <note priority="1" from="meaning">load algorithms failed</note>
+      </trans-unit>
+      <trans-unit id="provisioned" datatype="html">
+        <source>Provisioned</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">provisioned</note>
+        <note priority="1" from="meaning">provisioned</note>
+      </trans-unit>
+      <trans-unit id="provisioning" datatype="html">
+        <source>Provisioning</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">provisioning</note>
+        <note priority="1" from="meaning">provisioning</note>
+      </trans-unit>
+      <trans-unit id="close" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">198</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/results/constants/results.constants.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="mainTitleHeader" datatype="html">
+        <source> Interactive Dashboard for Accelerated Decision-making with AI (ADMAI) </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+        <note priority="1" from="description">Main title header.</note>
+        <note priority="1" from="meaning">Main title</note>
+      </trans-unit>
+      <trans-unit id="lastUpdateDiv" datatype="html">
+        <source> Updated: Jun 30, 2021 <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">Last update div</note>
+        <note priority="1" from="meaning">Last update div</note>
+      </trans-unit>
+      <trans-unit id="disclaimerPopover" datatype="html">
+        <source>Due to the various disease outbreaks, IBM is providing this interactive dashboard
+               as a service to the public, but this dashboard is not designed or intended to be a medical device or a
+                substitute for professional medical advice, diagnosis, treatment, or judgment.
+
+                IBM has compiled outcome data provided by multiple third-party sources including Wikipedia, governmental agencies and
+                 other public sources.
+
+                These sources update and report outcome data on various regular and irregular schedules, so from time to time there
+                 may be discrepancies between outcome data reported here and outcome data reported by individual sources. IBM makes
+                 efforts to provide up-to-date and accurate data as available and tries to verify Wikipedia data with data from
+                 governmental sources to minimize and correct errors. IBM does not warrant the accuracy, reliability, or completeness
+                 of the outcome data. The results of this dashboard are inherently speculative and the appropriate use of the
+                  results and decisions made based on the results are the responsibility of the user. IBM shall have no liability
+                  with respect to the results and decisions made based on the results. Please send any inquiries about the data
+                  presented here at: wwcc19@ke.ibm.com</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
+          <context context-type="linenumber">33,47</context>
+        </context-group>
+        <note priority="1" from="description">Disclaimer content</note>
+        <note priority="1" from="meaning">disclaimer popover</note>
+      </trans-unit>
+      <trans-unit id="disclaimerButton" datatype="html">
+        <source> Disclaimer </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
+          <context context-type="linenumber">48,49</context>
+        </context-group>
+        <note priority="1" from="description">Allows viewership of disclaimer message</note>
+        <note priority="1" from="meaning">disclaimer button</note>
+      </trans-unit>
+      <trans-unit id="a827e410d2935db965394cc46ea85637a3693cb2" datatype="html">
+        <source>Domains</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <note priority="1" from="description">domains@domains</note>
+        <note priority="1" from="meaning">domains</note>
+      </trans-unit>
+      <trans-unit id="domainModels" datatype="html">
+        <source>Domain Models</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+        <note priority="1" from="description">domain models</note>
+        <note priority="1" from="meaning">domain models</note>
+      </trans-unit>
+      <trans-unit id="AIAlgorithms" datatype="html">
+        <source>AI Algorithms</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+        <note priority="1" from="description">AI Algorithms</note>
+        <note priority="1" from="meaning">AI Algorithms</note>
+      </trans-unit>
+      <trans-unit id="territoriesCovered" datatype="html">
+        <source>Territories Covered</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+        <note priority="1" from="description">Territories covered</note>
+        <note priority="1" from="meaning">Territories covered</note>
+      </trans-unit>
+      <trans-unit id="pleaseConfirmDialog" datatype="html">
+        <source>Please confirm...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/components/confirm-dialog/confirm-dialog.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">please confirm dialog title</note>
+        <note priority="1" from="meaning">please confirm</note>
+      </trans-unit>
+      <trans-unit id="noMessage" datatype="html">
+        <source>No</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/components/confirm-dialog/confirm-dialog.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">No message</note>
+        <note priority="1" from="meaning">No</note>
+      </trans-unit>
+      <trans-unit id="yesMessage" datatype="html">
+        <source>Yes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/components/confirm-dialog/confirm-dialog.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">Yes message</note>
+        <note priority="1" from="meaning">Yes</note>
+      </trans-unit>
+      <trans-unit id="loginHeader" datatype="html">
+        <source>Interactive Dashboard for Accelerated Decision-making with AI (ADMAI)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/components/login/login.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Login header</note>
+        <note priority="1" from="meaning">Login Header</note>
+      </trans-unit>
+      <trans-unit id="platformPurpose" datatype="html">
+        <source>Providing a platform for sharing, optimizing and running domain models at scale.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/components/login/login.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">The purpose of the platform</note>
+        <note priority="1" from="meaning">Platform Purpose</note>
+      </trans-unit>
+      <trans-unit id="loginButton" datatype="html">
+        <source>Login</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/components/login/login.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Login button</note>
+        <note priority="1" from="meaning">Login Button</note>
+      </trans-unit>
+      <trans-unit id="initiateLogout" datatype="html">
+        <source>Initiating logout!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/components/logout/logout.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">initiating logout</note>
+        <note priority="1" from="meaning">initiating logout</note>
+      </trans-unit>
+      <trans-unit id="npiIndexDropDown" datatype="html">
+        <source>NPI-Index</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">128</context>
+        </context-group>
+        <note priority="1" from="description">NPI-Index drop down</note>
+        <note priority="1" from="meaning">NPI-Index</note>
+      </trans-unit>
+      <trans-unit id="complianceScoreDropDown" datatype="html">
+        <source>Compliance Score</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">128</context>
+        </context-group>
+        <note priority="1" from="description">Compliance Score drop down</note>
+        <note priority="1" from="meaning">Compliance Score</note>
+      </trans-unit>
+      <trans-unit id="stringencyIndexDropDown" datatype="html">
+        <source>Stringency Index</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">128</context>
+        </context-group>
+        <note priority="1" from="description">Stringency Index drop down</note>
+        <note priority="1" from="meaning">Stringency Index</note>
+      </trans-unit>
+      <trans-unit id="transitStationsDropDown" datatype="html">
+        <source>Transit_stations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">130</context>
+        </context-group>
+        <note priority="1" from="description">Transit stations drop down</note>
+        <note priority="1" from="meaning">Transit stations</note>
+      </trans-unit>
+      <trans-unit id="retailAndRecreationDropDown" datatype="html">
+        <source>Retail_and_recreation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">130</context>
+        </context-group>
+        <note priority="1" from="description">Retail and recreation drop down</note>
+        <note priority="1" from="meaning">Retail and recreation</note>
+      </trans-unit>
+      <trans-unit id="groceryAndPharmacyDropDown" datatype="html">
+        <source>Grocery_and_pharmacy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">130</context>
+        </context-group>
+        <note priority="1" from="description">Grocery and pharmacy drop down</note>
+        <note priority="1" from="meaning">Grocery and pharmacy</note>
+      </trans-unit>
+      <trans-unit id="parksDropDown" datatype="html">
+        <source>Parks</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">130</context>
+        </context-group>
+        <note priority="1" from="description">Parks drop down</note>
+        <note priority="1" from="meaning">Parks</note>
+      </trans-unit>
+      <trans-unit id="workplacesDropDown" datatype="html">
+        <source>Workplaces</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+        <note priority="1" from="description">Workplaces drop down</note>
+        <note priority="1" from="meaning">Workplaces</note>
+      </trans-unit>
+      <trans-unit id="residentialDropDown" datatype="html">
+        <source>Residential</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+        <note priority="1" from="description">Residential drop down</note>
+        <note priority="1" from="meaning">Residential</note>
+      </trans-unit>
+      <trans-unit id="stringency.index.wntrac" datatype="html">
+        <source>stringency index_wntrac_</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">181</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="compliance.score.wntrac" datatype="html">
+        <source>compliance score_wntrac_</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">182</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="npi.index.wntrac" datatype="html">
+        <source>npi-index_wntrac_</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">183</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="stringency.index.oxcgrt_" datatype="html">
+        <source>stringency index_oxcgrt_</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">184</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="compliance.score.oxcgrt" datatype="html">
+        <source>compliance score_oxcgrt_</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">185</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="npi.index.oxcgrt." datatype="html">
+        <source>npi-index_oxcgrt_</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">186</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="overview" datatype="html">
+        <source>Overview</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">181</context>
+        </context-group>
+        <note priority="1" from="description">Overview</note>
+        <note priority="1" from="meaning">Overview</note>
+      </trans-unit>
+      <trans-unit id="algorithms" datatype="html">
+        <source>Algorithms</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">182</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+        <note priority="1" from="description">Algorithms</note>
+        <note priority="1" from="meaning">Algorithms</note>
+      </trans-unit>
+      <trans-unit id="models" datatype="html">
+        <source>Models</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">183</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
+        <note priority="1" from="description">Models</note>
+        <note priority="1" from="meaning">Models</note>
+      </trans-unit>
+      <trans-unit id="experiments" datatype="html">
+        <source>Experiments</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">184</context>
+        </context-group>
+        <note priority="1" from="description">Experiments</note>
+        <note priority="1" from="meaning">Experiments</note>
+      </trans-unit>
+      <trans-unit id="results" datatype="html">
+        <source>Results</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">185</context>
+        </context-group>
+        <note priority="1" from="description">Results</note>
+        <note priority="1" from="meaning">Results</note>
+      </trans-unit>
+      <trans-unit id="apis" datatype="html">
+        <source>APIs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">186</context>
+        </context-group>
+        <note priority="1" from="description">Apis</note>
+        <note priority="1" from="meaning">Apis</note>
+      </trans-unit>
+      <trans-unit id="how_to" datatype="html">
+        <source>How to</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">187</context>
+        </context-group>
+        <note priority="1" from="description">How to</note>
+        <note priority="1" from="meaning">How to</note>
+      </trans-unit>
+      <trans-unit id="feedback" datatype="html">
+        <source>Feedback</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">188</context>
+        </context-group>
+        <note priority="1" from="description">Feedback</note>
+        <note priority="1" from="meaning">Feedback</note>
+      </trans-unit>
+      <trans-unit id="feedback_submitted" datatype="html">
+        <source>Feedback submitted</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">192</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="feedback_submission_failed" datatype="html">
+        <source>Feedback submission failed! Please try again.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">193</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3968402439901531024" datatype="html">
+        <source>User role missing:@@user_role_missing:User Role Missing! Contact the system admin at charles.wachira1@ibm.com.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">197</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="no_data_available" datatype="html">
+        <source>No data available</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">202</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="newCasesYAxis" datatype="html">
+        <source>New cases</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/services/chart/chart.service.ts</context>
+          <context context-type="linenumber">1155</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="addActionHeader" datatype="html">
+        <source>Add Actions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">add action</note>
+        <note priority="1" from="meaning">add action</note>
+      </trans-unit>
+      <trans-unit id="enterTimeLabel" datatype="html">
+        <source>Enter time</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+        <note priority="1" from="description">enter time label</note>
+        <note priority="1" from="meaning">enter time</note>
+      </trans-unit>
+      <trans-unit id="coveragePercentage" datatype="html">
+        <source> Coverage Percentage </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">51,52</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">135,136</context>
+        </context-group>
+        <note priority="1" from="description">coverage percentage</note>
+        <note priority="1" from="meaning">coverage percentage</note>
+      </trans-unit>
+      <trans-unit id="defineActionSpaceHeader" datatype="html">
+        <source>Define action space</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+        <note priority="1" from="description">define action space header</note>
+        <note priority="1" from="meaning">define action space</note>
+      </trans-unit>
+      <trans-unit id="enterNumberOfEpisodes" datatype="html">
+        <source>Enter the number of episodes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">191</context>
+        </context-group>
+        <note priority="1" from="description">enter the number of episodes</note>
+        <note priority="1" from="meaning">enter the number of episodes</note>
+      </trans-unit>
+      <trans-unit id="enterTimeResolution" datatype="html">
+        <source>Enter time resolution in weeks</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+        <note priority="1" from="description">enter time resolution in weeks</note>
+        <note priority="1" from="meaning">enter time resolution in weeks</note>
+      </trans-unit>
+      <trans-unit id="enterCoverageResolution" datatype="html">
+        <source>Enter the coverage resolution</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">127</context>
+        </context-group>
+        <note priority="1" from="description">enter the coverage resolution</note>
+        <note priority="1" from="meaning">enter the coverage resolution</note>
+      </trans-unit>
+      <trans-unit id="defineParameterSpace" datatype="html">
+        <source>Define parameter space</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">155</context>
+        </context-group>
+        <note priority="1" from="description">define the parameter space</note>
+        <note priority="1" from="meaning">define the parameter space</note>
+      </trans-unit>
+      <trans-unit id="startDate" datatype="html">
+        <source>Start date</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">163</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">227</context>
+        </context-group>
+        <note priority="1" from="description">start date</note>
+        <note priority="1" from="meaning">start date</note>
+      </trans-unit>
+      <trans-unit id="calibrationDurationInDays" datatype="html">
+        <source>Enter the calibration duration in days</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">175</context>
+        </context-group>
+        <note priority="1" from="description">enter calibration duration in days</note>
+        <note priority="1" from="meaning">enter calibration duration in days</note>
+      </trans-unit>
+      <trans-unit id="enterBetaWindowLength" datatype="html">
+        <source>Enter the beta window length in days</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">184</context>
+        </context-group>
+        <note priority="1" from="description">enter the beta length window in days</note>
+        <note priority="1" from="meaning">enter the beta window length in days</note>
+      </trans-unit>
+      <trans-unit id="defineActions" datatype="html">
+        <source>Define Actions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">211</context>
+        </context-group>
+        <note priority="1" from="description">define actions header</note>
+        <note priority="1" from="meaning">define actions header</note>
+      </trans-unit>
+      <trans-unit id="endDate" datatype="html">
+        <source>End date</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
+          <context context-type="linenumber">241</context>
+        </context-group>
+        <note priority="1" from="description">end date</note>
+        <note priority="1" from="meaning">end date</note>
+      </trans-unit>
+      <trans-unit id="newExperimentHeader" datatype="html">
+        <source> New Experiment </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+        <note priority="1" from="description">new experiment header</note>
+        <note priority="1" from="meaning">new experiment</note>
+      </trans-unit>
+      <trans-unit id="selectModel" datatype="html">
+        <source>Select model</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/results/components/predictions/predictions.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description">select model label</note>
+        <note priority="1" from="meaning">select model label</note>
+      </trans-unit>
+      <trans-unit id="defaultExecutors" datatype="html">
+        <source>Select default executors</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <note priority="1" from="description">select default executors label</note>
+        <note priority="1" from="meaning">select default executors label</note>
+      </trans-unit>
+      <trans-unit id="selectLocation" datatype="html">
+        <source>Select location</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/results/components/predictions/predictions.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <note priority="1" from="description">select location label</note>
+        <note priority="1" from="meaning">select location label</note>
+      </trans-unit>
+      <trans-unit id="noneDetected" datatype="html">
+        <source>None detected!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+        <note priority="1" from="description">none detected div</note>
+        <note priority="1" from="meaning">none detected div</note>
+      </trans-unit>
+      <trans-unit id="generalInfoHeader" datatype="html">
+        <source> General info </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">86,87</context>
+        </context-group>
+        <note priority="1" from="description">general info header</note>
+        <note priority="1" from="meaning">general info header</note>
+      </trans-unit>
+      <trans-unit id="parametersHeader" datatype="html">
+        <source> Parameters </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">99,100</context>
+        </context-group>
+        <note priority="1" from="description">parameters header</note>
+        <note priority="1" from="meaning">parameters header</note>
+      </trans-unit>
+      <trans-unit id="optimizationParametersHeader" datatype="html">
+        <source> Optimization Parameters </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">114,115</context>
+        </context-group>
+        <note priority="1" from="description">optimization parameters header</note>
+        <note priority="1" from="meaning">optimization parameters header</note>
+      </trans-unit>
+      <trans-unit id="pastExperimentsHeader" datatype="html">
+        <source> Past Experiments <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span *ngIf=&quot;itemsDataSource &amp;&amp; itemsDataSource.data&quot; class=&quot;models-number&quot;&gt;"/>(<x id="INTERPOLATION" equiv-text="{{itemsDataSource.data.length}}"/>)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">152,153</context>
+        </context-group>
+        <note priority="1" from="description">past experiments header</note>
+        <note priority="1" from="meaning">past experiments header</note>
+      </trans-unit>
+      <trans-unit id="idOfPastExperiment" datatype="html">
+        <source>ID</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">159</context>
+        </context-group>
+        <note priority="1" from="description">id of the past experiment</note>
+        <note priority="1" from="meaning">id</note>
+      </trans-unit>
+      <trans-unit id="nameOfPastExperiment" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">164</context>
+        </context-group>
+        <note priority="1" from="description">name of the past experiment</note>
+        <note priority="1" from="meaning">name</note>
+      </trans-unit>
+      <trans-unit id="descriptionOfPastExperiment" datatype="html">
+        <source>Description</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">172</context>
+        </context-group>
+        <note priority="1" from="description">description of the past experiment</note>
+        <note priority="1" from="meaning">description</note>
+      </trans-unit>
+      <trans-unit id="pastExperimentAction" datatype="html">
+        <source>Action</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">180</context>
+        </context-group>
+        <note priority="1" from="description">view the past experiment</note>
+        <note priority="1" from="meaning">action</note>
+      </trans-unit>
+      <trans-unit id="duplicateExperimentsHeader" datatype="html">
+        <source> Duplicate Experiments <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span *ngIf=&quot;duplicateExperimentsDataSource &amp;&amp; duplicateExperimentsDataSource.data&quot; class=&quot;models-number&quot;&gt;"/>(<x id="INTERPOLATION" equiv-text="{{duplicateExperimentsDataSource.data.length}}"/>)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">198,199</context>
+        </context-group>
+        <note priority="1" from="description">duplicate experiments header</note>
+        <note priority="1" from="meaning">duplicate experiments header</note>
+      </trans-unit>
+      <trans-unit id="duplicateExperimentId" datatype="html">
+        <source>ID</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">205</context>
+        </context-group>
+        <note priority="1" from="description">id of the duplicate experiment</note>
+        <note priority="1" from="meaning">id of the duplicate experiment</note>
+      </trans-unit>
+      <trans-unit id="duplicateExperimentName" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">210</context>
+        </context-group>
+        <note priority="1" from="description">name of the duplicate experiment</note>
+        <note priority="1" from="meaning">name of the duplicate experiment</note>
+      </trans-unit>
+      <trans-unit id="duplicateExperimentDescription" datatype="html">
+        <source>Description</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">218</context>
+        </context-group>
+        <note priority="1" from="description">description of the duplicate experiment</note>
+        <note priority="1" from="meaning">description of the duplicate experiment</note>
+      </trans-unit>
+      <trans-unit id="duplicateExperimentAction" datatype="html">
+        <source>Action</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
+          <context context-type="linenumber">226</context>
+        </context-group>
+        <note priority="1" from="description">view the duplicate experiments</note>
+        <note priority="1" from="meaning">action</note>
+      </trans-unit>
+      <trans-unit id="experimentPrediction" datatype="html">
+        <source>Prediction</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experimentCalibration" datatype="html">
+        <source>Calibration</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="calibrationTaskSingle" datatype="html">
+        <source>Single</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="calibrationTaskMultiple" datatype="html">
+        <source>Multiple</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="calibrationTaskContinuous" datatype="html">
+        <source>Continuous</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="calibrationActionMissing" datatype="html">
+        <source>Actions missing in </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="modelEndOfStatement" datatype="html">
+        <source>model.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultTheSystemAdmin" datatype="html">
+        <source> Consult the system admin!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="calibrationActionUpdatedFailed" datatype="html">
+        <source>Entered actions update failed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="calibrationModelsNotFound" datatype="html">
+        <source>Could not find models : </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="calibrationLocationNotFound" datatype="html">
+        <source>Could not find location : </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="calibrationExperimentCreationSuccessful" datatype="html">
+        <source>Experiment Creation Successful: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="calibrationExperimentCreationFailed" datatype="html">
+        <source>Experiment Creation Failed: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="calibrationSimilarExperimentConfirmation" datatype="html">
+        <source>A similar experiment for this location and environment has been returned,
+check the list of duplicate experiments to view the content.
+Would you like to override this and perform a new experiment?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experimentMetadataDetailsNotFound" datatype="html">
+        <source>Metadata details fetch failed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="feedbackForm" datatype="html">
+        <source>Use the form below to provide your feedback: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">feedback form usage</note>
+        <note priority="1" from="meaning">feedback form</note>
+      </trans-unit>
+      <trans-unit id="nameLabel" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">name label</note>
+        <note priority="1" from="meaning">name</note>
+      </trans-unit>
+      <trans-unit id="nameFieldError" datatype="html">
+        <source> Name is required. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+        <note priority="1" from="description">name field is required</note>
+        <note priority="1" from="meaning">name is required</note>
+      </trans-unit>
+      <trans-unit id="emailAddressLabel" datatype="html">
+        <source>Email address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <note priority="1" from="description">email address label</note>
+        <note priority="1" from="meaning">email address</note>
+      </trans-unit>
+      <trans-unit id="emailFieldError" datatype="html">
+        <source> Email is required. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
+          <context context-type="linenumber">47,48</context>
+        </context-group>
+        <note priority="1" from="description">email field is required</note>
+        <note priority="1" from="meaning">email is required</note>
+      </trans-unit>
+      <trans-unit id="emailFieldIncompleteError" datatype="html">
+        <source> Email is incomplete. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+        <note priority="1" from="description">email field is invalid</note>
+        <note priority="1" from="meaning">email is invalid</note>
+      </trans-unit>
+      <trans-unit id="provideFeedbackMessage" datatype="html">
+        <source>Provide feedback</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <note priority="1" from="description">provide feedback message</note>
+        <note priority="1" from="meaning">provide feedback</note>
+      </trans-unit>
+      <trans-unit id="feedbackFieldError" datatype="html">
+        <source> Feedback message is required. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
+          <context context-type="linenumber">62,63</context>
+        </context-group>
+        <note priority="1" from="description">feedback field is required</note>
+        <note priority="1" from="meaning">feedback is required</note>
+      </trans-unit>
+      <trans-unit id="sendFeedbackButton" datatype="html">
+        <source>Send</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+        <note priority="1" from="description">send feedback button</note>
+        <note priority="1" from="meaning">send feedback</note>
+      </trans-unit>
+      <trans-unit id="howToSummary" datatype="html">
+        <source>Summary</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">how to summary</note>
+        <note priority="1" from="meaning">summary</note>
+      </trans-unit>
+      <trans-unit id="summaryParagraphOne" datatype="html">
+        <source> Policy Making with AI is a decision support platform that harnesses the power of domain models using AI in a trusted environment, bringing together policy- and decision- makers, modelers, and AI practitioners to support complex decision-making. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
+          <context context-type="linenumber">37,40</context>
+        </context-group>
+        <note priority="1" from="description">summary paragraph one</note>
+        <note priority="1" from="meaning">summary paragraph one</note>
+      </trans-unit>
+      <trans-unit id="summaryParagraphTwo" datatype="html">
+        <source> Decision-makers must plan and implement interventions and strategies at varying timescales across different populations and geographies. This could be to control the spread of a pandemic like COVID-19, or to manage climate impact risks on global supply chains. Models are essential in the planning process but are often complex, uncertain, and can be difficult to consume, and also need to be trusted. The space of possible interventions that the models represent is vast, making the planning and decision-making process even more difficult. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
+          <context context-type="linenumber">43,49</context>
+        </context-group>
+        <note priority="1" from="description">summary paragraph two</note>
+        <note priority="1" from="meaning">summary paragraph two</note>
+      </trans-unit>
+      <trans-unit id="summaryParagraphThree" datatype="html">
+        <source> Policymaking with AI (PMAI) contains a core AI decisioning library using algorithms from the sub-disciplines of Planning, Reinforcement Learning and Optimization to enable uncertainty quantification, impact analysis, and exploration of the full space of possible options to inform decision making. Further, PMAI is built on top of Hyperledger fabric to support model and data governance and provide trust and transparency for understanding the provenance of data, models, and results generated by end-users </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
+          <context context-type="linenumber">52,58</context>
+        </context-group>
+        <note priority="1" from="description">summary paragraph three</note>
+        <note priority="1" from="meaning">summary paragraph three</note>
+      </trans-unit>
+      <trans-unit id="summaryParagraphFour" datatype="html">
+        <source> PMAI provides decision-makers with easy navigation through complex intervention spaces in a timely manner is required to generate the most optimal and context-relevant intervention programs, including: 1.) An interactive decision dashboard to fine-tune what is important for their context (including what-if analysis, and adding constraints). 2.) The ability to combine, learn, and compare multiple models. 3.) Calibration and uncertainty quantification which are essential to decision-making based on the real-world observational data, as misleading information could be catastrophic for high stakes decisions (e.g. healthcare). </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
+          <context context-type="linenumber">61,69</context>
+        </context-group>
+        <note priority="1" from="description">summary paragraph four</note>
+        <note priority="1" from="meaning">summary paragraph four</note>
+      </trans-unit>
+      <trans-unit id="summaryParagraphFive" datatype="html">
+        <source> Specifically, there are three ways in which what if analysis is performed using PMAI: 1.) What if analysis where a decision maker defines intervention packages of interest and the platform runs them and generates predictions. 2.) What if analysis where a decision maker defines a desired outcome trajectory and the platform uses AI algorithms to find intervention packages that meet the desired outcome trajectory. 3.) Algorithm controlled what-if analysis within the constraints set by a modeler with the goal of interrogating the intervention space to reach at candidate intervention packages that a decision maker can filter through depending on their needs. To perform each of the above what-if analyses, experiments – a group of model simulation with common properties defined by the user - are performed where the user defines the required inputs for each of the methods as indicated above. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
+          <context context-type="linenumber">72,83</context>
+        </context-group>
+        <note priority="1" from="description">summary paragraph five</note>
+        <note priority="1" from="meaning">summary paragraph five</note>
+      </trans-unit>
+      <trans-unit id="summaryParagraphSix" datatype="html">
+        <source> Our algorithms are developed to learn in the presence of uncertainty and sample the huge intervention space while optimizing the user defined goal. In the real world there are many sources of uncertainty, accordingly, to generate recommendations which are robust the algorithms must be able to learn in the presence of uncertainty. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
+          <context context-type="linenumber">86,90</context>
+        </context-group>
+        <note priority="1" from="description">summary paragraph six</note>
+        <note priority="1" from="meaning">summary paragraph six</note>
+      </trans-unit>
+      <trans-unit id="summaryParagraphSeven" datatype="html">
+        <source> With trust at its core, this decision support platform is designed to amplify the value from domain models and data, and it is a demonstration of the value which can be derived from AI and Hybrid Cloud technologies. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
+          <context context-type="linenumber">93,96</context>
+        </context-group>
+        <note priority="1" from="description">summary paragraph seven</note>
+        <note priority="1" from="meaning">summary paragraph seven</note>
+      </trans-unit>
+      <trans-unit id="credits" datatype="html">
+        <source>Credits</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+        <note priority="1" from="description">credits</note>
+        <note priority="1" from="meaning">credits</note>
+      </trans-unit>
+      <trans-unit id="data" datatype="html">
+        <source>Data</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
+          <context context-type="linenumber">112</context>
+        </context-group>
+        <note priority="1" from="description">data</note>
+        <note priority="1" from="meaning">data</note>
+      </trans-unit>
+      <trans-unit id="addLocationHeader" datatype="html">
+        <source>Add Location</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">add location header</note>
+        <note priority="1" from="meaning">add location</note>
+      </trans-unit>
+      <trans-unit id="editLocationHeader" datatype="html">
+        <source>Edit Location</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">edit location header</note>
+        <note priority="1" from="meaning">edit location</note>
+      </trans-unit>
+      <trans-unit id="enterLocationName" datatype="html">
+        <source>Enter name of the location</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">enter the name of the location</note>
+        <note priority="1" from="meaning">enter the name of the location</note>
+      </trans-unit>
+      <trans-unit id="enterLocationAdministrationType" datatype="html">
+        <source>Enter the administration type of the location</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <note priority="1" from="description">enter the administration type of the location</note>
+        <note priority="1" from="meaning">enter the administration type of the location</note>
+      </trans-unit>
+      <trans-unit id="enterLocationDetails" datatype="html">
+        <source>Enter location details</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <note priority="1" from="description">enter location details</note>
+        <note priority="1" from="meaning">enter location details</note>
+      </trans-unit>
+      <trans-unit id="enterLocationCountryCode" datatype="html">
+        <source>Enter ISO-3 code for the country where the location is located</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+        <note priority="1" from="description">enter ISO-3 country code</note>
+        <note priority="1" from="meaning">enter ISO-3 country code</note>
+      </trans-unit>
+      <trans-unit id="addModelData" datatype="html">
+        <source>Add Model Data</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+        <note priority="1" from="description">add model data</note>
+        <note priority="1" from="meaning">add model data</note>
+      </trans-unit>
+      <trans-unit id="enterNameData" datatype="html">
+        <source>Enter name data</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+        <note priority="1" from="description">enter name data</note>
+        <note priority="1" from="meaning">enter name data</note>
+      </trans-unit>
+      <trans-unit id="enterDataDescription" datatype="html">
+        <source>Enter data description</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+        <note priority="1" from="description">enter data description</note>
+        <note priority="1" from="meaning">enter data description</note>
+      </trans-unit>
+      <trans-unit id="selectDataFile" datatype="html">
+        <source>Select the data file </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+        <note priority="1" from="description">select the data file</note>
+        <note priority="1" from="meaning">select the data file</note>
+      </trans-unit>
+      <trans-unit id="location" datatype="html">
+        <source>Location</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">location</note>
+        <note priority="1" from="meaning">location</note>
+      </trans-unit>
+      <trans-unit id="Name" datatype="html">
+        <source>Name: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">name</note>
+        <note priority="1" from="meaning">name</note>
+      </trans-unit>
+      <trans-unit id="adminType" datatype="html">
+        <source>Admin Type: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <note priority="1" from="description">admin type</note>
+        <note priority="1" from="meaning">admin type</note>
+      </trans-unit>
+      <trans-unit id="adminLevel" datatype="html">
+        <source>Admin Level: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <note priority="1" from="description">admin level</note>
+        <note priority="1" from="meaning">admin level</note>
+      </trans-unit>
+      <trans-unit id="locatedIn" datatype="html">
+        <source>Located In: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <note priority="1" from="description">located in</note>
+        <note priority="1" from="meaning">located in</note>
+      </trans-unit>
+      <trans-unit id="country" datatype="html">
+        <source>Country: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+        <note priority="1" from="description">country</note>
+        <note priority="1" from="meaning">country</note>
+      </trans-unit>
+      <trans-unit id="modelData" datatype="html">
+        <source>Model data: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+        <note priority="1" from="description">model data</note>
+        <note priority="1" from="meaning">model data</note>
+      </trans-unit>
+      <trans-unit id="addButton" datatype="html">
+        <source>Add</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+        <note priority="1" from="description">add button</note>
+        <note priority="1" from="meaning">add button</note>
+      </trans-unit>
+      <trans-unit id="modelResults" datatype="html">
+        <source>Model results: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+        <note priority="1" from="description">model results</note>
+        <note priority="1" from="meaning">model results</note>
+      </trans-unit>
+      <trans-unit id="viewButton" datatype="html">
+        <source>View</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+        <note priority="1" from="description">view button</note>
+        <note priority="1" from="meaning">view button</note>
+      </trans-unit>
+      <trans-unit id="modelExperiements" datatype="html">
+        <source>Model experiments: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+        <note priority="1" from="description">model experiments</note>
+        <note priority="1" from="meaning">model experiments</note>
+      </trans-unit>
+      <trans-unit id="startButton" datatype="html">
+        <source>Start</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+        <note priority="1" from="description">start button</note>
+        <note priority="1" from="meaning">start button</note>
+      </trans-unit>
+      <trans-unit id="exitButton" datatype="html">
+        <source>Exit</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+        <note priority="1" from="description">exit button</note>
+        <note priority="1" from="meaning">exit button</note>
+      </trans-unit>
+      <trans-unit id="couldNotFindLocationDetails" datatype="html">
+        <source>Could not find location details!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+        <note priority="1" from="description">could not find location details</note>
+        <note priority="1" from="meaning">could not find location details</note>
+      </trans-unit>
+      <trans-unit id="addModel" datatype="html">
+        <source>Add Model</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">add model</note>
+        <note priority="1" from="meaning">add model</note>
+      </trans-unit>
+      <trans-unit id="editModel" datatype="html">
+        <source>Edit Model</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">edit model</note>
+        <note priority="1" from="meaning">edit model</note>
+      </trans-unit>
+      <trans-unit id="modelOfficialName" datatype="html">
+        <source>Enter the official name of your model (no spaces)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">enter the official name of the model with no spaces</note>
+        <note priority="1" from="meaning">enter the official name of the model with no spaces</note>
+      </trans-unit>
+      <trans-unit id="modelShortDescription" datatype="html">
+        <source>Short description of the model</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">short description of the model</note>
+        <note priority="1" from="meaning">short description of the model</note>
+      </trans-unit>
+      <trans-unit id="enterModelVersion" datatype="html">
+        <source>Enter the version of the model</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <note priority="1" from="description">enter the version of the model</note>
+        <note priority="1" from="meaning">enter the version of the model</note>
+      </trans-unit>
+      <trans-unit id="enterModelVersionAuthor" datatype="html">
+        <source>Enter the author of the model version</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <note priority="1" from="description">enter the author of the model version</note>
+        <note priority="1" from="meaning">enter the author of the model version</note>
+      </trans-unit>
+      <trans-unit id="enterModelVersionDate" datatype="html">
+        <source>Enter the date of the model version</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+        <note priority="1" from="description">enter the date of the model version</note>
+        <note priority="1" from="meaning">enter the date of the model version</note>
+      </trans-unit>
+      <trans-unit id="modelGithubUrl" datatype="html">
+        <source>Enter the GitHub url for the model code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <note priority="1" from="description">enter the GitHub URL for the model code</note>
+        <note priority="1" from="meaning">enter the GitHub URL for the model code</note>
+      </trans-unit>
+      <trans-unit id="enterModelRawUrl" datatype="html">
+        <source>Enter the URL of the model.py file (raw file)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+        <note priority="1" from="description">enter the raw url of the model python file</note>
+        <note priority="1" from="meaning">enter the raw url of the model python file</note>
+      </trans-unit>
+      <trans-unit id="enterRequirementsRawUrlIfAny" datatype="html">
+        <source>Enter the URL of the requirements.txt file for your model.py file if any</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <note priority="1" from="description">enter the raw url of the requirements text file for the model python file if any</note>
+        <note priority="1" from="meaning">enter the raw url of the requirements text file if any</note>
+      </trans-unit>
+      <trans-unit id="enterModelDataProviderServiceUrl" datatype="html">
+        <source>Enter the url of the model data provider service</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+        <note priority="1" from="description">enter the url of the model data provider service</note>
+        <note priority="1" from="meaning">enter the url of the model data provider service</note>
+      </trans-unit>
+      <trans-unit id="provideShortModelDataDescription" datatype="html">
+        <source>Provide short description of the model data provided</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
+          <context context-type="linenumber">98</context>
+        </context-group>
+        <note priority="1" from="description">provide a short description of the model data provided</note>
+        <note priority="1" from="meaning">provide a short description of the model data provided</note>
+      </trans-unit>
+      <trans-unit id="selectCountry" datatype="html">
+        <source>Select admin 0 (Country)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description">select a country</note>
+        <note priority="1" from="meaning">select admin 0</note>
+      </trans-unit>
+      <trans-unit id="selectState" datatype="html">
+        <source>Select admin 1 (Provinces/States/District/Counties)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <note priority="1" from="description">select a province or state or district or county </note>
+        <note priority="1" from="meaning">select admin 1</note>
+      </trans-unit>
+      <trans-unit id="selectSubcounties" datatype="html">
+        <source>Select admin 2 (District/Counties/sub-counties)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+        <note priority="1" from="description">select a sub county</note>
+        <note priority="1" from="meaning">select admin 2</note>
+      </trans-unit>
+      <trans-unit id="selectedModelHeader" datatype="html">
+        <source> Selected Model </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
+          <context context-type="linenumber">113,114</context>
+        </context-group>
+        <note priority="1" from="description">selected model header</note>
+        <note priority="1" from="meaning">selected model</note>
+      </trans-unit>
+      <trans-unit id="modelNameColumn" datatype="html">
+        <source> Model Name </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
+          <context context-type="linenumber">125,126</context>
+        </context-group>
+        <note priority="1" from="description">selected model name column</note>
+        <note priority="1" from="meaning">model name column</note>
+      </trans-unit>
+      <trans-unit id="modelVersionColumn" datatype="html">
+        <source> Model Version </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
+          <context context-type="linenumber">134,135</context>
+        </context-group>
+        <note priority="1" from="description">selected model version column</note>
+        <note priority="1" from="meaning">model version column</note>
+      </trans-unit>
+      <trans-unit id="modelVersionDateColumn" datatype="html">
+        <source> Version Date </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
+          <context context-type="linenumber">143,144</context>
+        </context-group>
+        <note priority="1" from="description">selected model version date column</note>
+        <note priority="1" from="meaning">model version date column</note>
+      </trans-unit>
+      <trans-unit id="modelVersionAuthorColumn" datatype="html">
+        <source> Version Author </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
+          <context context-type="linenumber">152,153</context>
+        </context-group>
+        <note priority="1" from="description">selected model version author column</note>
+        <note priority="1" from="meaning">model version author column</note>
+      </trans-unit>
+      <trans-unit id="modelStatusColumn" datatype="html">
+        <source> Status </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
+          <context context-type="linenumber">161,162</context>
+        </context-group>
+        <note priority="1" from="description">selected model status column</note>
+        <note priority="1" from="meaning">model status column</note>
+      </trans-unit>
+      <trans-unit id="environmentsHeader" datatype="html">
+        <source> Environments <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span *ngIf=&quot;rewardFunctionsDataSource &amp;&amp; rewardFunctionsDataSource.data&quot; class=&quot;models-number&quot;&gt;"/>(<x id="INTERPOLATION" equiv-text="{{rewardFunctionsDataSource.data.length}}"/>)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
+          <context context-type="linenumber">177,178</context>
+        </context-group>
+        <note priority="1" from="description">environments header</note>
+        <note priority="1" from="meaning">environments header</note>
+      </trans-unit>
+      <trans-unit id="environmentId" datatype="html">
+        <source>ID</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
+          <context context-type="linenumber">189</context>
+        </context-group>
+        <note priority="1" from="description">id of the environmnet</note>
+        <note priority="1" from="meaning">id of the environment</note>
+      </trans-unit>
+      <trans-unit id="environmentName" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
+          <context context-type="linenumber">194</context>
+        </context-group>
+        <note priority="1" from="description">name of the environmnet</note>
+        <note priority="1" from="meaning">name of the environment</note>
+      </trans-unit>
+      <trans-unit id="environmentAction" datatype="html">
+        <source>Action</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
+          <context context-type="linenumber">202</context>
+        </context-group>
+        <note priority="1" from="description">view the environment</note>
+        <note priority="1" from="meaning">action</note>
+      </trans-unit>
+      <trans-unit id="addModelButton" datatype="html">
+        <source> Add New Model </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
+          <context context-type="linenumber">218</context>
+        </context-group>
+        <note priority="1" from="description">add model button</note>
+        <note priority="1" from="meaning">add model button</note>
+      </trans-unit>
+      <trans-unit id="addRewardFunction" datatype="html">
+        <source>Add Reward Function</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">add reward function</note>
+        <note priority="1" from="meaning">add reward function</note>
+      </trans-unit>
+      <trans-unit id="editRewardFunction" datatype="html">
+        <source>Edit Reward Function</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">edit reward function</note>
+        <note priority="1" from="meaning">edit reward function</note>
+      </trans-unit>
+      <trans-unit id="enterEnvironmentName" datatype="html">
+        <source>Enter the name of the environment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">enter the name of the environment</note>
+        <note priority="1" from="meaning">enter the name of the environment</note>
+      </trans-unit>
+      <trans-unit id="enterEnvironmentClassName" datatype="html">
+        <source>Enter Class name of the Environment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">enter the class name of the environment</note>
+        <note priority="1" from="meaning">enter the class name of the environment</note>
+      </trans-unit>
+      <trans-unit id="selectEnvironmentCapabilities" datatype="html">
+        <source>Select the Capabilities for the Environment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <note priority="1" from="description">select the capabilities for the environment</note>
+        <note priority="1" from="meaning">select the capabilities for the environment</note>
+      </trans-unit>
+      <trans-unit id="enterEnvironmentGithubUrl" datatype="html">
+        <source>Enter the GitHub Url for the environment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+        <note priority="1" from="description">enter the github url for the environment</note>
+        <note priority="1" from="meaning">enter the github url for the environment</note>
+      </trans-unit>
+      <trans-unit id="enterEnvironmentRawUrl" datatype="html">
+        <source>Enter the URL of the environment.py file (raw file)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+        <note priority="1" from="description">enter the raw url of the environment python file</note>
+        <note priority="1" from="meaning">enter the raw url of the environment python file</note>
+      </trans-unit>
+      <trans-unit id="enterEnvironmentRequirementsRawUrl" datatype="html">
+        <source>Enter the URL of the requirements.txt file for your environment.py file if any</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+        <note priority="1" from="description">enter the raw url of the requirements text file for the environment if any</note>
+        <note priority="1" from="meaning">enter the raw url of the requirements text file for the environment if any</note>
+      </trans-unit>
+      <trans-unit id="enterEnvironmentVersion" datatype="html">
+        <source>Enter the version of the environment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <note priority="1" from="description">enter the version of the environment</note>
+        <note priority="1" from="meaning">enter the version of the environment</note>
+      </trans-unit>
+      <trans-unit id="enterEnvironmentVersionAuthor" datatype="html">
+        <source>Enter the author of the environment version</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+        <note priority="1" from="description">enter the author of the version of the environment</note>
+        <note priority="1" from="meaning">enter the author of the version of the environment</note>
+      </trans-unit>
+      <trans-unit id="enterEnvironmentVersionDate" datatype="html">
+        <source>Enter the date of the environment version</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+        <note priority="1" from="description">enter the date of the version of the environment</note>
+        <note priority="1" from="meaning">enter the date of the version of the environment</note>
+      </trans-unit>
+      <trans-unit id="c647698d922eed4e395e1481812b02ab97a2e077" datatype="html">
+        <source>Environment requirement json file</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+        <note priority="1" from="description">environment requirement json file@environmentRequirementJsonFile</note>
+        <note priority="1" from="meaning">environment requirement json file</note>
+      </trans-unit>
+      <trans-unit id="map.details.location.not.found" datatype="html">
+        <source>Entered Location update failed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="models.not.found" datatype="html">
+        <source>Could not find models : </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="model.creation.successful" datatype="html">
+        <source>Model Creation Successful: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="model.creation.failed" datatype="html">
+        <source>Could not create model!: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="model.update.successful" datatype="html">
+        <source>Model Update Successful: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="model.update.failed" datatype="html">
+        <source>Could not update model!: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="model.entered.update.failed" datatype="html">
+        <source>Entered Model update failed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="model.status.provisioned" datatype="html">
+        <source>Provisioned</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="model.status.provisioning" datatype="html">
+        <source>Provisioning</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="model.reward.creation.successful" datatype="html">
+        <source>Reward function Creation Successful: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="model.reward.creation.failed" datatype="html">
+        <source>Could not create reward function!: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="model.reward.update.successful" datatype="html">
+        <source>Reward function Update Successful: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="model.reward.update.failed" datatype="html">
+        <source>Could not update reward function!: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="model.entered.reward.update.failed" datatype="html">
+        <source>Entered reward function update failed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.level" datatype="html">
+        <source>Admin level </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="data.exists.for" datatype="html">
+        <source> data exists for </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/overview/constants/overview.constants.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="would.you.like.to.load.this.data" datatype="html">
+        <source>Would you like to load this data?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/overview/constants/overview.constants.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="model.location.creation.successful" datatype="html">
+        <source>Location Creation Successful: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="model.location.creation.failed" datatype="html">
+        <source>Could not create location!: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="model.location.update.successful" datatype="html">
+        <source>Location Update Successful: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="model.location.update.failed" datatype="html">
+        <source>Could not update location!: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="model.location.data.verification.failed.missing.loc.id" datatype="html">
+        <source>Location data verification failed due to missing location Id</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="location.data.verification.successful" datatype="html">
+        <source>Location Data Verification Successful: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="location.data.verification.failed" datatype="html">
+        <source>Could not verify location data!: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="indexNPI" datatype="html">
+        <source>Index (NPI-Index, Compliance Score, Stringency Index)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <note priority="1" from="description">NPI Compliance and Stringency index</note>
+        <note priority="1" from="meaning">index label</note>
+      </trans-unit>
+      <trans-unit id="mobilityType" datatype="html">
+        <source>Mobility Type (workplaces, retail_and_recreation, grocery_and_pharmacy, parks, transit_stations, residential)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+        <note priority="1" from="description">Mobility type</note>
+        <note priority="1" from="meaning">mobility type</note>
+      </trans-unit>
+      <trans-unit id="playPause" datatype="html">
+        <source>Play/Pause</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+        <note priority="1" from="description">play pause button</note>
+        <note priority="1" from="meaning">play pause button </note>
+      </trans-unit>
+      <trans-unit id="loadCountriesData" datatype="html">
+        <source>Load countries data</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+        <note priority="1" from="description">load countries data</note>
+        <note priority="1" from="meaning">load countries data</note>
+      </trans-unit>
+      <trans-unit id="modalTitle" datatype="html">
+        <source>Configure Data &amp; Data Sources</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
+          <context context-type="linenumber">130</context>
+        </context-group>
+        <note priority="1" from="description">modalTitle</note>
+        <note priority="1" from="meaning">modalTitle</note>
+      </trans-unit>
+      <trans-unit id="covid19Domain" datatype="html">
+        <source> Domain(Covid19): </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
+          <context context-type="linenumber">140,141</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
+          <context context-type="linenumber">146</context>
+        </context-group>
+        <note priority="1" from="description">covid 19 domain div</note>
+        <note priority="1" from="meaning">covid 19 domain div</note>
+      </trans-unit>
+      <trans-unit id="npiDatasetList" datatype="html">
+        <source> NPIs Dataset (WNTRAC or OxCGRT): </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
+          <context context-type="linenumber">158,159</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
+          <context context-type="linenumber">164</context>
+        </context-group>
+        <note priority="1" from="description">NPIs dataset</note>
+        <note priority="1" from="meaning">NPIs dataset</note>
+      </trans-unit>
+      <trans-unit id="monthRangePicker" datatype="html">
+        <source> Month range picker for data: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
+          <context context-type="linenumber">176,177</context>
+        </context-group>
+        <note priority="1" from="description">month range picker</note>
+        <note priority="1" from="meaning">month range picker</note>
+      </trans-unit>
+      <trans-unit id="saveButton" datatype="html">
+        <source>Save</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
+          <context context-type="linenumber">188</context>
+        </context-group>
+        <note priority="1" from="description">save button</note>
+        <note priority="1" from="meaning">save button</note>
+      </trans-unit>
+      <trans-unit id="admin.level1" datatype="html">
+        <source>Admin level 1</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/overview/constants/overview.constants.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="selectOutcome" datatype="html">
+        <source>Select outcome</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/results/components/predictions/predictions.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <note priority="1" from="description">select outcome label</note>
+        <note priority="1" from="meaning">select outcome label</note>
+      </trans-unit>
+      <trans-unit id="requestsHeader" datatype="html">
+        <source> Requests <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span *ngIf=&quot;resultsRequestsDataSource &amp;&amp; resultsRequestsDataSource.data&quot; class=&quot;models-number&quot;&gt;"/>(<x id="INTERPOLATION" equiv-text="{{resultsRequestsDataSource.data.length}}"/>)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/results/components/predictions/predictions.component.html</context>
+          <context context-type="linenumber">88,89</context>
+        </context-group>
+        <note priority="1" from="description">requests header</note>
+        <note priority="1" from="meaning">requests header</note>
+      </trans-unit>
+      <trans-unit id="requestId" datatype="html">
+        <source>ID</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/results/components/predictions/predictions.component.html</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+        <note priority="1" from="description">request id</note>
+        <note priority="1" from="meaning">id</note>
+      </trans-unit>
+      <trans-unit id="requestType" datatype="html">
+        <source>Type</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/results/components/predictions/predictions.component.html</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+        <note priority="1" from="description">request type</note>
+        <note priority="1" from="meaning">type</note>
+      </trans-unit>
+      <trans-unit id="requestStatus" datatype="html">
+        <source>Status</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/results/components/predictions/predictions.component.html</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+        <note priority="1" from="description">request status</note>
+        <note priority="1" from="meaning">status</note>
+      </trans-unit>
+      <trans-unit id="requestAction" datatype="html">
+        <source>Action</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/results/components/predictions/predictions.component.html</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+        <note priority="1" from="description">request action</note>
+        <note priority="1" from="meaning">action</note>
+      </trans-unit>
+      <trans-unit id="completed" datatype="html">
+        <source>Completed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/results/constants/results.constants.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="inProgress" datatype="html">
+        <source>In-progress</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/results/constants/results.constants.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resultsModelsNotFound" datatype="html">
+        <source>Could not find models : </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/results/constants/results.constants.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resultsLocationsNotFound" datatype="html">
+        <source>Could not find locations : </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/results/constants/results.constants.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resultsNotFound" datatype="html">
+        <source>Could not find results : </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/results/constants/results.constants.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
