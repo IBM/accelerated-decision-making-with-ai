@@ -604,7 +604,7 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
 
         if (outcome['status'] === 201) {
           this.itemsDataSource.data = [...outcome['entity'], ...this.itemsDataSource.data];
-          this.snackBar.open(EXPERIMENTS_CONSTANTS.EXPERIMENT_CREATION_SUCCESSFUL 
+          this.snackBar.open(EXPERIMENTS_CONSTANTS.EXPERIMENT_CREATION_SUCCESSFUL
             + experimentPayload['name'], EXPERIMENTS_CONSTANTS.CLOSE, {
               duration: SNACK_BAR_DURATION,
           });
@@ -624,14 +624,14 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
               }
               this.subscribePostExperiment = this.apiService.postExperiment(experimentPayload, false).subscribe(newOutcome => {
                 if (!newOutcome['entity'] || !newOutcome['entity'][0]) {
-                  this.snackBar.open(EXPERIMENTS_CONSTANTS.EXPERIMENT_CREATION_FAILED 
+                  this.snackBar.open(EXPERIMENTS_CONSTANTS.EXPERIMENT_CREATION_FAILED
                     + experimentPayload['name'], EXPERIMENTS_CONSTANTS.CLOSE, {
                     duration: SNACK_BAR_DURATION,
                   });
                   return;
                 }
                 this.itemsDataSource.data = [...newOutcome['entity'], ...this.itemsDataSource.data];
-                this.snackBar.open(EXPERIMENTS_CONSTANTS.EXPERIMENT_CREATION_SUCCESSFUL 
+                this.snackBar.open(EXPERIMENTS_CONSTANTS.EXPERIMENT_CREATION_SUCCESSFUL
                   + experimentPayload['name'], EXPERIMENTS_CONSTANTS.CLOSE, {
                   duration: SNACK_BAR_DURATION,
                 });
@@ -643,7 +643,7 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
                   },
                 });
               }, newError => {
-                this.snackBar.open(EXPERIMENTS_CONSTANTS.EXPERIMENT_CREATION_FAILED 
+                this.snackBar.open(EXPERIMENTS_CONSTANTS.EXPERIMENT_CREATION_FAILED
                   + experimentPayload['name'], EXPERIMENTS_CONSTANTS.CLOSE, {
                   duration: SNACK_BAR_DURATION,
                 });
