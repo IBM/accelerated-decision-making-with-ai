@@ -13,14 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-import { $ } from "protractor";
-
 export const MAP_DETAILS_CONSTANTS = {
     LOCATION_UPDATE_FAILED: $localize`:@@map.details.location.not.found:Entered Location update failed`,
     CLOSE:$localize`:@@close:Close`,
 };
-  
+
 export const MODELS_CONSTANTS = {
     MODELS_NOT_FOUND: $localize`:@@models.not.found:Could not find models : `,
     MODEL_CREATION_SUCCESSFUL: $localize`:@@model.creation.successful:Model Creation Successful: `,

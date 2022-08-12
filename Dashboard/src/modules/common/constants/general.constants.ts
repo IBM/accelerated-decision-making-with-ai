@@ -195,7 +195,7 @@ export const APP_CONSTANTS = {
   RESULTS: $localize`:Results|Results@@results:Results`,
   APIS: $localize`:Apis|Apis@@apis:APIs`,
   HOW_TO: $localize`:How to|How to@@how_to:How to`,
-  FEEDBACK: $localize`:Feedback|Feedback@@feedback:Feedback`,   
+  FEEDBACK: $localize`:Feedback|Feedback@@feedback:Feedback`,
 };
 
 export const FEEDBACK_CONSTANTS = {
