@@ -125,10 +125,10 @@ export const ADMIN_0_OBJECT = {
   KEN: 'Kenya'
 };
 
-export const DROPDOWN_ITEMS_INDEX = ['NPI-Index', 'Compliance Score', 'Stringency Index'];
+export const DROPDOWN_ITEMS_INDEX = [$localize`:NPI-Index|NPI-Index drop down@@npiIndexDropDown:NPI-Index`, $localize`:Compliance Score|Compliance Score drop down@@complianceScoreDropDown:Compliance Score`, $localize`:Stringency Index|Stringency Index drop down@@stringencyIndexDropDown:Stringency Index`];
 
-export const DROPDOWN_ITEMS_MOBILITY_TYPE = ['Transit_stations', 'Retail_and_recreation', 'Grocery_and_pharmacy', 'Parks',
-  'Workplaces', 'Residential'];
+export const DROPDOWN_ITEMS_MOBILITY_TYPE = [$localize`:Transit stations|Transit stations drop down@@transitStationsDropDown:Transit_stations`, $localize`:Retail and recreation|Retail and recreation drop down@@retailAndRecreationDropDown:Retail_and_recreation`, $localize`:Grocery and pharmacy|Grocery and pharmacy drop down@@groceryAndPharmacyDropDown:Grocery_and_pharmacy`,$localize`:Parks|Parks drop down@@parksDropDown:Parks`,
+$localize`:Workplaces|Workplaces drop down@@workplacesDropDown:Workplaces`, $localize`:Residential|Residential drop down@@residentialDropDown:Residential`];
 
 export const DROPDOWN_ITEMS_NPI_DATASET = ['WNTRAC', 'OxCGRT'];
 
@@ -136,6 +136,15 @@ export const DROPDOWN_ITEMS_GLOBAL_US = [
   'Global',
   'US'
 ];
+
+export const HEADER = {
+  STRINGENCY_INDEX_WNTRAC: $localize`:@@stringency.index.wntrac:stringency index_wntrac_`,
+  COMPLIANCE_SCORE_WNTRAC: $localize`:@@compliance.score.wntrac:compliance score_wntrac_`,
+  NPI_INDEX_WNTRAC: $localize`:@@npi.index.wntrac:npi-index_wntrac_`,
+  STRINGENCY_INDEX_OXCGRT: $localize`:@@stringency.index.oxcgrt_:stringency index_oxcgrt_`,
+  COMPLIANCE_SCORE_OXCGRT: $localize`:@@compliance.score.oxcgrt:compliance score_oxcgrt_`,
+  NPI_INDEX_OXCGRT: $localize`:@@npi.index.oxcgrt.:npi-index_oxcgrt_`,
+};
 
 export const INDEX_DATA_KEYS = {
   confirmed_cases: 0,
@@ -176,3 +185,31 @@ export const INDEX_DATA_KEYS = {
   'compliance score_oxcgrt_residential': 35,
   'npi-index_oxcgrt_residential': 36,
 };
+
+
+export const APP_CONSTANTS = {
+  OVERVIEW: $localize`:Overview|Overview@@overview:Overview`,
+  ALGORITHMS: $localize`:Algorithms|Algorithms@@algorithms:Algorithms`,
+  MODELS: $localize`:Models|Models@@models:Models`,
+  EXPERIMENTS: $localize`:Experiments|Experiments@@experiments:Experiments`,
+  RESULTS: $localize`:Results|Results@@results:Results`,
+  APIS: $localize`:Apis|Apis@@apis:APIs`,
+  HOW_TO: $localize`:How to|How to@@how_to:How to`,
+  FEEDBACK: $localize`:Feedback|Feedback@@feedback:Feedback`,   
+};
+
+export const FEEDBACK_CONSTANTS = {
+  FEEDBACK_SUBMITTED: $localize`:@@feedback_submitted:Feedback submitted`,
+  FEEDBACK_SUBMISSION_FAILED: $localize`:@@feedback_submission_failed:Feedback submission failed! Please try again.`,
+};
+
+export const LOGIN_CONSTANTS = {
+  USER_ROLE_MISSING: $localize`:@@user_role_missing:User Role Missing! Contact the system admin at charles.wachira1@ibm.com.`,
+  CLOSE:$localize`:@@close:Close`,
+};
+
+export const MAP_CONSTANTS = {
+  NO_DATA_AVAILABLE: $localize`:@@no_data_available:No data available`,
+};
+
+

@@ -180,7 +180,7 @@
                     <mat-header-cell *matHeaderCellDef mat-sort-header i18n="action|view the past experiment@@pastExperimentAction">Action</mat-header-cell>
                     <mat-cell *matCellDef="let item" (click)="$event.stopPropagation()">
                       <button class="btn btn-link" matTooltip="View" [routerLink]="['/results']" [queryParams]="{experimentId: item.id, locationId: item.location.id, modelId: item.executor.id}">
-                        <i class="material-icons default-color" i18n="visibility|visibility@@visibility">visibility</i>
+                        <i class="material-icons default-color">visibility</i>
                       </button>
                     </mat-cell>
                   </ng-container>
@@ -226,7 +226,7 @@
                     <mat-header-cell *matHeaderCellDef mat-sort-header i18n="action|view the duplicate experiments@@duplicateExperimentAction">Action</mat-header-cell>
                     <mat-cell *matCellDef="let item" (click)="$event.stopPropagation()">
                       <button class="btn btn-link" matTooltip="View" [routerLink]="['/results']" [queryParams]="{experimentId: item.id, locationId: item.location.id, modelId: item.executor.id}">
-                        <i class="material-icons default-color" i18n="visibility|visibility@@visibility">visibility</i>
+                        <i class="material-icons default-color">visibility</i>
                       </button>
                     </mat-cell>
                   </ng-container>

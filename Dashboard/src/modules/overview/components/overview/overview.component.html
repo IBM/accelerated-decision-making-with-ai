@@ -143,7 +143,7 @@
           <div class="control-panel-form form-group">
             <div class="form-control-wrap">
               <mat-form-field class="settings-select" id="domain-select">
-                <mat-label i18n="covid 19 domain div|covid 19 domain div@@covid19Domain">Domain(Covid19)</mat-label>
+                <mat-label i18n="@@covid19Domain">Domain(Covid19)</mat-label>
                 <mat-select [(ngModel)]="domain">
                   <mat-option value="covid19" >COVID19</mat-option>
                 </mat-select>
@@ -161,7 +161,7 @@
           <div class="control-panel-form form-group">
             <div class="form-control-wrap">
               <mat-form-field class="settings-select">
-                <mat-label i18n="NPIs dataset|NPIs dataset@@npiDatasetList">NPIs Dataset (WNTRAC or OxCGRT)</mat-label>
+                <mat-label i18n="@@npiDatasetList">NPIs Dataset (WNTRAC or OxCGRT)</mat-label>
                 <mat-select [(ngModel)]="CURRENT_DROPDOWN_ITEMS_NPI_DATASET" (selectionChange)="npiDatasetDropdownChangeListener($event)">
                   <mat-option *ngFor="let obj of DROPDOWN_ITEMS_NPI_DATASET" [value]="obj">{{obj}}</mat-option>
                 </mat-select>

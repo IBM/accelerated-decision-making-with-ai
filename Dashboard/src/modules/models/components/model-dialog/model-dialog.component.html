@@ -17,7 +17,7 @@
 <div *ngIf="data.type=='model'; then model"></div>
 <ng-template #model>
   <h5 *ngIf="!data.model" i18n="add model|add model@@addModel">Add Model</h5>
-  <h5 *ngIf="data.model" i18n="edit model|edit model@@addModel">Edit Model</h5>
+  <h5 *ngIf="data.model" i18n="edit model|edit model@@editModel">Edit Model</h5>
   <mat-dialog-content>
     <div class="container">
       <form [formGroup]="formGroup" validate>
@@ -80,7 +80,7 @@
             </div>
             <div class="col-md-6">
               <mat-form-field>
-                <mat-label i18n="enter the raw url of the requirements text file if any|enter the raw url of the requirements text file for the model python file if any@@enterRequirementsRawUrl">Enter the URL of the requirements.txt file for your model.py file if any</mat-label>
+                <mat-label i18n="enter the raw url of the requirements text file if any|enter the raw url of the requirements text file for the model python file if any@@enterRequirementsRawUrlIfAny">Enter the URL of the requirements.txt file for your model.py file if any</mat-label>
                 <input matInput placeholder="Requirements" formControlName="runCommand">
               </mat-form-field>
             </div>

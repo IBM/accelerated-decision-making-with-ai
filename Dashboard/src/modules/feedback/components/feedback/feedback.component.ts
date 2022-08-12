@@ -16,6 +16,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import { FEEDBACK_CONSTANTS } from 'src/modules/common';
 import { Feedback } from 'src/modules/common/models/custom';
 import { ApiService } from 'src/modules/common/services/api/api.service';
 
@@ -48,10 +49,10 @@ export class FeedbackComponent implements OnInit {
     value['timestamp'] = Date.now();
     const feedback: Feedback = {contact: value['name'] + ' ' + value['email'], feedback: value['feedback'], user: null};
     this.apiService.postFeedback(feedback).subscribe(response => {
-      alert('Feedback submitted');
+      alert(FEEDBACK_CONSTANTS.FEEDBACK_SUBMITTED);
       this.feedback.reset();
     }, error => {
-      alert('Feedback submission failed! Please try again.');
+      alert(FEEDBACK_CONSTANTS.FEEDBACK_SUBMISSION_FAILED);
     });
   }
 

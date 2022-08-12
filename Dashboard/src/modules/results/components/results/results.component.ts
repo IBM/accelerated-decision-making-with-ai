@@ -37,6 +37,7 @@ import {
   ResultsRequest,
   SNACK_BAR_DURATION,
 } from '../../../common';
+import { RESULTS_CONSTANTS } from '../../constants/results.constants';
 
 @Component({
   selector: 'app-results',
@@ -160,7 +161,7 @@ export class ResultsComponent
           this.loadLocationsAndPostExecutors([modelId], locationId);
         },
         (error) => {
-          this.snackBar.open('Could not find models : ', 'close', {
+          this.snackBar.open(RESULTS_CONSTANTS.MODELS_NOT_FOUND, RESULTS_CONSTANTS.CLOSE, {
             duration: SNACK_BAR_DURATION,
           });
         }
@@ -197,7 +198,7 @@ export class ResultsComponent
           }
         },
         (error) => {
-          this.snackBar.open('Could not find locations : ', 'close', {
+          this.snackBar.open(RESULTS_CONSTANTS.LOCATIONS_NOT_FOUND, RESULTS_CONSTANTS.CLOSE, {
             duration: SNACK_BAR_DURATION,
           });
         }
@@ -244,7 +245,7 @@ export class ResultsComponent
           this.favorites = data;
         },
         (error) => {
-          this.snackBar.open('Could not find results : ', 'close', {
+          this.snackBar.open(RESULTS_CONSTANTS.RESULTS_NOT_FOUND, RESULTS_CONSTANTS.CLOSE, {
             duration: SNACK_BAR_DURATION,
           });
         }
@@ -260,7 +261,7 @@ export class ResultsComponent
           this.resultsLess = data;
         },
         (error) => {
-          this.snackBar.open('Could not find results : ', 'close', {
+          this.snackBar.open(RESULTS_CONSTANTS.RESULTS_NOT_FOUND, RESULTS_CONSTANTS.CLOSE, {
             duration: SNACK_BAR_DURATION,
           });
         }
@@ -278,7 +279,7 @@ export class ResultsComponent
           this.resultsMore = data;
         },
         (error) => {
-          this.snackBar.open('Could not find results : ', 'close', {
+          this.snackBar.open(RESULTS_CONSTANTS.RESULTS_NOT_FOUND, RESULTS_CONSTANTS.CLOSE, {
             duration: SNACK_BAR_DURATION,
           });
         }
