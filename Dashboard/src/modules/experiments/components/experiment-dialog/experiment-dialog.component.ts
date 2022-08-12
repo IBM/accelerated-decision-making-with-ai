@@ -20,6 +20,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { isNotNullOrUndefined } from 'codelyzer/util/isNotNullOrUndefined';
 import { ApiService, SNACK_BAR_DURATION } from 'src/modules/common';
+import { EXPERIMENTS_CONSTANTS, EXPERIMENT_DIALOG_CONSTANTS } from '../../constants/experiments.constants';
 import { ExperimentDialogService } from '../../services';
 
 @Component({
@@ -60,14 +61,14 @@ export class ExperimentDialogComponent implements OnInit, OnDestroy {
 
   private setupForm() {
     this.actionTypes = this.data.experiment.interventions;
-    if (this.data.type === 'Single') {
+    if (this.data.type === EXPERIMENTS_CONSTANTS.TASKS.SINGLE) {
       this.formGroup = this.formBuilder.group({
         coverage: ['', [Validators.required]],
         modelName: ['', [Validators.required]],
         time: ['', [Validators.required]],
       });
-    } else if (this.data.type === 'Multiple') {
-      if (this.data.experiment.experiment_type === 'Prediction') {
+    } else if (this.data.type === EXPERIMENTS_CONSTANTS.TASKS.MULTIPLE) {
+      if (this.data.experiment.experiment_type === EXPERIMENTS_CONSTANTS.EXPERIMENT_TYPES.PREDICTION) {
         this.formGroup = this.formBuilder.group({
           interventionName: ['', [Validators.required]],
           numberOfEpisodes: ['', [Validators.required]],
@@ -77,7 +78,7 @@ export class ExperimentDialogComponent implements OnInit, OnDestroy {
           coverageStep: ['', [Validators.required]],
           coverageMinMax: this.formBuilder.control([0, 100]),
         });
-      } else if (this.data.experiment.experiment_type === 'Calibration') {
+      } else if (this.data.experiment.experiment_type === EXPERIMENTS_CONSTANTS.EXPERIMENT_TYPES.CALIBRATION) {
         this.formGroup = this.formBuilder.group({
           time: ['', [Validators.required]],
           numberOfEpisodes: ['', [Validators.required]],
@@ -91,7 +92,7 @@ export class ExperimentDialogComponent implements OnInit, OnDestroy {
         this.formGroup.controls['coverageStep'].setValue(28);
         this.pickerDisabled = true;
       }
-    } else if (this.data.type === 'Continuous') {
+    } else if (this.data.type === EXPERIMENTS_CONSTANTS.TASKS.CONTINUOUS) {
       this.formGroup = this.formBuilder.group({
         timeEnd: ['', [Validators.required]],
         modelName: ['', [Validators.required]],
@@ -118,7 +119,7 @@ export class ExperimentDialogComponent implements OnInit, OnDestroy {
             this.pickerDisabled = true;
           },
           (error) => {
-            this.snackBar.open('Metadata details fetch failed', 'close', {
+            this.snackBar.open(EXPERIMENT_DIALOG_CONSTANTS.METADATA_DETAILS_NOT_FOUND, EXPERIMENT_DIALOG_CONSTANTS.CLOSE, {
               duration: SNACK_BAR_DURATION,
             });
           }

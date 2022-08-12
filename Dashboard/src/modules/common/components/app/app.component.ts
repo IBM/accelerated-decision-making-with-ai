@@ -20,7 +20,7 @@ import 'rxjs/add/operator/filter';
 import {ApiService, CacheService, DataService, UserService} from '../../services';
 import {Observable} from 'rxjs';
 import {User} from '../../models';
-import {USER_ROLES} from '../../constants';
+import {APP_CONSTANTS, USER_ROLES} from '../../constants';
 import { isNotNullOrUndefined } from 'codelyzer/util/isNotNullOrUndefined';
 
 @Component({
@@ -30,9 +30,9 @@ import { isNotNullOrUndefined } from 'codelyzer/util/isNotNullOrUndefined';
 })
 export class AppComponent implements OnInit, OnDestroy, AfterContentChecked {
   links = [
-    { title: 'Overview', path: '/overview'},
-    { title: 'How to', path: '/how-to'},
-    { title: 'Feedback', path: '/feedback'},
+    { title: APP_CONSTANTS.OVERVIEW, path: '/overview'},
+    { title: APP_CONSTANTS.HOW_TO, path: '/how-to'},
+    { title: APP_CONSTANTS.FEEDBACK, path: '/feedback'},
   ];
   activeNgbNav;
   completedRequestsNotification = {popOverMsg: `<b>Experiments</b><br><a href='/experiments'>ab1234</a><i>`
@@ -94,7 +94,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterContentChecked {
       this.userPop = {msg: ``
           + `` + whoami.name + `<br>` + `<hr>`
           + `` + USER_ROLES[whoami.type] + `<br>` + `<hr>`
-          + `` + `<a href='/logout'>Log Out</a>` + ``
+          + `` + `<a href='/logout' i18n="@@logout">Log Out</a>` + ``
           + ``, icon: whoami.name.charAt(0).toUpperCase()};
     });
     this.subscribeDomain = this.dataService.domainObservable.subscribe(domain => {
@@ -147,43 +147,43 @@ export class AppComponent implements OnInit, OnDestroy, AfterContentChecked {
 
   private setTabs(type: string, overviewUrl: string) {
     this.links = (type === 'admai_admin') ? [
-      { title: 'Overview', path: overviewUrl},
-      { title: 'Algorithms', path: '/algorithms'},
-      { title: 'Models', path: '/models'},
-      { title: 'Experiments', path: '/experiments'},
-      { title: 'Results', path: '/results'},
-      { title: 'Apis', path: '/swagger'},
-      { title: 'How to', path: '/how-to'},
-      { title: 'Feedback', path: '/feedback'},
+      { title: APP_CONSTANTS.OVERVIEW, path: overviewUrl},
+      { title: APP_CONSTANTS.ALGORITHMS, path: '/algorithms'},
+      { title: APP_CONSTANTS.MODELS, path: '/models'},
+      { title: APP_CONSTANTS.EXPERIMENTS, path: '/experiments'},
+      { title: APP_CONSTANTS.RESULTS, path: '/results'},
+      { title: APP_CONSTANTS.APIS, path: '/swagger'},
+      { title: APP_CONSTANTS.HOW_TO, path: '/how-to'},
+      { title: APP_CONSTANTS.FEEDBACK, path: '/feedback'},
     ] : (type === 'admai_ds') ? [
-      { title: 'Overview', path: overviewUrl},
-      { title: 'Algorithms', path: '/algorithms'},
-      { title: 'Models', path: '/models'},
-      { title: 'Experiments', path: '/experiments'},
-      { title: 'Results', path: '/results'},
-      { title: 'Apis', path: '/swagger'},
-      { title: 'How to', path: '/how-to'},
-      { title: 'Feedback', path: '/feedback'},
+      { title: APP_CONSTANTS.OVERVIEW, path: overviewUrl},
+      { title: APP_CONSTANTS.ALGORITHMS, path: '/algorithms'},
+      { title: APP_CONSTANTS.MODELS, path: '/models'},
+      { title: APP_CONSTANTS.EXPERIMENTS, path: '/experiments'},
+      { title: APP_CONSTANTS.RESULTS, path: '/results'},
+      { title: APP_CONSTANTS.APIS, path: '/swagger'},
+      { title: APP_CONSTANTS.HOW_TO, path: '/how-to'},
+      { title: APP_CONSTANTS.FEEDBACK, path: '/feedback'},
     ] : (type === 'admai_ms') ? [
-      { title: 'Overview', path: overviewUrl},
-      { title: 'Models', path: '/models'},
-      // { title: 'Algorithms', path: '/algorithms'},
-      { title: 'Experiments', path: '/experiments'},
-      { title: 'Results', path: '/results'},
-      { title: 'Apis', path: '/swagger'},
-      { title: 'How to', path: '/how-to'},
-      { title: 'Feedback', path: '/feedback'},
+      { title: APP_CONSTANTS.OVERVIEW, path: overviewUrl},
+      { title: APP_CONSTANTS.MODELS, path: '/models'},
+      // { title: APP_CONSTANTS.ALGORITHMS, path: '/algorithms'},
+      { title: APP_CONSTANTS.EXPERIMENTS, path: '/experiments'},
+      { title: APP_CONSTANTS.RESULTS, path: '/results'},
+      { title: APP_CONSTANTS.APIS, path: '/swagger'},
+      { title: APP_CONSTANTS.HOW_TO, path: '/how-to'},
+      { title: APP_CONSTANTS.FEEDBACK, path: '/feedback'},
     ] : (type === 'admai_dm') ? [
-      { title: 'Overview', path: overviewUrl},
-      { title: 'Models', path: '/models'},
-      { title: 'Experiments', path: '/experiments'},
-      { title: 'Results', path: '/results'},
-      { title: 'How to', path: '/how-to'},
-      { title: 'Feedback', path: '/feedback'},
+      { title: APP_CONSTANTS.OVERVIEW, path: overviewUrl},
+      { title: APP_CONSTANTS.MODELS, path: '/models'},
+      { title: APP_CONSTANTS.EXPERIMENTS, path: '/experiments'},
+      { title: APP_CONSTANTS.RESULTS, path: '/results'},
+      { title: APP_CONSTANTS.HOW_TO, path: '/how-to'},
+      { title: APP_CONSTANTS.FEEDBACK, path: '/feedback'},
     ] : [
-      { title: 'Overview', path: overviewUrl},
-      { title: 'How to', path: '/how-to'},
-      { title: 'Feedback', path: '/feedback'},
+      { title: APP_CONSTANTS.OVERVIEW, path: overviewUrl},
+      { title: APP_CONSTANTS.HOW_TO, path: '/how-to'},
+      { title: APP_CONSTANTS.FEEDBACK, path: '/feedback'},
     ];
   }
 }
