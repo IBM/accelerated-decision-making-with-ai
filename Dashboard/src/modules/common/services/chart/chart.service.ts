@@ -40,7 +40,7 @@ import {
 import {
   CHART_INTERVENTIONS_SYMBOLS,
   DEFAULT_COLOR,
-  DROPDOWN_ITEMS_X_AXIS, INDEX_DATA_KEYS,
+  DROPDOWN_ITEMS_X_AXIS, HEADER, INDEX_DATA_KEYS,
   MAP_DATA,
   STROKE_DEFAULT_COLOR
 } from '../../constants';
@@ -1130,29 +1130,29 @@ export class ChartService {
         x.push(xValue);
         ycc.push((thisAdminIndexData[epoch][0] < 0) ? 0 : thisAdminIndexData[epoch][0]);
         ywsi.push((thisAdminIndexData[epoch]
-          [INDEX_DATA_KEYS['stringency index_wntrac_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
-          thisAdminIndexData[epoch][INDEX_DATA_KEYS['stringency index_wntrac_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
+          [INDEX_DATA_KEYS[HEADER.STRINGENCY_INDEX_WNTRAC + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
+          thisAdminIndexData[epoch][INDEX_DATA_KEYS[HEADER.STRINGENCY_INDEX_WNTRAC + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
         ywcs.push((thisAdminIndexData[epoch]
-          [INDEX_DATA_KEYS['compliance score_wntrac_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
-          thisAdminIndexData[epoch][INDEX_DATA_KEYS['compliance score_wntrac_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
+          [INDEX_DATA_KEYS[HEADER.COMPLIANCE_SCORE_WNTRAC + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
+          thisAdminIndexData[epoch][INDEX_DATA_KEYS[HEADER.COMPLIANCE_SCORE_WNTRAC + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
         ywni.push((thisAdminIndexData[epoch]
-          [INDEX_DATA_KEYS['npi-index_wntrac_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
-          thisAdminIndexData[epoch][INDEX_DATA_KEYS['npi-index_wntrac_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
+          [INDEX_DATA_KEYS[HEADER.NPI_INDEX_WNTRAC + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
+          thisAdminIndexData[epoch][INDEX_DATA_KEYS[HEADER.NPI_INDEX_WNTRAC + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
         yosi.push((thisAdminIndexData[epoch]
-          [INDEX_DATA_KEYS['stringency index_oxcgrt_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
-          thisAdminIndexData[epoch][INDEX_DATA_KEYS['stringency index_oxcgrt_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
+          [INDEX_DATA_KEYS[HEADER.STRINGENCY_INDEX_OXCGRT + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
+          thisAdminIndexData[epoch][INDEX_DATA_KEYS[HEADER.STRINGENCY_INDEX_OXCGRT + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
         yocs.push((thisAdminIndexData[epoch]
-          [INDEX_DATA_KEYS['compliance score_oxcgrt_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
-          thisAdminIndexData[epoch][INDEX_DATA_KEYS['compliance score_oxcgrt_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
+          [INDEX_DATA_KEYS[HEADER.COMPLIANCE_SCORE_OXCGRT + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
+          thisAdminIndexData[epoch][INDEX_DATA_KEYS[HEADER.COMPLIANCE_SCORE_OXCGRT + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
         yoni.push((thisAdminIndexData[epoch]
-          [INDEX_DATA_KEYS['npi-index_oxcgrt_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
-          thisAdminIndexData[epoch][INDEX_DATA_KEYS['npi-index_oxcgrt_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
+          [INDEX_DATA_KEYS[HEADER.NPI_INDEX_OXCGRT + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
+          thisAdminIndexData[epoch][INDEX_DATA_KEYS[HEADER.NPI_INDEX_OXCGRT + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
       }
     });
 
     const trace: ChartData = {
       mode: 'lines',
-      name: 'New cases',
+      name: $localize`:@@newCasesYAxis:New cases`,
       type: 'scatter',
       x,
       y: ycc,

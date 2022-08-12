@@ -19,7 +19,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { isNotNullOrUndefined } from 'codelyzer/util/isNotNullOrUndefined';
 import AppID from 'ibmcloud-appid-js';
-import { SNACK_BAR_LONG_DURATION } from '../../constants';
+import { LOGIN_CONSTANTS, SNACK_BAR_LONG_DURATION } from '../../constants';
 import { UserService } from '../../services';
 
 @Component({
@@ -73,8 +73,8 @@ export class LoginComponent implements OnInit {
         );
       } else {
         this.snackBar.open(
-          'User Role Missing! Contact the system admin at charles.wachira1@ibm.com.',
-          'close',
+          LOGIN_CONSTANTS.USER_ROLE_MISSING,
+          LOGIN_CONSTANTS.CLOSE,
           {
             duration: SNACK_BAR_LONG_DURATION,
           }

@@ -120,7 +120,7 @@
                     <mat-header-cell *matHeaderCellDef i18n="action|request action@@requestAction">Action</mat-header-cell>
                     <mat-cell *matCellDef="let item" (click)="$event.stopPropagation()">
                       <button class="btn btn-link" matTooltip="Open" [disabled]="!item.status" (click)="viewResultsRequest(item)">
-                        <i class="material-icons default-color" i18n="visibility|visibility@@visibility">visibility</i>
+                        <i class="material-icons default-color">visibility</i>
                       </button>
                     </mat-cell>
                   </ng-container>

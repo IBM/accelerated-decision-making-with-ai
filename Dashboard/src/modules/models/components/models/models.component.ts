@@ -48,6 +48,7 @@ import { ApiService } from '../../../common/services/api/api.service';
 import { ModelDialogService } from '../../services/model-dialog/model-dialog.service';
 import { RewardFunctionsDialogService } from '../../services/reward-functions-dialog/reward-functions-dialog.service';
 import { filterOut } from 'src/modules/common/functions/functions';
+import { MODELS_CONSTANTS } from '../../constants/models.constants';
 
 @Component({
   selector: 'app-models',
@@ -192,7 +193,7 @@ export class ModelsComponent implements OnInit, AfterViewInit, OnDestroy {
         }
       },
       (error) => {
-        this.snackBar.open('Could not find models : ', 'close', {
+        this.snackBar.open(MODELS_CONSTANTS.MODELS_NOT_FOUND, MODELS_CONSTANTS.CLOSE, {
           duration: SNACK_BAR_DURATION,
         });
       }
@@ -227,8 +228,8 @@ export class ModelsComponent implements OnInit, AfterViewInit, OnDestroy {
                   this.resetAdmin(-1);
                   this.rewardFunctionsDataSource.data = [];
                   this.snackBar.open(
-                    'Model Creation Successful: ' + model['name'],
-                    'close',
+                    MODELS_CONSTANTS.MODEL_CREATION_SUCCESSFUL + model['name'],
+                    MODELS_CONSTANTS.CLOSE,
                     {
                       duration: SNACK_BAR_DURATION,
                     }
@@ -237,8 +238,8 @@ export class ModelsComponent implements OnInit, AfterViewInit, OnDestroy {
                 (error) => {
                   console.log(error);
                   this.snackBar.open(
-                    'Could not create model!: ' + model['name'],
-                    'close',
+                    MODELS_CONSTANTS.MODEL_CREATION_FAILED + model['name'],
+                    MODELS_CONSTANTS.CLOSE,
                     {
                       duration: SNACK_BAR_DURATION,
                     }
@@ -272,8 +273,8 @@ export class ModelsComponent implements OnInit, AfterViewInit, OnDestroy {
                   this.currentModel = outcome['entity'];
                   this.resetAdmin(-1);
                   this.snackBar.open(
-                    'Model Update Successful: ' + model['id'],
-                    'close',
+                    MODELS_CONSTANTS.MODEL_UPDATE_SUCCESSFUL + model['id'],
+                    MODELS_CONSTANTS.CLOSE,
                     {
                       duration: SNACK_BAR_DURATION,
                     }
@@ -282,8 +283,8 @@ export class ModelsComponent implements OnInit, AfterViewInit, OnDestroy {
                 (error) => {
                   console.log(error);
                   this.snackBar.open(
-                    'Could not update model!: ' + model['id'],
-                    'close',
+                    MODELS_CONSTANTS.MODEL_UPDATE_FAILED + model['id'],
+                    MODELS_CONSTANTS.CLOSE,
                     {
                       duration: SNACK_BAR_DURATION,
                     }
@@ -293,7 +294,7 @@ export class ModelsComponent implements OnInit, AfterViewInit, OnDestroy {
           }
         },
         (error) => {
-          this.snackBar.open('Entered Model update failed', 'close', {
+          this.snackBar.open(MODELS_CONSTANTS.ENTERED_MODEL_UPDATE_FAILED, MODELS_CONSTANTS.CLOSE, {
             duration: SNACK_BAR_DURATION,
           });
         }
@@ -302,9 +303,9 @@ export class ModelsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   getStatus(provisioned) {
     if (provisioned) {
-      return 'Provisioned';
+      return MODELS_CONSTANTS.MODEL_STATUS_PROVISIONED;
     } else {
-      return 'Provisioning';
+      return MODELS_CONSTANTS.MODEL_STATUS_PROVISIONING;
     }
   }
 
@@ -343,9 +344,9 @@ export class ModelsComponent implements OnInit, AfterViewInit, OnDestroy {
                         this.itemsDataSource.data = tempModel;
                         this.currentModel = newOutcome['entity'];
                         this.snackBar.open(
-                          'Reward function Creation Successful: ' +
+                          MODELS_CONSTANTS.REWARD_FUNCTION_CREATION_SUCCESSFUL +
                             rewardFunction['title'],
-                          'close',
+                          MODELS_CONSTANTS.CLOSE,
                           {
                             duration: SNACK_BAR_DURATION,
                           }
@@ -355,9 +356,9 @@ export class ModelsComponent implements OnInit, AfterViewInit, OnDestroy {
                   (error) => {
                     console.log(error);
                     this.snackBar.open(
-                      'Could not create reward function!: ' +
+                      MODELS_CONSTANTS.REWARD_FUNCTION_CREATION_FAILED +
                         rewardFunction['title'],
-                      'close',
+                      MODELS_CONSTANTS.CLOSE,
                       {
                         duration: SNACK_BAR_DURATION,
                       }
@@ -388,9 +389,9 @@ export class ModelsComponent implements OnInit, AfterViewInit, OnDestroy {
                         this.itemsDataSource.data = tempModel;
                         this.currentModel = newOutcome['entity'];
                         this.snackBar.open(
-                          'Reward function Update Successful: ' +
+                          MODELS_CONSTANTS.REWARD_FUNCTION_UPDATE_SUCCESSFUL +
                             rewardFunction['id'],
-                          'close',
+                          MODELS_CONSTANTS.CLOSE,
                           {
                             duration: SNACK_BAR_DURATION,
                           }
@@ -400,9 +401,9 @@ export class ModelsComponent implements OnInit, AfterViewInit, OnDestroy {
                   (error) => {
                     console.log(error);
                     this.snackBar.open(
-                      'Could not update reward function!: ' +
+                      MODELS_CONSTANTS.REWARD_FUNCTION_UPDATE_FAILED +
                         rewardFunction['id'],
-                      'close',
+                      MODELS_CONSTANTS.CLOSE,
                       {
                         duration: SNACK_BAR_DURATION,
                       }
@@ -413,8 +414,8 @@ export class ModelsComponent implements OnInit, AfterViewInit, OnDestroy {
           },
           (error) => {
             this.snackBar.open(
-              'Entered reward function update failed',
-              'close',
+              MODELS_CONSTANTS.ENTERED_REWARD_FUNCTION_UPDATE_FAILED,
+              MODELS_CONSTANTS.CLOSE,
               {
                 duration: SNACK_BAR_DURATION,
               }
@@ -868,14 +869,14 @@ export class ModelsComponent implements OnInit, AfterViewInit, OnDestroy {
       this.confirmDialogService
         .openDialog(
           'confirmation',
-          'Admin level ' +
+          MODELS_CONSTANTS.ADMIN_LEVEL +
             '' +
             newLevel +
-            ' data exists for ' +
+            MODELS_CONSTANTS.DATA_EXISTS_FOR +
             modelMetadata.name +
             '.' +
             '\n' +
-            'Would you like to load this data?'
+            MODELS_CONSTANTS.WOULD_YOU_LIKE_TO_LOAD_THIS_DATA
         )
         .subscribe(
           (response) => {
@@ -1021,8 +1022,8 @@ export class ModelsComponent implements OnInit, AfterViewInit, OnDestroy {
             (outcome) => {
               this.generalLocations.push(outcome['entity']);
               this.snackBar.open(
-                'Location Creation Successful: ' + event['names'],
-                'close',
+                MODELS_CONSTANTS.LOCATION_CREATION_SUCCESSFUL + event['names'],
+                MODELS_CONSTANTS.CLOSE,
                 {
                   duration: SNACK_BAR_DURATION,
                 }
@@ -1031,8 +1032,8 @@ export class ModelsComponent implements OnInit, AfterViewInit, OnDestroy {
             (error) => {
               console.log(error);
               this.snackBar.open(
-                'Could not create location!: ' + event['names'],
-                'close',
+                MODELS_CONSTANTS.LOCATION_CREATION_FAILED + event['names'],
+                MODELS_CONSTANTS.CLOSE,
                 {
                   duration: SNACK_BAR_DURATION,
                 }
@@ -1051,8 +1052,8 @@ export class ModelsComponent implements OnInit, AfterViewInit, OnDestroy {
               temp.push(outcome['entity']);
               this.generalLocations = temp;
               this.snackBar.open(
-                'Location Update Successful: ' + event['id'],
-                'close',
+                MODELS_CONSTANTS.LOCATION_UPDATE_SUCCESSFUL + event['id'],
+                MODELS_CONSTANTS.CLOSE,
                 {
                   duration: SNACK_BAR_DURATION,
                 }
@@ -1061,8 +1062,8 @@ export class ModelsComponent implements OnInit, AfterViewInit, OnDestroy {
             (error) => {
               console.log(error);
               this.snackBar.open(
-                'Could not update location!: ' + event['id'],
-                'close',
+                MODELS_CONSTANTS.LOCATION_UPDATE_FAILED + event['id'],
+                MODELS_CONSTANTS.CLOSE,
                 {
                   duration: SNACK_BAR_DURATION,
                 }
@@ -1080,8 +1081,8 @@ export class ModelsComponent implements OnInit, AfterViewInit, OnDestroy {
           !isNotNullOrUndefined(response[0].id)
         ) {
           this.snackBar.open(
-            'Location data verification failed due to missing location Id',
-            'close',
+            MODELS_CONSTANTS.LOCATION_DATA_VERIFICATION_FAILED_MISSING_LOC_ID,
+            MODELS_CONSTANTS.CLOSE,
             {
               duration: SNACK_BAR_DURATION,
             }
@@ -1114,9 +1115,9 @@ export class ModelsComponent implements OnInit, AfterViewInit, OnDestroy {
             this.currentModel = thisModel;
             this.reloadData();
             this.snackBar.open(
-              'Location Data Verification Successful: ' +
+              MODELS_CONSTANTS.LOCATION_DATA_VERIFICATION_SUCCESSFUL +
                 event['iso2code'],
-              'close',
+              MODELS_CONSTANTS.CLOSE,
               {
                 duration: SNACK_BAR_DURATION,
               }
@@ -1125,8 +1126,8 @@ export class ModelsComponent implements OnInit, AfterViewInit, OnDestroy {
           (error) => {
             console.log(error);
             this.snackBar.open(
-              'Could not verify location data!: ' + event['iso2code'],
-              'close',
+              MODELS_CONSTANTS.LOCATION_DATA_VERIFICATION_FAILED + event['iso2code'],
+              MODELS_CONSTANTS.CLOSE,
               {
                 duration: SNACK_BAR_DURATION,
               }

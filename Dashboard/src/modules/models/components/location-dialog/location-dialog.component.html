@@ -17,7 +17,7 @@
 <div *ngIf="data.type=='location'; then location else dataRepositoryConfiguration"></div>
 <ng-template #location>
   <h5 *ngIf="!data.modelMetadata.generalLocation" i18n="add location|add location header@@addLocationHeader">Add Location</h5>
-  <h5 *ngIf="data.modelMetadata.generalLocation" i18n="edit location|edit location header@@addLocationHeader">Edit Location</h5>
+  <h5 *ngIf="data.modelMetadata.generalLocation" i18n="edit location|edit location header@@editLocationHeader">Edit Location</h5>
   <mat-dialog-content>
     <div class="container">
       <form [formGroup]="formGroup" validate>
@@ -108,7 +108,7 @@
   <mat-dialog-actions align="end">
     <button mat-button mat-dialog-close i18n="cancel button|cancel button@@cancelButton">Cancel</button>
     <button type="submit" [disabled]="!formGroup.valid || submitted"  mat-raised-button
-            class="mat-raised-button mat-primary" (click)="onSubmit(formGroup.value)" i18n="submitButton|submitButton@@submitButton">Submit
+            class="mat-raised-button mat-primary" (click)="onSubmit(formGroup.value)" i18n="@@submitButton">Submit
     </button>
   </mat-dialog-actions>
 </ng-template>

@@ -54,6 +54,7 @@ import {
   MAP_COLORS,
   MAP_POPUP_OPTIONS,
 } from '../../../common';
+import { OVERVIEW_CONSTANTS } from '../../constants/overview.constants';
 
 @Component({
   selector: 'app-overview',
@@ -577,12 +578,12 @@ export class OverviewComponent
       this.confirmDialogService
         .openDialog(
           'confirmation',
-          'Admin level 1' +
-            ' data exists for ' +
+          OVERVIEW_CONSTANTS.ADMIN_LEVEL +
+            OVERVIEW_CONSTANTS.DATA_EXISTS_FOR +
             locationMetadata['fullname'] +
             '.' +
             '\n' +
-            'Would you like to load this data?'
+            OVERVIEW_CONSTANTS.WOULD_YOU_LIKE_TO_LOAD_THIS_DATA
         )
         .subscribe(
           (response) => {

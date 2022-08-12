@@ -20,7 +20,7 @@ import * as L from 'leaflet';
 import 'leaflet.markercluster';
 import {getColor, numberWithCommas} from '../../functions';
 import {DataService, MapService} from '../../services';
-import {MAP_POPUP_OPTIONS, DROPDOWN_ITEMS_GEO, GLYPHS, DEFAULT_MAP_BOUNDS} from '../../constants';
+import {MAP_POPUP_OPTIONS, DROPDOWN_ITEMS_GEO, GLYPHS, DEFAULT_MAP_BOUNDS, MAP_CONSTANTS} from '../../constants';
 import {MapParameters, OverviewMapParameters} from '../../models';
 import {environment} from '../../../../environments/environment';
 import {isNotNullOrUndefined} from 'codelyzer/util/isNotNullOrUndefined';
@@ -329,7 +329,7 @@ export class MapComponent implements OnInit, OnChanges {
     // create popup contents
     let customPopup = '';
     if (noData) {
-      customPopup = 'No Data Available';
+      customPopup = MAP_CONSTANTS.NO_DATA_AVAILABLE;
     } else {
       customPopup = this.mapService.makeDefautPopup(feature.properties.NAME, feature.properties.densityFeature, feature.properties.density);
     }
