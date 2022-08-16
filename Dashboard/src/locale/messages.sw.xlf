@@ -4,6 +4,7 @@
     <body>
       <trans-unit id="ngb.alert.close" datatype="html">
         <source>Close</source>
+        <target>Funga</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/alert/alert.ts</context>
           <context context-type="linenumber">58,61</context>
@@ -11,6 +12,7 @@
       </trans-unit>
       <trans-unit id="ngb.carousel.slide-number" datatype="html">
         <source> Slide <x id="INTERPOLATION" equiv-text="private _pauseO"/> of <x id="INTERPOLATION_1" equiv-text="Subject(false);"/> </source>
+        <target>Songesha</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/carousel/carousel.ts</context>
           <context context-type="linenumber">114,118</context>
@@ -19,6 +21,7 @@
       </trans-unit>
       <trans-unit id="ngb.carousel.previous" datatype="html">
         <source>Previous</source>
+        <target>Iliyopita</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/carousel/carousel.ts</context>
           <context context-type="linenumber">132,133</context>
@@ -26,6 +29,7 @@
       </trans-unit>
       <trans-unit id="ngb.carousel.next" datatype="html">
         <source>Next</source>
+        <target>Inayofuata</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/carousel/carousel.ts</context>
           <context context-type="linenumber">147,151</context>
@@ -33,6 +37,7 @@
       </trans-unit>
       <trans-unit id="ngb.datepicker.select-month" datatype="html">
         <source>Select month</source>
+        <target>Chagua mwezi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/datepicker/datepicker-navigation-select.ts</context>
           <context context-type="linenumber">43,47</context>
@@ -44,6 +49,7 @@
       </trans-unit>
       <trans-unit id="ngb.datepicker.select-year" datatype="html">
         <source>Select year</source>
+        <target>Chagua mwaka</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/datepicker/datepicker-navigation-select.ts</context>
           <context context-type="linenumber">59,63</context>
@@ -55,6 +61,7 @@
       </trans-unit>
       <trans-unit id="ngb.datepicker.previous-month" datatype="html">
         <source>Previous month</source>
+        <target>Mwezi uliopita</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/datepicker/datepicker-navigation.ts</context>
           <context context-type="linenumber">24,27</context>
@@ -66,6 +73,7 @@
       </trans-unit>
       <trans-unit id="ngb.datepicker.next-month" datatype="html">
         <source>Next month</source>
+        <target>Mwezi ujao</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/datepicker/datepicker-navigation.ts</context>
           <context context-type="linenumber">44,48</context>
@@ -77,6 +85,7 @@
       </trans-unit>
       <trans-unit id="ngb.pagination.first" datatype="html">
         <source>««</source>
+        <target>««</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/pagination/pagination.ts</context>
           <context context-type="linenumber">147,148</context>
@@ -84,6 +93,7 @@
       </trans-unit>
       <trans-unit id="ngb.pagination.previous" datatype="html">
         <source>«</source>
+        <target>«</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/pagination/pagination.ts</context>
           <context context-type="linenumber">153,154</context>
@@ -91,6 +101,7 @@
       </trans-unit>
       <trans-unit id="ngb.pagination.next" datatype="html">
         <source>»</source>
+        <target>»</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/pagination/pagination.ts</context>
           <context context-type="linenumber">158,159</context>
@@ -98,6 +109,7 @@
       </trans-unit>
       <trans-unit id="ngb.pagination.last" datatype="html">
         <source>»»</source>
+        <target>»»</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/pagination/pagination.ts</context>
           <context context-type="linenumber">164,165</context>
@@ -105,6 +117,7 @@
       </trans-unit>
       <trans-unit id="ngb.pagination.first-aria" datatype="html">
         <source>First</source>
+        <target>Mwanzo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/pagination/pagination.ts</context>
           <context context-type="linenumber">168,172</context>
@@ -112,6 +125,7 @@
       </trans-unit>
       <trans-unit id="ngb.pagination.previous-aria" datatype="html">
         <source>Previous</source>
+        <target>Uliopita</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/pagination/pagination.ts</context>
           <context context-type="linenumber">176,177</context>
@@ -119,6 +133,7 @@
       </trans-unit>
       <trans-unit id="ngb.pagination.next-aria" datatype="html">
         <source>Next</source>
+        <target>Unaofuata</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/pagination/pagination.ts</context>
           <context context-type="linenumber">188,189</context>
@@ -126,6 +141,7 @@
       </trans-unit>
       <trans-unit id="ngb.pagination.last-aria" datatype="html">
         <source>Last</source>
+        <target>Mwisho</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/pagination/pagination.ts</context>
           <context context-type="linenumber">195,200</context>
@@ -140,6 +156,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.HH" datatype="html">
         <source>HH</source>
+        <target>HH</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">40,41</context>
@@ -147,6 +164,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.hours" datatype="html">
         <source>Hours</source>
+        <target>Saa</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">45,46</context>
@@ -154,6 +172,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.MM" datatype="html">
         <source>MM</source>
+        <target>MM</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">52,53</context>
@@ -161,6 +180,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.minutes" datatype="html">
         <source>Minutes</source>
+        <target>Dakika</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">57,58</context>
@@ -168,6 +188,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.increment-hours" datatype="html">
         <source>Increment hours</source>
+        <target>Ongeza saa</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">62,63</context>
@@ -175,6 +196,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-hours" datatype="html">
         <source>Decrement hours</source>
+        <target>Punguza saa</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">67,68</context>
@@ -182,6 +204,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.increment-minutes" datatype="html">
         <source>Increment minutes</source>
+        <target>Ongeza dakika</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">75,76</context>
@@ -189,6 +212,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-minutes" datatype="html">
         <source>Decrement minutes</source>
+        <target>Punguza dakika</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">82</context>
@@ -196,6 +220,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.SS" datatype="html">
         <source>SS</source>
+        <target>SS</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">85,87</context>
@@ -203,6 +228,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.seconds" datatype="html">
         <source>Seconds</source>
+        <target>Sekunde</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">90,92</context>
@@ -210,6 +236,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.increment-seconds" datatype="html">
         <source>Increment seconds</source>
+        <target>Ongeza sekunde</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">98,99</context>
@@ -217,14 +244,14 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-seconds" datatype="html">
         <source>Decrement seconds</source>
+        <target>Punguza secunde</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">105,109</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.PM" datatype="html">
-        <source><x id="INTERPOLATION" equiv-text="sible.
-   */"/></source>
+        <source><x id="INTERPOLATION" equiv-text="sible.*/"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">125,130</context>
@@ -239,6 +266,7 @@
       </trans-unit>
       <trans-unit id="ngb.toast.close-aria" datatype="html">
         <source>Close</source>
+        <target>Funga</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/toast/toast.ts</context>
           <context context-type="linenumber">76,85</context>
@@ -246,6 +274,7 @@
       </trans-unit>
       <trans-unit id="addAlgorithmHeader" datatype="html">
         <source>Add Algorithm</source>
+        <target>Weka Algorithimu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">19</context>
@@ -255,6 +284,7 @@
       </trans-unit>
       <trans-unit id="editAlgorithmHeader" datatype="html">
         <source>Edit Algorithm</source>
+        <target>Sasaisha Algorithimu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">20</context>
@@ -264,6 +294,7 @@
       </trans-unit>
       <trans-unit id="enterAlgorithmName" datatype="html">
         <source>Enter name of the algorithm</source>
+        <target>Andika jina la algorithimu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">28</context>
@@ -273,6 +304,7 @@
       </trans-unit>
       <trans-unit id="fieldRequiredError" datatype="html">
         <source>This field is required</source>
+        <target>Jaza pengo hili</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">30</context>
@@ -474,6 +506,7 @@
       </trans-unit>
       <trans-unit id="enterAlgorithmClassName" datatype="html">
         <source>Enter the exact name of the Algorithm Class name</source>
+        <target>Andika jina kamili la kikundi cha Algorithimu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">35</context>
@@ -483,15 +516,17 @@
       </trans-unit>
       <trans-unit id="enterAlgorithmRawUrl" datatype="html">
         <source>Enter the raw url of the algorithm.py file</source>
+        <target>Andika anwani mbichi ya faili la algorithimu, iliyo kwenye tovuti ya Github</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">44</context>
         </context-group>
         <note priority="1" from="description">enter the raw url of the algorithm python file</note>
-        <note priority="1" from="meaning">enter the raw url of the algorithm python file</note>
+        <note priority="1" from="meaning">enter the raw url of the algorithimu python file</note>
       </trans-unit>
       <trans-unit id="enterRequirementsRawUrl" datatype="html">
         <source>Enter the raw url of requiments.txt</source>
+        <target>Andika anwani mbichi ya faili la mahitaji, iliyo kwenye tovuti ya Github</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">51</context>
@@ -501,6 +536,7 @@
       </trans-unit>
       <trans-unit id="enterAlgorithmGithubUrl" datatype="html">
         <source>Enter the GitHub url for the algorithm code</source>
+        <target>Andika anwani kamili ya tovuti ya Github, iliyo na maagizo ya programu ya algorithimu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">60</context>
@@ -510,6 +546,7 @@
       </trans-unit>
       <trans-unit id="enterAlgorithmVersion" datatype="html">
         <source>Enter the version of the algorithm</source>
+        <target>Andika toleo la algorithimu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">67</context>
@@ -519,6 +556,7 @@
       </trans-unit>
       <trans-unit id="enterAlgorithmVersionAuthor" datatype="html">
         <source>Enter the author of the algorithm version</source>
+        <target>Andika mwandishi wa toleo hili la algorithimu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">76</context>
@@ -528,6 +566,7 @@
       </trans-unit>
       <trans-unit id="enterAlgorithmVersionDate" datatype="html">
         <source>Enter the date of the algorithm version</source>
+        <target>Andika tarehe ya toleo hili la algorithimu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">83</context>
@@ -537,6 +576,7 @@
       </trans-unit>
       <trans-unit id="cancelButton" datatype="html">
         <source>Cancel</source>
+        <target>Ghairi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">94</context>
@@ -578,6 +618,7 @@
       </trans-unit>
       <trans-unit id="submitButton" datatype="html">
         <source>Submit </source>
+        <target>Tuma </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">96,97</context>
@@ -623,6 +664,7 @@
       </trans-unit>
       <trans-unit id="selectAlgorithmLabel" datatype="html">
         <source>Select algorithm</source>
+        <target>Chagua algorithimu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">31</context>
@@ -632,6 +674,7 @@
       </trans-unit>
       <trans-unit id="selectCompareAlgorithmsLabel" datatype="html">
         <source>Select compare algorithms</source>
+        <target>Chagua algorithimu ya kuilinganisha</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">44</context>
@@ -641,6 +684,7 @@
       </trans-unit>
       <trans-unit id="selectEnvironmentLabel" datatype="html">
         <source>Select environment</source>
+        <target>Chagua mazingira ya maagizo ya programu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">57</context>
@@ -650,6 +694,7 @@
       </trans-unit>
       <trans-unit id="selectLocationLabel" datatype="html">
         <source>Select location</source>
+        <target>Chagua eneo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">70</context>
@@ -659,6 +704,7 @@
       </trans-unit>
       <trans-unit id="selectedAlgorithmLabel" datatype="html">
         <source> Selected Algorithm </source>
+        <target> Algorithimu iliyochaguliwa </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">100,101</context>
@@ -668,6 +714,7 @@
       </trans-unit>
       <trans-unit id="selectedAlgorithmName" datatype="html">
         <source> Algorithm Name </source>
+        <target> Jina la algorithimu </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">112,113</context>
@@ -677,6 +724,7 @@
       </trans-unit>
       <trans-unit id="selectedAlgorithmVersion" datatype="html">
         <source> Algorithm Version </source>
+        <target> Toleo la algorithimu </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">121,122</context>
@@ -686,6 +734,7 @@
       </trans-unit>
       <trans-unit id="selectedAlgorithmVersionDate" datatype="html">
         <source> Version Date </source>
+        <target> Tarehe ya toleo la algorithimu </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">130,131</context>
@@ -695,6 +744,7 @@
       </trans-unit>
       <trans-unit id="selectedAlgorithmVersionAuthor" datatype="html">
         <source> Version Author </source>
+        <target> Mwandishi wa toleo hili </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">139,140</context>
@@ -704,6 +754,7 @@
       </trans-unit>
       <trans-unit id="selectedAlgorithmAccessedDate" datatype="html">
         <source> Accessed </source>
+        <target> Tarehe ya kufikiwa</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">148,149</context>
@@ -713,6 +764,7 @@
       </trans-unit>
       <trans-unit id="selectedAlgorithmStatus" datatype="html">
         <source> Status </source>
+        <target> Hali </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">157,158</context>
@@ -722,6 +774,7 @@
       </trans-unit>
       <trans-unit id="addNewAlgorithmButton" datatype="html">
         <source> Add New Algorithm </source>
+        <target> Weka Algorithimu Mpya </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">171</context>
@@ -731,6 +784,7 @@
       </trans-unit>
       <trans-unit id="learningResultsError" datatype="html">
         <source>Could not find learning results : </source>
+        <target>Matokeo ya kujifunza hayapatikani : </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">16</context>
@@ -740,6 +794,7 @@
       </trans-unit>
       <trans-unit id="algorithmCreationSuccess" datatype="html">
         <source>Algorithm Creation Successful: </source>
+        <target>Uundaji wa algorithimu umefaulu: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">17</context>
@@ -749,6 +804,7 @@
       </trans-unit>
       <trans-unit id="algorithmCreationFailed" datatype="html">
         <source>Could not create algorithm!: </source>
+        <target>Uundaji wa algorithimu haujafaulu!: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">18</context>
@@ -758,6 +814,7 @@
       </trans-unit>
       <trans-unit id="algorithmUpdateSuccess" datatype="html">
         <source>Algorithm Update Successful: </source>
+        <target>Usasaishaji wa algorithimu umefaulu: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">19</context>
@@ -767,6 +824,7 @@
       </trans-unit>
       <trans-unit id="algorithmUpdateFailed" datatype="html">
         <source>&quot;Could not update algorithm!: &quot;</source>
+        <target>&quot;Usasaishaji wa algorithimu haujafaulu!: &quot;</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">20</context>
@@ -776,6 +834,7 @@
       </trans-unit>
       <trans-unit id="enteredAlgorithmUpdateFailed" datatype="html">
         <source>Entered Algorithm update failed.</source>
+        <target>Usasaishaji wa algorithimu iliyowekwa haujafaulu.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">21</context>
@@ -785,6 +844,7 @@
       </trans-unit>
       <trans-unit id="loadAlgorithmsFailed" datatype="html">
         <source>Could not algorithms, locations and/or environments data : </source>
+        <target>Data za algorithimu, eneo na mazingira hazipatikani: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">22</context>
@@ -794,6 +854,7 @@
       </trans-unit>
       <trans-unit id="provisioned" datatype="html">
         <source>Provisioned</source>
+        <target>Hali ya Kukamilika</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">23</context>
@@ -803,6 +864,7 @@
       </trans-unit>
       <trans-unit id="provisioning" datatype="html">
         <source>Provisioning</source>
+        <target>Hali ya Kuendelea</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">24</context>
@@ -812,6 +874,7 @@
       </trans-unit>
       <trans-unit id="close" datatype="html">
         <source>Close</source>
+        <target>&quot;Funga</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">25</context>
@@ -843,6 +906,7 @@
       </trans-unit>
       <trans-unit id="mainTitleHeader" datatype="html">
         <source> Interactive Dashboard for Accelerated Decision-making with AI (ADMAI) </source>
+        <target>Dashibodi ya Kufanya Maamuzi ya Haraka kwa kutumia AI (ADMAI) </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
           <context context-type="linenumber">27,28</context>
@@ -852,6 +916,7 @@
       </trans-unit>
       <trans-unit id="lastUpdateDiv" datatype="html">
         <source> Updated: Jun 30, 2021 <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target>Imesasaishwa tarehe: Juni 30, 2021</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
           <context context-type="linenumber">30</context>
@@ -875,6 +940,21 @@
                   results and decisions made based on the results are the responsibility of the user. IBM shall have no liability
                   with respect to the results and decisions made based on the results. Please send any inquiries about the data
                   presented here at: wwcc19@ke.ibm.com</source>
+        <target>Kutokana na maongezeko ya magonjwa mbalimbali, IBM inafadhili Dashibodi hii
+               kama huduma kwa umma, lakini dashibodi yenyewe haijaundwa kuwa kifaa cha matibabu wala kuwa mbadala
+                wa ushauri, matibabu au uamuzi wa daktari.
+
+                IBM imekusanya data ya matokeo kutoka tovuti mbali mbali. Kwa mfano : Wikipedia, mashirika ya serikali na
+                 tovuti zinginezo za umma.
+
+                Tovuti hizi husasaisha na kurepoti matokeo ya ratiba ya Covid19 iliyo kawaida na isiyo ya kawaida, kwa hivyo mara kwa mara
+                 matokeo yanayotolewa hapo huweza kuwa tofauti yakilinganishwa na matokeo yanayorepotiwa na vituo binafsi vya habari. IBM hujitahidi
+                 kupeana data sahihi na ya sasa japo data hio inapotokea na hujaribu kusasaisha data ya Wikipedia kwa kutumia data kutoka
+                 mashirika ya serikali ili kupunguza na kurekebisha makosa. Hata hivyo, IBM haithibitishi usahihi, utegemeaji wala ukamilifu
+                 wa data hii ya matokeo. Matokeo ya dashibodi hii ni ya asili ya kubahatisha kwa hivyo matumizi yake
+                  na maamuzi yanayotolewa kwa kuzingatia matokeo haya ni jukumu la mtumiaji wa Dashibodi hii. IBM haitakuwa na dhima kutokana na
+                  matokeo wala maamuzi yanayotolewa kwa kuzingatia matokeo haya. Tafadhali tuma maswali yoyote uliyonayo kuhusu data iliyowasilishwa
+                  hapa kwa: wwcc19@ke.ibm.com</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
           <context context-type="linenumber">33,47</context>
@@ -884,6 +964,7 @@
       </trans-unit>
       <trans-unit id="disclaimerButton" datatype="html">
         <source> Disclaimer </source>
+        <target>Onyo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
           <context context-type="linenumber">48,49</context>
@@ -893,6 +974,7 @@
       </trans-unit>
       <trans-unit id="a827e410d2935db965394cc46ea85637a3693cb2" datatype="html">
         <source>Domains</source>
+        <target>Vikoa</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
           <context context-type="linenumber">58</context>
@@ -902,6 +984,7 @@
       </trans-unit>
       <trans-unit id="domainModels" datatype="html">
         <source>Domain Models</source>
+        <target>Vikoa vya modeli</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
           <context context-type="linenumber">64</context>
@@ -911,6 +994,7 @@
       </trans-unit>
       <trans-unit id="AIAlgorithms" datatype="html">
         <source>AI Algorithms</source>
+        <target>Algorithimu za AI</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
           <context context-type="linenumber">70</context>
@@ -920,6 +1004,7 @@
       </trans-unit>
       <trans-unit id="territoriesCovered" datatype="html">
         <source>Territories Covered</source>
+        <target>Maeneo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
           <context context-type="linenumber">76</context>
@@ -929,6 +1014,7 @@
       </trans-unit>
       <trans-unit id="pleaseConfirmDialog" datatype="html">
         <source>Please confirm...</source>
+        <target>Tafadhali hakikisha...</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/confirm-dialog/confirm-dialog.component.html</context>
           <context context-type="linenumber">19</context>
@@ -938,6 +1024,7 @@
       </trans-unit>
       <trans-unit id="noMessage" datatype="html">
         <source>No</source>
+        <target>Hapana</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/confirm-dialog/confirm-dialog.component.html</context>
           <context context-type="linenumber">24</context>
@@ -947,6 +1034,7 @@
       </trans-unit>
       <trans-unit id="yesMessage" datatype="html">
         <source>Yes</source>
+        <target>Ndio</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/confirm-dialog/confirm-dialog.component.html</context>
           <context context-type="linenumber">25</context>
@@ -956,6 +1044,7 @@
       </trans-unit>
       <trans-unit id="loginHeader" datatype="html">
         <source>Interactive Dashboard for Accelerated Decision-making with AI (ADMAI)</source>
+        <target>Dashibodi ya Kufanya Maamuzi ya Haraka kwa kutumia AI (ADMAI) </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/login/login.component.html</context>
           <context context-type="linenumber">19</context>
@@ -965,6 +1054,7 @@
       </trans-unit>
       <trans-unit id="platformPurpose" datatype="html">
         <source>Providing a platform for sharing, optimizing and running domain models at scale.</source>
+        <target>Ambayo inafadhili jukwaa la kushiriki, kuboresha na kuendesha modeli za kikoa.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/login/login.component.html</context>
           <context context-type="linenumber">20</context>
@@ -974,6 +1064,7 @@
       </trans-unit>
       <trans-unit id="loginButton" datatype="html">
         <source>Login</source>
+        <target>Ingia</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/login/login.component.html</context>
           <context context-type="linenumber">22</context>
@@ -983,6 +1074,7 @@
       </trans-unit>
       <trans-unit id="initiateLogout" datatype="html">
         <source>Initiating logout!</source>
+        <target>Anza kuondoka!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/logout/logout.component.html</context>
           <context context-type="linenumber">17</context>
@@ -992,6 +1084,7 @@
       </trans-unit>
       <trans-unit id="constants.no.data" datatype="html">
         <source>No data</source>
+        <target>Hakuna data</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">30</context>
@@ -1001,6 +1094,7 @@
       </trans-unit>
       <trans-unit id="npiIndexDropDown" datatype="html">
         <source>NPI-Index</source>
+        <target>Index ya NPI</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">129</context>
@@ -1010,6 +1104,7 @@
       </trans-unit>
       <trans-unit id="complianceScoreDropDown" datatype="html">
         <source>Compliance Score</source>
+        <target>Alama ya Compliance</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">129</context>
@@ -1019,6 +1114,7 @@
       </trans-unit>
       <trans-unit id="stringencyIndexDropDown" datatype="html">
         <source>Stringency Index</source>
+        <target>Index ya Stringency</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">129</context>
@@ -1028,6 +1124,7 @@
       </trans-unit>
       <trans-unit id="transitStationsDropDown" datatype="html">
         <source>Transit_stations</source>
+        <target>Vituo_vya_kusafiri</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">131</context>
@@ -1037,6 +1134,7 @@
       </trans-unit>
       <trans-unit id="retailAndRecreationDropDown" datatype="html">
         <source>Retail_and_recreation</source>
+        <target>Madukani_na_Mahali_pa_burudani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">131</context>
@@ -1046,6 +1144,7 @@
       </trans-unit>
       <trans-unit id="groceryAndPharmacyDropDown" datatype="html">
         <source>Grocery_and_pharmacy</source>
+        <target>Maduka_ya_mboga_na_Zahanati</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">131</context>
@@ -1055,6 +1154,7 @@
       </trans-unit>
       <trans-unit id="parksDropDown" datatype="html">
         <source>Parks</source>
+        <target>Mbuga</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">131</context>
@@ -1064,6 +1164,7 @@
       </trans-unit>
       <trans-unit id="workplacesDropDown" datatype="html">
         <source>Workplaces</source>
+        <target>Kazini</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">132</context>
@@ -1073,6 +1174,7 @@
       </trans-unit>
       <trans-unit id="residentialDropDown" datatype="html">
         <source>Residential</source>
+        <target>Maskani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">132</context>
@@ -1133,6 +1235,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.workplaces" datatype="html">
         <source>stringency index_wntrac_workplaces</source>
+        <target>stringency index_wntrac_Vituo_Kazini</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">151</context>
@@ -1142,6 +1245,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.workplaces" datatype="html">
         <source>compliance score_wntrac_workplaces</source>
+        <target>compliance score_wntrac_Kazini</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">152</context>
@@ -1151,6 +1255,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.workplaces" datatype="html">
         <source>npi-index_wntrac_workplaces</source>
+        <target>npi-index_wntrac_Kazini</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">153</context>
@@ -1160,6 +1265,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.workplaces" datatype="html">
         <source>stringency index_oxcgrt_workplaces</source>
+        <target>stringency index_oxcgrt_Kazini</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">154</context>
@@ -1169,6 +1275,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.workplaces" datatype="html">
         <source>compliance score_oxcgrt_workplaces</source>
+        <target>compliance score_oxcgrt_Kazini</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">155</context>
@@ -1178,6 +1285,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.workplaces" datatype="html">
         <source>npi-index_oxcgrt_workplaces</source>
+        <target>npi-index_oxcgrt_Kazini</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">156</context>
@@ -1187,6 +1295,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.retail.and.recreation" datatype="html">
         <source>stringency index_wntrac_retail_and_recreation</source>
+        <target>stringency index_wntrac_Madukani_na_Mahali_pa_burudani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">157</context>
@@ -1196,6 +1305,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.retail.and.recreation" datatype="html">
         <source>compliance score_wntrac_retail_and_recreation</source>
+        <target>compliance score_wntrac_Madukani_na_Mahali_pa_burudani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">158</context>
@@ -1205,6 +1315,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.retail.and.recreation" datatype="html">
         <source>npi-index_wntrac_retail_and_recreation</source>
+        <target>npi-index_wntrac_Madukani_na_Mahali_pa_burudani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">159</context>
@@ -1214,6 +1325,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.retail.and.recreation" datatype="html">
         <source>stringency index_oxcgrt_retail_and_recreation</source>
+        <target>stringency index_oxcgrt_Madukani_na_Mahali_pa_burudani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">160</context>
@@ -1223,6 +1335,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.retail.and.recreation" datatype="html">
         <source>compliance score_oxcgrt_retail_and_recreation</source>
+        <target>compliance score_oxcgrt_Madukani_na_Mahali_pa_burudani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">161</context>
@@ -1232,6 +1345,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.retail.and.recreation" datatype="html">
         <source>npi-index_oxcgrt_retail_and_recreation</source>
+        <target>npi-index_oxcgrt_Madukani_na_Mahali_pa_burudani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">162</context>
@@ -1241,6 +1355,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.grocery.and.pharmacy" datatype="html">
         <source>stringency index_wntrac_grocery_and_pharmacy</source>
+        <target>stringency index_wntrac_Maduka_ya_mboga_na_Zahanati</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">163</context>
@@ -1250,6 +1365,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.grocery.and.pharmacy" datatype="html">
         <source>compliance score_wntrac_grocery_and_pharmacy</source>
+        <target>compliance score_wntrac_Maduka_ya_mboga_na_Zahanati</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">164</context>
@@ -1259,6 +1375,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.grocery.and.pharmacy" datatype="html">
         <source>npi-index_wntrac_grocery_and_pharmacy</source>
+        <target>npi-index_wntrac_Maduka_ya_mboga_na_Zahanati</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">165</context>
@@ -1268,6 +1385,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.grocery.and.pharmacy" datatype="html">
         <source>stringency index_oxcgrt_grocery_and_pharmacy</source>
+        <target>stringency index_oxcgrt_Maduka_ya_mboga_na_Zahanati</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">166</context>
@@ -1277,6 +1395,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.grocery.and.pharmacy" datatype="html">
         <source>compliance score_oxcgrt_grocery_and_pharmacy</source>
+        <target>compliance score_oxcgrt_Maduka_ya_mboga_na_Zahanati</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">167</context>
@@ -1286,6 +1405,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.grocery.and.pharmacy" datatype="html">
         <source>npi-index_oxcgrt_grocery_and_pharmacy</source>
+        <target>npi-index_oxcgrt_Maduka_ya_mboga_na_Zahanati</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">168</context>
@@ -1295,6 +1415,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.parks" datatype="html">
         <source>stringency index_wntrac_parks</source>
+        <target>stringency index_wntrac_Mbuga</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">169</context>
@@ -1304,6 +1425,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.parks" datatype="html">
         <source>compliance score_wntrac_parks</source>
+        <target>compliance score_wntrac_Mbuga</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">170</context>
@@ -1313,6 +1435,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.parks" datatype="html">
         <source>npi-index_wntrac_parks</source>
+        <target>npi-index_wntrac_Mbuga</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">171</context>
@@ -1322,6 +1445,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.parks" datatype="html">
         <source>stringency index_oxcgrt_parks</source>
+        <target>stringency index_oxcgrt_Mbuga</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">172</context>
@@ -1331,6 +1455,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.parks" datatype="html">
         <source>compliance score_oxcgrt_parks</source>
+        <target>compliance score_oxcgrt_Mbuga</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">173</context>
@@ -1340,6 +1465,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.parks" datatype="html">
         <source>npi-index_oxcgrt_parks</source>
+        <target>npi-index_oxcgrt_Mbuga</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">174</context>
@@ -1349,6 +1475,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.transit.stations" datatype="html">
         <source>stringency index_wntrac_transit_stations</source>
+        <target>stringency index_wntrac_Vituo_vya_kusafiri</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">175</context>
@@ -1358,6 +1485,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.transit.stations" datatype="html">
         <source>compliance score_wntrac_transit_stations</source>
+        <target>compliance score_wntrac_Vituo_vya_kusafiri</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">176</context>
@@ -1367,6 +1495,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.transit.stations" datatype="html">
         <source>npi-index_wntrac_transit_stations</source>
+        <target>npi-index_wntrac_Vituo_vya_kusafiri</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">177</context>
@@ -1376,6 +1505,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.transit.stations" datatype="html">
         <source>stringency index_oxcgrt_transit_stations</source>
+        <target>stringency index_oxcgrt_Vituo_vya_kusafiri</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">178</context>
@@ -1385,6 +1515,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.transit.stations" datatype="html">
         <source>compliance score_oxcgrt_transit_stations</source>
+        <target>compliance score_oxcgrt_Vituo_vya_kusafiri</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">179</context>
@@ -1394,6 +1525,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.transit.stations" datatype="html">
         <source>npi-index_oxcgrt_transit_stations</source>
+        <target>npi-index_oxcgrt_Vituo_vya_kusafiri</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">180</context>
@@ -1403,6 +1535,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.residential" datatype="html">
         <source>stringency index_wntrac_residential</source>
+        <target>stringency index_wntrac_Maskani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">181</context>
@@ -1412,6 +1545,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.residential" datatype="html">
         <source>compliance score_wntrac_residential</source>
+        <target>compliance score_wntrac_Maskani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">182</context>
@@ -1421,6 +1555,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.residential" datatype="html">
         <source>npi-index_wntrac_residential</source>
+        <target>npi-index_wntrac_Maskani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">183</context>
@@ -1430,6 +1565,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.residential" datatype="html">
         <source>stringency index_oxcgrt_residential</source>
+        <target>stringency index_oxcgrt_Maskani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">184</context>
@@ -1439,6 +1575,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.residential" datatype="html">
         <source>compliance score_oxcgrt_residential</source>
+        <target>compliance score_oxcgrt_Maskani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">185</context>
@@ -1448,6 +1585,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.residential" datatype="html">
         <source>npi-index_oxcgrt_residential</source>
+        <target>npi-index_oxcgrt_Maskani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">186</context>
@@ -1457,6 +1595,7 @@
       </trans-unit>
       <trans-unit id="overview" datatype="html">
         <source>Overview</source>
+        <target>Muhtasari</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">229</context>
@@ -1466,6 +1605,7 @@
       </trans-unit>
       <trans-unit id="algorithms" datatype="html">
         <source>Algorithms</source>
+        <target>Algorithimu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">230</context>
@@ -1479,6 +1619,7 @@
       </trans-unit>
       <trans-unit id="models" datatype="html">
         <source>Models</source>
+        <target>Modeli</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">231</context>
@@ -1492,6 +1633,7 @@
       </trans-unit>
       <trans-unit id="experiments" datatype="html">
         <source>Experiments</source>
+        <target>Majaribio</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">232</context>
@@ -1501,6 +1643,7 @@
       </trans-unit>
       <trans-unit id="results" datatype="html">
         <source>Results</source>
+        <target>Matokeo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">233</context>
@@ -1510,6 +1653,7 @@
       </trans-unit>
       <trans-unit id="apis" datatype="html">
         <source>APIs</source>
+        <target>API</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">234</context>
@@ -1519,6 +1663,7 @@
       </trans-unit>
       <trans-unit id="how_to" datatype="html">
         <source>How to</source>
+        <target>Jinsi ya</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">235</context>
@@ -1528,6 +1673,7 @@
       </trans-unit>
       <trans-unit id="feedback" datatype="html">
         <source>Feedback</source>
+        <target>Maoni</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">236</context>
@@ -1537,6 +1683,7 @@
       </trans-unit>
       <trans-unit id="feedback_submitted" datatype="html">
         <source>Feedback submitted</source>
+        <target>Maoni yametumwa</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">240</context>
@@ -1544,6 +1691,7 @@
       </trans-unit>
       <trans-unit id="feedback_submission_failed" datatype="html">
         <source>Feedback submission failed! Please try again.</source>
+        <target>Maoni hayajatumwa! Tafadhali jaribu tena.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">241</context>
@@ -1551,6 +1699,7 @@
       </trans-unit>
       <trans-unit id="user_role_missing" datatype="html">
         <source>User Role Missing! Contact the system admin at charles.wachira1@ibm.com.</source>
+        <target>Jukumu la mtumiaji wa dashibodi halipo! Tafadhali wasiliana na msimamizi wa dashibodi, charles.wachira1@ibm.com.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">245</context>
@@ -1558,13 +1707,15 @@
       </trans-unit>
       <trans-unit id="no_data_available" datatype="html">
         <source>No data available</source>
+        <target>Hakuna data inayopatikana</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">250</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="newCases" datatype="html">
+       <trans-unit id="newCases" datatype="html">
         <source>New Cases</source>
+        <target>Kesi zipya</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/services/chart/chart.service.ts</context>
           <context context-type="linenumber">1036</context>
@@ -1574,6 +1725,7 @@
       </trans-unit>
       <trans-unit id="indexValue" datatype="html">
         <source>Index Value</source>
+        <target>Index ya</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/services/chart/chart.service.ts</context>
           <context context-type="linenumber">1050</context>
@@ -1583,6 +1735,7 @@
       </trans-unit>
       <trans-unit id="selectARegionOnTheMap" datatype="html">
         <source>Select a region on the map</source>
+        <target>Chagua eneo kwenye ramani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/services/chart/chart.service.ts</context>
           <context context-type="linenumber">1109</context>
@@ -1592,6 +1745,7 @@
       </trans-unit>
       <trans-unit id="newCasesYAxis" datatype="html">
         <source>New cases</source>
+        <target>Kesi zipya</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/services/chart/chart.service.ts</context>
           <context context-type="linenumber">1156</context>
@@ -1599,6 +1753,7 @@
       </trans-unit>
       <trans-unit id="enterLabel" datatype="html">
         <source>Enter <x id="INTERPOLATION" equiv-text="{{executorRequirement.description || executorRequirement.name}}"/></source>
+        <target>Andika <x id="INTERPOLATION" equiv-text="{{executorRequirement.description || executorRequirement.name}}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/dynamic-form/dynamic-form.component.html</context>
           <context context-type="linenumber">22</context>
@@ -1612,6 +1767,7 @@
       </trans-unit>
       <trans-unit id="isRequired" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{executorRequirement.name}}"/> is required</source>
+        <target><x id="INTERPOLATION" equiv-text="{{executorRequirement.name}}"/> yahitajika</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/dynamic-form/dynamic-form.component.html</context>
           <context context-type="linenumber">24</context>
@@ -1625,6 +1781,7 @@
       </trans-unit>
       <trans-unit id="addActionHeader" datatype="html">
         <source>Add Actions</source>
+        <target>Weka vitendo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">21</context>
@@ -1634,6 +1791,7 @@
       </trans-unit>
       <trans-unit id="enterTimeLabel" datatype="html">
         <source>Enter time</source>
+        <target>Andika wakati</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">37</context>
@@ -1647,6 +1805,7 @@
       </trans-unit>
       <trans-unit id="coveragePercentage" datatype="html">
         <source> Coverage Percentage </source>
+        <target>Asilimia iliyotiliwa maanani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">51,52</context>
@@ -1660,6 +1819,7 @@
       </trans-unit>
       <trans-unit id="defineActionSpaceHeader" datatype="html">
         <source>Define action space</source>
+        <target>Andika nafasi ya kitendo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">74</context>
@@ -1669,6 +1829,7 @@
       </trans-unit>
       <trans-unit id="enterNumberOfEpisodes" datatype="html">
         <source>Enter the number of episodes</source>
+        <target>Andika idadi ya vipindi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">90</context>
@@ -1682,6 +1843,7 @@
       </trans-unit>
       <trans-unit id="enterTimeResolution" datatype="html">
         <source>Enter time resolution in weeks</source>
+        <target>Andika azimio la wakati katika wiki</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">120</context>
@@ -1691,6 +1853,7 @@
       </trans-unit>
       <trans-unit id="enterCoverageResolution" datatype="html">
         <source>Enter the coverage resolution</source>
+        <target>Andika kiwango cha azimio</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">127</context>
@@ -1700,6 +1863,7 @@
       </trans-unit>
       <trans-unit id="defineParameterSpace" datatype="html">
         <source>Define parameter space</source>
+        <target>Andika nafasi ya paramita</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">155</context>
@@ -1709,6 +1873,7 @@
       </trans-unit>
       <trans-unit id="startDate" datatype="html">
         <source>Start date</source>
+        <target>Tarehe ya kuanza</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">163</context>
@@ -1722,6 +1887,7 @@
       </trans-unit>
       <trans-unit id="calibrationDurationInDays" datatype="html">
         <source>Enter the calibration duration in days</source>
+        <target>Andika siku zilizotumiwa kukalibreti</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">175</context>
@@ -1731,6 +1897,7 @@
       </trans-unit>
       <trans-unit id="enterBetaWindowLength" datatype="html">
         <source>Enter the beta window length in days</source>
+        <target>Andika urefu wa dirisha la beta kwa kutumia idadi ya siku</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">184</context>
@@ -1740,6 +1907,7 @@
       </trans-unit>
       <trans-unit id="defineActions" datatype="html">
         <source>Define Actions</source>
+        <target>Fafanua vitendo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">211</context>
@@ -1749,6 +1917,7 @@
       </trans-unit>
       <trans-unit id="endDate" datatype="html">
         <source>End date</source>
+        <target>Tarehe ya mwisho</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">241</context>
@@ -1758,6 +1927,7 @@
       </trans-unit>
       <trans-unit id="newExperimentHeader" datatype="html">
         <source> New Experiment </source>
+        <target>Majaribio mapya</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">29,30</context>
@@ -1767,6 +1937,7 @@
       </trans-unit>
       <trans-unit id="selectModel" datatype="html">
         <source>Select model</source>
+        <target>Chagua modeli</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">36</context>
@@ -1788,6 +1959,7 @@
       </trans-unit>
       <trans-unit id="defaultExecutors" datatype="html">
         <source>Select default executors</source>
+        <target>Chagua vitekelezaji msingi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">54</context>
@@ -1797,6 +1969,7 @@
       </trans-unit>
       <trans-unit id="selectLocation" datatype="html">
         <source>Select location</source>
+        <target>Chagua eneo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">63</context>
@@ -1810,6 +1983,7 @@
       </trans-unit>
       <trans-unit id="noneDetected" datatype="html">
         <source>None detected!</source>
+        <target>Hakuna iliyopatikana!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">80</context>
@@ -1819,6 +1993,7 @@
       </trans-unit>
       <trans-unit id="generalInfoHeader" datatype="html">
         <source> General info </source>
+        <target> Habari za jumla </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">86,87</context>
@@ -1828,6 +2003,7 @@
       </trans-unit>
       <trans-unit id="parametersHeader" datatype="html">
         <source> Parameters </source>
+        <target> Paramita </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">99,100</context>
@@ -1837,6 +2013,7 @@
       </trans-unit>
       <trans-unit id="optimizationParametersHeader" datatype="html">
         <source> Optimization Parameters </source>
+        <target> Paramita za uboreshaji </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">114,115</context>
@@ -1846,6 +2023,7 @@
       </trans-unit>
       <trans-unit id="pastExperimentsHeader" datatype="html">
         <source> Past Experiments <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span *ngIf=&quot;itemsDataSource &amp;&amp; itemsDataSource.data&quot; class=&quot;models-number&quot;&gt;"/>(<x id="INTERPOLATION" equiv-text="{{itemsDataSource.data.length}}"/>)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target> Majaribio ya zamani <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span *ngIf=&quot;itemsDataSource &amp;&amp; itemsDataSource.data&quot; class=&quot;models-number&quot;&gt;"/>(<x id="INTERPOLATION" equiv-text="{{itemsDataSource.data.length}}"/>)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">152,153</context>
@@ -1855,6 +2033,7 @@
       </trans-unit>
       <trans-unit id="idOfPastExperiment" datatype="html">
         <source>ID</source>
+        <target>Kitambulisho</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">159</context>
@@ -1864,6 +2043,7 @@
       </trans-unit>
       <trans-unit id="nameOfPastExperiment" datatype="html">
         <source>Name</source>
+        <target>Jina</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">164</context>
@@ -1873,6 +2053,7 @@
       </trans-unit>
       <trans-unit id="descriptionOfPastExperiment" datatype="html">
         <source>Description</source>
+        <target>Maelezo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">172</context>
@@ -1882,6 +2063,7 @@
       </trans-unit>
       <trans-unit id="pastExperimentAction" datatype="html">
         <source>Action</source>
+        <target>Kitendo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">180</context>
@@ -1891,6 +2073,7 @@
       </trans-unit>
       <trans-unit id="duplicateExperimentsHeader" datatype="html">
         <source> Duplicate Experiments <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span *ngIf=&quot;duplicateExperimentsDataSource &amp;&amp; duplicateExperimentsDataSource.data&quot; class=&quot;models-number&quot;&gt;"/>(<x id="INTERPOLATION" equiv-text="{{duplicateExperimentsDataSource.data.length}}"/>)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target> Majaribio yaliyojirudia <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span *ngIf=&quot;duplicateExperimentsDataSource &amp;&amp; duplicateExperimentsDataSource.data&quot; class=&quot;models-number&quot;&gt;"/>(<x id="INTERPOLATION" equiv-text="{{duplicateExperimentsDataSource.data.length}}"/>)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">198,199</context>
@@ -1900,6 +2083,7 @@
       </trans-unit>
       <trans-unit id="duplicateExperimentId" datatype="html">
         <source>ID</source>
+        <target>Kitambulisho</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">205</context>
@@ -1909,6 +2093,7 @@
       </trans-unit>
       <trans-unit id="duplicateExperimentName" datatype="html">
         <source>Name</source>
+        <target>Jina</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">210</context>
@@ -1918,6 +2103,7 @@
       </trans-unit>
       <trans-unit id="duplicateExperimentDescription" datatype="html">
         <source>Description</source>
+        <target>Maelezo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">218</context>
@@ -1927,6 +2113,7 @@
       </trans-unit>
       <trans-unit id="duplicateExperimentAction" datatype="html">
         <source>Action</source>
+        <target>Kitendo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">226</context>
@@ -1936,6 +2123,7 @@
       </trans-unit>
       <trans-unit id="experiment.type" datatype="html">
         <source>experiment type</source>
+        <target>aina ya jaribio</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.ts</context>
           <context context-type="linenumber">87</context>
@@ -1945,6 +2133,7 @@
       </trans-unit>
       <trans-unit id="algorithm.name" datatype="html">
         <source>algorithm name</source>
+        <target>jina la algorithimu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.ts</context>
           <context context-type="linenumber">87</context>
@@ -1954,6 +2143,7 @@
       </trans-unit>
       <trans-unit id="experiment.name" datatype="html">
         <source>experiment name</source>
+        <target>jina la jaribio</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.ts</context>
           <context context-type="linenumber">87</context>
@@ -1963,6 +2153,7 @@
       </trans-unit>
       <trans-unit id="description.of.the.experiment" datatype="html">
         <source>Description of the experiment</source>
+        <target>maelezo ya jaribio</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.ts</context>
           <context context-type="linenumber">87</context>
@@ -1972,6 +2163,7 @@
       </trans-unit>
       <trans-unit id="experimentPrediction" datatype="html">
         <source>Prediction</source>
+        <target>Utabiri</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">18</context>
@@ -1979,6 +2171,7 @@
       </trans-unit>
       <trans-unit id="experimentCalibration" datatype="html">
         <source>Calibration</source>
+        <target>Kalibration</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">19</context>
@@ -1986,6 +2179,7 @@
       </trans-unit>
       <trans-unit id="calibrationTaskSingle" datatype="html">
         <source>Single</source>
+        <target>Moja</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">22</context>
@@ -1993,6 +2187,7 @@
       </trans-unit>
       <trans-unit id="calibrationTaskMultiple" datatype="html">
         <source>Multiple</source>
+        <target>Mingi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">23</context>
@@ -2000,6 +2195,7 @@
       </trans-unit>
       <trans-unit id="calibrationTaskContinuous" datatype="html">
         <source>Continuous</source>
+        <target>Endelezi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">24</context>
@@ -2007,6 +2203,7 @@
       </trans-unit>
       <trans-unit id="calibrationActionMissing" datatype="html">
         <source>Actions missing in </source>
+        <target>Vitendo vimekosekana katika modeli </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">26</context>
@@ -2014,6 +2211,7 @@
       </trans-unit>
       <trans-unit id="modelEndOfStatement" datatype="html">
         <source>model.</source>
+        <target></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">27</context>
@@ -2021,6 +2219,7 @@
       </trans-unit>
       <trans-unit id="consultTheSystemAdmin" datatype="html">
         <source> Consult the system admin!</source>
+        <target> Tafadhali wasiliana na msimamizi wa dashibodi!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">28</context>
@@ -2028,6 +2227,7 @@
       </trans-unit>
       <trans-unit id="calibrationActionUpdatedFailed" datatype="html">
         <source>Entered actions update failed</source>
+        <target>Usasaishaji wa vitendo vilivyoingizwa haujafaulu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">30</context>
@@ -2035,6 +2235,7 @@
       </trans-unit>
       <trans-unit id="calibrationModelsNotFound" datatype="html">
         <source>Could not find models : </source>
+        <target>Modeli hazijapatikana</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">31</context>
@@ -2042,6 +2243,7 @@
       </trans-unit>
       <trans-unit id="calibrationLocationNotFound" datatype="html">
         <source>Could not find location : </source>
+        <target>Eneo halijapatikana</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">32</context>
@@ -2049,6 +2251,7 @@
       </trans-unit>
       <trans-unit id="calibrationExperimentCreationSuccessful" datatype="html">
         <source>Experiment Creation Successful: </source>
+        <target>Uundaji wa jaribio umefaulu: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">33</context>
@@ -2056,6 +2259,7 @@
       </trans-unit>
       <trans-unit id="calibrationExperimentCreationFailed" datatype="html">
         <source>Experiment Creation Failed: </source>
+        <target>Uundaji wa jaribio haujafaulu: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">34</context>
@@ -2065,6 +2269,9 @@
         <source>A similar experiment for this location and environment has been returned,
 check the list of duplicate experiments to view the content.
 Would you like to override this and perform a new experiment?</source>
+        <target>Jaribio sawa la eneo hili na mazingira haya limerudishwa,
+angalia jaribio hilo katika orodha ya majaribio yaliyorudiwa.
+Je ungependa kubadilisha jaribio hili na kutengeneza jaribio jipya?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">35</context>
@@ -2072,6 +2279,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="date" datatype="html">
         <source>Date: </source>
+        <target>Tarehe: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">36</context>
@@ -2079,6 +2287,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="dates" datatype="html">
         <source>Dates: </source>
+        <target>Tarehe: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">37</context>
@@ -2086,6 +2295,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="datesAndDash" datatype="html">
         <source>Dates: - </source>
+        <target>Tarehe: - </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">38</context>
@@ -2093,6 +2303,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="experimentMetadataDetailsNotFound" datatype="html">
         <source>Metadata details fetch failed</source>
+        <target>Maelezo ya metadata hayajaletwa</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">42</context>
@@ -2100,6 +2311,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="feedbackForm" datatype="html">
         <source>Use the form below to provide your feedback: </source>
+        <target>Jaza fomu hili kwa kutoa maoni yako: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
           <context context-type="linenumber">26</context>
@@ -2109,6 +2321,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="nameLabel" datatype="html">
         <source>Name</source>
+        <target>Jina</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
           <context context-type="linenumber">29</context>
@@ -2118,6 +2331,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="nameFieldError" datatype="html">
         <source> Name is required. </source>
+        <target> Jina linahitajika. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
           <context context-type="linenumber">35,36</context>
@@ -2127,6 +2341,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="emailAddressLabel" datatype="html">
         <source>Email address</source>
+        <target>Barua pepe</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
           <context context-type="linenumber">41</context>
@@ -2136,6 +2351,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="emailFieldError" datatype="html">
         <source> Email is required. </source>
+        <target> Barua pepe inahitajika</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
           <context context-type="linenumber">47,48</context>
@@ -2145,6 +2361,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="emailFieldIncompleteError" datatype="html">
         <source> Email is incomplete. </source>
+        <target> Barua pepe hii haijakamilika. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
           <context context-type="linenumber">50,51</context>
@@ -2154,6 +2371,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="provideFeedbackMessage" datatype="html">
         <source>Provide feedback</source>
+        <target>Toa maoni yako</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
           <context context-type="linenumber">56</context>
@@ -2163,6 +2381,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="feedbackFieldError" datatype="html">
         <source> Feedback message is required. </source>
+        <target> Maoni yako yanahitajika. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
           <context context-type="linenumber">62,63</context>
@@ -2172,6 +2391,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="sendFeedbackButton" datatype="html">
         <source>Send</source>
+        <target>Tuma</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
           <context context-type="linenumber">68</context>
@@ -2181,6 +2401,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="howToSummary" datatype="html">
         <source>Summary</source>
+        <target>Muhtasari</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">35</context>
@@ -2190,6 +2411,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="summaryParagraphOne" datatype="html">
         <source> Policy Making with AI is a decision support platform that harnesses the power of domain models using AI in a trusted environment, bringing together policy- and decision- makers, modelers, and AI practitioners to support complex decision-making. </source>
+        <target> "Utengenezaji sera kwa kutumia AI" ni jukwaa la kusaidia katika kufanya maamuzi, linalotumia nguvu za vikoa vya modeli vya AI katika mazingira yanayoaminika, ili kuleta pamoja watu wanaotengeneza sera, wanaofanya maamuzi mbalimbali, wanaotengeneza modeli na wanaotengeneza AI kwa ajili ya kusaidia maamuzi magumu kufanywa. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">37,40</context>
@@ -2199,6 +2421,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="summaryParagraphTwo" datatype="html">
         <source> Decision-makers must plan and implement interventions and strategies at varying timescales across different populations and geographies. This could be to control the spread of a pandemic like COVID-19, or to manage climate impact risks on global supply chains. Models are essential in the planning process but are often complex, uncertain, and can be difficult to consume, and also need to be trusted. The space of possible interventions that the models represent is vast, making the planning and decision-making process even more difficult. </source>
+        <target> Watu wanaofanya maamuzi wanafaa kupanga na kutekeleza mikakati katika nyakati tofauti na baina ya watu mbalimbali kijografia. Lengo ni kuzuia kuenea kwa majanga (Kwa mfano: janga la Korona), au kuzuia hatari ya athari za hali ya hewa kwenye minyororo ya usambazaji wa kimataifa. Modeli ni muhimu katika kupanga lakini mara mingi huwa ngumu kuelewa na kutumia, na huhitaji kuaminiwa. Mikakati ambayo modeli husimamia ni mingi na kwa hivyo upangaji na ufanyaji maamuzi waweza kuwa ngumu zaidi. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">43,49</context>
@@ -2208,6 +2431,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="summaryParagraphThree" datatype="html">
         <source> Policymaking with AI (PMAI) contains a core AI decisioning library using algorithms from the sub-disciplines of Planning, Reinforcement Learning and Optimization to enable uncertainty quantification, impact analysis, and exploration of the full space of possible options to inform decision making. Further, PMAI is built on top of Hyperledger fabric to support model and data governance and provide trust and transparency for understanding the provenance of data, models, and results generated by end-users </source>
+        <target> "Utengenezaji sera kwa kutumia AI"(PMAI) una maktaba ya uamuzi wa AI kutokana na taaluma ndogo ndogo za kupanga, kujifunza kwa kujimarisha na kuboresha ndivyo kuwezesha upimaji wa athari na uhakika na uchunguzaji wa namna mbalimbali za kusaidia uamuzi kufanywa. Aidha, PMAI imetengenezwa juu ya fabric ya Hyperledger kusaidia modeli, upangaji wa data na kuhakikisha kuwa kuna uaminifu wa data, modeli na matokeo watumiaji wa dashibodi hupata </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">52,58</context>
@@ -2253,6 +2477,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="credits" datatype="html">
         <source>Credits</source>
+        <target>Asante zaenda kwa</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">101</context>
@@ -2262,6 +2487,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="data" datatype="html">
         <source>Data</source>
+        <target>Data</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">112</context>
@@ -2271,6 +2497,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="addLocationHeader" datatype="html">
         <source>Add Location</source>
+        <target>Weka Eneo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
           <context context-type="linenumber">19</context>
@@ -2280,6 +2507,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="editLocationHeader" datatype="html">
         <source>Edit Location</source>
+        <target>Sasaisha Eneo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
           <context context-type="linenumber">20</context>
@@ -2289,6 +2517,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterLocationName" datatype="html">
         <source>Enter name of the location</source>
+        <target>Andika jina la eneo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
           <context context-type="linenumber">28</context>
@@ -2298,6 +2527,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterLocationAdministrationType" datatype="html">
         <source>Enter the administration type of the location</source>
+        <target>Andika aina ya eneo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
           <context context-type="linenumber">37</context>
@@ -2307,6 +2537,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterLocationDetails" datatype="html">
         <source>Enter location details</source>
+        <target>Andika maelezo ya eneo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
           <context context-type="linenumber">46</context>
@@ -2316,6 +2547,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterLocationCountryCode" datatype="html">
         <source>Enter ISO-3 code for the country where the location is located</source>
+        <target>Andika msimbo wa ISO-3 wa nchi ambayo eneo uliloandika lipo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
           <context context-type="linenumber">55</context>
@@ -2325,6 +2557,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="addModelData" datatype="html">
         <source>Add Model Data</source>
+        <target>Ongeza data kwenye modeli</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
           <context context-type="linenumber">73</context>
@@ -2334,6 +2567,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterNameData" datatype="html">
         <source>Enter name data</source>
+        <target>Andika jina la data</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
           <context context-type="linenumber">81</context>
@@ -2343,6 +2577,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterDataDescription" datatype="html">
         <source>Enter data description</source>
+        <target>Andika maelezo ya data</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
           <context context-type="linenumber">90</context>
@@ -2352,6 +2587,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="selectDataFile" datatype="html">
         <source>Select the data file </source>
+        <target>Chagua faili iliyo na data</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
           <context context-type="linenumber">99</context>
@@ -2361,6 +2597,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="location" datatype="html">
         <source>Location</source>
+        <target>Eneo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">20</context>
@@ -2370,6 +2607,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="Name" datatype="html">
         <source>Name: </source>
+        <target>Jina: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">35</context>
@@ -2379,6 +2617,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="adminType" datatype="html">
         <source>Admin Type: </source>
+        <target>Aina ya Eneo: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">40</context>
@@ -2388,6 +2627,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="adminLevel" datatype="html">
         <source>Admin Level: </source>
+        <target>Kiwango cha Eneo: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">45</context>
@@ -2397,6 +2637,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="locatedIn" datatype="html">
         <source>Located In: </source>
+        <target>Yapatikana: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">50</context>
@@ -2406,6 +2647,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="country" datatype="html">
         <source>Country: </source>
+        <target>Nchi: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">55</context>
@@ -2415,6 +2657,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelData" datatype="html">
         <source>Model data: </source>
+        <target>Data ya modeli: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">70</context>
@@ -2424,6 +2667,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="addButton" datatype="html">
         <source>Add</source>
+        <target>Ongeza</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">71</context>
@@ -2433,6 +2677,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelResults" datatype="html">
         <source>Model results: </source>
+        <target>Matokeo ya modeli: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">75</context>
@@ -2442,6 +2687,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="viewButton" datatype="html">
         <source>View</source>
+        <target>Tazama</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">76</context>
@@ -2451,6 +2697,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelExperiements" datatype="html">
         <source>Model experiments: </source>
+        <target>Majaribio ya modeli: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">81</context>
@@ -2460,6 +2707,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="startButton" datatype="html">
         <source>Start</source>
+        <target>Anza</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">82</context>
@@ -2469,6 +2717,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="exitButton" datatype="html">
         <source>Exit</source>
+        <target>Ondoka</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">88</context>
@@ -2478,6 +2727,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="couldNotFindLocationDetails" datatype="html">
         <source>Could not find location details!</source>
+        <target>Maelezo ya eneo hayajapatikana!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">92</context>
@@ -2487,6 +2737,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="addModel" datatype="html">
         <source>Add Model</source>
+        <target>Weka Modeli</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">19</context>
@@ -2496,6 +2747,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="editModel" datatype="html">
         <source>Edit Model</source>
+        <target>Sasaisha Modeli</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">20</context>
@@ -2505,6 +2757,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelOfficialName" datatype="html">
         <source>Enter the official name of your model (no spaces)</source>
+        <target>Andika jina kamili la modeli (bila kuweka nafasi kati ya herufi)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">28</context>
@@ -2514,6 +2767,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelShortDescription" datatype="html">
         <source>Short description of the model</source>
+        <target>Maelezo mafupi kuhusu modeli</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">35</context>
@@ -2523,6 +2777,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterModelVersion" datatype="html">
         <source>Enter the version of the model</source>
+        <target>Andika toleo la modeli</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">44</context>
@@ -2532,6 +2787,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterModelVersionAuthor" datatype="html">
         <source>Enter the author of the model version</source>
+        <target>Andika mwandishi wa toleo hili la modeli</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">51</context>
@@ -2541,6 +2797,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterModelVersionDate" datatype="html">
         <source>Enter the date of the model version</source>
+        <target>Andika tarehe ya toleo la modeli</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">60</context>
@@ -2550,6 +2807,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelGithubUrl" datatype="html">
         <source>Enter the GitHub url for the model code</source>
+        <target>Andika anwani kamili ya tovuti ya Github, iliyo na maagizo ya programu ya modeli</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">67</context>
@@ -2559,6 +2817,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterModelRawUrl" datatype="html">
         <source>Enter the URL of the model.py file (raw file)</source>
+        <target>Andika anwani mbichi ya faili la modeli, iliyo kwenye tovuti ya Github</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">76</context>
@@ -2568,6 +2827,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterRequirementsRawUrlIfAny" datatype="html">
         <source>Enter the URL of the requirements.txt file for your model.py file if any</source>
+        <target>Andika anwani mbichi ya faili la mahitaji ya modeli, kama ipo kwenye tovuti ya Github</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">83</context>
@@ -2577,6 +2837,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterModelDataProviderServiceUrl" datatype="html">
         <source>Enter the url of the model data provider service</source>
+        <target>Andika anwani ya tovuti ya mhudumu wa data za modeli</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">91</context>
@@ -2586,6 +2847,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="provideShortModelDataDescription" datatype="html">
         <source>Provide short description of the model data provided</source>
+        <target>Andika maelezo mafupi kuhusu data ambazo zimeongezwa kwenye modeli</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">98</context>
@@ -2595,6 +2857,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="selectCountry" datatype="html">
         <source>Select admin 0 (Country)</source>
+        <target>Chagua aina 0 la eneo (Nchi)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">46</context>
@@ -2608,6 +2871,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="selectState" datatype="html">
         <source>Select admin 1 (Provinces/States/District/Counties)</source>
+        <target>Chagua aina 1 la eneo (Majimbo/Kaunti)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">62</context>
@@ -2621,6 +2885,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="selectSubcounties" datatype="html">
         <source>Select admin 2 (District/Counties/sub-counties)</source>
+        <target>Chagua aina 2 la eneo (Eneo bunge)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">78</context>
@@ -2630,6 +2895,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="selectedModelHeader" datatype="html">
         <source> Selected Model </source>
+        <target> Modeli iliyochaguliwa </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">113,114</context>
@@ -2639,6 +2905,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelNameColumn" datatype="html">
         <source> Model Name </source>
+        <target> Jina la modeli </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">125,126</context>
@@ -2648,6 +2915,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelVersionColumn" datatype="html">
         <source> Model Version </source>
+        <target> Toleo la modeli </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">134,135</context>
@@ -2657,6 +2925,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelVersionDateColumn" datatype="html">
         <source> Version Date </source>
+        <target> Tarehe ya toleo hili la modeli </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">143,144</context>
@@ -2666,6 +2935,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelVersionAuthorColumn" datatype="html">
         <source> Version Author </source>
+        <target> Mwandish wa toleo hili la modeli </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">152,153</context>
@@ -2675,6 +2945,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelStatusColumn" datatype="html">
         <source> Status </source>
+        <target> Hali </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">161,162</context>
@@ -2684,6 +2955,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="environmentsHeader" datatype="html">
         <source> Environments <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span *ngIf=&quot;rewardFunctionsDataSource &amp;&amp; rewardFunctionsDataSource.data&quot; class=&quot;models-number&quot;&gt;"/>(<x id="INTERPOLATION" equiv-text="{{rewardFunctionsDataSource.data.length}}"/>)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target> Mazingira <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span *ngIf=&quot;rewardFunctionsDataSource &amp;&amp; rewardFunctionsDataSource.data&quot; class=&quot;models-number&quot;&gt;"/>(<x id="INTERPOLATION" equiv-text="{{rewardFunctionsDataSource.data.length}}"/>)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">177,178</context>
@@ -2693,6 +2965,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="environmentId" datatype="html">
         <source>ID</source>
+        <target>Kitambulisho</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">189</context>
@@ -2702,6 +2975,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="environmentName" datatype="html">
         <source>Name</source>
+        <target>Jina</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">194</context>
@@ -2711,6 +2985,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="environmentAction" datatype="html">
         <source>Action</source>
+        <target>Kitendo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">202</context>
@@ -2720,6 +2995,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="addModelButton" datatype="html">
         <source> Add New Model </source>
+        <target> Ongeza Modeli Mpya  </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">218</context>
@@ -2729,6 +3005,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="addRewardFunction" datatype="html">
         <source>Add Reward Function</source>
+        <target>Weka Mazingira</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">19</context>
@@ -2738,6 +3015,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="editRewardFunction" datatype="html">
         <source>Edit Reward Function</source>
+        <target>Sasaisha Mazingira</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">20</context>
@@ -2747,6 +3025,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterEnvironmentName" datatype="html">
         <source>Enter the name of the environment</source>
+        <target>Andika jina la mazingira</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">28</context>
@@ -2756,6 +3035,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterEnvironmentClassName" datatype="html">
         <source>Enter Class name of the Environment</source>
+        <target>Andika jina kamili la kikundi cha Mazingira</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">35</context>
@@ -2765,6 +3045,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="selectEnvironmentCapabilities" datatype="html">
         <source>Select the Capabilities for the Environment</source>
+        <target>Chagua Uwezo wa Mazingira</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">44</context>
@@ -2774,6 +3055,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterEnvironmentGithubUrl" datatype="html">
         <source>Enter the GitHub Url for the environment</source>
+        <target>Andika anwani ya tovuti ya Github, iliyo na maagizo ya programu ya mazingira</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">59</context>
@@ -2783,6 +3065,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterEnvironmentRawUrl" datatype="html">
         <source>Enter the URL of the environment.py file (raw file)</source>
+         <target>Andika anwani mbichi ya faili la mazingira, iliyo kwenye tovuti ya Github</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">68</context>
@@ -2792,6 +3075,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterEnvironmentRequirementsRawUrl" datatype="html">
         <source>Enter the URL of the requirements.txt file for your environment.py file if any</source>
+        <target>Andika anwani mbichi ya faili la mahitaji ya mazingira, kama ipo kwenye tovuti ya Github</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">75</context>
@@ -2801,6 +3085,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterEnvironmentVersion" datatype="html">
         <source>Enter the version of the environment</source>
+        <target>Andika toleo ya mazingira</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">83</context>
@@ -2810,6 +3095,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterEnvironmentVersionAuthor" datatype="html">
         <source>Enter the author of the environment version</source>
+        <target>Andika mwandishi wa toleo ya mazingira</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">90</context>
@@ -2819,6 +3105,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterEnvironmentVersionDate" datatype="html">
         <source>Enter the date of the environment version</source>
+        <target>Andika tarehe ya toleo ya mazingira </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">99</context>
@@ -2828,6 +3115,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="c647698d922eed4e395e1481812b02ab97a2e077" datatype="html">
         <source>Environment requirement json file</source>
+        <target>Weka faili aina ya json iliyo na mahitaji ya mazingira</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">105</context>
@@ -2837,6 +3125,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="map.details.location.not.found" datatype="html">
         <source>Entered Location update failed</source>
+        <target>Usasaishaji wa eneo lililowekwa haujafaulu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">17</context>
@@ -2844,6 +3133,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="models.not.found" datatype="html">
         <source>Could not find models : </source>
+        <target>Modeli hazipatikani : </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">22</context>
@@ -2851,6 +3141,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.creation.successful" datatype="html">
         <source>Model Creation Successful: </source>
+        <target>Uundaji wa modeli umefaulu: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">23</context>
@@ -2858,6 +3149,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.creation.failed" datatype="html">
         <source>Could not create model!: </source>
+        <target>Uundaji wa modeli haujafaulu!: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">24</context>
@@ -2865,6 +3157,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.update.successful" datatype="html">
         <source>Model Update Successful: </source>
+        <target>Usasaishaji wa modeli umefaulu: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">25</context>
@@ -2872,6 +3165,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.update.failed" datatype="html">
         <source>Could not update model!: </source>
+        <target>Usasaishaji wa modeli haujafaulu: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">26</context>
@@ -2879,6 +3173,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.entered.update.failed" datatype="html">
         <source>Entered Model update failed</source>
+        <target>Usasaishaji wa modeli iliyowekwa haujafaulu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">27</context>
@@ -2886,6 +3181,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.status.provisioned" datatype="html">
         <source>Provisioned</source>
+        <target>Hali ya kukamilika</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">28</context>
@@ -2893,6 +3189,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.status.provisioning" datatype="html">
         <source>Provisioning</source>
+        <target>Hali ya kuendelea</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">29</context>
@@ -2900,6 +3197,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.reward.creation.successful" datatype="html">
         <source>Reward function Creation Successful: </source>
+        <target>Uundaji wa mazingira umefaulu: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">31</context>
@@ -2907,6 +3205,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.reward.creation.failed" datatype="html">
         <source>Could not create reward function!: </source>
+        <target>Uundaji wa mazingira haujafaulu: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">32</context>
@@ -2914,6 +3213,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.reward.update.successful" datatype="html">
         <source>Reward function Update Successful: </source>
+        <target>Usasaishaji wa mazingira umefaulu: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">33</context>
@@ -2921,6 +3221,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.reward.update.failed" datatype="html">
         <source>Could not update reward function!: </source>
+        <target>Usasaishaji wa mazingira haujafaulu: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">34</context>
@@ -2928,6 +3229,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.entered.reward.update.failed" datatype="html">
         <source>Entered reward function update failed</source>
+        <target>Uundaji wa mazingira yaliyowekwa haujafaulu: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">35</context>
@@ -2935,6 +3237,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="admin.level" datatype="html">
         <source>Admin level </source>
+        <target>Data ya aina ya eneo </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">37</context>
@@ -2942,6 +3245,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="data.exists.for" datatype="html">
         <source> data exists for </source>
+        <target> yaweza kuwekwa nchini </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">38</context>
@@ -2953,6 +3257,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="would.you.like.to.load.this.data" datatype="html">
         <source>Would you like to load this data?</source>
+        <target>Je, ungependa kuweka data hii?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">39</context>
@@ -2964,6 +3269,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.location.creation.successful" datatype="html">
         <source>Location Creation Successful: </source>
+        <target>Uundaji wa eneo hili umefaulu: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">41</context>
@@ -2971,6 +3277,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.location.creation.failed" datatype="html">
         <source>Could not create location!: </source>
+        <target>Uundaji wa eneo hili haujafaulu: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">42</context>
@@ -2978,6 +3285,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.location.update.successful" datatype="html">
         <source>Location Update Successful: </source>
+        <target>Usasaishaji wa eneo hili umefaulu: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">43</context>
@@ -2985,6 +3293,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.location.update.failed" datatype="html">
         <source>Could not update location!: </source>
+        <target>Usasaishaji wa eneo hili haujafaulu!: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">44</context>
@@ -2992,6 +3301,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.location.data.verification.failed.missing.loc.id" datatype="html">
         <source>Location data verification failed due to missing location Id</source>
+        <target>Uundaji wa algorithimu umefaulu: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">45</context>
@@ -2999,6 +3309,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="location.data.verification.successful" datatype="html">
         <source>Location Data Verification Successful: </source>
+        <target>Uthibitishaji wa data za eneo hili umefaulu: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">46</context>
@@ -3006,6 +3317,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="location.data.verification.failed" datatype="html">
         <source>Could not verify location data!: </source>
+        <target>Uthibitishaji wa data za eneo hili haujafaulu!: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">47</context>
@@ -3013,6 +3325,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="indexNPI" datatype="html">
         <source>Index (NPI-Index, Compliance Score, Stringency Index)</source>
+        <target>Index (Index ya NPI, Compliance na Stringency)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">67</context>
@@ -3022,6 +3335,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="mobilityType" datatype="html">
         <source>Mobility Type (workplaces, retail_and_recreation, grocery_and_pharmacy, parks, transit_stations, residential)</source>
+        <target>Aina ya mahali (kazini, madukani na mahali pa burudani, maduka ya mboga na zahanati, mbuga, vituo vya usafiri, nyumbani)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">80</context>
@@ -3031,6 +3345,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="playPause" datatype="html">
         <source>Play/Pause</source>
+        <target>Cheza/Simamisha</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">91</context>
@@ -3040,6 +3355,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="loadCountriesData" datatype="html">
         <source>Load countries data</source>
+        <target>Ongeza nchi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">100</context>
@@ -3049,6 +3365,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modalTitle" datatype="html">
         <source>Configure Data &amp; Data Sources</source>
+        <target>Weka Data &amp; Asili za data  </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">130</context>
@@ -3056,8 +3373,9 @@ Would you like to override this and perform a new experiment?</source>
         <note priority="1" from="description">modalTitle</note>
         <note priority="1" from="meaning">modalTitle</note>
       </trans-unit>
-      <trans-unit id="covid19.domain" datatype="html">
+      <trans-unit id="ovid19.domain" datatype="html">
         <source> Domain(Covid19): </source>
+        <target> Kikoa(Covid19):</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">140,141</context>
@@ -3067,6 +3385,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="covid19Domain" datatype="html">
         <source>Domain(Covid19)</source>
+        <target>Kikoa(Covid19)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">146</context>
@@ -3074,6 +3393,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="npi.dataset.list" datatype="html">
         <source> NPIs Dataset (WNTRAC or OxCGRT): </source>
+        <target> Kikundi cha data za NPI (WNTRAC or OxCGRT): </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">158,159</context>
@@ -3083,6 +3403,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="npiDatasetList" datatype="html">
         <source>NPIs Dataset (WNTRAC or OxCGRT)</source>
+        <target>Kikundi cha data za NPI (WNTRAC or OxCGRT)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">164</context>
@@ -3090,6 +3411,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="monthRangePicker" datatype="html">
         <source> Month range picker for data: </source>
+        <target> Kichaguzi cha data kulingana na mwezi: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">176,177</context>
@@ -3099,6 +3421,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="saveButton" datatype="html">
         <source>Save</source>
+        <target>Weka</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">188</context>
@@ -3108,6 +3431,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="dataset" datatype="html">
         <source>Dataset</source>
+        <target>Kikundi cha data</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.ts</context>
           <context context-type="linenumber">678</context>
@@ -3117,6 +3441,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="mobility" datatype="html">
         <source>Mobility</source>
+        <target>Aina ya mahali</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.ts</context>
           <context context-type="linenumber">679</context>
@@ -3126,6 +3451,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="index" datatype="html">
         <source>Index</source>
+        <target>Index</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.ts</context>
           <context context-type="linenumber">680</context>
@@ -3135,6 +3461,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="value" datatype="html">
         <source>Value</source>
+        <target>Maelezo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.ts</context>
           <context context-type="linenumber">681</context>
@@ -3144,6 +3471,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="admin.level1" datatype="html">
         <source>Admin level 1</source>
+        <target>Aina 1 ya eneo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/constants/overview.constants.ts</context>
           <context context-type="linenumber">18</context>
@@ -3151,6 +3479,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="selectOutcome" datatype="html">
         <source>Select outcome</source>
+        <target>Chagua matokeo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/components/predictions/predictions.component.html</context>
           <context context-type="linenumber">57</context>
@@ -3160,6 +3489,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="requestsHeader" datatype="html">
         <source> Requests <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span *ngIf=&quot;resultsRequestsDataSource &amp;&amp; resultsRequestsDataSource.data&quot; class=&quot;models-number&quot;&gt;"/>(<x id="INTERPOLATION" equiv-text="{{resultsRequestsDataSource.data.length}}"/>)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target> Majaribio yaliyouliziwa <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span *ngIf=&quot;resultsRequestsDataSource &amp;&amp; resultsRequestsDataSource.data&quot; class=&quot;models-number&quot;&gt;"/>(<x id="INTERPOLATION" equiv-text="{{resultsRequestsDataSource.data.length}}"/>)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/components/predictions/predictions.component.html</context>
           <context context-type="linenumber">88,89</context>
@@ -3169,6 +3499,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="requestId" datatype="html">
         <source>ID</source>
+        <target>Kitambulisho</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/components/predictions/predictions.component.html</context>
           <context context-type="linenumber">95</context>
@@ -3178,6 +3509,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="requestType" datatype="html">
         <source>Type</source>
+        <target>Aina</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/components/predictions/predictions.component.html</context>
           <context context-type="linenumber">100</context>
@@ -3187,6 +3519,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="requestStatus" datatype="html">
         <source>Status</source>
+        <target>Hali</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/components/predictions/predictions.component.html</context>
           <context context-type="linenumber">108</context>
@@ -3196,6 +3529,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="requestAction" datatype="html">
         <source>Action</source>
+        <target>Kitendo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/components/predictions/predictions.component.html</context>
           <context context-type="linenumber">120</context>
@@ -3205,6 +3539,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="completed" datatype="html">
         <source>Completed</source>
+        <target>Hali ya kumalizika</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/constants/results.constants.ts</context>
           <context context-type="linenumber">17</context>
@@ -3212,6 +3547,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="inProgress" datatype="html">
         <source>In-progress</source>
+        <target>Hali ya kuendelea</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/constants/results.constants.ts</context>
           <context context-type="linenumber">18</context>
@@ -3219,6 +3555,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="resultsModelsNotFound" datatype="html">
         <source>Could not find models : </source>
+        <target>Modeli hazijapatikana: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/constants/results.constants.ts</context>
           <context context-type="linenumber">22</context>
@@ -3226,6 +3563,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="resultsLocationsNotFound" datatype="html">
         <source>Could not find locations : </source>
+        <target>Eneo halijapatikana</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/constants/results.constants.ts</context>
           <context context-type="linenumber">23</context>
@@ -3233,6 +3571,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="resultsNotFound" datatype="html">
         <source>Could not find results : </source>
+        <target>Matokeo hayajapatikana</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/constants/results.constants.ts</context>
           <context context-type="linenumber">24</context>
