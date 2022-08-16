@@ -53,6 +53,7 @@ import {
   INDEX_DATA_KEYS,
   MAP_COLORS,
   MAP_POPUP_OPTIONS,
+  NO_DATA,
 } from '../../../common';
 import { OVERVIEW_CONSTANTS } from '../../constants/overview.constants';
 
@@ -469,7 +470,7 @@ export class OverviewComponent
         locationMetadata['dataset'] = this.CURRENT_DROPDOWN_ITEMS_NPI_DATASET;
         locationMetadata['mobility'] =
           this.CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE;
-        locationMetadata['value'] = 'No Data';
+        locationMetadata['value'] = NO_DATA;
         locationMetadata['fullname'] = thisFeature['properties']['NAME'];
 
         if (isNotNullOrUndefined(thisLocationData)) {
@@ -490,7 +491,7 @@ export class OverviewComponent
             indexDataKey = indexDataKey.toLowerCase();
             const currentValue = thisEpoch[INDEX_DATA_KEYS[indexDataKey]];
             locationMetadata['value'] =
-              currentValue === -1 ? 'No Data' : currentValue;
+              currentValue === -1 ? NO_DATA : currentValue;
 
             // fill color
             let fillColor = '#d9d9d9';
@@ -674,10 +675,10 @@ export class OverviewComponent
     return (
       `` +
       `<div class="popup-region-name">${locationMetadata['fullname']}</div>` +
-      `<div>Dataset: ${locationMetadata['dataset']}</div>` +
-      `<div>Mobility: ${locationMetadata['mobility']}</div>` +
-      `<div>Index: ${locationMetadata['index']}</div>` +
-      `<div>Value: ${locationMetadata['value']}</div>`
+      `<div>` + $localize`:dataset|dataset@@dataset:Dataset` + `: ${locationMetadata['dataset']}</div>` +
+      `<div>` + $localize`:mobility|mobility@@mobility:Mobility` + `: ${locationMetadata['mobility']}</div>` +
+      `<div>` + $localize`:index|index@@index:Index` + `: ${locationMetadata['index']}</div>` +
+      `<div>` + $localize`:value|value@@value:Value` + `: ${locationMetadata['value']}</div>`
     );
   }
 

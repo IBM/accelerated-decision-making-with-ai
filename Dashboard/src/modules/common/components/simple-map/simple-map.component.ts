@@ -20,6 +20,7 @@ import {environment} from '../../../../environments/environment';
 import {isNotNullOrUndefined} from 'codelyzer/util/isNotNullOrUndefined';
 import {DatePipe} from '@angular/common';
 import {getColor2, numberWithCommas} from '../../functions';
+import { NO_DATA } from '../../constants';
 
 @Component({
   selector: 'app-simple-map',
@@ -130,7 +131,7 @@ export class SimpleMapComponent implements OnInit, OnChanges {
 
       // loop through the density intervals and generate a label with a colored square for each interval
       div.innerHTML +=
-        '<i style="background:' + getColor2(null) + '"></i> ' + 'No data' + '<br>';
+        '<i style="background:' + getColor2(null) + '"></i> ' + NO_DATA + '<br>';
       for (let i = 0; i < keyRanges.length; i++) {
         if (!isNotNullOrUndefined(keyRanges[i]) && !isNotNullOrUndefined(keyRanges[i + 1])) {
           continue;

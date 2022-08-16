@@ -32,7 +32,10 @@ export const EXPERIMENTS_CONSTANTS = {
   LOCATION_NOT_FOUND: $localize`:@@calibrationLocationNotFound:Could not find location : `,
   EXPERIMENT_CREATION_SUCCESSFUL: $localize`:@@calibrationExperimentCreationSuccessful:Experiment Creation Successful: `,
   EXPERIMENT_CREATION_FAILED: $localize`:@@calibrationExperimentCreationFailed:Experiment Creation Failed: `,
-  SIMILAR_EXPERIMENT_CONFIRMATION: $localize`:@@calibrationSimilarExperimentConfirmation:A similar experiment for this location and environment has been returned,\ncheck the list of duplicate experiments to view the content.\nWould you like to override this and perform a new experiment?`
+  SIMILAR_EXPERIMENT_CONFIRMATION: $localize`:@@calibrationSimilarExperimentConfirmation:A similar experiment for this location and environment has been returned,\ncheck the list of duplicate experiments to view the content.\nWould you like to override this and perform a new experiment?`,
+  DATE: $localize`:@@date:Date: `,
+  DATES: $localize`:@@dates:Dates: `,
+  DATES_DASH: $localize`:@@datesAndDash:Dates: - `
 };
 
 export const EXPERIMENT_DIALOG_CONSTANTS = {

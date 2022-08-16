@@ -40,6 +40,7 @@ import {
 import {
   CHART_INTERVENTIONS_SYMBOLS,
   DEFAULT_COLOR,
+  DROPDOWN_ITEMS_INDEX,
   DROPDOWN_ITEMS_X_AXIS, HEADER, INDEX_DATA_KEYS,
   MAP_DATA,
   STROKE_DEFAULT_COLOR
@@ -1032,7 +1033,7 @@ export class ChartService {
     const chartLayoutYAxis: ChartLayoutAxis = {
       type: 'linear',
       ticks: '',
-      title: { text: 'New Cases', standoff: 15 },
+      title: { text: $localize`:new cases|new cases@@newCases:New Cases`, standoff: 15 },
       gridcolor: '#F2F2F2',
       linecolor: '#E5E5E5',
       automargin: true,
@@ -1046,7 +1047,7 @@ export class ChartService {
     const chartLayoutYAxis2: ChartLayoutAxis = {
       type: 'linear',
       ticks: '',
-      title: { text: 'Index Value', standoff: 15 },
+      title: { text: $localize`:index value|index value@@indexValue:Index Value`, standoff: 15 },
       gridcolor: '#F2F2F2',
       linecolor: '#E5E5E5',
       automargin: true,
@@ -1105,7 +1106,7 @@ export class ChartService {
     };
 
     const chartParameters: ChartParameters = {
-      chartHeader: !isNotNullOrUndefined(geo) ? 'Select a region on the map'
+      chartHeader: !isNotNullOrUndefined(geo) ? $localize`:Select a region on the map|Select a region on the map@@selectARegionOnTheMap:Select a region on the map`
         : geo['fullname'] + ' ' + '(' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE + ')',
       data: [],
       layout: chartLayout,
@@ -1293,9 +1294,9 @@ export class ChartService {
       xanchor: 'left',
       y: 1.0,
       yanchor: 'center',
-      text: '<b>' + 'SI' + '</b>' + ' Stringency Index' + ' | '
-        + '<b>' + 'CS' + '</b>' + ' Compliance Score' + ' | '
-        + '<b>' + 'NI' + '</b>' + ' NPI Index',
+      text: '<b>' + 'SI' + '</b>' + ' ' + DROPDOWN_ITEMS_INDEX[2] + ' | '
+        + '<b>' + 'CS' + '</b>' + ' ' + DROPDOWN_ITEMS_INDEX[1] + ' | '
+        + '<b>' + 'NI' + '</b>' + ' ' + DROPDOWN_ITEMS_INDEX[0] ,
       font: {
         family: '"IBM Plex Sans", "Open Sans", verdana, arial, sans-serif',
         size: 10

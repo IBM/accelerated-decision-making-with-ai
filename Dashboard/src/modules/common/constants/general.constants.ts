@@ -27,6 +27,7 @@ export const ERROR = 'error';
 export const WARNING = 'warning';
 export const KEY_TOKEN = 'token';
 export const KEY_USER = 'user';
+export const NO_DATA = $localize`:no data|no data@@constants.no.data:No data`;
 
 export const DROPDOWN_ITEMS_X_AXIS = [
   'Date',
@@ -146,45 +147,82 @@ export const HEADER = {
   NPI_INDEX_OXCGRT: $localize`:@@npi.index.oxcgrt.:npi-index_oxcgrt_`,
 };
 
-export const INDEX_DATA_KEYS = {
-  confirmed_cases: 0,
-  'stringency index_wntrac_workplaces': 1,
-  'compliance score_wntrac_workplaces': 2,
-  'npi-index_wntrac_workplaces': 3,
-  'stringency index_oxcgrt_workplaces': 4,
-  'compliance score_oxcgrt_workplaces': 5,
-  'npi-index_oxcgrt_workplaces': 6,
-  'stringency index_wntrac_retail_and_recreation': 7,
-  'compliance score_wntrac_retail_and_recreation': 8,
-  'npi-index_wntrac_retail_and_recreation': 9,
-  'stringency index_oxcgrt_retail_and_recreation': 10,
-  'compliance score_oxcgrt_retail_and_recreation': 11,
-  'npi-index_oxcgrt_retail_and_recreation': 12,
-  'stringency index_wntrac_grocery_and_pharmacy': 13,
-  'compliance score_wntrac_grocery_and_pharmacy': 14,
-  'npi-index_wntrac_grocery_and_pharmacy': 15,
-  'stringency index_oxcgrt_grocery_and_pharmacy': 16,
-  'compliance score_oxcgrt_grocery_and_pharmacy': 17,
-  'npi-index_oxcgrt_grocery_and_pharmacy': 18,
-  'stringency index_wntrac_parks': 19,
-  'compliance score_wntrac_parks': 20,
-  'npi-index_wntrac_parks': 21,
-  'stringency index_oxcgrt_parks': 22,
-  'compliance score_oxcgrt_parks': 23,
-  'npi-index_oxcgrt_parks': 24,
-  'stringency index_wntrac_transit_stations': 25,
-  'compliance score_wntrac_transit_stations': 26,
-  'npi-index_wntrac_transit_stations': 27,
-  'stringency index_oxcgrt_transit_stations': 28,
-  'compliance score_oxcgrt_transit_stations': 29,
-  'npi-index_oxcgrt_transit_stations': 30,
-  'stringency index_wntrac_residential': 31,
-  'compliance score_wntrac_residential': 32,
-  'npi-index_wntrac_residential': 33,
-  'stringency index_oxcgrt_residential': 34,
-  'compliance score_oxcgrt_residential': 35,
-  'npi-index_oxcgrt_residential': 36,
-};
+const confirmed_cases = $localize`:data indices|data indices@@confirmed.cases:confirmed_cases`;
+const stringency_index_wntrac_workplaces = $localize`:data indices|data indices@@constants.stringency.index.wntrac.workplaces:stringency index_wntrac_workplaces`;
+const compliance_score_wntrac_workplaces = $localize`:data indices|data indices@@constants.compliance.score.wntrac.workplaces:compliance score_wntrac_workplaces`;
+const npi_index_wntrac_workplaces = $localize`:data indices|data indices@@constants.npi.index.wntrac.workplaces:npi-index_wntrac_workplaces`;
+const stringency_index_oxcgrt_workplaces = $localize`:data indices|data indices@@constants.stringency.index.oxcgrt.workplaces:stringency index_oxcgrt_workplaces`;
+const compliance_score_oxcgrt_workplaces = $localize`:data indices|data indices@@constants.compliance.score.oxcgrt.workplaces:compliance score_oxcgrt_workplaces`;
+const npi_index_oxcgrt_workplaces = $localize`:data indices|data indices@@constants.npi.index.oxcgrt.workplaces:npi-index_oxcgrt_workplaces`;
+const stringency_index_wntrac_retail_and_recreation = $localize`:data indices|data indices@@constants.stringency.index.wntrac.retail.and.recreation:stringency index_wntrac_retail_and_recreation`;
+const compliance_score_wntrac_retail_and_recreation = $localize`:data indices|data indices@@constants.compliance.score.wntrac.retail.and.recreation:compliance score_wntrac_retail_and_recreation`;
+const npi_index_wntrac_retail_and_recreation = $localize`:data indices|data indices@@constants.npi.index.wntrac.retail.and.recreation:npi-index_wntrac_retail_and_recreation`;
+const stringency_index_oxcgrt_retail_and_recreation = $localize`:data indices|data indices@@constants.stringency.index.oxcgrt.retail.and.recreation:stringency index_oxcgrt_retail_and_recreation`;
+const compliance_score_oxcgrt_retail_and_recreation = $localize`:data indices|data indices@@constants.compliance.score.oxcgrt.retail.and.recreation:compliance score_oxcgrt_retail_and_recreation`;
+const npi_index_oxcgrt_retail_and_recreation = $localize`:data indices|data indices@@constants.npi.index.oxcgrt.retail.and.recreation:npi-index_oxcgrt_retail_and_recreation`;
+const stringency_index_wntrac_grocery_and_pharmacy = $localize`:data indices|data indices@@constants.stringency.index.wntrac.grocery.and.pharmacy:stringency index_wntrac_grocery_and_pharmacy`;
+const compliance_score_wntrac_grocery_and_pharmacy = $localize`:data indices|data indices@@constants.compliance.score.wntrac.grocery.and.pharmacy:compliance score_wntrac_grocery_and_pharmacy`;
+const npi_index_wntrac_grocery_and_pharmacy = $localize`:data indices|data indices@@constants.npi.index.wntrac.grocery.and.pharmacy:npi-index_wntrac_grocery_and_pharmacy`;
+const stringency_index_oxcgrt_grocery_and_pharmacy = $localize`:data indices|data indices@@constants.stringency.index.oxcgrt.grocery.and.pharmacy:stringency index_oxcgrt_grocery_and_pharmacy`;
+const compliance_score_oxcgrt_grocery_and_pharmacy = $localize`:data indices|data indices@@constants.compliance.score.oxcgrt.grocery.and.pharmacy:compliance score_oxcgrt_grocery_and_pharmacy`;
+const npi_index_oxcgrt_grocery_and_pharmacy = $localize`:data indices|data indices@@constants.npi.index.oxcgrt.grocery.and.pharmacy:npi-index_oxcgrt_grocery_and_pharmacy`;
+const stringency_index_wntrac_parks = $localize`:data indices|data indices@@constants.stringency.index.wntrac.parks:stringency index_wntrac_parks`;
+const compliance_score_wntrac_parks = $localize`:data indices|data indices@@constants.compliance.score.wntrac.parks:compliance score_wntrac_parks`;
+const npi_index_wntrac_parks = $localize`:data indices|data indices@@constants.npi.index.wntrac.parks:npi-index_wntrac_parks`;
+const stringency_index_oxcgrt_parks = $localize`:data indices|data indices@@constants.stringency.index.oxcgrt.parks:stringency index_oxcgrt_parks`;
+const compliance_score_oxcgrt_parks = $localize`:data indices|data indices@@constants.compliance.score.oxcgrt.parks:compliance score_oxcgrt_parks`;
+const npi_index_oxcgrt_parks = $localize`:data indices|data indices@@constants.npi.index.oxcgrt.parks:npi-index_oxcgrt_parks`;
+const stringency_index_wntrac_transit_stations = $localize`:data indices|data indices@@constants.stringency.index.wntrac.transit.stations:stringency index_wntrac_transit_stations`;
+const compliance_score_wntrac_transit_stations = $localize`:data indices|data indices@@constants.compliance.score.wntrac.transit.stations:compliance score_wntrac_transit_stations`;
+const npi_index_wntrac_transit_stations = $localize`:data indices|data indices@@constants.npi.index.wntrac.transit.stations:npi-index_wntrac_transit_stations`;
+const stringency_index_oxcgrt_transit_stations = $localize`:data indices|data indices@@constants.stringency.index.oxcgrt.transit.stations:stringency index_oxcgrt_transit_stations`;
+const compliance_score_oxcgrt_transit_stations = $localize`:data indices|data indices@@constants.compliance.score.oxcgrt.transit.stations:compliance score_oxcgrt_transit_stations`;
+const npi_index_oxcgrt_transit_stations = $localize`:data indices|data indices@@constants.npi.index.oxcgrt.transit.stations:npi-index_oxcgrt_transit_stations`;
+const stringency_index_wntrac_residential = $localize`:data indices|data indices@@constants.stringency.index.wntrac.residential:stringency index_wntrac_residential`;
+const compliance_score_wntrac_residential = $localize`:data indices|data indices@@constants.compliance.score.wntrac.residential:compliance score_wntrac_residential`;
+const npi_index_wntrac_residential = $localize`:data indices|data indices@@constants.npi.index.wntrac.residential:npi-index_wntrac_residential`;
+const stringency_index_oxcgrt_residential = $localize`:data indices|data indices@@constants.stringency.index.oxcgrt.residential:stringency index_oxcgrt_residential`;
+const compliance_score_oxcgrt_residential = $localize`:data indices|data indices@@constants.compliance.score.oxcgrt.residential:compliance score_oxcgrt_residential`;
+const npi_index_oxcgrt_residential = $localize`:data indices|data indices@@constants.npi.index.oxcgrt.residential:npi-index_oxcgrt_residential`;
+
+export const INDEX_DATA_KEYS = {};
+INDEX_DATA_KEYS[confirmed_cases] = 0;
+INDEX_DATA_KEYS[stringency_index_wntrac_workplaces] = 1;
+INDEX_DATA_KEYS[compliance_score_wntrac_workplaces] = 2;
+INDEX_DATA_KEYS[npi_index_wntrac_workplaces] = 3;
+INDEX_DATA_KEYS[stringency_index_oxcgrt_workplaces] = 4;
+INDEX_DATA_KEYS[compliance_score_oxcgrt_workplaces] = 5;
+INDEX_DATA_KEYS[npi_index_oxcgrt_workplaces] = 6;
+INDEX_DATA_KEYS[stringency_index_wntrac_retail_and_recreation] = 7;
+INDEX_DATA_KEYS[compliance_score_wntrac_retail_and_recreation] = 8;
+INDEX_DATA_KEYS[npi_index_wntrac_retail_and_recreation] = 9;
+INDEX_DATA_KEYS[stringency_index_oxcgrt_retail_and_recreation] = 10;
+INDEX_DATA_KEYS[compliance_score_oxcgrt_retail_and_recreation] = 11;
+INDEX_DATA_KEYS[npi_index_oxcgrt_retail_and_recreation] = 12;
+INDEX_DATA_KEYS[stringency_index_wntrac_grocery_and_pharmacy] = 13;
+INDEX_DATA_KEYS[compliance_score_wntrac_grocery_and_pharmacy] = 14;
+INDEX_DATA_KEYS[npi_index_wntrac_grocery_and_pharmacy] = 15;
+INDEX_DATA_KEYS[stringency_index_oxcgrt_grocery_and_pharmacy] = 16;
+INDEX_DATA_KEYS[compliance_score_oxcgrt_grocery_and_pharmacy] = 17;
+INDEX_DATA_KEYS[npi_index_oxcgrt_grocery_and_pharmacy] = 18;
+INDEX_DATA_KEYS[stringency_index_wntrac_parks] = 19;
+INDEX_DATA_KEYS[compliance_score_wntrac_parks] = 20;
+INDEX_DATA_KEYS[npi_index_wntrac_parks] = 21;
+INDEX_DATA_KEYS[stringency_index_oxcgrt_parks] = 22;
+INDEX_DATA_KEYS[compliance_score_oxcgrt_parks] = 23;
+INDEX_DATA_KEYS[npi_index_oxcgrt_parks] = 24;
+INDEX_DATA_KEYS[stringency_index_wntrac_transit_stations] = 25;
+INDEX_DATA_KEYS[compliance_score_wntrac_transit_stations] = 26;
+INDEX_DATA_KEYS[npi_index_wntrac_transit_stations] = 27;
+INDEX_DATA_KEYS[stringency_index_oxcgrt_transit_stations] = 28;
+INDEX_DATA_KEYS[compliance_score_oxcgrt_transit_stations] = 29;
+INDEX_DATA_KEYS[npi_index_oxcgrt_transit_stations] = 30;
+INDEX_DATA_KEYS[stringency_index_wntrac_residential] = 31;
+INDEX_DATA_KEYS[compliance_score_wntrac_residential] = 32;
+INDEX_DATA_KEYS[npi_index_wntrac_residential] = 33;
+INDEX_DATA_KEYS[stringency_index_oxcgrt_residential] = 34;
+INDEX_DATA_KEYS[compliance_score_oxcgrt_residential] = 35;
+INDEX_DATA_KEYS[npi_index_oxcgrt_residential] = 36;
 
 
 export const APP_CONSTANTS = {
