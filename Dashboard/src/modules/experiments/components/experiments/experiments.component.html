@@ -71,7 +71,7 @@
                       </mat-form-field>
                     </div>
                     <div class="col-xl-3 button-wrap" *ngIf="selectedValue != '' ">
-                      <button mat-raised-button color="primary" [disabled]="!(formGroup.get('dynamicGroup')) || (formGroup.get('dynamicGroup').invalid) || !(formGroup.get('staticGroup')) || (formGroup.get('staticGroup').invalid)" align="right" (click)="runExperiment(formGroup.value)" i18n="submit button|submit button@@submitButton">Submit</button>
+                      <button mat-raised-button color="primary" [disabled]="!(formGroup.get('dynamicGroup')) || (formGroup.get('dynamicGroup').invalid) || !(formGroup.get('staticGroup')) || (formGroup.get('staticGroup').invalid)" align="right" (click)="runExperiment(formGroup.value)" i18n="submit button|submit button@@submitButton">Submit </button>
                       <!-- <button mat-raised-button color="primary" [disabled]="(formGroup.invalid)" align="right" (click)="runExperiment(formGroup.value)" >Submit</button> -->
                     </div>
                   </div>

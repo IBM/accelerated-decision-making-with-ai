@@ -20,7 +20,7 @@ import * as L from 'leaflet';
 import 'leaflet.markercluster';
 import {getColor, numberWithCommas} from '../../functions';
 import {DataService, MapService} from '../../services';
-import {MAP_POPUP_OPTIONS, DROPDOWN_ITEMS_GEO, GLYPHS, DEFAULT_MAP_BOUNDS, MAP_CONSTANTS} from '../../constants';
+import {MAP_POPUP_OPTIONS, DROPDOWN_ITEMS_GEO, GLYPHS, DEFAULT_MAP_BOUNDS, MAP_CONSTANTS, NO_DATA} from '../../constants';
 import {MapParameters, OverviewMapParameters} from '../../models';
 import {environment} from '../../../../environments/environment';
 import {isNotNullOrUndefined} from 'codelyzer/util/isNotNullOrUndefined';
@@ -206,7 +206,7 @@ export class MapComponent implements OnInit, OnChanges {
 
       // loop through the density intervals and generate a label with a colored square for each interval
       div.innerHTML +=
-        '<i style="background:' + getColor(null) + '"></i> ' + 'No data' + '<br>';
+        '<i style="background:' + getColor(null) + '"></i> ' + NO_DATA + '<br>';
       for (let i = 0; i < keyRanges.length; i++) {
         if (!isNotNullOrUndefined(keyRanges[i]) && !isNotNullOrUndefined(keyRanges[i + 1])) {
           continue;
