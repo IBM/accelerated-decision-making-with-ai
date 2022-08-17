@@ -4,6 +4,7 @@
     <body>
       <trans-unit id="ngb.alert.close" datatype="html">
         <source>Close</source>
+        <target>Fermer</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/alert/alert.ts</context>
           <context context-type="linenumber">58,61</context>
