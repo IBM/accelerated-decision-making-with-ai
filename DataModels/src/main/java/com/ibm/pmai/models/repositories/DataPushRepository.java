@@ -16,18 +16,17 @@
 
 package com.ibm.pmai.models.repositories;
 
-import com.ibm.pmai.models.core.DataRepositoryConfiguration;
+import com.ibm.pmai.models.core.DataPush;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface DataRepositoryConfigurationRepository extends JpaRepository<DataRepositoryConfiguration, String> {
-    List<DataRepositoryConfiguration> getById(String id);
 
-    DataRepositoryConfiguration getByName(String name);
+public interface DataPushRepository extends JpaRepository<DataPush, String> {
+    List<DataPush> getById(String id);
 
-    List<DataRepositoryConfiguration> getByCategory(String category);
+    DataPush getByHash(String hash);
 
 }
