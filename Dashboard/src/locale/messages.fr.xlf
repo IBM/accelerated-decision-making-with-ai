@@ -502,6 +502,7 @@
       </trans-unit>
       <trans-unit id="enterAlgorithmGithubUrl" datatype="html">
         <source>Enter the GitHub url for the algorithm code</source>
+        <target>Entrer l'url GitHub du code de l'algorithme</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">60</context>
@@ -511,6 +512,7 @@
       </trans-unit>
       <trans-unit id="enterAlgorithmVersion" datatype="html">
         <source>Enter the version of the algorithm</source>
+        <target>Entrer la version de l'algorithme</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">67</context>
@@ -520,6 +522,7 @@
       </trans-unit>
       <trans-unit id="enterAlgorithmVersionAuthor" datatype="html">
         <source>Enter the author of the algorithm version</source>
+        <target>Entrer l'auteur de la version de l'algorithme</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">76</context>
@@ -529,6 +532,7 @@
       </trans-unit>
       <trans-unit id="enterAlgorithmVersionDate" datatype="html">
         <source>Enter the date of the algorithm version</source>
+        <target>Entrer la date de la version de l'algorithme</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">83</context>
@@ -538,6 +542,7 @@
       </trans-unit>
       <trans-unit id="cancelButton" datatype="html">
         <source>Cancel</source>
+        <target>Annuler</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">94</context>
@@ -579,6 +584,7 @@
       </trans-unit>
       <trans-unit id="submitButton" datatype="html">
         <source>Submit </source>
+        <target>Soumettre</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">96,97</context>
@@ -624,6 +630,7 @@
       </trans-unit>
       <trans-unit id="selectAlgorithmLabel" datatype="html">
         <source>Select algorithm</source>
+        <target>Sélectionner un algorithme</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">31</context>
@@ -633,6 +640,7 @@
       </trans-unit>
       <trans-unit id="selectCompareAlgorithmsLabel" datatype="html">
         <source>Select compare algorithms</source>
+        <target>Sélectionner les algorithmes de comparaisons</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">44</context>
@@ -642,6 +650,7 @@
       </trans-unit>
       <trans-unit id="selectEnvironmentLabel" datatype="html">
         <source>Select environment</source>
+        <target>Sélectionner un environnement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">57</context>
@@ -651,6 +660,7 @@
       </trans-unit>
       <trans-unit id="selectLocationLabel" datatype="html">
         <source>Select location</source>
+        <target>Sélectionner une localisation</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">70</context>
@@ -660,6 +670,7 @@
       </trans-unit>
       <trans-unit id="selectedAlgorithmLabel" datatype="html">
         <source> Selected Algorithm </source>
+        <target>Algorithme sélectionné</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">100,101</context>
@@ -669,6 +680,7 @@
       </trans-unit>
       <trans-unit id="selectedAlgorithmName" datatype="html">
         <source> Algorithm Name </source>
+        <target>Nom de l'algorithme</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">112,113</context>
@@ -678,6 +690,7 @@
       </trans-unit>
       <trans-unit id="selectedAlgorithmVersion" datatype="html">
         <source> Algorithm Version </source>
+        <target>Version de l'algorithme</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">121,122</context>
@@ -687,6 +700,7 @@
       </trans-unit>
       <trans-unit id="selectedAlgorithmVersionDate" datatype="html">
         <source> Version Date </source>
+        <target>Date de la version</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">130,131</context>
@@ -696,6 +710,7 @@
       </trans-unit>
       <trans-unit id="selectedAlgorithmVersionAuthor" datatype="html">
         <source> Version Author </source>
+        <target>Auteur de la version</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">139,140</context>
@@ -705,6 +720,7 @@
       </trans-unit>
       <trans-unit id="selectedAlgorithmAccessedDate" datatype="html">
         <source> Accessed </source>
+        <target>Accédé</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">148,149</context>
@@ -714,6 +730,7 @@
       </trans-unit>
       <trans-unit id="selectedAlgorithmStatus" datatype="html">
         <source> Status </source>
+        <target>Statut</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">157,158</context>
@@ -723,6 +740,7 @@
       </trans-unit>
       <trans-unit id="addNewAlgorithmButton" datatype="html">
         <source> Add New Algorithm </source>
+        <target>Ajouter un nouvel algorithme</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">171</context>
@@ -732,6 +750,7 @@
       </trans-unit>
       <trans-unit id="learningResultsError" datatype="html">
         <source>Could not find learning results : </source>
+        <target> Ne peut trouver les résultats d'apprentissage</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">16</context>
@@ -741,6 +760,7 @@
       </trans-unit>
       <trans-unit id="algorithmCreationSuccess" datatype="html">
         <source>Algorithm Creation Successful: </source>
+        <target>Création de l'algorithme avec succès:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">17</context>
@@ -750,6 +770,7 @@
       </trans-unit>
       <trans-unit id="algorithmCreationFailed" datatype="html">
         <source>Could not create algorithm!: </source>
+        <target>Ne peut créer l'algorithme!:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">18</context>
@@ -759,6 +780,7 @@
       </trans-unit>
       <trans-unit id="algorithmUpdateSuccess" datatype="html">
         <source>Algorithm Update Successful: </source>
+        <target> Mise à jour de l'algorithme avec succès</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">19</context>
@@ -768,6 +790,7 @@
       </trans-unit>
       <trans-unit id="algorithmUpdateFailed" datatype="html">
         <source>&quot;Could not update algorithm!: &quot;</source>
+        <target>&quot;Ne peut mettre à jour l'algorithme!: &quot;</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">20</context>
@@ -777,6 +800,7 @@
       </trans-unit>
       <trans-unit id="enteredAlgorithmUpdateFailed" datatype="html">
         <source>Entered Algorithm update failed.</source>
+        <target>Entrer échec de la mise à jour de l'algorithme</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">21</context>
@@ -786,6 +810,7 @@
       </trans-unit>
       <trans-unit id="loadAlgorithmsFailed" datatype="html">
         <source>Could not algorithms, locations and/or environments data : </source>
+        <target>Impossible d'obtenir les lieux et/ou les environnements de données des algorithmes: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">22</context>
@@ -795,6 +820,7 @@
       </trans-unit>
       <trans-unit id="provisioned" datatype="html">
         <source>Provisioned</source>
+        <target>Provisionné</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">23</context>
@@ -804,6 +830,7 @@
       </trans-unit>
       <trans-unit id="provisioning" datatype="html">
         <source>Provisioning</source>
+        <target>Approvisionnement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">24</context>
@@ -813,6 +840,7 @@
       </trans-unit>
       <trans-unit id="close" datatype="html">
         <source>Close</source>
+        <target>Fermer</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">25</context>
@@ -844,6 +872,7 @@
       </trans-unit>
       <trans-unit id="mainTitleHeader" datatype="html">
         <source> Interactive Dashboard for Accelerated Decision-making with AI (ADMAI) </source>
+        <target> Tableau de bord interactif pour la prise de décision accélérée avec l'IA (ADMAI) </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
           <context context-type="linenumber">27,28</context>
@@ -853,6 +882,7 @@
       </trans-unit>
       <trans-unit id="lastUpdateDiv" datatype="html">
         <source> Updated: Jun 30, 2021 <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target> Mis à jour le : 30 Juin, 2021 <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
           <context context-type="linenumber">30</context>
@@ -876,6 +906,20 @@
                   results and decisions made based on the results are the responsibility of the user. IBM shall have no liability
                   with respect to the results and decisions made based on the results. Please send any inquiries about the data
                   presented here at: wwcc19@ke.ibm.com</source>
+        <target>En raison des différentes épidémies, IBM fournit ce tableau de bord interactif en tant que service au public, 
+          mais ce tableau de bord n'est pas conçu ni destiné à être un dispositif médical ou à remplacer un avis, un diagnostic,
+          un traitement ou un jugement médical professionnel.
+         IBM a compilé des données sur les résultats fournies par de multiples sources tierces, dont Wikipedia, 
+          des agences gouvernementales et d'autres sources publiques.
+        Ces sources mettent à jour et rapportent les données sur les résultats selon des calendriers réguliers et irréguliers.
+          Il peut donc y avoir de temps en temps des différences entre les données sur les résultats rapportées ici et celles rapportées
+          par les sources individuelles. IBM s'efforce de fournir des données actualisées et exactes dans la mesure où elles sont disponibles
+          et essaie de vérifier les données de Wikipédia avec les données des sources gouvernementales pour minimiser et corriger les erreurs.
+          IBM ne garantit pas l'exactitude, la fiabilité ou l'exhaustivité des données de résultats. Les résultats de ce tableau de bord sont
+          par nature spéculatifs et l'utilisation appropriée des résultats et les décisions prises sur la base de ces résultats relèvent de
+          la responsabilité de l'utilisateur. IBM n'a aucune responsabilité en ce qui concerne les résultats et les décisions prises sur 
+          la base de ces résultats. Veuillez envoyer toute demande de renseignements sur les données présentées ici à l'adresse
+          suivante : wwcc19@ke.ibm.com</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
           <context context-type="linenumber">33,47</context>
@@ -885,6 +929,7 @@
       </trans-unit>
       <trans-unit id="disclaimerButton" datatype="html">
         <source> Disclaimer </source>
+        <target>Mentions légales</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
           <context context-type="linenumber">48,49</context>
@@ -894,6 +939,7 @@
       </trans-unit>
       <trans-unit id="a827e410d2935db965394cc46ea85637a3693cb2" datatype="html">
         <source>Domains</source>
+        <target> Domaines</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
           <context context-type="linenumber">58</context>
@@ -903,6 +949,7 @@
       </trans-unit>
       <trans-unit id="domainModels" datatype="html">
         <source>Domain Models</source>
+        <target>Modèles du domaine</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
           <context context-type="linenumber">64</context>
@@ -912,6 +959,7 @@
       </trans-unit>
       <trans-unit id="AIAlgorithms" datatype="html">
         <source>AI Algorithms</source>
+        <target>Algorithmes de l'IA</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
           <context context-type="linenumber">70</context>
@@ -921,6 +969,7 @@
       </trans-unit>
       <trans-unit id="territoriesCovered" datatype="html">
         <source>Territories Covered</source>
+        <target>Territoires couverts</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
           <context context-type="linenumber">76</context>
@@ -930,6 +979,7 @@
       </trans-unit>
       <trans-unit id="pleaseConfirmDialog" datatype="html">
         <source>Please confirm...</source>
+        <target>Veuillez confirmer...</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/confirm-dialog/confirm-dialog.component.html</context>
           <context context-type="linenumber">19</context>
@@ -939,6 +989,7 @@
       </trans-unit>
       <trans-unit id="noMessage" datatype="html">
         <source>No</source>
+        <target>Non</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/confirm-dialog/confirm-dialog.component.html</context>
           <context context-type="linenumber">24</context>
@@ -948,6 +999,7 @@
       </trans-unit>
       <trans-unit id="yesMessage" datatype="html">
         <source>Yes</source>
+        <target>Oui</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/confirm-dialog/confirm-dialog.component.html</context>
           <context context-type="linenumber">25</context>
