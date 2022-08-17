@@ -33,6 +33,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ibm.pmai.models.core.DataPush;
+import com.ibm.pmai.models.repositories.DataPushRepository;
 import com.ibm.pmai.taskclerk.configurations.ApplicationConfigurations;
 import com.ibm.pmai.taskclerk.exceptions.ApiException;
 import com.ibm.pmai.taskclerk.utils.PBEEncryption;
