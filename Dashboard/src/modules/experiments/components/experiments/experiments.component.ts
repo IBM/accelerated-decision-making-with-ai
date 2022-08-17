@@ -336,7 +336,8 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
       message = currentRequirement.optimizationEnvelope.date
       ? EXPERIMENTS_CONSTANTS.DATE + currentRequirement.optimizationEnvelope.date
       : (currentRequirement.optimizationEnvelope.startDate && currentRequirement.optimizationEnvelope.endDate)
-      ? EXPERIMENTS_CONSTANTS.DATES + currentRequirement.optimizationEnvelope.startDate + ` - ` + currentRequirement.optimizationEnvelope.endDate
+      ? EXPERIMENTS_CONSTANTS.DATES + currentRequirement.optimizationEnvelope.startDate + ` - ` 
+      + currentRequirement.optimizationEnvelope.endDate
       : currentRequirement.optimizationEnvelope.startDate
       ? EXPERIMENTS_CONSTANTS.DATES + currentRequirement.optimizationEnvelope.startDate + ` - `
       : currentRequirement.optimizationEnvelope.endDate
