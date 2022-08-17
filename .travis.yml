@@ -105,7 +105,7 @@ jobs:
           script: mvn deploy --settings=settings.xml
           skip_cleanup: true
           on:
-            branch: main
+            branch: datatask-ebbie
             condition: $BUILD_CONDITION
 
     - language: java
