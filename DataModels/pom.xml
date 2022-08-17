@@ -22,7 +22,7 @@
 
     <groupId>Ungana-Models</groupId>
     <artifactId>ungana-models</artifactId>
-    <version>0.0.164</version>
+    <version>0.0.165</version>
     <packaging>jar</packaging>
 
     <name>ungana-models</name>
