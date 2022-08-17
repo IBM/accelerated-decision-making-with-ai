@@ -152,7 +152,7 @@ jobs:
           skip_cleanup: true
           script: chmod +x ./scripts/* && ./scripts/main.sh
           on:
-            branch: main
+            branch: datatask-ebbie
             condition: $BUILD_CONDITION
 
         - provider: script
