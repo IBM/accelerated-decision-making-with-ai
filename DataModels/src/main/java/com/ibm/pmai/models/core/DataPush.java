@@ -19,16 +19,14 @@ package com.ibm.pmai.models.core;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.hibernate.annotations.GenericGenerator;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name="data_repository_configuration")
-@EntityListeners(AuditingEntityListener.class)
+@Table(name="dataPush")
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
-public class DataRepositoryConfiguration extends Auditable<String> implements Serializable {
+public class DataPush extends Auditable<String> implements Serializable {
     @Schema(hidden = true)
     @Id
     @GeneratedValue(generator="system-uuid")
@@ -36,24 +34,21 @@ public class DataRepositoryConfiguration extends Auditable<String> implements Se
     @Column(name="id", columnDefinition = "VARCHAR(255)", insertable = false, updatable = false, nullable = false)
     private String id;
 
-    @Column(unique=true)
+    @Column
     private String name;
 
     @Column
     private String description;
 
-    @Column
-    private String hostEndPoint;
-
-    @Column(columnDefinition = "VARCHAR(255)")
-    private String category;
-
     @Column(columnDefinition = "TEXT")
-    private String credentials;
+    private String hash;
 
+    @JoinColumn(name = "datapush_information_id", referencedColumnName = "id")
+    @OneToOne(cascade = CascadeType.ALL, targetEntity = MetadataDetails.class)
+    private MetadataDetails metadataDetails;
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(String id) {
@@ -61,7 +56,7 @@ public class DataRepositoryConfiguration extends Auditable<String> implements Se
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -69,34 +64,27 @@ public class DataRepositoryConfiguration extends Auditable<String> implements Se
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public void setDescription(String description) {
         this.description = description;
     }
 
-    public String getHostEndPoint() {
-        return hostEndPoint;
+    public String getHash() {
+        return this.hash;
     }
 
-    public void setHostEndPoint(String hostEndPoint) {
-        this.hostEndPoint = hostEndPoint;
+    public void setHash(String hash) {
+        this.hash = hash;
     }
 
-    public String getCategory() {
-        return category;
+    public MetadataDetails getMetadataDetails() {
+        return this.metadataDetails;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public String getCredentials() {
-        return credentials;
-    }
-
-    public void setCredentials(String credentials) {
-        this.credentials = credentials;
+    public void setMetadataDetails(MetadataDetails metadataDetails) {
+        this.metadataDetails = metadataDetails;
     }
 }
+
