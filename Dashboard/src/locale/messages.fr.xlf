@@ -12,6 +12,7 @@
       </trans-unit>
       <trans-unit id="ngb.carousel.slide-number" datatype="html">
         <source> Slide <x id="INTERPOLATION" equiv-text="private _pauseO"/> of <x id="INTERPOLATION_1" equiv-text="Subject(false);"/> </source>
+        <target>Slide</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/carousel/carousel.ts</context>
           <context context-type="linenumber">114,118</context>
@@ -20,6 +21,7 @@
       </trans-unit>
       <trans-unit id="ngb.carousel.previous" datatype="html">
         <source>Previous</source>
+        <target>Précédent</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/carousel/carousel.ts</context>
           <context context-type="linenumber">132,133</context>
@@ -27,6 +29,7 @@
       </trans-unit>
       <trans-unit id="ngb.carousel.next" datatype="html">
         <source>Next</source>
+        <target>Suivant</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/carousel/carousel.ts</context>
           <context context-type="linenumber">147,151</context>
@@ -34,6 +37,7 @@
       </trans-unit>
       <trans-unit id="ngb.datepicker.select-month" datatype="html">
         <source>Select month</source>
+        <target>Choisir mois</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/datepicker/datepicker-navigation-select.ts</context>
           <context context-type="linenumber">43,47</context>
@@ -45,6 +49,7 @@
       </trans-unit>
       <trans-unit id="ngb.datepicker.select-year" datatype="html">
         <source>Select year</source>
+        <target>Choisir année</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/datepicker/datepicker-navigation-select.ts</context>
           <context context-type="linenumber">59,63</context>
@@ -56,6 +61,7 @@
       </trans-unit>
       <trans-unit id="ngb.datepicker.previous-month" datatype="html">
         <source>Previous month</source>
+        <target>Mois Précédent</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/datepicker/datepicker-navigation.ts</context>
           <context context-type="linenumber">24,27</context>
@@ -67,6 +73,7 @@
       </trans-unit>
       <trans-unit id="ngb.datepicker.next-month" datatype="html">
         <source>Next month</source>
+        <target>Mois suivant</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/datepicker/datepicker-navigation.ts</context>
           <context context-type="linenumber">44,48</context>
@@ -106,6 +113,7 @@
       </trans-unit>
       <trans-unit id="ngb.pagination.first-aria" datatype="html">
         <source>First</source>
+        <target>Premier</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/pagination/pagination.ts</context>
           <context context-type="linenumber">168,172</context>
@@ -113,6 +121,7 @@
       </trans-unit>
       <trans-unit id="ngb.pagination.previous-aria" datatype="html">
         <source>Previous</source>
+        <target>Précédent</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/pagination/pagination.ts</context>
           <context context-type="linenumber">176,177</context>
@@ -120,6 +129,7 @@
       </trans-unit>
       <trans-unit id="ngb.pagination.next-aria" datatype="html">
         <source>Next</source>
+        <target>Suivant</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/pagination/pagination.ts</context>
           <context context-type="linenumber">188,189</context>
@@ -127,6 +137,7 @@
       </trans-unit>
       <trans-unit id="ngb.pagination.last-aria" datatype="html">
         <source>Last</source>
+        <target>Dernier</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/pagination/pagination.ts</context>
           <context context-type="linenumber">195,200</context>
@@ -141,6 +152,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.HH" datatype="html">
         <source>HH</source>
+        <target>HH</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">40,41</context>
@@ -148,6 +160,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.hours" datatype="html">
         <source>Hours</source>
+        <target>Heures</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">45,46</context>
@@ -155,6 +168,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.MM" datatype="html">
         <source>MM</source>
+        <target>MM</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">52,53</context>
@@ -162,6 +176,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.minutes" datatype="html">
         <source>Minutes</source>
+        <target>Minutes</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">57,58</context>
@@ -169,6 +184,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.increment-hours" datatype="html">
         <source>Increment hours</source>
+        <target>Incrémenter les heures</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">62,63</context>
@@ -176,6 +192,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-hours" datatype="html">
         <source>Decrement hours</source>
+        <target>Décrémenter les heures</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">67,68</context>
@@ -183,6 +200,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.increment-minutes" datatype="html">
         <source>Increment minutes</source>
+        <target>Incrémenter les minutes</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">75,76</context>
@@ -190,6 +208,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-minutes" datatype="html">
         <source>Decrement minutes</source>
+        <target>Décrémenter les minutes</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">82</context>
@@ -197,6 +216,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.SS" datatype="html">
         <source>SS</source>
+        <target>SS</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">85,87</context>
@@ -204,6 +224,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.seconds" datatype="html">
         <source>Seconds</source>
+        <target>Secondes</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">90,92</context>
@@ -211,6 +232,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.increment-seconds" datatype="html">
         <source>Increment seconds</source>
+        <target>Incrémenter les secondes</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">98,99</context>
@@ -218,6 +240,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-seconds" datatype="html">
         <source>Decrement seconds</source>
+        <target>Décrémenter les secondes</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">105,109</context>
@@ -240,6 +263,7 @@
       </trans-unit>
       <trans-unit id="ngb.toast.close-aria" datatype="html">
         <source>Close</source>
+        <target>Fermer</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/@ng-bootstrap/src/toast/toast.ts</context>
           <context context-type="linenumber">76,85</context>
@@ -247,6 +271,7 @@
       </trans-unit>
       <trans-unit id="addAlgorithmHeader" datatype="html">
         <source>Add Algorithm</source>
+        <target>Ajouter Algorithme</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">19</context>
@@ -256,6 +281,7 @@
       </trans-unit>
       <trans-unit id="editAlgorithmHeader" datatype="html">
         <source>Edit Algorithm</source>
+        <target>Modifier Algorithme</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">20</context>
@@ -265,6 +291,7 @@
       </trans-unit>
       <trans-unit id="enterAlgorithmName" datatype="html">
         <source>Enter name of the algorithm</source>
+        <target>Entrer le nom de l'algorithme</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">28</context>
@@ -274,6 +301,7 @@
       </trans-unit>
       <trans-unit id="fieldRequiredError" datatype="html">
         <source>This field is required</source>
+        <target>Ce champ est obligatoire</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">30</context>
@@ -475,6 +503,7 @@
       </trans-unit>
       <trans-unit id="enterAlgorithmClassName" datatype="html">
         <source>Enter the exact name of the Algorithm Class name</source>
+        <target>Entrer le nom de classe exact de l'algorithme</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">35</context>
@@ -484,6 +513,7 @@
       </trans-unit>
       <trans-unit id="enterAlgorithmRawUrl" datatype="html">
         <source>Enter the raw url of the algorithm.py file</source>
+        <target>Entrer l'URL du fichier algorithm.py</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">44</context>
@@ -493,6 +523,7 @@
       </trans-unit>
       <trans-unit id="enterRequirementsRawUrl" datatype="html">
         <source>Enter the raw url of requiments.txt</source>
+        <target>Entrer l'URL du fichier requirements.txt</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">51</context>
@@ -1207,6 +1238,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.workplaces" datatype="html">
         <source>stringency index_wntrac_workplaces</source>
+        <target>Indice_wntrac de rigueur sur les lieux de travail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">151</context>
@@ -1216,6 +1248,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.workplaces" datatype="html">
         <source>compliance score_wntrac_workplaces</source>
+        <target>Score_wntrac de conformité sur les lieux de travail</target>       
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">152</context>
@@ -1225,6 +1258,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.workplaces" datatype="html">
         <source>npi-index_wntrac_workplaces</source>
+        <target>Index_wntrac NPI sur les lieux de travail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">153</context>
@@ -1234,6 +1268,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.workplaces" datatype="html">
         <source>stringency index_oxcgrt_workplaces</source>
+        <target>Index_oxcgrt de rigueur sur les lieux de travail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">154</context>
@@ -1243,6 +1278,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.workplaces" datatype="html">
         <source>compliance score_oxcgrt_workplaces</source>
+        <target>Score_oxcgrt de conformité sur les lieux de travail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">155</context>
@@ -1252,6 +1288,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.workplaces" datatype="html">
         <source>npi-index_oxcgrt_workplaces</source>
+        <target>Index_oxcgrt NPI sur les lieux de travail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">156</context>
@@ -1261,6 +1298,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.retail.and.recreation" datatype="html">
         <source>stringency index_wntrac_retail_and_recreation</source>
+        <target>Index_wntrac de rigueur sur les commerces et loisirs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">157</context>
@@ -1270,6 +1308,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.retail.and.recreation" datatype="html">
         <source>compliance score_wntrac_retail_and_recreation</source>
+        <target>Score_wntrac de conformité sur les commerces et loisirs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">158</context>
@@ -1279,6 +1318,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.retail.and.recreation" datatype="html">
         <source>npi-index_wntrac_retail_and_recreation</source>
+        <target>Index_wntrac NPI sur les commerces et loisirs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">159</context>
@@ -1288,6 +1328,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.retail.and.recreation" datatype="html">
         <source>stringency index_oxcgrt_retail_and_recreation</source>
+        <target>Index_oxcgrt de rigueur sur les commerces et loisirs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">160</context>
@@ -1297,6 +1338,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.retail.and.recreation" datatype="html">
         <source>compliance score_oxcgrt_retail_and_recreation</source>
+        <target>Score_oxcgrt de conformité sur les commerces et loisirs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">161</context>
@@ -1306,6 +1348,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.retail.and.recreation" datatype="html">
         <source>npi-index_oxcgrt_retail_and_recreation</source>
+        <target>Index_oxcgrt NPI sur les commerces et loisirs </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">162</context>
@@ -1315,6 +1358,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.grocery.and.pharmacy" datatype="html">
         <source>stringency index_wntrac_grocery_and_pharmacy</source>
+        <target>Indice_wntract de rigueur sur les supermarchés et pharmacies</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">163</context>
@@ -1324,6 +1368,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.grocery.and.pharmacy" datatype="html">
         <source>compliance score_wntrac_grocery_and_pharmacy</source>
+        <target>Score_wntrac de conformité sur les supermarchés et pharmacies</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">164</context>
