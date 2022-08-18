@@ -1972,7 +1972,7 @@
       </trans-unit>
       <trans-unit id="selectLocation" datatype="html">
         <source>Select location</source>
-        <target>Sélectionner la localisation</target>
+        <target>Sélectionner l'emplacement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">63</context>
@@ -2106,6 +2106,7 @@
       </trans-unit>
       <trans-unit id="duplicateExperimentDescription" datatype="html">
         <source>Description</source>
+        <target>Description</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">218</context>
@@ -2115,6 +2116,7 @@
       </trans-unit>
       <trans-unit id="duplicateExperimentAction" datatype="html">
         <source>Action</source>
+        <target>Action</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">226</context>
@@ -2124,6 +2126,7 @@
       </trans-unit>
       <trans-unit id="experiment.type" datatype="html">
         <source>experiment type</source>
+        <target>Type de l'expérimentation</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.ts</context>
           <context context-type="linenumber">87</context>
@@ -2133,6 +2136,7 @@
       </trans-unit>
       <trans-unit id="algorithm.name" datatype="html">
         <source>algorithm name</source>
+        <target>Nom de l'algorithme</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.ts</context>
           <context context-type="linenumber">87</context>
@@ -2142,6 +2146,7 @@
       </trans-unit>
       <trans-unit id="experiment.name" datatype="html">
         <source>experiment name</source>
+        <target>Nom de l'expérimentation</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.ts</context>
           <context context-type="linenumber">87</context>
@@ -2151,6 +2156,7 @@
       </trans-unit>
       <trans-unit id="description.of.the.experiment" datatype="html">
         <source>Description of the experiment</source>
+        <target>Description de l'expérimentation</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.ts</context>
           <context context-type="linenumber">87</context>
@@ -2160,6 +2166,7 @@
       </trans-unit>
       <trans-unit id="experimentPrediction" datatype="html">
         <source>Prediction</source>
+        <target>Prédiction</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">18</context>
@@ -2167,6 +2174,7 @@
       </trans-unit>
       <trans-unit id="experimentCalibration" datatype="html">
         <source>Calibration</source>
+        <target>Calibrage</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">19</context>
@@ -2174,6 +2182,7 @@
       </trans-unit>
       <trans-unit id="calibrationTaskSingle" datatype="html">
         <source>Single</source>
+        <target>Unique</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">22</context>
@@ -2181,6 +2190,7 @@
       </trans-unit>
       <trans-unit id="calibrationTaskMultiple" datatype="html">
         <source>Multiple</source>
+        <target>Multiples</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">23</context>
@@ -2188,6 +2198,7 @@
       </trans-unit>
       <trans-unit id="calibrationTaskContinuous" datatype="html">
         <source>Continuous</source>
+        <target>Continu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">24</context>
@@ -2195,6 +2206,7 @@
       </trans-unit>
       <trans-unit id="calibrationActionMissing" datatype="html">
         <source>Actions missing in </source>
+        <target>Actions manquantes dans </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">26</context>
@@ -2202,6 +2214,7 @@
       </trans-unit>
       <trans-unit id="modelEndOfStatement" datatype="html">
         <source>model.</source>
+        <target>modèle</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">27</context>
@@ -2209,6 +2222,7 @@
       </trans-unit>
       <trans-unit id="consultTheSystemAdmin" datatype="html">
         <source> Consult the system admin!</source>
+        <target>Consultez l'administrateur du système!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">28</context>
@@ -2216,6 +2230,7 @@
       </trans-unit>
       <trans-unit id="calibrationActionUpdatedFailed" datatype="html">
         <source>Entered actions update failed</source>
+        <target>Entrer échec de la mise à jour de l'action</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">30</context>
@@ -2223,6 +2238,7 @@
       </trans-unit>
       <trans-unit id="calibrationModelsNotFound" datatype="html">
         <source>Could not find models : </source>
+        <target>Ne peut trouver les modèles: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">31</context>
@@ -2230,6 +2246,7 @@
       </trans-unit>
       <trans-unit id="calibrationLocationNotFound" datatype="html">
         <source>Could not find location : </source>
+        <target>Ne peut trouver l'emplacement: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">32</context>
@@ -2237,6 +2254,7 @@
       </trans-unit>
       <trans-unit id="calibrationExperimentCreationSuccessful" datatype="html">
         <source>Experiment Creation Successful: </source>
+        <target>Création de l'expérimentation avec succès: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">33</context>
@@ -2244,6 +2262,7 @@
       </trans-unit>
       <trans-unit id="calibrationExperimentCreationFailed" datatype="html">
         <source>Experiment Creation Failed: </source>
+        <target>Echec de la création de l'expérimentation</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">34</context>
@@ -2253,6 +2272,9 @@
         <source>A similar experiment for this location and environment has been returned,
 check the list of duplicate experiments to view the content.
 Would you like to override this and perform a new experiment?</source>
+        <target>Une expérimentation similaire pour cet emplacement et cet environnement a été renvoyée,
+                Consultez la liste des expérimentations dupliquées pour en voir le contenu.
+                Souhaitez-vous passer outre et réaliser une nouvelle expérimentation ?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">35</context>
@@ -2260,6 +2282,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="date" datatype="html">
         <source>Date: </source>
+        <target>Date: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">36</context>
@@ -2267,6 +2290,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="dates" datatype="html">
         <source>Dates: </source>
+        <target>Dates: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">37</context>
@@ -2274,6 +2298,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="datesAndDash" datatype="html">
         <source>Dates: - </source>
+        <target>Dates: - </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">38</context>
@@ -2281,6 +2306,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="experimentMetadataDetailsNotFound" datatype="html">
         <source>Metadata details fetch failed</source>
+        <target>La récupération des détails des métadonnées a échoué</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/constants/experiments.constants.ts</context>
           <context context-type="linenumber">42</context>
@@ -2288,6 +2314,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="feedbackForm" datatype="html">
         <source>Use the form below to provide your feedback: </source>
+        <target>Utilisez le formulaire ci-dessous pour nous faire part de vos commentaires :</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
           <context context-type="linenumber">26</context>
@@ -2297,6 +2324,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="nameLabel" datatype="html">
         <source>Name</source>
+        <target>Nom</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
           <context context-type="linenumber">29</context>
@@ -2306,6 +2334,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="nameFieldError" datatype="html">
         <source> Name is required. </source>
+        <target>Le nom est requis.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
           <context context-type="linenumber">35,36</context>
@@ -2315,6 +2344,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="emailAddressLabel" datatype="html">
         <source>Email address</source>
+        <target>Adresse e-mail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
           <context context-type="linenumber">41</context>
@@ -2324,6 +2354,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="emailFieldError" datatype="html">
         <source> Email is required. </source>
+        <target>L'adresse e-mail est requis</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
           <context context-type="linenumber">47,48</context>
@@ -2333,6 +2364,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="emailFieldIncompleteError" datatype="html">
         <source> Email is incomplete. </source>
+        <target>L'adresse e-mail est incomplète</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
           <context context-type="linenumber">50,51</context>
@@ -2342,6 +2374,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="provideFeedbackMessage" datatype="html">
         <source>Provide feedback</source>
+        <target>Fournir un feedback</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
           <context context-type="linenumber">56</context>
@@ -2351,6 +2384,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="feedbackFieldError" datatype="html">
         <source> Feedback message is required. </source>
+        <target>Un message de feedback est requis</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
           <context context-type="linenumber">62,63</context>
@@ -2360,6 +2394,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="sendFeedbackButton" datatype="html">
         <source>Send</source>
+        <target>Envoyer</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/feedback/components/feedback/feedback.component.html</context>
           <context context-type="linenumber">68</context>
@@ -2369,6 +2404,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="howToSummary" datatype="html">
         <source>Summary</source>
+        <target>Résumé</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">35</context>
@@ -2378,6 +2414,8 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="summaryParagraphOne" datatype="html">
         <source> Policy Making with AI is a decision support platform that harnesses the power of domain models using AI in a trusted environment, bringing together policy- and decision- makers, modelers, and AI practitioners to support complex decision-making. </source>
+        <target>L'élaboration de politiques avec l'IA est une plateforme d'aide à la décision qui exploite la puissance des modèles de domaine en utilisant l'IA dans un environnement de confiance,
+          réunissant des responsables politiques et des décideurs, des modélisateurs et des praticiens de l'IA pour soutenir des décisions complexes.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">37,40</context>
@@ -2387,6 +2425,8 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="summaryParagraphTwo" datatype="html">
         <source> Decision-makers must plan and implement interventions and strategies at varying timescales across different populations and geographies. This could be to control the spread of a pandemic like COVID-19, or to manage climate impact risks on global supply chains. Models are essential in the planning process but are often complex, uncertain, and can be difficult to consume, and also need to be trusted. The space of possible interventions that the models represent is vast, making the planning and decision-making process even more difficult. </source>
+        <target>Les décideurs doivent planifier et mettre en œuvre des interventions et des stratégies à des échelles de temps variables pour différentes populations et zones géographiques. Il peut s'agir de contrôler la propagation d'une pandémie comme celle du COVID-19, ou de gérer les risques liés à l'impact climatique sur les chaînes d'approvisionnement mondiales. 
+          Les modèles sont essentiels dans le processus de planification, mais ils sont souvent complexes, incertains et peuvent être difficiles à utiliser, et il faut également leur faire confiance. L'espace des interventions possibles que les modèles représentent est vaste, ce qui rend le processus de planification et de décision encore plus difficile.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">43,49</context>
@@ -2396,6 +2436,8 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="summaryParagraphThree" datatype="html">
         <source> Policymaking with AI (PMAI) contains a core AI decisioning library using algorithms from the sub-disciplines of Planning, Reinforcement Learning and Optimization to enable uncertainty quantification, impact analysis, and exploration of the full space of possible options to inform decision making. Further, PMAI is built on top of Hyperledger fabric to support model and data governance and provide trust and transparency for understanding the provenance of data, models, and results generated by end-users </source>
+        <target>Policy making with AI (PMAI) contient une bibliothèque décisionnelle d'IA de base utilisant des algorithmes des sous-disciplines de la planification, de l'apprentissage par renforcement et de l'optimisation pour permettre la quantification de l'incertitude,
+          l'analyse de l'impact et l'exploration de l'espace complet des options possibles afin d'éclairer la prise de décision. En outre, PMAI est construit au-dessus de Hyperledger fabric pour soutenir la gouvernance des modèles et des données et fournir la confiance et la transparence pour comprendre la provenance des données, des modèles et des résultats générés par les utilisateurs finaux.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">52,58</context>
@@ -2405,6 +2447,8 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="summaryParagraphFour" datatype="html">
         <source> PMAI provides decision-makers with easy navigation through complex intervention spaces in a timely manner is required to generate the most optimal and context-relevant intervention programs, including: 1.) An interactive decision dashboard to fine-tune what is important for their context (including what-if analysis, and adding constraints). 2.) The ability to combine, learn, and compare multiple models. 3.) Calibration and uncertainty quantification which are essential to decision-making based on the real-world observational data, as misleading information could be catastrophic for high stakes decisions (e.g. healthcare). </source>
+        <target>Le PMAI permet aux décideurs de naviguer facilement dans des espaces d'intervention complexes, en temps voulu, afin de générer les programmes d'intervention les plus optimaux et les plus pertinents par rapport au contexte, y compris : 1.) Un tableau de bord interactif de décision pour affiner ce qui est important pour leur contexte (y compris l'analyse de simulation et l'ajout de contraintes). 2.) La possibilité de combiner, d'apprendre et de comparer plusieurs modèles. 3.) La calibration et la quantification de l'incertitude,
+          qui sont essentielles à la prise de décision basée sur les données d'observation du monde réel, car des informations erronées pourraient être catastrophiques pour des décisions à fort enjeu (par exemple, les soins de santé).</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">61,69</context>
@@ -2414,6 +2458,8 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="summaryParagraphFive" datatype="html">
         <source> Specifically, there are three ways in which what if analysis is performed using PMAI: 1.) What if analysis where a decision maker defines intervention packages of interest and the platform runs them and generates predictions. 2.) What if analysis where a decision maker defines a desired outcome trajectory and the platform uses AI algorithms to find intervention packages that meet the desired outcome trajectory. 3.) Algorithm controlled what-if analysis within the constraints set by a modeler with the goal of interrogating the intervention space to reach at candidate intervention packages that a decision maker can filter through depending on their needs. To perform each of the above what-if analyses, experiments – a group of model simulation with common properties defined by the user - are performed where the user defines the required inputs for each of the methods as indicated above. </source>
+        <target>Plus précisément, il y a trois façons d'effectuer des analyses de type "what if" à l'aide de PMAI : 1.) Analyse de type "what if" où un décideur définit des paquets d'intervention d'intérêt et la plateforme les exécute et génère des prédictions. 2.) Analyse d'hypothèses dans laquelle un décideur définit une trajectoire de résultats souhaités et la plateforme utilise des algorithmes d'IA pour trouver des paquets d'intervention qui répondent à la trajectoire de résultats souhaités. 3.) Analyse d'hypothèses contrôlée par des algorithmes dans le cadre des contraintes fixées par un modélisateur, dans le but d'interroger l'espace d'intervention pour aboutir à des ensembles d'interventions candidates qu'un décideur peut filtrer en fonction de ses besoins. Pour effectuer chacune des analyses d'hypothèses ci-dessus, des expériences - un groupe de simulation de modèle avec des
+          propriétés communes définies par l'utilisateur - sont effectuées où l'utilisateur définit les entrées requises pour chacune des méthodes comme indiqué ci-dessus.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">72,83</context>
@@ -2423,6 +2469,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="summaryParagraphSix" datatype="html">
         <source> Our algorithms are developed to learn in the presence of uncertainty and sample the huge intervention space while optimizing the user defined goal. In the real world there are many sources of uncertainty, accordingly, to generate recommendations which are robust the algorithms must be able to learn in the presence of uncertainty. </source>
+        <target>Nos algorithmes sont développés pour apprendre en présence d'incertitude et échantillonner l'immense espace d'intervention tout en optimisant l'objectif défini par l'utilisateur. Dans le monde réel, il existe de nombreuses sources d'incertitude. Par conséquent, pour générer des recommandations robustes, les algorithmes doivent être capables d'apprendre en présence d'incertitude.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">86,90</context>
@@ -2432,6 +2479,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="summaryParagraphSeven" datatype="html">
         <source> With trust at its core, this decision support platform is designed to amplify the value from domain models and data, and it is a demonstration of the value which can be derived from AI and Hybrid Cloud technologies. </source>
+        <target>Avec la confiance au cœur, cette plateforme d'aide à la décision est conçue pour amplifier la valeur des modèles de domaine et des données, et elle est une démonstration de la valeur qui peut être tirée de l'IA et des technologies de cloud hybride.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">93,96</context>
@@ -2441,6 +2489,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="credits" datatype="html">
         <source>Credits</source>
+        <target>Crédits</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">101</context>
@@ -2450,6 +2499,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="data" datatype="html">
         <source>Data</source>
+        <target>Les données</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">112</context>
@@ -2459,6 +2509,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="addLocationHeader" datatype="html">
         <source>Add Location</source>
+        <target>Ajouter un emplacement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
           <context context-type="linenumber">19</context>
@@ -2468,6 +2519,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="editLocationHeader" datatype="html">
         <source>Edit Location</source>
+        <target>Editer l'emplacement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
           <context context-type="linenumber">20</context>
@@ -2477,6 +2529,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterLocationName" datatype="html">
         <source>Enter name of the location</source>
+        <target>Entrer le nom de l'emplacement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
           <context context-type="linenumber">28</context>
@@ -2486,6 +2539,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterLocationAdministrationType" datatype="html">
         <source>Enter the administration type of the location</source>
+        <target>Entrer le type d'administration de l'emplacement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
           <context context-type="linenumber">37</context>
@@ -2495,6 +2549,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterLocationDetails" datatype="html">
         <source>Enter location details</source>
+        <target>Entrer les details sur l'emplacement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
           <context context-type="linenumber">46</context>
