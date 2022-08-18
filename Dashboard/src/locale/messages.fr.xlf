@@ -1170,7 +1170,7 @@
       </trans-unit>
       <trans-unit id="residentialDropDown" datatype="html">
         <source>Residential</source>
-        <target></target>
+        <target>Résidentiel</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">132</context>
@@ -1378,6 +1378,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.grocery.and.pharmacy" datatype="html">
         <source>npi-index_wntrac_grocery_and_pharmacy</source>
+        <target>Indice-npi_wntrac_épiceries_et_pharmacies</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">165</context>
@@ -1387,6 +1388,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.grocery.and.pharmacy" datatype="html">
         <source>stringency index_oxcgrt_grocery_and_pharmacy</source>
+        <target>Indice de rigueur_oxcgrt_supermarchés_et_pharmacies</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">166</context>
@@ -1396,6 +1398,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.grocery.and.pharmacy" datatype="html">
         <source>compliance score_oxcgrt_grocery_and_pharmacy</source>
+        <target>Score de conformité_oxcgrt_supermarchés_et_pharmacies</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">167</context>
@@ -1405,6 +1408,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.grocery.and.pharmacy" datatype="html">
         <source>npi-index_oxcgrt_grocery_and_pharmacy</source>
+        <target>Indice-npi_oxcgrt_supermarchés_et_pharmacies</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">168</context>
@@ -1414,6 +1418,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.parks" datatype="html">
         <source>stringency index_wntrac_parks</source>
+        <target>Indice de rigueur_wntrac_parcs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">169</context>
@@ -1423,6 +1428,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.parks" datatype="html">
         <source>compliance score_wntrac_parks</source>
+        <target>Score de conformité_wntrac_parcs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">170</context>
@@ -1432,6 +1438,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.parks" datatype="html">
         <source>npi-index_wntrac_parks</source>
+        <target>Indice-npi_wntrac_parcs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">171</context>
@@ -1441,6 +1448,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.parks" datatype="html">
         <source>stringency index_oxcgrt_parks</source>
+        <target>Indice de rigueur_oxcgrt_parcs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">172</context>
@@ -1450,6 +1458,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.parks" datatype="html">
         <source>compliance score_oxcgrt_parks</source>
+        <target>Score de conformité_oxcgrt_parcs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">173</context>
@@ -1459,6 +1468,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.parks" datatype="html">
         <source>npi-index_oxcgrt_parks</source>
+        <target>Indice-npi_oxcgrt_parcs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">174</context>
@@ -1468,6 +1478,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.transit.stations" datatype="html">
         <source>stringency index_wntrac_transit_stations</source>
+        <target>Indice de rigueur_wntrac_gares de transport</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">175</context>
@@ -1477,6 +1488,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.transit.stations" datatype="html">
         <source>compliance score_wntrac_transit_stations</source>
+        <target>Score de conformité_wntrac_gares_de_transport</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">176</context>
@@ -1486,6 +1498,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.transit.stations" datatype="html">
         <source>npi-index_wntrac_transit_stations</source>
+        <target>Indice-npi_wntrac_gares_de_transport</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">177</context>
@@ -1495,6 +1508,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.transit.stations" datatype="html">
         <source>stringency index_oxcgrt_transit_stations</source>
+        <target>Indice de rigueur_oxcgrt_gares_de_transport</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">178</context>
@@ -1504,6 +1518,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.transit.stations" datatype="html">
         <source>compliance score_oxcgrt_transit_stations</source>
+        <target>Score de conformité_oxcgrt_gares_de_transport</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">179</context>
@@ -1513,6 +1528,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.transit.stations" datatype="html">
         <source>npi-index_oxcgrt_transit_stations</source>
+        <target>Indice-npi_oxcgrt_gares_de_transport</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">180</context>
@@ -1522,6 +1538,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.residential" datatype="html">
         <source>stringency index_wntrac_residential</source>
+        <target>Indice de rigueur_wntrac_résidentiel</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">181</context>
@@ -1531,6 +1548,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.residential" datatype="html">
         <source>compliance score_wntrac_residential</source>
+         <target>Score de conformité_wntrac_résidentiel</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">182</context>
@@ -1540,6 +1558,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.residential" datatype="html">
         <source>npi-index_wntrac_residential</source>
+         <target>Indice-npi_wntrac_résidentiel</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">183</context>
@@ -1549,6 +1568,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.residential" datatype="html">
         <source>stringency index_oxcgrt_residential</source>
+         <target>Indice de rigueur_oxcgrt_résidentiel</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">184</context>
@@ -1558,6 +1578,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.residential" datatype="html">
         <source>compliance score_oxcgrt_residential</source>
+         <target>Score de conformité_oxcgrt_résidentiel</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">185</context>
@@ -1567,6 +1588,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.residential" datatype="html">
         <source>npi-index_oxcgrt_residential</source>
+         <target>Indice-npi_oxcgrt_résidentiel</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">186</context>
@@ -1576,6 +1598,7 @@
       </trans-unit>
       <trans-unit id="overview" datatype="html">
         <source>Overview</source>
+        <target>Aperçu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">229</context>
@@ -1585,6 +1608,7 @@
       </trans-unit>
       <trans-unit id="algorithms" datatype="html">
         <source>Algorithms</source>
+        <target>Algorithmes</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">230</context>
@@ -1598,6 +1622,7 @@
       </trans-unit>
       <trans-unit id="models" datatype="html">
         <source>Models</source>
+        <target>Modèles</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">231</context>
@@ -1611,6 +1636,7 @@
       </trans-unit>
       <trans-unit id="experiments" datatype="html">
         <source>Experiments</source>
+        <target>Expérimentations</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">232</context>
@@ -1620,6 +1646,7 @@
       </trans-unit>
       <trans-unit id="results" datatype="html">
         <source>Results</source>
+        <target>Résultats</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">233</context>
@@ -1629,6 +1656,7 @@
       </trans-unit>
       <trans-unit id="apis" datatype="html">
         <source>APIs</source>
+        <target>APIS</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">234</context>
@@ -1638,6 +1666,7 @@
       </trans-unit>
       <trans-unit id="how_to" datatype="html">
         <source>How to</source>
+        <target>Comment faire</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">235</context>
@@ -1647,6 +1676,7 @@
       </trans-unit>
       <trans-unit id="feedback" datatype="html">
         <source>Feedback</source>
+        <target>Feedback</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">236</context>
@@ -1656,6 +1686,7 @@
       </trans-unit>
       <trans-unit id="feedback_submitted" datatype="html">
         <source>Feedback submitted</source>
+        <target>feedback soumis</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">240</context>
@@ -1663,6 +1694,7 @@
       </trans-unit>
       <trans-unit id="feedback_submission_failed" datatype="html">
         <source>Feedback submission failed! Please try again.</source>
+        <target>Echec de la soumission du feedback!Veuillez réessayer</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">241</context>
@@ -1670,6 +1702,7 @@
       </trans-unit>
       <trans-unit id="user_role_missing" datatype="html">
         <source>User Role Missing! Contact the system admin at charles.wachira1@ibm.com.</source>
+        <target>Rôle d'utilisateur manquant ! Contactez l'administrateur système à l'adresse charles.wachira1@ibm.com.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">245</context>
@@ -1677,6 +1710,7 @@
       </trans-unit>
       <trans-unit id="no_data_available" datatype="html">
         <source>No data available</source>
+        <target>Pas de données disponibles</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">250</context>
@@ -1684,6 +1718,7 @@
       </trans-unit>
       <trans-unit id="newCases" datatype="html">
         <source>New Cases</source>
+        <target>Nouveaux cas</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/services/chart/chart.service.ts</context>
           <context context-type="linenumber">1036</context>
@@ -1693,6 +1728,7 @@
       </trans-unit>
       <trans-unit id="indexValue" datatype="html">
         <source>Index Value</source>
+        <target>Valeur de l'indice</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/services/chart/chart.service.ts</context>
           <context context-type="linenumber">1050</context>
@@ -1702,6 +1738,7 @@
       </trans-unit>
       <trans-unit id="selectARegionOnTheMap" datatype="html">
         <source>Select a region on the map</source>
+        <target>Sélectionner une région sur la carte</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/services/chart/chart.service.ts</context>
           <context context-type="linenumber">1109</context>
@@ -1711,6 +1748,7 @@
       </trans-unit>
       <trans-unit id="newCasesYAxis" datatype="html">
         <source>New cases</source>
+        <target>Nouveaux cas</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/services/chart/chart.service.ts</context>
           <context context-type="linenumber">1156</context>
@@ -1718,6 +1756,7 @@
       </trans-unit>
       <trans-unit id="enterLabel" datatype="html">
         <source>Enter <x id="INTERPOLATION" equiv-text="{{executorRequirement.description || executorRequirement.name}}"/></source>
+        <target>Entrer <x id="INTERPOLATION" equiv-text="{{executorRequirement.description || executorRequirement.name}}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/dynamic-form/dynamic-form.component.html</context>
           <context context-type="linenumber">22</context>
@@ -1731,6 +1770,7 @@
       </trans-unit>
       <trans-unit id="isRequired" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{executorRequirement.name}}"/> is required</source>
+        <target><x id="INTERPOLATION" equiv-text="{{executorRequirement.name}}"/> est requis</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/dynamic-form/dynamic-form.component.html</context>
           <context context-type="linenumber">24</context>
@@ -1744,6 +1784,7 @@
       </trans-unit>
       <trans-unit id="addActionHeader" datatype="html">
         <source>Add Actions</source>
+        <target>Ajouter des actions</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">21</context>
@@ -1753,6 +1794,7 @@
       </trans-unit>
       <trans-unit id="enterTimeLabel" datatype="html">
         <source>Enter time</source>
+        <target>Entrer le temps</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">37</context>
@@ -1766,6 +1808,7 @@
       </trans-unit>
       <trans-unit id="coveragePercentage" datatype="html">
         <source> Coverage Percentage </source>
+        <target>Pourcentage de couverture</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">51,52</context>
@@ -1779,6 +1822,7 @@
       </trans-unit>
       <trans-unit id="defineActionSpaceHeader" datatype="html">
         <source>Define action space</source>
+        <target>Définir le champ d'action</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">74</context>
@@ -1788,6 +1832,7 @@
       </trans-unit>
       <trans-unit id="enterNumberOfEpisodes" datatype="html">
         <source>Enter the number of episodes</source>
+        <target>Entrer le nombre d'épisodes</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">90</context>
@@ -1801,6 +1846,7 @@
       </trans-unit>
       <trans-unit id="enterTimeResolution" datatype="html">
         <source>Enter time resolution in weeks</source>
+        <target>Entrez la résolution temporelle en semaines</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">120</context>
@@ -1810,6 +1856,7 @@
       </trans-unit>
       <trans-unit id="enterCoverageResolution" datatype="html">
         <source>Enter the coverage resolution</source>
+        <target>Entrer la résolution de la couverture</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">127</context>
@@ -1819,6 +1866,7 @@
       </trans-unit>
       <trans-unit id="defineParameterSpace" datatype="html">
         <source>Define parameter space</source>
+        <target>Définir le champ des paramètres</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">155</context>
@@ -1828,6 +1876,7 @@
       </trans-unit>
       <trans-unit id="startDate" datatype="html">
         <source>Start date</source>
+        <target>Date de début</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">163</context>
@@ -1841,6 +1890,7 @@
       </trans-unit>
       <trans-unit id="calibrationDurationInDays" datatype="html">
         <source>Enter the calibration duration in days</source>
+        <target>Entrer la durée du calibrage en jours</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">175</context>
@@ -1850,6 +1900,7 @@
       </trans-unit>
       <trans-unit id="enterBetaWindowLength" datatype="html">
         <source>Enter the beta window length in days</source>
+        <target>Entrer la durée de la fenêtre bêta en jours</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">184</context>
@@ -1859,6 +1910,7 @@
       </trans-unit>
       <trans-unit id="defineActions" datatype="html">
         <source>Define Actions</source>
+        <target>Définir les actions</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">211</context>
@@ -1868,6 +1920,7 @@
       </trans-unit>
       <trans-unit id="endDate" datatype="html">
         <source>End date</source>
+        <target>Date de fin</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiment-dialog/experiment-dialog.component.html</context>
           <context context-type="linenumber">241</context>
@@ -1877,6 +1930,7 @@
       </trans-unit>
       <trans-unit id="newExperimentHeader" datatype="html">
         <source> New Experiment </source>
+        <target>Nouvelle expérimentation</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">29,30</context>
@@ -1886,6 +1940,7 @@
       </trans-unit>
       <trans-unit id="selectModel" datatype="html">
         <source>Select model</source>
+        <target>Sélectionner le modèle</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">36</context>
@@ -1907,6 +1962,7 @@
       </trans-unit>
       <trans-unit id="defaultExecutors" datatype="html">
         <source>Select default executors</source>
+        <target>Sélectionner les exécuteurs par défaut</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">54</context>
@@ -1916,6 +1972,7 @@
       </trans-unit>
       <trans-unit id="selectLocation" datatype="html">
         <source>Select location</source>
+        <target>Sélectionner la localisation</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">63</context>
@@ -1929,6 +1986,7 @@
       </trans-unit>
       <trans-unit id="noneDetected" datatype="html">
         <source>None detected!</source>
+        <target>Aucun détecté!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">80</context>
@@ -1938,6 +1996,7 @@
       </trans-unit>
       <trans-unit id="generalInfoHeader" datatype="html">
         <source> General info </source>
+        <target>Infos générales</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">86,87</context>
@@ -1947,6 +2006,7 @@
       </trans-unit>
       <trans-unit id="parametersHeader" datatype="html">
         <source> Parameters </source>
+        <target>paramètres</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">99,100</context>
@@ -1956,6 +2016,7 @@
       </trans-unit>
       <trans-unit id="optimizationParametersHeader" datatype="html">
         <source> Optimization Parameters </source>
+        <target>Paramètres d'optimisation</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">114,115</context>
@@ -1965,7 +2026,8 @@
       </trans-unit>
       <trans-unit id="pastExperimentsHeader" datatype="html">
         <source> Past Experiments <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span *ngIf=&quot;itemsDataSource &amp;&amp; itemsDataSource.data&quot; class=&quot;models-number&quot;&gt;"/>(<x id="INTERPOLATION" equiv-text="{{itemsDataSource.data.length}}"/>)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
-        <context-group purpose="location">
+        <target> Expérimentations passées <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span *ngIf=&quot;itemsDataSource &amp;&amp; itemsDataSource.data&quot; class=&quot;models-number&quot;&gt;"/>(<x id="INTERPOLATION" equiv-text="{{itemsDataSource.data.length}}"/>)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+          <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">152,153</context>
         </context-group>
@@ -1974,6 +2036,7 @@
       </trans-unit>
       <trans-unit id="idOfPastExperiment" datatype="html">
         <source>ID</source>
+        <target>ID</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">159</context>
@@ -1983,6 +2046,7 @@
       </trans-unit>
       <trans-unit id="nameOfPastExperiment" datatype="html">
         <source>Name</source>
+        <target>Nom</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">164</context>
@@ -1992,6 +2056,7 @@
       </trans-unit>
       <trans-unit id="descriptionOfPastExperiment" datatype="html">
         <source>Description</source>
+        <target>Description</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">172</context>
@@ -2001,6 +2066,7 @@
       </trans-unit>
       <trans-unit id="pastExperimentAction" datatype="html">
         <source>Action</source>
+        <target>Action</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">180</context>
@@ -2010,6 +2076,7 @@
       </trans-unit>
       <trans-unit id="duplicateExperimentsHeader" datatype="html">
         <source> Duplicate Experiments <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span *ngIf=&quot;duplicateExperimentsDataSource &amp;&amp; duplicateExperimentsDataSource.data&quot; class=&quot;models-number&quot;&gt;"/>(<x id="INTERPOLATION" equiv-text="{{duplicateExperimentsDataSource.data.length}}"/>)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target> Dupliquer les expérimentations <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span *ngIf=&quot;duplicateExperimentsDataSource &amp;&amp; duplicateExperimentsDataSource.data&quot; class=&quot;models-number&quot;&gt;"/>(<x id="INTERPOLATION" equiv-text="{{duplicateExperimentsDataSource.data.length}}"/>)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">198,199</context>
@@ -2019,6 +2086,7 @@
       </trans-unit>
       <trans-unit id="duplicateExperimentId" datatype="html">
         <source>ID</source>
+        <target>ID</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">205</context>
@@ -2028,6 +2096,7 @@
       </trans-unit>
       <trans-unit id="duplicateExperimentName" datatype="html">
         <source>Name</source>
+        <target>Nom</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/experiments/components/experiments/experiments.component.html</context>
           <context context-type="linenumber">210</context>
