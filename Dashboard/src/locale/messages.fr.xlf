@@ -660,7 +660,7 @@
       </trans-unit>
       <trans-unit id="selectLocationLabel" datatype="html">
         <source>Select location</source>
-        <target>Sélectionner une localisation</target>
+        <target>Sélectionner une source</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithms/algorithms.component.html</context>
           <context context-type="linenumber">70</context>
@@ -750,7 +750,7 @@
       </trans-unit>
       <trans-unit id="learningResultsError" datatype="html">
         <source>Could not find learning results : </source>
-        <target> Ne peut trouver les résultats d'apprentissage</target>
+        <target> Résultats d'apprentissage non trouvés</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">16</context>
@@ -760,7 +760,7 @@
       </trans-unit>
       <trans-unit id="algorithmCreationSuccess" datatype="html">
         <source>Algorithm Creation Successful: </source>
-        <target>Création de l'algorithme avec succès:</target>
+        <target>Création de l'algorithme réussie:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">17</context>
@@ -780,7 +780,7 @@
       </trans-unit>
       <trans-unit id="algorithmUpdateSuccess" datatype="html">
         <source>Algorithm Update Successful: </source>
-        <target> Mise à jour de l'algorithme avec succès</target>
+        <target> Mise à jour de l'algorithme réussie</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">19</context>
@@ -800,7 +800,7 @@
       </trans-unit>
       <trans-unit id="enteredAlgorithmUpdateFailed" datatype="html">
         <source>Entered Algorithm update failed.</source>
-        <target>Entrer échec de la mise à jour de l'algorithme</target>
+        <target>Echec de la mise à jour de l'algorithme entré</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">21</context>
@@ -810,7 +810,7 @@
       </trans-unit>
       <trans-unit id="loadAlgorithmsFailed" datatype="html">
         <source>Could not algorithms, locations and/or environments data : </source>
-        <target>Impossible d'obtenir les lieux et/ou les environnements de données des algorithmes: </target>
+        <target>Impossible d'obtenir les sources et/ou les environnements de données des algorithmes: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/constants/algorithms.constants.ts</context>
           <context context-type="linenumber">22</context>
@@ -1009,6 +1009,7 @@
       </trans-unit>
       <trans-unit id="loginHeader" datatype="html">
         <source>Interactive Dashboard for Accelerated Decision-making with AI (ADMAI)</source>
+        <target>Tableau de bord interactif de ADMAI</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/login/login.component.html</context>
           <context context-type="linenumber">19</context>
@@ -1018,6 +1019,7 @@
       </trans-unit>
       <trans-unit id="platformPurpose" datatype="html">
         <source>Providing a platform for sharing, optimizing and running domain models at scale.</source>
+        <target>Fournir une plate-forme pour partager, optimiser et exécuter des modèles de domaine à grande échelle.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/login/login.component.html</context>
           <context context-type="linenumber">20</context>
@@ -1027,6 +1029,7 @@
       </trans-unit>
       <trans-unit id="loginButton" datatype="html">
         <source>Login</source>
+        <target>Se connecter</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/login/login.component.html</context>
           <context context-type="linenumber">22</context>
@@ -1036,6 +1039,7 @@
       </trans-unit>
       <trans-unit id="initiateLogout" datatype="html">
         <source>Initiating logout!</source>
+        <target>Lancement de la déconnexion</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/logout/logout.component.html</context>
           <context context-type="linenumber">17</context>
@@ -1045,6 +1049,7 @@
       </trans-unit>
       <trans-unit id="constants.no.data" datatype="html">
         <source>No data</source>
+        <target>Pas de données</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">30</context>
@@ -1054,6 +1059,7 @@
       </trans-unit>
       <trans-unit id="npiIndexDropDown" datatype="html">
         <source>NPI-Index</source>
+        <target>Index NPI</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">129</context>
@@ -1063,6 +1069,7 @@
       </trans-unit>
       <trans-unit id="complianceScoreDropDown" datatype="html">
         <source>Compliance Score</source>
+        <target>Score de conformité</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">129</context>
@@ -1072,6 +1079,7 @@
       </trans-unit>
       <trans-unit id="stringencyIndexDropDown" datatype="html">
         <source>Stringency Index</source>
+        <target>Indice de rigueur</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">129</context>
@@ -1081,6 +1089,7 @@
       </trans-unit>
       <trans-unit id="transitStationsDropDown" datatype="html">
         <source>Transit_stations</source>
+        <target>Gares de transport</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">131</context>
@@ -1090,6 +1099,7 @@
       </trans-unit>
       <trans-unit id="retailAndRecreationDropDown" datatype="html">
         <source>Retail_and_recreation</source>
+        <target>Commerce de détails et loisirs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">131</context>
@@ -1099,6 +1109,7 @@
       </trans-unit>
       <trans-unit id="groceryAndPharmacyDropDown" datatype="html">
         <source>Grocery_and_pharmacy</source>
+        <target>Pharmacie et Supermmarché</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">131</context>
@@ -1108,6 +1119,7 @@
       </trans-unit>
       <trans-unit id="parksDropDown" datatype="html">
         <source>Parks</source>
+        <target>Parcs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">131</context>
@@ -1117,6 +1129,7 @@
       </trans-unit>
       <trans-unit id="workplacesDropDown" datatype="html">
         <source>Workplaces</source>
+        <target>Lieu de travail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">132</context>
@@ -1126,6 +1139,7 @@
       </trans-unit>
       <trans-unit id="residentialDropDown" datatype="html">
         <source>Residential</source>
+        <target></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">132</context>
@@ -1135,6 +1149,7 @@
       </trans-unit>
       <trans-unit id="stringency.index.wntrac" datatype="html">
         <source>stringency index_wntrac_</source>
+        <target>Indice wntrac de rigueur</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">142</context>
@@ -1142,6 +1157,7 @@
       </trans-unit>
       <trans-unit id="compliance.score.wntrac" datatype="html">
         <source>compliance score_wntrac_</source>
+        <target>Score_wntrac de conformité</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">143</context>
@@ -1149,6 +1165,7 @@
       </trans-unit>
       <trans-unit id="npi.index.wntrac" datatype="html">
         <source>npi-index_wntrac_</source>
+        <target>Index_wntrac NPI</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">144</context>
@@ -1156,6 +1173,7 @@
       </trans-unit>
       <trans-unit id="stringency.index.oxcgrt_" datatype="html">
         <source>stringency index_oxcgrt_</source>
+        <target>Indice_oxcgrt de rigueur</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">145</context>
@@ -1163,6 +1181,7 @@
       </trans-unit>
       <trans-unit id="compliance.score.oxcgrt" datatype="html">
         <source>compliance score_oxcgrt_</source>
+        <target>Score_oxcgrt de conformité</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">146</context>
@@ -1170,6 +1189,7 @@
       </trans-unit>
       <trans-unit id="npi.index.oxcgrt." datatype="html">
         <source>npi-index_oxcgrt_</source>
+        <target>Indice_oxcgrt NPI</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">147</context>
@@ -1177,6 +1197,7 @@
       </trans-unit>
       <trans-unit id="confirmed.cases" datatype="html">
         <source>confirmed_cases</source>
+        <target>Cas confirmés</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">150</context>
