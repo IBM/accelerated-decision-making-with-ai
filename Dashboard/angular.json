@@ -116,7 +116,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "PMAI-Interactive-Decisioning-Dashboard:development"
+            "browserTarget": "PMAI-Interactive-Decisioning-Dashboard:build:development"
           },
           "configurations": {
             "production": {
