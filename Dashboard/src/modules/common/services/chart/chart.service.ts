@@ -39,6 +39,9 @@ import {
 } from '../../models';
 import {
   CHART_INTERVENTIONS_SYMBOLS,
+  CONFIRMED_CASES,
+  DATE,
+  DAYS,
   DEFAULT_COLOR,
   DROPDOWN_ITEMS_INDEX,
   DROPDOWN_ITEMS_X_AXIS, HEADER, INDEX_DATA_KEYS,
@@ -60,12 +63,12 @@ export class ChartService {
   generateOverviewChartParameters(mapOutcomeData: any, overviewControlPanelParameters: OverviewControlPanelParameters,
                                   overviewMapParameters: OverviewParentParameters) {
     let xScaleType = 'date';
-    let hoverXLabel = 'Days';
+    let hoverXLabel = DAYS;
     let xLabel = '';
     if (overviewControlPanelParameters.xAxis === DROPDOWN_ITEMS_X_AXIS[0]) {
       xScaleType = 'date';
       xLabel = '';
-      hoverXLabel = 'Date';
+      hoverXLabel = DATE;
     } else {
       xScaleType = 'linear';
       xLabel = overviewControlPanelParameters.xAxis;
@@ -520,7 +523,7 @@ export class ChartService {
                                      currentDefaultExecutors: string[]): ChartParameters {
     const xScaleType = 'date';
     const yScaleType = 'linear';
-    const hoverXLabel = 'Date';
+    const hoverXLabel = DATE;
     const xLabel = '';
     const yLabel = (isNotNullOrUndefined(currentDefaultExecutors)
       && isNotNullOrUndefined(currentDefaultExecutors[0]))
@@ -1005,7 +1008,7 @@ export class ChartService {
 
   generateChartParameters(CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE: string, value, indexData: any, geo, innerHeight: number) {
     const xScaleType = 'date';
-    const hoverXLabel = 'Date';
+    const hoverXLabel = DATE;
     const xLabel = '';
 
     const chartConfig: ChartConfig = {
@@ -1164,7 +1167,7 @@ export class ChartService {
       },
       fill: 'tozeroy',
       fillcolor: transparentize('' + '#33adff', 0.9),
-      meta: {fullName: geo['fullname'], hoverXLabel, yLabel: 'Confirmed cases'},
+      meta: {fullName: geo['fullname'], hoverXLabel, yLabel: CONFIRMED_CASES},
       hovertemplate: '<b>%{meta.fullName}</b>' + '<br><b>%{meta.hoverXLabel}:</b> %{x}' + '<br>' +
         '<b>%{meta.yLabel}:</b> %{y:.2f}'
     };
