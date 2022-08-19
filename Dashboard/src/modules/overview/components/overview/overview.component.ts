@@ -489,12 +489,7 @@ export class OverviewComponent
               '_' +
               this.CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE;
             indexDataKey = indexDataKey.toLowerCase();
-            console.log(thisEpoch)
-            console.log(INDEX_DATA_KEYS)
-            console.log(indexDataKey)
-            
             const currentValue = thisEpoch[INDEX_DATA_KEYS[indexDataKey]];
-            console.log(currentValue)
             locationMetadata['value'] =
               currentValue === -1 ? NO_DATA : currentValue;
 
