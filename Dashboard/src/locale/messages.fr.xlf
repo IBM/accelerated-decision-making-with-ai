@@ -1078,6 +1078,33 @@
         <note priority="1" from="description">initiating logout</note>
         <note priority="1" from="meaning">initiating logout</note>
       </trans-unit>
+      <trans-unit id="casesConfirmed" datatype="html">
+        <source>Confirmed cases</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/chart.constants.ts</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+        <note priority="1" from="description">confirmed cases</note>
+        <note priority="1" from="meaning">confirmed cases</note>
+      </trans-unit>
+      <trans-unit id="dateHoverLabel" datatype="html">
+        <source>Date</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/chart.constants.ts</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+        <note priority="1" from="description">Date</note>
+        <note priority="1" from="meaning">Date</note>
+      </trans-unit>
+      <trans-unit id="daysHoverLabel" datatype="html">
+        <source>Days</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/chart.constants.ts</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
+        <note priority="1" from="description">Days</note>
+        <note priority="1" from="meaning">Days</note>
+      </trans-unit>
       <trans-unit id="constants.no.data" datatype="html">
         <source>No data</source>
         <target>Pas de données</target>
@@ -1263,8 +1290,6 @@
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">153</context>
         </context-group>
-        <note priority="1" from="description">data indices</note>
-        <note priority="1" from="meaning">data indices</note>
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.workplaces" datatype="html">
         <source>stringency index_oxcgrt_workplaces</source>
@@ -1293,8 +1318,6 @@
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">156</context>
         </context-group>
-        <note priority="1" from="description">data indices</note>
-        <note priority="1" from="meaning">data indices</note>
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.retail.and.recreation" datatype="html">
         <source>stringency index_wntrac_retail_and_recreation</source>
@@ -1721,7 +1744,7 @@
         <target>Nouveaux cas</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/services/chart/chart.service.ts</context>
-          <context context-type="linenumber">1036</context>
+          <context context-type="linenumber">1039</context>
         </context-group>
         <note priority="1" from="description">new cases</note>
         <note priority="1" from="meaning">new cases</note>
@@ -1731,7 +1754,7 @@
         <target>Valeur de l'indice</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/services/chart/chart.service.ts</context>
-          <context context-type="linenumber">1050</context>
+          <context context-type="linenumber">1053</context>
         </context-group>
         <note priority="1" from="description">index value</note>
         <note priority="1" from="meaning">index value</note>
@@ -1741,7 +1764,7 @@
         <target>Sélectionner une région sur la carte</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/services/chart/chart.service.ts</context>
-          <context context-type="linenumber">1109</context>
+          <context context-type="linenumber">1112</context>
         </context-group>
         <note priority="1" from="description">Select a region on the map</note>
         <note priority="1" from="meaning">Select a region on the map</note>
@@ -1751,7 +1774,7 @@
         <target>Nouveaux cas</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/services/chart/chart.service.ts</context>
-          <context context-type="linenumber">1156</context>
+          <context context-type="linenumber">1159</context>
         </context-group>
       </trans-unit>
       <trans-unit id="enterLabel" datatype="html">
@@ -3447,7 +3470,7 @@ Would you like to override this and perform a new experiment?</source>
         <target>Dataset</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.ts</context>
-          <context context-type="linenumber">678</context>
+          <context context-type="linenumber">683</context>
         </context-group>
         <note priority="1" from="description">dataset</note>
         <note priority="1" from="meaning">dataset</note>
@@ -3457,7 +3480,7 @@ Would you like to override this and perform a new experiment?</source>
         <target>Mobilité</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.ts</context>
-          <context context-type="linenumber">679</context>
+          <context context-type="linenumber">684</context>
         </context-group>
         <note priority="1" from="description">mobility</note>
         <note priority="1" from="meaning">mobility</note>
@@ -3467,7 +3490,7 @@ Would you like to override this and perform a new experiment?</source>
         <target>Indices</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.ts</context>
-          <context context-type="linenumber">680</context>
+          <context context-type="linenumber">685</context>
         </context-group>
         <note priority="1" from="description">index</note>
         <note priority="1" from="meaning">index</note>
@@ -3477,7 +3500,7 @@ Would you like to override this and perform a new experiment?</source>
         <target>Valeur</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.ts</context>
-          <context context-type="linenumber">681</context>
+          <context context-type="linenumber">686</context>
         </context-group>
         <note priority="1" from="description">value</note>
         <note priority="1" from="meaning">value</note>

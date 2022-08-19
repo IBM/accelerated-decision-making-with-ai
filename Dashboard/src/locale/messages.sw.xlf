@@ -1082,6 +1082,36 @@
         <note priority="1" from="description">initiating logout</note>
         <note priority="1" from="meaning">initiating logout</note>
       </trans-unit>
+      <trans-unit id="casesConfirmed" datatype="html">
+        <source>Confirmed cases</source>
+        <target>Kesi zilizothibitishwa</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/chart.constants.ts</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+        <note priority="1" from="description">confirmed cases</note>
+        <note priority="1" from="meaning">confirmed cases</note>
+      </trans-unit>
+      <trans-unit id="dateHoverLabel" datatype="html">
+        <source>Date</source>
+        <target>Tarehe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/chart.constants.ts</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+        <note priority="1" from="description">Date</note>
+        <note priority="1" from="meaning">Date</note>
+      </trans-unit>
+      <trans-unit id="daysHoverLabel" datatype="html">
+        <source>Days</source>
+        <target>Siku</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/chart.constants.ts</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
+        <note priority="1" from="description">Days</note>
+        <note priority="1" from="meaning">Days</note>
+      </trans-unit>
       <trans-unit id="constants.no.data" datatype="html">
         <source>No data</source>
         <target>Hakuna data</target>
@@ -1184,6 +1214,7 @@
       </trans-unit>
       <trans-unit id="stringency.index.wntrac" datatype="html">
         <source>stringency index_wntrac_</source>
+        <target>index ya stringency_wntrac_</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">142</context>
@@ -1191,6 +1222,7 @@
       </trans-unit>
       <trans-unit id="compliance.score.wntrac" datatype="html">
         <source>compliance score_wntrac_</source>
+        <target>alama ya compliance_wntrac_</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">143</context>
@@ -1198,6 +1230,7 @@
       </trans-unit>
       <trans-unit id="npi.index.wntrac" datatype="html">
         <source>npi-index_wntrac_</source>
+        <target>index ya npi_wntrac_</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">144</context>
@@ -1205,6 +1238,7 @@
       </trans-unit>
       <trans-unit id="stringency.index.oxcgrt_" datatype="html">
         <source>stringency index_oxcgrt_</source>
+        <target>index ya stringency_oxcgrt_</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">145</context>
@@ -1212,6 +1246,7 @@
       </trans-unit>
       <trans-unit id="compliance.score.oxcgrt" datatype="html">
         <source>compliance score_oxcgrt_</source>
+        <target>alama ya compliance_oxcgrt_</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">146</context>
@@ -1219,6 +1254,7 @@
       </trans-unit>
       <trans-unit id="npi.index.oxcgrt." datatype="html">
         <source>npi-index_oxcgrt_</source>
+        <target>index ya npi_oxcgrt_</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">147</context>
@@ -1235,7 +1271,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.workplaces" datatype="html">
         <source>stringency index_wntrac_workplaces</source>
-        <target>stringency index_wntrac_Vituo_Kazini</target>
+        <target>index ya stringency_wntrac_kazini</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">151</context>
@@ -1245,7 +1281,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.workplaces" datatype="html">
         <source>compliance score_wntrac_workplaces</source>
-        <target>compliance score_wntrac_Kazini</target>
+        <target>alama ya compliance_wntrac_kazini</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">152</context>
@@ -1255,17 +1291,15 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.workplaces" datatype="html">
         <source>npi-index_wntrac_workplaces</source>
-        <target>npi-index_wntrac_Kazini</target>
+        <target>index ya npi_wntrac_kazini</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">153</context>
         </context-group>
-        <note priority="1" from="description">data indices</note>
-        <note priority="1" from="meaning">data indices</note>
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.workplaces" datatype="html">
         <source>stringency index_oxcgrt_workplaces</source>
-        <target>stringency index_oxcgrt_Kazini</target>
+        <target>index ya stringency_oxcgrt_kazini</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">154</context>
@@ -1275,7 +1309,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.workplaces" datatype="html">
         <source>compliance score_oxcgrt_workplaces</source>
-        <target>compliance score_oxcgrt_Kazini</target>
+        <target>alama ya compliance_oxcgrt_kazini</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">155</context>
@@ -1285,17 +1319,15 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.workplaces" datatype="html">
         <source>npi-index_oxcgrt_workplaces</source>
-        <target>npi-index_oxcgrt_Kazini</target>
+        <target>index ya npi_oxcgrt_kazini</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">156</context>
         </context-group>
-        <note priority="1" from="description">data indices</note>
-        <note priority="1" from="meaning">data indices</note>
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.retail.and.recreation" datatype="html">
         <source>stringency index_wntrac_retail_and_recreation</source>
-        <target>stringency index_wntrac_Madukani_na_Mahali_pa_burudani</target>
+        <target>index ya stringency_wntrac_madukani_na_mahali_pa_burudani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">157</context>
@@ -1305,7 +1337,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.retail.and.recreation" datatype="html">
         <source>compliance score_wntrac_retail_and_recreation</source>
-        <target>compliance score_wntrac_Madukani_na_Mahali_pa_burudani</target>
+        <target>alama ya compliance_wntrac_madukani_na_mahali_pa_burudani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">158</context>
@@ -1315,7 +1347,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.retail.and.recreation" datatype="html">
         <source>npi-index_wntrac_retail_and_recreation</source>
-        <target>npi-index_wntrac_Madukani_na_Mahali_pa_burudani</target>
+        <target>index ya npi_wntrac_madukani_na_mahali_pa_burudani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">159</context>
@@ -1325,7 +1357,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.retail.and.recreation" datatype="html">
         <source>stringency index_oxcgrt_retail_and_recreation</source>
-        <target>stringency index_oxcgrt_Madukani_na_Mahali_pa_burudani</target>
+        <target>index ya stringency_oxcgrt_madukani_na_mahali_pa_burudani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">160</context>
@@ -1335,7 +1367,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.retail.and.recreation" datatype="html">
         <source>compliance score_oxcgrt_retail_and_recreation</source>
-        <target>compliance score_oxcgrt_Madukani_na_Mahali_pa_burudani</target>
+        <target>alama ya compliance_oxcgrt_madukani_na_mahali_pa_burudani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">161</context>
@@ -1345,7 +1377,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.retail.and.recreation" datatype="html">
         <source>npi-index_oxcgrt_retail_and_recreation</source>
-        <target>npi-index_oxcgrt_Madukani_na_Mahali_pa_burudani</target>
+        <target>index ya npi_oxcgrt_madukani_na_mahali_pa_burudani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">162</context>
@@ -1355,7 +1387,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.grocery.and.pharmacy" datatype="html">
         <source>stringency index_wntrac_grocery_and_pharmacy</source>
-        <target>stringency index_wntrac_Maduka_ya_mboga_na_Zahanati</target>
+        <target>index ya stringency_wntrac_maduka_ya_mboga_na_zahanati</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">163</context>
@@ -1365,7 +1397,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.grocery.and.pharmacy" datatype="html">
         <source>compliance score_wntrac_grocery_and_pharmacy</source>
-        <target>compliance score_wntrac_Maduka_ya_mboga_na_Zahanati</target>
+        <target>alama ya compliance_wntrac_maduka_ya_mboga_na_zahanati</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">164</context>
@@ -1375,7 +1407,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.grocery.and.pharmacy" datatype="html">
         <source>npi-index_wntrac_grocery_and_pharmacy</source>
-        <target>npi-index_wntrac_Maduka_ya_mboga_na_Zahanati</target>
+        <target>index ya npi_wntrac_maduka_ya_mboga_na_zahanati</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">165</context>
@@ -1385,7 +1417,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.grocery.and.pharmacy" datatype="html">
         <source>stringency index_oxcgrt_grocery_and_pharmacy</source>
-        <target>stringency index_oxcgrt_Maduka_ya_mboga_na_Zahanati</target>
+        <target>index ya stringency_oxcgrt_maduka_ya_mboga_na_zahanati</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">166</context>
@@ -1395,7 +1427,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.grocery.and.pharmacy" datatype="html">
         <source>compliance score_oxcgrt_grocery_and_pharmacy</source>
-        <target>compliance score_oxcgrt_Maduka_ya_mboga_na_Zahanati</target>
+        <target>alama ya compliance_oxcgrt_maduka_ya_mboga_na_zahanati</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">167</context>
@@ -1405,7 +1437,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.grocery.and.pharmacy" datatype="html">
         <source>npi-index_oxcgrt_grocery_and_pharmacy</source>
-        <target>npi-index_oxcgrt_Maduka_ya_mboga_na_Zahanati</target>
+        <target>index ya npi_oxcgrt_maduka_ya_mboga_na_zahanati</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">168</context>
@@ -1415,7 +1447,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.parks" datatype="html">
         <source>stringency index_wntrac_parks</source>
-        <target>stringency index_wntrac_Mbuga</target>
+        <target>index ya stringency_wntrac_mbuga</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">169</context>
@@ -1425,7 +1457,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.parks" datatype="html">
         <source>compliance score_wntrac_parks</source>
-        <target>compliance score_wntrac_Mbuga</target>
+        <target>alama ya compliance_wntrac_mbuga</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">170</context>
@@ -1435,7 +1467,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.parks" datatype="html">
         <source>npi-index_wntrac_parks</source>
-        <target>npi-index_wntrac_Mbuga</target>
+        <target>index ya npi_wntrac_mbuga</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">171</context>
@@ -1445,7 +1477,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.parks" datatype="html">
         <source>stringency index_oxcgrt_parks</source>
-        <target>stringency index_oxcgrt_Mbuga</target>
+        <target>index ya stringency_oxcgrt_mbuga</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">172</context>
@@ -1455,7 +1487,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.parks" datatype="html">
         <source>compliance score_oxcgrt_parks</source>
-        <target>compliance score_oxcgrt_Mbuga</target>
+        <target>alama ya compliance_oxcgrt_mbuga</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">173</context>
@@ -1465,7 +1497,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.parks" datatype="html">
         <source>npi-index_oxcgrt_parks</source>
-        <target>npi-index_oxcgrt_Mbuga</target>
+        <target>index ya npi_oxcgrt_mbuga</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">174</context>
@@ -1475,7 +1507,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.transit.stations" datatype="html">
         <source>stringency index_wntrac_transit_stations</source>
-        <target>stringency index_wntrac_Vituo_vya_kusafiri</target>
+        <target>index ya stringency_wntrac_vituo_vya_kusafiri</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">175</context>
@@ -1485,7 +1517,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.transit.stations" datatype="html">
         <source>compliance score_wntrac_transit_stations</source>
-        <target>compliance score_wntrac_Vituo_vya_kusafiri</target>
+        <target>alama ya compliance_wntrac_vituo_vya_kusafiri</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">176</context>
@@ -1495,7 +1527,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.transit.stations" datatype="html">
         <source>npi-index_wntrac_transit_stations</source>
-        <target>npi-index_wntrac_Vituo_vya_kusafiri</target>
+        <target>index ya npi_wntrac_vituo_vya_kusafiri</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">177</context>
@@ -1505,7 +1537,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.transit.stations" datatype="html">
         <source>stringency index_oxcgrt_transit_stations</source>
-        <target>stringency index_oxcgrt_Vituo_vya_kusafiri</target>
+        <target>index ya stringency_oxcgrt_vituo_vya_kusafiri</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">178</context>
@@ -1515,7 +1547,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.transit.stations" datatype="html">
         <source>compliance score_oxcgrt_transit_stations</source>
-        <target>compliance score_oxcgrt_Vituo_vya_kusafiri</target>
+        <target>alama ya compliance_oxcgrt_vituo_vya_kusafiri</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">179</context>
@@ -1525,7 +1557,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.transit.stations" datatype="html">
         <source>npi-index_oxcgrt_transit_stations</source>
-        <target>npi-index_oxcgrt_Vituo_vya_kusafiri</target>
+        <target>index ya npi_oxcgrt_vituo_vya_kusafiri</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">180</context>
@@ -1535,7 +1567,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.residential" datatype="html">
         <source>stringency index_wntrac_residential</source>
-        <target>stringency index_wntrac_Maskani</target>
+        <target>index ya stringency_wntrac_maskani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">181</context>
@@ -1545,7 +1577,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.residential" datatype="html">
         <source>compliance score_wntrac_residential</source>
-        <target>compliance score_wntrac_Maskani</target>
+        <target>alama ya compliance_wntrac_maskani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">182</context>
@@ -1555,7 +1587,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.residential" datatype="html">
         <source>npi-index_wntrac_residential</source>
-        <target>npi-index_wntrac_Maskani</target>
+        <target>index ya npi_wntrac_maskani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">183</context>
@@ -1565,7 +1597,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.residential" datatype="html">
         <source>stringency index_oxcgrt_residential</source>
-        <target>stringency index_oxcgrt_Maskani</target>
+        <target>index ya stringency_oxcgrt_maskani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">184</context>
@@ -1575,7 +1607,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.residential" datatype="html">
         <source>compliance score_oxcgrt_residential</source>
-        <target>compliance score_oxcgrt_Maskani</target>
+        <target>alama ya compliance_oxcgrt_maskani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">185</context>
@@ -1585,7 +1617,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.residential" datatype="html">
         <source>npi-index_oxcgrt_residential</source>
-        <target>npi-index_oxcgrt_Maskani</target>
+        <target>index ya npi_oxcgrt_maskani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">186</context>
@@ -1718,17 +1750,17 @@
         <target>Kesi zipya</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/services/chart/chart.service.ts</context>
-          <context context-type="linenumber">1036</context>
+          <context context-type="linenumber">1039</context>
         </context-group>
         <note priority="1" from="description">new cases</note>
         <note priority="1" from="meaning">new cases</note>
       </trans-unit>
       <trans-unit id="indexValue" datatype="html">
         <source>Index Value</source>
-        <target>Index ya</target>
+        <target>Index</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/services/chart/chart.service.ts</context>
-          <context context-type="linenumber">1050</context>
+          <context context-type="linenumber">1053</context>
         </context-group>
         <note priority="1" from="description">index value</note>
         <note priority="1" from="meaning">index value</note>
@@ -1738,7 +1770,7 @@
         <target>Chagua eneo kwenye ramani</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/services/chart/chart.service.ts</context>
-          <context context-type="linenumber">1109</context>
+          <context context-type="linenumber">1112</context>
         </context-group>
         <note priority="1" from="description">Select a region on the map</note>
         <note priority="1" from="meaning">Select a region on the map</note>
@@ -1748,7 +1780,7 @@
         <target>Kesi zipya</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/services/chart/chart.service.ts</context>
-          <context context-type="linenumber">1156</context>
+          <context context-type="linenumber">1159</context>
         </context-group>
       </trans-unit>
       <trans-unit id="enterLabel" datatype="html">
@@ -3434,7 +3466,7 @@ Je ungependa kubadilisha jaribio hili na kutengeneza jaribio jipya?</target>
         <target>Kikundi cha data</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.ts</context>
-          <context context-type="linenumber">678</context>
+          <context context-type="linenumber">683</context>
         </context-group>
         <note priority="1" from="description">dataset</note>
         <note priority="1" from="meaning">dataset</note>
@@ -3444,7 +3476,7 @@ Je ungependa kubadilisha jaribio hili na kutengeneza jaribio jipya?</target>
         <target>Aina ya mahali</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.ts</context>
-          <context context-type="linenumber">679</context>
+          <context context-type="linenumber">684</context>
         </context-group>
         <note priority="1" from="description">mobility</note>
         <note priority="1" from="meaning">mobility</note>
@@ -3454,7 +3486,7 @@ Je ungependa kubadilisha jaribio hili na kutengeneza jaribio jipya?</target>
         <target>Index</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.ts</context>
-          <context context-type="linenumber">680</context>
+          <context context-type="linenumber">685</context>
         </context-group>
         <note priority="1" from="description">index</note>
         <note priority="1" from="meaning">index</note>
@@ -3464,7 +3496,7 @@ Je ungependa kubadilisha jaribio hili na kutengeneza jaribio jipya?</target>
         <target>Maelezo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.ts</context>
-          <context context-type="linenumber">681</context>
+          <context context-type="linenumber">686</context>
         </context-group>
         <note priority="1" from="description">value</note>
         <note priority="1" from="meaning">value</note>
