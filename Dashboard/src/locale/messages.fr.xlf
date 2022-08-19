@@ -2559,6 +2559,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterLocationCountryCode" datatype="html">
         <source>Enter ISO-3 code for the country where the location is located</source>
+        <target>Entrer le code ISO-3 du pays de la localisation</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
           <context context-type="linenumber">55</context>
@@ -2568,6 +2569,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="addModelData" datatype="html">
         <source>Add Model Data</source>
+        <target>Ajouter des données au modèle</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
           <context context-type="linenumber">73</context>
@@ -2577,6 +2579,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterNameData" datatype="html">
         <source>Enter name data</source>
+        <target>Entrer le nom des données</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
           <context context-type="linenumber">81</context>
@@ -2586,6 +2589,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterDataDescription" datatype="html">
         <source>Enter data description</source>
+        <target>Entrer la description des données</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
           <context context-type="linenumber">90</context>
@@ -2595,6 +2599,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="selectDataFile" datatype="html">
         <source>Select the data file </source>
+        <target>Choisir le fichier des données</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/location-dialog/location-dialog.component.html</context>
           <context context-type="linenumber">99</context>
@@ -2604,6 +2609,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="location" datatype="html">
         <source>Location</source>
+        <target>Source</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">20</context>
@@ -2613,6 +2619,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="Name" datatype="html">
         <source>Name: </source>
+        <target>Nom: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">35</context>
@@ -2622,6 +2629,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="adminType" datatype="html">
         <source>Admin Type: </source>
+        <target>Type Admin: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">40</context>
@@ -2631,6 +2639,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="adminLevel" datatype="html">
         <source>Admin Level: </source>
+        <target>Niveau Admin: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">45</context>
@@ -2640,6 +2649,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="locatedIn" datatype="html">
         <source>Located In: </source>
+        <target>Situé dans: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">50</context>
@@ -2649,6 +2659,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="country" datatype="html">
         <source>Country: </source>
+        <target>Pays: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">55</context>
@@ -2658,6 +2669,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelData" datatype="html">
         <source>Model data: </source>
+        <target>Données du modèle: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">70</context>
@@ -2667,6 +2679,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="addButton" datatype="html">
         <source>Add</source>
+        <target>Ajouter</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">71</context>
@@ -2676,6 +2689,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelResults" datatype="html">
         <source>Model results: </source>
+        <target>Résultats du modèle: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">75</context>
@@ -2685,6 +2699,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="viewButton" datatype="html">
         <source>View</source>
+        <target>Visualiser</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">76</context>
@@ -2694,6 +2709,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelExperiements" datatype="html">
         <source>Model experiments: </source>
+        <target>Expériences du modèle: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">81</context>
@@ -2703,6 +2719,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="startButton" datatype="html">
         <source>Start</source>
+        <target>Démarrer</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">82</context>
@@ -2712,6 +2729,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="exitButton" datatype="html">
         <source>Exit</source>
+        <target>Quitter</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">88</context>
@@ -2721,6 +2739,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="couldNotFindLocationDetails" datatype="html">
         <source>Could not find location details!</source>
+        <target>Détails sur la source introuvable</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/map-details/map-details.component.html</context>
           <context context-type="linenumber">92</context>
@@ -2730,6 +2749,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="addModel" datatype="html">
         <source>Add Model</source>
+        <target>Ajouter modèle</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">19</context>
@@ -2739,6 +2759,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="editModel" datatype="html">
         <source>Edit Model</source>
+        <target>Modifier modèle</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">20</context>
@@ -2748,6 +2769,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelOfficialName" datatype="html">
         <source>Enter the official name of your model (no spaces)</source>
+        <target>Entrer le nom officiel du modèle (sans espace)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">28</context>
@@ -2757,6 +2779,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelShortDescription" datatype="html">
         <source>Short description of the model</source>
+        <target>Courte description du modèle</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">35</context>
@@ -2766,6 +2789,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterModelVersion" datatype="html">
         <source>Enter the version of the model</source>
+        <target>Entrer la version du modèle</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">44</context>
@@ -2775,6 +2799,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterModelVersionAuthor" datatype="html">
         <source>Enter the author of the model version</source>
+        <target>Entrer l'auteur de la version du modèle</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">51</context>
@@ -2784,6 +2809,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterModelVersionDate" datatype="html">
         <source>Enter the date of the model version</source>
+        <target>Entrer la date de la version du modèle</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">60</context>
@@ -2793,6 +2819,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelGithubUrl" datatype="html">
         <source>Enter the GitHub url for the model code</source>
+        <target>Entrer l'URL Github du code du modèle</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">67</context>
@@ -2802,6 +2829,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterModelRawUrl" datatype="html">
         <source>Enter the URL of the model.py file (raw file)</source>
+        <target>Entrer l'URL du fichier model.py</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">76</context>
@@ -2811,6 +2839,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterRequirementsRawUrlIfAny" datatype="html">
         <source>Enter the URL of the requirements.txt file for your model.py file if any</source>
+        <target>Entrer l'URL du fichier requirements.txt du fichier model.py</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">83</context>
@@ -2820,6 +2849,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterModelDataProviderServiceUrl" datatype="html">
         <source>Enter the url of the model data provider service</source>
+        <target>Entrer l'URL du service fournisseur de données du modèle</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">91</context>
@@ -2829,6 +2859,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="provideShortModelDataDescription" datatype="html">
         <source>Provide short description of the model data provided</source>
+        <target>Fournir une courte description des données fournies</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/model-dialog/model-dialog.component.html</context>
           <context context-type="linenumber">98</context>
@@ -2838,6 +2869,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="selectCountry" datatype="html">
         <source>Select admin 0 (Country)</source>
+        <target>Choisir admin 0 (Pays)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">46</context>
@@ -2851,6 +2883,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="selectState" datatype="html">
         <source>Select admin 1 (Provinces/States/District/Counties)</source>
+        <target>Choisir admin 1 (Provinces/Etats/Quartier/Comtés)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">62</context>
@@ -2864,6 +2897,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="selectSubcounties" datatype="html">
         <source>Select admin 2 (District/Counties/sub-counties)</source>
+        <target>Select admin 2 (Quartiers/Comtés/Sous-comtés</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">78</context>
@@ -2873,6 +2907,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="selectedModelHeader" datatype="html">
         <source> Selected Model </source>
+        <target>Modèle choisi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">113,114</context>
@@ -2882,6 +2917,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelNameColumn" datatype="html">
         <source> Model Name </source>
+        <target>Nom du modèle</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">125,126</context>
@@ -2891,6 +2927,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelVersionColumn" datatype="html">
         <source> Model Version </source>
+        <target>Version du modèle</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">134,135</context>
@@ -2900,6 +2937,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelVersionDateColumn" datatype="html">
         <source> Version Date </source>
+        <target>Date de la version</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">143,144</context>
@@ -2909,6 +2947,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelVersionAuthorColumn" datatype="html">
         <source> Version Author </source>
+        <target>Auteur de la version</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">152,153</context>
@@ -2918,6 +2957,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modelStatusColumn" datatype="html">
         <source> Status </source>
+        <target>Statut</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">161,162</context>
@@ -2927,6 +2967,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="environmentsHeader" datatype="html">
         <source> Environments <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span *ngIf=&quot;rewardFunctionsDataSource &amp;&amp; rewardFunctionsDataSource.data&quot; class=&quot;models-number&quot;&gt;"/>(<x id="INTERPOLATION" equiv-text="{{rewardFunctionsDataSource.data.length}}"/>)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target> Environments <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span *ngIf=&quot;rewardFunctionsDataSource &amp;&amp; rewardFunctionsDataSource.data&quot; class=&quot;models-number&quot;&gt;"/>(<x id="INTERPOLATION" equiv-text="{{rewardFunctionsDataSource.data.length}}"/>)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">177,178</context>
@@ -2936,6 +2977,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="environmentId" datatype="html">
         <source>ID</source>
+        <target>ID</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">189</context>
@@ -2945,6 +2987,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="environmentName" datatype="html">
         <source>Name</source>
+        <target>Nom</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">194</context>
@@ -2954,6 +2997,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="environmentAction" datatype="html">
         <source>Action</source>
+        <target>Action</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">202</context>
@@ -2963,6 +3007,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="addModelButton" datatype="html">
         <source> Add New Model </source>
+        <target>Ajouter nouveau modèle</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/models/models.component.html</context>
           <context context-type="linenumber">218</context>
@@ -2972,6 +3017,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="addRewardFunction" datatype="html">
         <source>Add Reward Function</source>
+        <target>Ajouter une fonction de récompense</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">19</context>
@@ -2981,6 +3027,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="editRewardFunction" datatype="html">
         <source>Edit Reward Function</source>
+        <target>Modifier fonction de récompense/target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">20</context>
@@ -2990,6 +3037,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterEnvironmentName" datatype="html">
         <source>Enter the name of the environment</source>
+        <target>Entrer le nom de l'environnement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">28</context>
@@ -2999,6 +3047,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterEnvironmentClassName" datatype="html">
         <source>Enter Class name of the Environment</source>
+        <target>Entrer le nom de la classe de l'environnement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">35</context>
@@ -3008,6 +3057,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="selectEnvironmentCapabilities" datatype="html">
         <source>Select the Capabilities for the Environment</source>
+        <target>Selectionner les capacités pour l'environnement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">44</context>
@@ -3017,6 +3067,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterEnvironmentGithubUrl" datatype="html">
         <source>Enter the GitHub Url for the environment</source>
+        <target>Entrer l'URL Github pour l'environnement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">59</context>
@@ -3026,6 +3077,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterEnvironmentRawUrl" datatype="html">
         <source>Enter the URL of the environment.py file (raw file)</source>
+        <target>Entrer l'URL du fichier environment.py</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">68</context>
@@ -3035,6 +3087,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterEnvironmentRequirementsRawUrl" datatype="html">
         <source>Enter the URL of the requirements.txt file for your environment.py file if any</source>
+        <target>Entrer l'URL du fichier requirements.txt du fichier environment.py s'il y a lieu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">75</context>
@@ -3044,6 +3097,8 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterEnvironmentVersion" datatype="html">
         <source>Enter the version of the environment</source>
+        <target>Entrer la version de l'environnement</target>
+        <target></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">83</context>
@@ -3053,6 +3108,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterEnvironmentVersionAuthor" datatype="html">
         <source>Enter the author of the environment version</source>
+        <target>Entrer l'auteur de la version de l'environnement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">90</context>
@@ -3062,6 +3118,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="enterEnvironmentVersionDate" datatype="html">
         <source>Enter the date of the environment version</source>
+        <target>Entrer la date de la version de l'environnement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">99</context>
@@ -3071,6 +3128,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="c647698d922eed4e395e1481812b02ab97a2e077" datatype="html">
         <source>Environment requirement json file</source>
+        <target>Fichier json requirement de l'environnement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/components/reward-functions-dialog/reward-functions-dialog.component.html</context>
           <context context-type="linenumber">105</context>
@@ -3080,6 +3138,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="map.details.location.not.found" datatype="html">
         <source>Entered Location update failed</source>
+        <target>Echec de la mise à jour de l'emplacement saisi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">17</context>
@@ -3087,6 +3146,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="models.not.found" datatype="html">
         <source>Could not find models : </source>
+        <target>Modèles introuvables</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">22</context>
@@ -3094,6 +3154,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.creation.successful" datatype="html">
         <source>Model Creation Successful: </source>
+        <target>Création du modèle réussie</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">23</context>
@@ -3101,6 +3162,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.creation.failed" datatype="html">
         <source>Could not create model!: </source>
+        <target>Impossible de créer le modèle!: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">24</context>
@@ -3108,6 +3170,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.update.successful" datatype="html">
         <source>Model Update Successful: </source>
+        <target>Mise à jour du modèle réussie</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">25</context>
@@ -3115,6 +3178,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.update.failed" datatype="html">
         <source>Could not update model!: </source>
+        <target>Impossible de mettre à jour le modèle!: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">26</context>
@@ -3122,6 +3186,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.entered.update.failed" datatype="html">
         <source>Entered Model update failed</source>
+        <target>Mise à jour échouée du modèle entré</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">27</context>
@@ -3129,6 +3194,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.status.provisioned" datatype="html">
         <source>Provisioned</source>
+        <target>Provisionné</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">28</context>
@@ -3136,6 +3202,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.status.provisioning" datatype="html">
         <source>Provisioning</source>
+        <target>Provisionnement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">29</context>
@@ -3143,6 +3210,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.reward.creation.successful" datatype="html">
         <source>Reward function Creation Successful: </source>
+        <target>Création réussie de la fonction de récompense</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">31</context>
@@ -3150,6 +3218,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.reward.creation.failed" datatype="html">
         <source>Could not create reward function!: </source>
+        <target>Impossible de créer la fonction de récompense!: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">32</context>
@@ -3157,6 +3226,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.reward.update.successful" datatype="html">
         <source>Reward function Update Successful: </source>
+        <target>Mise à jour réussie de la fonction de récompense: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">33</context>
@@ -3164,6 +3234,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.reward.update.failed" datatype="html">
         <source>Could not update reward function!: </source>
+        <target>Impossible de mettre à jour la fonction de récompense!: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">34</context>
@@ -3171,6 +3242,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.entered.reward.update.failed" datatype="html">
         <source>Entered reward function update failed</source>
+        <target>Echec de la mise à jour de la fonction de récompense entrée</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">35</context>
@@ -3178,6 +3250,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="admin.level" datatype="html">
         <source>Admin level </source>
+        <target>Niveau admin</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">37</context>
@@ -3185,6 +3258,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="data.exists.for" datatype="html">
         <source> data exists for </source>
+        <target>Données existant pour</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">38</context>
@@ -3196,6 +3270,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="would.you.like.to.load.this.data" datatype="html">
         <source>Would you like to load this data?</source>
+        <target>Souhaitez-vous charger ces données?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">39</context>
@@ -3207,6 +3282,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.location.creation.successful" datatype="html">
         <source>Location Creation Successful: </source>
+        <target>Création réussie de l'emplacement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">41</context>
@@ -3214,6 +3290,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.location.creation.failed" datatype="html">
         <source>Could not create location!: </source>
+        <target>Impossible de créer l'emplacement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">42</context>
@@ -3221,6 +3298,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.location.update.successful" datatype="html">
         <source>Location Update Successful: </source>
+        <target>Mise à jour réussie de l'emplacement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">43</context>
@@ -3228,6 +3306,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.location.update.failed" datatype="html">
         <source>Could not update location!: </source>
+        <target>Impossible de mettre à jour l'emplacement!: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">44</context>
@@ -3235,6 +3314,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="model.location.data.verification.failed.missing.loc.id" datatype="html">
         <source>Location data verification failed due to missing location Id</source>
+        <target>Echec de la verification de l'emplacement des données du à l'emplacement ID manquant</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">45</context>
@@ -3242,6 +3322,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="location.data.verification.successful" datatype="html">
         <source>Location Data Verification Successful: </source>
+        <target>Vérification de l'emplacement des données réussie</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">46</context>
@@ -3249,6 +3330,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="location.data.verification.failed" datatype="html">
         <source>Could not verify location data!: </source>
+        <target>Impossible de vérifier l'emplacement des données!: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/models/constants/models.constants.ts</context>
           <context context-type="linenumber">47</context>
@@ -3256,6 +3338,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="indexNPI" datatype="html">
         <source>Index (NPI-Index, Compliance Score, Stringency Index)</source>
+        <target>Index (Indice NPI, Score de Conformité, Indice de rigueur)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">67</context>
@@ -3265,6 +3348,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="mobilityType" datatype="html">
         <source>Mobility Type (workplaces, retail_and_recreation, grocery_and_pharmacy, parks, transit_stations, residential)</source>
+        <target>Type de mobilité (Lieux de travail, commerces et loisirs, supermarchés et pharmacies, gares de transport)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">80</context>
@@ -3274,6 +3358,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="playPause" datatype="html">
         <source>Play/Pause</source>
+        <target>Play/Pause</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">91</context>
@@ -3283,6 +3368,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="loadCountriesData" datatype="html">
         <source>Load countries data</source>
+        <target>Charger les données des pays</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">100</context>
@@ -3292,6 +3378,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="modalTitle" datatype="html">
         <source>Configure Data &amp; Data Sources</source>
+        <target>Configurer les données  &amp; Emplacements de données</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">130</context>
@@ -3301,6 +3388,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="covid19.domain" datatype="html">
         <source> Domain(Covid19): </source>
+        <target> Domaine (Covid19): </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">140,141</context>
@@ -3310,6 +3398,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="covid19Domain" datatype="html">
         <source>Domain(Covid19)</source>
+        <target>Domaine(Covid19)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">146</context>
@@ -3317,6 +3406,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="npi.dataset.list" datatype="html">
         <source> NPIs Dataset (WNTRAC or OxCGRT): </source>
+        <target>Dataset des NPIs (WNTRAC or OxCGRT): </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">158,159</context>
@@ -3326,6 +3416,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="npiDatasetList" datatype="html">
         <source>NPIs Dataset (WNTRAC or OxCGRT)</source>
+        <target>Dataset des NPIs (WNTRAC or OxCGRT): </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">164</context>
@@ -3333,6 +3424,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="monthRangePicker" datatype="html">
         <source> Month range picker for data: </source>
+        <target>Sélecteur de plage de mois pour les données </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">176,177</context>
@@ -3342,6 +3434,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="saveButton" datatype="html">
         <source>Save</source>
+        <target>Sauvegarder</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">188</context>
@@ -3351,6 +3444,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="dataset" datatype="html">
         <source>Dataset</source>
+        <target>Dataset</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.ts</context>
           <context context-type="linenumber">678</context>
@@ -3360,6 +3454,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="mobility" datatype="html">
         <source>Mobility</source>
+        <target>Mobilité</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.ts</context>
           <context context-type="linenumber">679</context>
@@ -3369,6 +3464,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="index" datatype="html">
         <source>Index</source>
+        <target>Indices</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.ts</context>
           <context context-type="linenumber">680</context>
@@ -3378,6 +3474,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="value" datatype="html">
         <source>Value</source>
+        <target>Valeur</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.ts</context>
           <context context-type="linenumber">681</context>
@@ -3387,6 +3484,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="admin.level1" datatype="html">
         <source>Admin level 1</source>
+        <target>Admin niveau 1 </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/constants/overview.constants.ts</context>
           <context context-type="linenumber">18</context>
@@ -3394,6 +3492,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="selectOutcome" datatype="html">
         <source>Select outcome</source>
+        <target>Sélectionner sortie</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/components/predictions/predictions.component.html</context>
           <context context-type="linenumber">57</context>
@@ -3403,6 +3502,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="requestsHeader" datatype="html">
         <source> Requests <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span *ngIf=&quot;resultsRequestsDataSource &amp;&amp; resultsRequestsDataSource.data&quot; class=&quot;models-number&quot;&gt;"/>(<x id="INTERPOLATION" equiv-text="{{resultsRequestsDataSource.data.length}}"/>)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target> Requests <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span *ngIf=&quot;resultsRequestsDataSource &amp;&amp; resultsRequestsDataSource.data&quot; class=&quot;models-number&quot;&gt;"/>(<x id="INTERPOLATION" equiv-text="{{resultsRequestsDataSource.data.length}}"/>)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/components/predictions/predictions.component.html</context>
           <context context-type="linenumber">88,89</context>
@@ -3412,6 +3512,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="requestId" datatype="html">
         <source>ID</source>
+        <target>ID</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/components/predictions/predictions.component.html</context>
           <context context-type="linenumber">95</context>
@@ -3421,6 +3522,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="requestType" datatype="html">
         <source>Type</source>
+        <target>Type</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/components/predictions/predictions.component.html</context>
           <context context-type="linenumber">100</context>
@@ -3430,6 +3532,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="requestStatus" datatype="html">
         <source>Status</source>
+        <target>Statut</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/components/predictions/predictions.component.html</context>
           <context context-type="linenumber">108</context>
@@ -3439,6 +3542,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="requestAction" datatype="html">
         <source>Action</source>
+        <target>Action</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/components/predictions/predictions.component.html</context>
           <context context-type="linenumber">120</context>
@@ -3448,6 +3552,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="completed" datatype="html">
         <source>Completed</source>
+        <target>Terminé</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/constants/results.constants.ts</context>
           <context context-type="linenumber">17</context>
@@ -3455,6 +3560,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="inProgress" datatype="html">
         <source>In-progress</source>
+        <target>En cours</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/constants/results.constants.ts</context>
           <context context-type="linenumber">18</context>
@@ -3462,6 +3568,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="resultsModelsNotFound" datatype="html">
         <source>Could not find models : </source>
+        <target>Impossible de trouver les modèles : </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/constants/results.constants.ts</context>
           <context context-type="linenumber">22</context>
@@ -3469,6 +3576,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="resultsLocationsNotFound" datatype="html">
         <source>Could not find locations : </source>
+        <target>Impossible de trouver les emplacements : </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/constants/results.constants.ts</context>
           <context context-type="linenumber">23</context>
@@ -3476,6 +3584,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="resultsNotFound" datatype="html">
         <source>Could not find results : </source>
+        <target>Impossible de trouver les résultats</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/results/constants/results.constants.ts</context>
           <context context-type="linenumber">24</context>
