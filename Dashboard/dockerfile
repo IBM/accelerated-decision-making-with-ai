@@ -13,6 +13,6 @@ FROM nginx:latest
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /usr/src/app/dist /usr/share/nginx/html
 # COPY --from=build /usr/src/app/DomainVerification.html /usr/share/nginx/html
-EXPOSE 8070
+EXPOSE 80
 RUN echo "Completed docker build!"
 
