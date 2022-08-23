@@ -1518,7 +1518,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.grocery.and.pharmacy" datatype="html">
         <source>stringency index_oxcgrt_grocery_and_pharmacy</source>
-        <target>indice de rigueur_oxcgrt_supermarchés_et_pharmacies</target>
+        <target>indice de rigueur_oxcgrt_supermarchés et pharmacies</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">166</context>
