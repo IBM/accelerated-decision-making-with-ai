@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-md-6">
               <mat-form-field>
-                <mat-select placeholder="Select an action type" formControlName="modelName" required>
+                <mat-select i18n-placeholder="select an action type placeholder|select an action type placeholder@@selectAnActionTypePlaceholder" placeholder="Select an action type" formControlName="modelName" required>
                   <mat-option *ngFor="let actionType of actionTypes" [value]="actionType">{{actionType}}</mat-option>
                 </mat-select>
                 <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
@@ -79,7 +79,7 @@
             <div class="row">
               <div class="col-md-6">
                 <mat-form-field>
-                  <mat-select placeholder="Select an intervention" formControlName="interventionName" required>
+                  <mat-select i18n-placeholder="select an intervention placeholder|select an intervention placeholder@@selectAnInterventionPlaceholder" placeholder="Select an intervention" formControlName="interventionName" required>
                     <mat-option *ngFor="let actionType of actionTypes" [value]="actionType">{{actionType}}</mat-option>
                   </mat-select>
                   <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
@@ -88,7 +88,7 @@
               <div class="col-md-6">
                 <mat-form-field>
                   <mat-label i18n="enter the number of episodes|enter the number of episodes@@enterNumberOfEpisodes">Enter the number of episodes</mat-label>
-                  <input matInput placeholder="Intervention episodes" formControlName="numberOfEpisodes" type="number" min="1" oninput="validity.valid||(value='');" required>
+                  <input matInput i18n-placeholder="intervention episodes placeholder|intervention episodes placeholder@@interventionEpisodesPlaceholder" placeholder="Intervention episodes" formControlName="numberOfEpisodes" type="number" min="1" oninput="validity.valid||(value='');" required>
                   <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
                 </mat-form-field>
               </div>
@@ -109,7 +109,7 @@
               <div class="col-md-6">
                 <mat-form-field>
                   <mat-label>Enter the number of simulation years</mat-label>
-                  <input matInput placeholder="Simulation years" formControlName="numberOfSimulationYears" type="number" min="1" oninput="validity.valid||(value='');" required>
+                  <input matInput i18n-placeholder="simulation years placeholder|simulation years placeholder@@simulationYearsPlaceholder" placeholder="Simulation years" formControlName="numberOfSimulationYears" type="number" min="1" oninput="validity.valid||(value='');" required>
                   <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
                 </mat-form-field>
               </div>
@@ -118,14 +118,14 @@
               <div class="col-md-6">
                 <mat-form-field>
                   <mat-label i18n="enter time resolution in weeks|enter time resolution in weeks@@enterTimeResolution">Enter time resolution in weeks</mat-label>
-                  <input matInput placeholder="Time resolution in weeks" formControlName="dateStep" type="number" min="1" oninput="validity.valid||(value='');" required>
+                  <input matInput i18n-placeholder="time resolution in weeks placeholder|time resolution in weeks placeholder@@timeResolutionInWeeksPlaceholder" placeholder="Time resolution in weeks" formControlName="dateStep" type="number" min="1" oninput="validity.valid||(value='');" required>
                   <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
                 </mat-form-field>
               </div>
               <div class="col-md-6">
                 <mat-form-field>
                   <mat-label i18n="enter the coverage resolution|enter the coverage resolution@@enterCoverageResolution">Enter the coverage resolution</mat-label>
-                  <input matInput placeholder="Coverage resolution as a percentage" formControlName="coverageStep" type="number" min="1" oninput="validity.valid||(value='');" required>
+                  <input matInput i18n-placeholder="coverage resolution as a percentage placeholder|coverage resolution as a percentage placeholder@@coverageResolutionAsAPercentagePlaceholder" placeholder="Coverage resolution as a percentage" formControlName="coverageStep" type="number" min="1" oninput="validity.valid||(value='');" required>
                   <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
                 </mat-form-field>
               </div>
@@ -173,7 +173,7 @@
               <div class="col-md-6">
                 <mat-form-field>
                   <mat-label i18n="enter calibration duration in days|enter calibration duration in days@@calibrationDurationInDays">Enter the calibration duration in days</mat-label>
-                  <input matInput placeholder="Calibration duration" formControlName="numberOfSimulationYears" type="number" min="1" oninput="validity.valid||(value='');" required>
+                  <input matInput i18n-placeholder="calibration duration placeholder|calibration duration placeholder@@calibrationDurationPlaceholder" placeholder="Calibration duration" formControlName="numberOfSimulationYears" type="number" min="1" oninput="validity.valid||(value='');" required>
                   <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
                 </mat-form-field>
               </div>
@@ -182,14 +182,14 @@
               <div class="col-md-6">
                 <mat-form-field>
                   <mat-label i18n="enter the beta window length in days|enter the beta length window in days@@enterBetaWindowLength">Enter the beta window length in days</mat-label>
-                  <input matInput placeholder="Intervention episodes" formControlName="coverageStep" type="number" min="1" oninput="validity.valid||(value='');" required>
+                  <input matInput i18n-placeholder="beta window length in days placeholder|beta window length in days placeholder@@betaWindowLengthInDaysPlaceholder" placeholder="Beta window length in days" formControlName="coverageStep" type="number" min="1" oninput="validity.valid||(value='');" required>
                   <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
                 </mat-form-field>
               </div>
               <div class="col-md-6">
                 <mat-form-field>
                   <mat-label i18n="enter the number of episodes|enter the number of episodes@@enterNumberOfEpisodes">Enter the number of episodes</mat-label>
-                  <input matInput placeholder="Intervention episodes" formControlName="numberOfEpisodes" type="number" min="1" oninput="validity.valid||(value='');" required>
+                  <input matInput i18n-placeholder="@@interventionEpisodesPlaceholder" placeholder="Intervention episodes" formControlName="numberOfEpisodes" type="number" min="1" oninput="validity.valid||(value='');" required>
                   <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
                 </mat-form-field>
               </div>
@@ -216,7 +216,7 @@
           <div class="row">
             <div class="col-md-6">
               <mat-form-field>
-                <mat-select placeholder="Select actions" formControlName="modelName" required multiple>
+                <mat-select i18n-placeholder="select actions placeholder|select actions placeholder@@selectActionsPlaceholder" placeholder="Select actions" formControlName="modelName" required multiple>
                   <mat-option *ngFor="let actionType of actionTypes" [value]="actionType">{{actionType}}</mat-option>
                 </mat-select>
                 <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>

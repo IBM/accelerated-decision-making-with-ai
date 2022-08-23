@@ -26,14 +26,14 @@
             <div class="col-md-6">
               <mat-form-field>
                 <mat-label i18n="enter the official name of the model with no spaces|enter the official name of the model with no spaces@@modelOfficialName">Enter the official name of your model (no spaces)</mat-label>
-                <input matInput placeholder="Model name" formControlName="name" required>
+                <input matInput i18n-placeholder="model name placeholder|model name placeholder@@modelNamePlaceholder" placeholder="Model name" formControlName="name" required>
                 <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
             <div class="col-md-6">
               <mat-form-field>
                 <mat-label i18n="short description of the model|short description of the model@@modelShortDescription">Short description of the model</mat-label>
-                <input matInput placeholder="Model description" formControlName="title" required>
+                <input matInput i18n-placeholder="model description placeholder|model description placeholder@@modelDescriptionPlaceholder" placeholder="Model description" formControlName="title" required>
                 <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
@@ -42,14 +42,14 @@
             <div class="col-md-6">
               <mat-form-field>
                 <mat-label i18n="enter the version of the model|enter the version of the model@@enterModelVersion">Enter the version of the model</mat-label>
-                <input matInput placeholder="Model Version" formControlName="version" required>
+                <input matInput i18n-placeholder="model version placeholder|model version placeholder@@modelVersionPlaceholder" placeholder="Model Version" formControlName="version" required>
                 <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
             <div class="col-md-6">
               <mat-form-field>
                 <mat-label i18n="enter the author of the model version|enter the author of the model version@@enterModelVersionAuthor">Enter the author of the model version</mat-label>
-                <input matInput placeholder="Version Author" formControlName="versionAuthor" required>
+                <input matInput i18n-placeholder="version author placeholder|version author placeholder@@versionAuthorPlaceholder" placeholder="Version Author" formControlName="versionAuthor" required>
                 <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
@@ -58,14 +58,14 @@
             <div class="col-md-6">
               <mat-form-field>
                 <mat-label i18n="enter the date of the model version|enter the date of the model version@@enterModelVersionDate">Enter the date of the model version</mat-label>
-                <input type="date" matInput placeholder="Version Date" formControlName="versionDate" required>
+                <input type="date" matInput i18n-placeholder="version date placeholder|version date placeholder@@versionDatePlaceholder" placeholder="Version Date" formControlName="versionDate" required>
                 <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
             <div class="col-md-6">
               <mat-form-field>
                 <mat-label i18n="enter the GitHub URL for the model code|enter the GitHub URL for the model code@@modelGithubUrl">Enter the GitHub url for the model code</mat-label>
-                <input matInput placeholder="Github url" formControlName="githubLink" required>
+                <input matInput i18n-placeholder="github url placeholder|github url placeholder@@githubUrlPlaceholder" placeholder="Github url" formControlName="githubLink" required>
                 <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
@@ -74,14 +74,14 @@
             <div class="col-md-6">
               <mat-form-field>
                 <mat-label i18n="enter the raw url of the model python file|enter the raw url of the model python file@@enterModelRawUrl">Enter the URL of the model.py file (raw file)</mat-label>
-                <input matInput placeholder="Model url" formControlName="uri" required>
+                <input matInput i18n-placeholder="model url placeholder|model url placeholder@@modelUrlPlaceholder" placeholder="Model url" formControlName="uri" required>
                 <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
             <div class="col-md-6">
               <mat-form-field>
                 <mat-label i18n="enter the raw url of the requirements text file if any|enter the raw url of the requirements text file for the model python file if any@@enterRequirementsRawUrlIfAny">Enter the URL of the requirements.txt file for your model.py file if any</mat-label>
-                <input matInput placeholder="Requirements" formControlName="runCommand">
+                <input matInput i18n-placeholder="requirements placeholder|requirements placeholder@@requirementsPlaceholder" placeholder="Requirements" formControlName="runCommand">
               </mat-form-field>
             </div>
           </div>
@@ -89,14 +89,14 @@
             <div class="col-md-6">
               <mat-form-field>
                 <mat-label i18n="enter the url of the model data provider service|enter the url of the model data provider service@@enterModelDataProviderServiceUrl">Enter the url of the model data provider service</mat-label>
-                <input matInput placeholder="Model Data Url" formControlName="modelDataUrl" required>
+                <input matInput i18n-placeholder="model data url placeholder|model data url placeholder@@modelDataUrlPlaceholder" placeholder="Model Data Url" formControlName="modelDataUrl" required>
                 <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
             <div class="col-md-6">
               <mat-form-field>
                 <mat-label i18n="provide a short description of the model data provided|provide a short description of the model data provided@@provideShortModelDataDescription">Provide short description of the model data provided</mat-label>
-                <input matInput placeholder="Model Data Description" formControlName="modelDataDescription" required>
+                <input matInput i18n-placeholder="model data description placeholder|model data description placeholder@@modelDataDescriptionPlaceholder" placeholder="Model Data Description" formControlName="modelDataDescription" required>
                 <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>

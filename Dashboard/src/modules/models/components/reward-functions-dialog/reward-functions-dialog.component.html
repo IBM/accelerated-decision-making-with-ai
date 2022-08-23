@@ -26,14 +26,14 @@
             <div class="col-md-6">
               <mat-form-field>
                 <mat-label i18n="enter the name of the environment|enter the name of the environment@@enterEnvironmentName">Enter the name of the environment</mat-label>
-                <input matInput placeholder="Environment Name" formControlName="name" required>
+                <input matInput i18n-placeholder="environment name placeholder|environment name placeholder@@environmentNamePlaceholder" placeholder="Environment Name" formControlName="name" required>
                 <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
             <div class="col-md-6">
               <mat-form-field>
                 <mat-label i18n="enter the class name of the environment|enter the class name of the environment@@enterEnvironmentClassName">Enter Class name of the Environment</mat-label>
-                <input matInput placeholder="Environment Class Name" formControlName="title" required>
+                <input matInput i18n-placeholder="environment class name placeholder|environment class name placeholder@@environmentClassNamePlaceholder" placeholder="Environment Class Name" formControlName="title" required>
                 <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
@@ -57,7 +57,7 @@
             <div class="col-md-6">
               <mat-form-field>
                 <mat-label i18n="enter the github url for the environment|enter the github url for the environment@@enterEnvironmentGithubUrl">Enter the GitHub Url for the environment</mat-label>
-                <input matInput placeholder="Github url" formControlName="githubLink" required>
+                <input matInput i18n-placeholder="github url placeholder|github url placeholder@@githubUrlPlaceholder" placeholder="Github url" formControlName="githubLink" required>
                 <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
@@ -66,14 +66,14 @@
             <div class="col-md-6">
               <mat-form-field>
                 <mat-label i18n="enter the raw url of the environment python file|enter the raw url of the environment python file@@enterEnvironmentRawUrl">Enter the URL of the environment.py file (raw file)</mat-label>
-                <input matInput placeholder="Environment url" formControlName="uri" required>
+                <input matInput i18n-placeholder="environment url placeholder|environment url placeholder@@environmentUrlPlaceholder" placeholder="Environment url" formControlName="uri" required>
                 <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
             <div class="col-md-6">
               <mat-form-field>
                 <mat-label i18n="enter the raw url of the requirements text file for the environment if any|enter the raw url of the requirements text file for the environment if any@@enterEnvironmentRequirementsRawUrl">Enter the URL of the requirements.txt file for your environment.py file if any</mat-label>
-                <input matInput placeholder="Requirements" formControlName="runCommand">
+                <input matInput i18n-placeholder="requirements placeholder|requirements placeholder@@requirementsPlaceholder" placeholder="Requirements" formControlName="runCommand">
               </mat-form-field>
             </div>
           </div>
@@ -81,14 +81,14 @@
             <div class="col-md-6">
               <mat-form-field>
                 <mat-label i18n="enter the version of the environment|enter the version of the environment@@enterEnvironmentVersion">Enter the version of the environment</mat-label>
-                <input matInput placeholder="Environment Version" formControlName="version" required>
+                <input matInput i18n-placeholder="environment version placeholder|environment version placeholder@@environmentVersionPlaceholder" placeholder="Environment Version" formControlName="version" required>
                 <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
             <div class="col-md-6">
               <mat-form-field>
                 <mat-label i18n="enter the author of the version of the environment|enter the author of the version of the environment@@enterEnvironmentVersionAuthor">Enter the author of the environment version</mat-label>
-                <input matInput placeholder="Version Author" formControlName="versionAuthor" required>
+                <input matInput i18n-placeholder="version author placeholder|version author placeholder@@versionAuthorPlaceholder" placeholder="Version Author" formControlName="versionAuthor" required>
                 <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
@@ -97,7 +97,7 @@
             <div class="col-md-6">
               <mat-form-field>
                 <mat-label i18n="enter the date of the version of the environment|enter the date of the version of the environment@@enterEnvironmentVersionDate">Enter the date of the environment version</mat-label>
-                <input type="date" matInput placeholder="Version Date" formControlName="versionDate" required>
+                <input type="date" matInput i18n-placeholder="version date placeholder|version date placeholder@@versionDatePlaceholder" placeholder="Version Date" formControlName="versionDate" required>
                 <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
               </mat-form-field>
             </div>
