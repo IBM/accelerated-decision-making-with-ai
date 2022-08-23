@@ -1184,6 +1184,7 @@
       </trans-unit>
       <trans-unit id="casesConfirmed" datatype="html">
         <source>Confirmed cases</source>
+        <target>Cas confirmés</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/chart.constants.ts</context>
           <context context-type="linenumber">115</context>
@@ -1193,6 +1194,7 @@
       </trans-unit>
       <trans-unit id="dateHoverLabel" datatype="html">
         <source>Date</source>
+        <target>Date</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/chart.constants.ts</context>
           <context context-type="linenumber">116</context>
@@ -1202,6 +1204,7 @@
       </trans-unit>
       <trans-unit id="daysHoverLabel" datatype="html">
         <source>Days</source>
+        <target>Jours</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/chart.constants.ts</context>
           <context context-type="linenumber">117</context>
@@ -1311,7 +1314,7 @@
       </trans-unit>
       <trans-unit id="stringency.index.wntrac" datatype="html">
         <source>stringency index_wntrac_</source>
-        <target>Indice wntrac de rigueur</target>
+        <target>indice de rigueur_wntrac</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">142</context>
@@ -1319,7 +1322,7 @@
       </trans-unit>
       <trans-unit id="compliance.score.wntrac" datatype="html">
         <source>compliance score_wntrac_</source>
-        <target>Score_wntrac de conformité</target>
+        <target>score de conformité_wntrac</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">143</context>
@@ -1335,7 +1338,7 @@
       </trans-unit>
       <trans-unit id="stringency.index.oxcgrt_" datatype="html">
         <source>stringency index_oxcgrt_</source>
-        <target>Indice_oxcgrt de rigueur</target>
+        <target>indice de rigueur_oxcgrt</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">145</context>
@@ -1343,7 +1346,7 @@
       </trans-unit>
       <trans-unit id="compliance.score.oxcgrt" datatype="html">
         <source>compliance score_oxcgrt_</source>
-        <target>Score_oxcgrt de conformité</target>
+        <target>score de conformité_oxcgrt</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">146</context>
@@ -1369,7 +1372,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.workplaces" datatype="html">
         <source>stringency index_wntrac_workplaces</source>
-        <target>Indice_wntrac de rigueur sur les lieux de travail</target>
+        <target>indice de rigueur_wntrac_lieux de travail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">151</context>
@@ -1379,7 +1382,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.workplaces" datatype="html">
         <source>compliance score_wntrac_workplaces</source>
-        <target>Score_wntrac de conformité sur les lieux de travail</target>       
+        <target>score de conformité_wntrac_lieux de travail</target>       
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">152</context>
@@ -1407,7 +1410,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.workplaces" datatype="html">
         <source>compliance score_oxcgrt_workplaces</source>
-        <target>Score_oxcgrt de conformité sur les lieux de travail</target>
+        <target>score de conformité_oxcgrt_lieux de travail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">155</context>
@@ -1425,7 +1428,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.retail.and.recreation" datatype="html">
         <source>stringency index_wntrac_retail_and_recreation</source>
-        <target>Index_wntrac de rigueur sur les commerces et loisirs</target>
+        <target>indice de rigueur_wntrac_commerces et loisirs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">157</context>
@@ -1435,7 +1438,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.retail.and.recreation" datatype="html">
         <source>compliance score_wntrac_retail_and_recreation</source>
-        <target>Score_wntrac de conformité sur les commerces et loisirs</target>
+        <target>score de conformité_wntrac_commerces et loisirs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">158</context>
@@ -1455,7 +1458,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.retail.and.recreation" datatype="html">
         <source>stringency index_oxcgrt_retail_and_recreation</source>
-        <target>Index_oxcgrt de rigueur sur les commerces et loisirs</target>
+        <target>indice de rigueur_oxcgrt_commerces et loisirs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">160</context>
@@ -1465,7 +1468,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.retail.and.recreation" datatype="html">
         <source>compliance score_oxcgrt_retail_and_recreation</source>
-        <target>Score_oxcgrt de conformité sur les commerces et loisirs</target>
+        <target>score de conformité_oxcgrt_commerces et loisirs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">161</context>
@@ -1485,7 +1488,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.grocery.and.pharmacy" datatype="html">
         <source>stringency index_wntrac_grocery_and_pharmacy</source>
-        <target>Indice_wntract de rigueur sur les supermarchés et pharmacies</target>
+        <target>indice de rigueur_wntrac_supermarchés et pharmacies</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">163</context>
@@ -1495,7 +1498,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.grocery.and.pharmacy" datatype="html">
         <source>compliance score_wntrac_grocery_and_pharmacy</source>
-        <target>Score_wntrac de conformité sur les supermarchés et pharmacies</target>
+        <target>score de conformité_wntrac_supermarchés et pharmacies</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">164</context>
@@ -1515,7 +1518,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.grocery.and.pharmacy" datatype="html">
         <source>stringency index_oxcgrt_grocery_and_pharmacy</source>
-        <target>Indice de rigueur_oxcgrt_supermarchés_et_pharmacies</target>
+        <target>indice de rigueur_oxcgrt_supermarchés_et_pharmacies</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">166</context>
@@ -1525,7 +1528,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.grocery.and.pharmacy" datatype="html">
         <source>compliance score_oxcgrt_grocery_and_pharmacy</source>
-        <target>Score de conformité_oxcgrt_supermarchés_et_pharmacies</target>
+        <target>score de conformité_oxcgrt_supermarchés_et_pharmacies</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">167</context>
@@ -1545,7 +1548,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.parks" datatype="html">
         <source>stringency index_wntrac_parks</source>
-        <target>Indice de rigueur_wntrac_parcs</target>
+        <target>indice de rigueur_wntrac_parcs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">169</context>
@@ -1555,7 +1558,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.parks" datatype="html">
         <source>compliance score_wntrac_parks</source>
-        <target>Score de conformité_wntrac_parcs</target>
+        <target>score de conformité_wntrac_parcs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">170</context>
@@ -1575,7 +1578,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.parks" datatype="html">
         <source>stringency index_oxcgrt_parks</source>
-        <target>Indice de rigueur_oxcgrt_parcs</target>
+        <target>indice de rigueur_oxcgrt_parcs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">172</context>
@@ -1585,7 +1588,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.parks" datatype="html">
         <source>compliance score_oxcgrt_parks</source>
-        <target>Score de conformité_oxcgrt_parcs</target>
+        <target>score de conformité_oxcgrt_parcs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">173</context>
@@ -1605,7 +1608,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.wntrac.transit.stations" datatype="html">
         <source>stringency index_wntrac_transit_stations</source>
-        <target>Indice de rigueur_wntrac_gares de transport</target>
+        <target>indice de rigueur_wntrac_gares de transport</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">175</context>
@@ -1615,7 +1618,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.transit.stations" datatype="html">
         <source>compliance score_wntrac_transit_stations</source>
-        <target>Score de conformité_wntrac_gares_de_transport</target>
+        <target>score de conformité_wntrac_gares_de_transport</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">176</context>
@@ -1635,7 +1638,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.transit.stations" datatype="html">
         <source>stringency index_oxcgrt_transit_stations</source>
-        <target>Indice de rigueur_oxcgrt_gares_de_transport</target>
+        <target>indice de rigueur_oxcgrt_gares_de_transport</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">178</context>
@@ -1645,7 +1648,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.transit.stations" datatype="html">
         <source>compliance score_oxcgrt_transit_stations</source>
-        <target>Score de conformité_oxcgrt_gares_de_transport</target>
+        <target>score de conformité_oxcgrt_gares_de_transport</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">179</context>
@@ -1675,7 +1678,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.wntrac.residential" datatype="html">
         <source>compliance score_wntrac_residential</source>
-         <target>Score de conformité_wntrac_résidentiel</target>
+         <target>score de conformité_wntrac_résidentiel</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">182</context>
@@ -1695,7 +1698,7 @@
       </trans-unit>
       <trans-unit id="constants.stringency.index.oxcgrt.residential" datatype="html">
         <source>stringency index_oxcgrt_residential</source>
-         <target>Indice de rigueur_oxcgrt_résidentiel</target>
+         <target>indice de rigueur_oxcgrt_résidentiel</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">184</context>
@@ -1705,7 +1708,7 @@
       </trans-unit>
       <trans-unit id="constants.compliance.score.oxcgrt.residential" datatype="html">
         <source>compliance score_oxcgrt_residential</source>
-         <target>Score de conformité_oxcgrt_résidentiel</target>
+         <target>score de conformité_oxcgrt_résidentiel</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">185</context>
