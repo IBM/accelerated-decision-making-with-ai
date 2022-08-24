@@ -1232,7 +1232,7 @@
       </trans-unit>
       <trans-unit id="npiIndexDropDown" datatype="html">
         <source>NPI-Index</source>
-        <target>Index NPI</target>
+        <target>Indice NPI</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">129</context>
@@ -1322,7 +1322,7 @@
       </trans-unit>
       <trans-unit id="stringency.index.wntrac" datatype="html">
         <source>stringency index_wntrac_</source>
-        <target>indice de rigueur_wntrac</target>
+        <target>indice de rigueur_wntrac_</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">142</context>
@@ -1330,7 +1330,7 @@
       </trans-unit>
       <trans-unit id="compliance.score.wntrac" datatype="html">
         <source>compliance score_wntrac_</source>
-        <target>score de conformité_wntrac</target>
+        <target>score de conformité_wntrac_</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">143</context>
@@ -1338,7 +1338,7 @@
       </trans-unit>
       <trans-unit id="npi.index.wntrac" datatype="html">
         <source>npi-index_wntrac_</source>
-        <target>indice-npi_wntrac</target>
+        <target>indice npi_wntrac_</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">144</context>
@@ -1346,7 +1346,7 @@
       </trans-unit>
       <trans-unit id="stringency.index.oxcgrt_" datatype="html">
         <source>stringency index_oxcgrt_</source>
-        <target>indice de rigueur_oxcgrt</target>
+        <target>indice de rigueur_oxcgrt_</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">145</context>
@@ -1354,7 +1354,7 @@
       </trans-unit>
       <trans-unit id="compliance.score.oxcgrt" datatype="html">
         <source>compliance score_oxcgrt_</source>
-        <target>score de conformité_oxcgrt</target>
+        <target>score de conformité_oxcgrt_</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">146</context>
@@ -1362,7 +1362,7 @@
       </trans-unit>
       <trans-unit id="npi.index.oxcgrt." datatype="html">
         <source>npi-index_oxcgrt_</source>
-        <target>indice-npi_oxcgrt</target>
+        <target>indice npi_oxcgrt_</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">147</context>
@@ -1400,7 +1400,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.workplaces" datatype="html">
         <source>npi-index_wntrac_workplaces</source>
-        <target>indice-npi_wntrac_lieux de travail</target>
+        <target>indice npi_wntrac_lieux de travail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">153</context>
@@ -1428,7 +1428,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.workplaces" datatype="html">
         <source>npi-index_oxcgrt_workplaces</source>
-        <target>indice-npi_oxcgrt_lieux de travail</target>
+        <target>indice npi_oxcgrt_lieux de travail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">156</context>
@@ -1456,7 +1456,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.retail.and.recreation" datatype="html">
         <source>npi-index_wntrac_retail_and_recreation</source>
-        <target>Index_wntrac NPI sur les commerces et loisirs</target>
+        <target>indice npi_wntrac_commerces et loisirs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">159</context>
@@ -1486,7 +1486,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.retail.and.recreation" datatype="html">
         <source>npi-index_oxcgrt_retail_and_recreation</source>
-        <target>indice-npi_oxcgrt_commerces et loisirs </target>
+        <target>indice npi_oxcgrt_commerces et loisirs </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">162</context>
@@ -1516,7 +1516,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.grocery.and.pharmacy" datatype="html">
         <source>npi-index_wntrac_grocery_and_pharmacy</source>
-        <target>indice-npi_wntrac_supermarchés et pharmacies</target>
+        <target>indice npi_wntrac_supermarchés et pharmacies</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">165</context>
@@ -1546,7 +1546,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.grocery.and.pharmacy" datatype="html">
         <source>npi-index_oxcgrt_grocery_and_pharmacy</source>
-        <target>indice-npi_oxcgrt_supermarchés et pharmacies</target>
+        <target>indice npi_oxcgrt_supermarchés et pharmacies</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">168</context>
@@ -1576,7 +1576,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.parks" datatype="html">
         <source>npi-index_wntrac_parks</source>
-        <target>Indice-npi_wntrac_parcs</target>
+        <target>indice npi_wntrac_parcs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">171</context>
@@ -1606,7 +1606,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.parks" datatype="html">
         <source>npi-index_oxcgrt_parks</source>
-        <target>indice-npi_oxcgrt_parcs</target>
+        <target>indice npi_oxcgrt_parcs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">174</context>
@@ -1636,7 +1636,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.transit.stations" datatype="html">
         <source>npi-index_wntrac_transit_stations</source>
-        <target>indice-npi_wntrac_gares_de_transport</target>
+        <target>indice npi_wntrac_gares_de_transport</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">177</context>
@@ -1666,7 +1666,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.transit.stations" datatype="html">
         <source>npi-index_oxcgrt_transit_stations</source>
-        <target>indice-npi_oxcgrt_gares de transport</target>
+        <target>indice npi_oxcgrt_gares de transport</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">180</context>
@@ -1696,7 +1696,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.wntrac.residential" datatype="html">
         <source>npi-index_wntrac_residential</source>
-         <target>indice-npi_wntrac_résidentiel</target>
+         <target>indice npi_wntrac_résidentiel</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">183</context>
@@ -1726,7 +1726,7 @@
       </trans-unit>
       <trans-unit id="constants.npi.index.oxcgrt.residential" datatype="html">
         <source>npi-index_oxcgrt_residential</source>
-         <target>indice-npi_oxcgrt_résidentiel</target>
+         <target>indice npi_oxcgrt_résidentiel</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">186</context>
@@ -3705,7 +3705,7 @@ Would you like to override this and perform a new experiment?</source>
       </trans-unit>
       <trans-unit id="indexNPI" datatype="html">
         <source>Index (NPI-Index, Compliance Score, Stringency Index)</source>
-        <target>Index (Indice NPI, Score de Conformité, Indice de rigueur)</target>
+        <target>Indice (Indice NPI, Score de Conformité, Indice de rigueur)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/overview/components/overview/overview.component.html</context>
           <context context-type="linenumber">67</context>
