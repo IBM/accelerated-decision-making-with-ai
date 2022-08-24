@@ -301,6 +301,7 @@
       </trans-unit>
       <trans-unit id="algorithmNamePlaceholder" datatype="html">
         <source>Algorithm Name</source>
+        <target>Nom de l'algorithme</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">29</context>
@@ -522,6 +523,7 @@
       </trans-unit>
       <trans-unit id="algorithmClassNamePlaceholder" datatype="html">
         <source>Algorithm Class Name</source>
+        <target>Nom de la classe de l'algorithme</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">36</context>
@@ -541,6 +543,7 @@
       </trans-unit>
       <trans-unit id="algorithmUrlPlaceholder" datatype="html">
         <source>Algorithm url</source>
+        <target>URL de l'algorithme</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">45</context>
@@ -560,6 +563,7 @@
       </trans-unit>
       <trans-unit id="requirementsPlaceholder" datatype="html">
         <source>Requirements</source>
+        <target>Conditions</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">52</context>
@@ -587,6 +591,7 @@
       </trans-unit>
       <trans-unit id="githubUrlPlaceholder" datatype="html">
         <source>Github url</source>
+        <target>URL Github</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">61</context>
@@ -614,6 +619,7 @@
       </trans-unit>
       <trans-unit id="versionPlaceholder" datatype="html">
         <source>Version</source>
+        <target>Version</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">68</context>
@@ -633,6 +639,7 @@
       </trans-unit>
       <trans-unit id="versionAuthorPlaceholder" datatype="html">
         <source>Version Author</source>
+        <target>Auteur de la version</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">77</context>
@@ -660,6 +667,7 @@
       </trans-unit>
       <trans-unit id="versionDatePlaceholder" datatype="html">
         <source>Version Date</source>
+        <target>Date de la version</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/algorithms/components/algorithm-dialog/algorithm-dialog.component.html</context>
           <context context-type="linenumber">84</context>
