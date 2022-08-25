@@ -1272,7 +1272,7 @@
       </trans-unit>
       <trans-unit id="retailAndRecreationDropDown" datatype="html">
         <source>Retail_and_recreation</source>
-        <target>Commerce de détails et loisirs</target>
+        <target>Commerces et loisirs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">131</context>
