@@ -46,7 +46,6 @@ class CollectData(Resource):
         args = upload_parser.parse_args()
         file = args.get('file')
         data_repository_configuration_ID = args.get('data_repository_configuration_ID')
-        #4028818382aacd920182aacf07340000
 
         UPLOAD_FOLDER = 'pushed_datasets'
         randID = str(uuid.uuid4())
