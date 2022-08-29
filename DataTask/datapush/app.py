@@ -12,6 +12,15 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
+import os
+import uuid
+from flask import Flask, Blueprint, render_template, request, escape, jsonify
+from flask_swagger import swagger
+from swagger_ui_bundle import swagger_ui_path
+from flask_restx import Api, Resource
+from werkzeug.datastructures import FileStorage
+from werkzeug.middleware.proxy_fix import ProxyFix
+from werkzeug.utils import secure_filename
 import pandas as pd
 import json
 import constants
@@ -19,44 +28,53 @@ import requests
 import ibm_boto3
 from ibm_botocore.client import Config, ClientError
 import hashlib
+import glob
 
-def dbpush(data_to_push):
+
+app = Flask(__name__)
+api = Api(app)
+
+upload_parser = api.parser()
+upload_parser.add_argument('file', type=FileStorage, location='files',required=True)
+upload_parser.add_argument('data_repository_configuration_ID', type=str,required=True)
+
+
+@api.route('/datapush')
+@api.expect(upload_parser)
+class CollectData(Resource):
+    def post(self):
+        args = upload_parser.parse_args()
+        file = args.get('file')
+        data_repository_configuration_ID = args.get('data_repository_configuration_ID')
+        #4028818382aacd920182aacf07340000
+
+        UPLOAD_FOLDER = '/Users/dorcasawino/Documents/dev/open-source/accelerated-decision-making-with-ai/DataTask/datapush/pushed_datasets'
+        randID = str(uuid.uuid4())
+        appendRand = "datapush-"+str(randID)
+        appendNewname = str(appendRand)+"-"+file.filename
+        url=os.path.join(UPLOAD_FOLDER,appendNewname)
+        
+        # file1 = open(url, "w")
+        # toFile = "John,Doe,120 jefferson st.,Riverside, NJ, 08075"
+        # file1.write(toFile)
+        # file1.close()
+
+        dbpush(url, data_repository_configuration_ID, appendNewname)
+        return "Uploaded file is " + file.filename + data_repository_configuration_ID
+
+def dbpush(url, data_repository_configuration_ID,appendNewname):
     
-    #prepare the data for upload/updating
-    data_to_push_df = pd.DataFrame([data_to_push])
-
-
-    data = {
-        'id': "12" + "-datapush",
-        'data': json.loads(data_to_push_df.to_json(orient='records'))
-        }
-
-    print(data)
-
-    with open("12" + "-datapush.json", 'w') as outfile:
-        json.dump(data, outfile)
+    with open(url, mode="r") as file:
+        file_content = file.read()
 
     # Get COS credentials details
-    url = constants.DATA_REPOSITORY_CATEGORY
-    response = requests.get(url)
-    categorylist = json.loads(response.content)["entity"][0]
-    dataRepositoryConfigurationId = categorylist["id"]
+    dataRepositoryConfigurationId = data_repository_configuration_ID
     print(dataRepositoryConfigurationId)
 
-    url = constants.DATA_REPOSITORY_CREDENTIALS+dataRepositoryConfigurationId
-    response = requests.get(url)
+    credentials_url = constants.DATA_REPOSITORY_CREDENTIALS+dataRepositoryConfigurationId
+    response = requests.get(credentials_url)
     cosCredentials = json.loads(json.loads(response.content)["entity"])
     print(cosCredentials)
-    
-    # with open('data-dump.json') as f:
-    #     data = json.load(f)
-    #     cosCredentials = json.loads(data["credentials"])
-    #     print(cosCredentials)
-    
-
-    # upload
-    with open("12" + "-datapush.json", mode="r") as file:
-        file_content = file.read()
 
     try:
         # Create resource
@@ -79,21 +97,20 @@ def dbpush(data_to_push):
             multipart_chunksize=part_size
         )
 
-        with open("12" + "-datapush.json", mode="rb") as file_data:
+        with open(url, mode="rb") as file_data:
             cos.Object(cosCredentials['bucketName'],
-                        "12" + "-datapush.json").upload_fileobj(Fileobj=file_data,
-                                                                                    Config=transfer_config)
+                        appendNewname).upload_fileobj(Fileobj=file_data,Config=transfer_config)
 
         # update job with link to output
         DataPush_output_payload = {
-            "name":  "12" + "-datapush.json",
+            "name":  appendNewname,
             "description": "DataPush_output",
             "hash": hashlib.md5(file_content.encode('utf-8')).hexdigest(),
             "metadataDetails": {
-                "name":  "13" + "-datapush.json",
+                "name":  appendNewname,
                 "contentType": "json",
                 "description": "DataPush output file",
-                "source":  "12" + "-datapush.json",
+                "source":  appendNewname,
                 "testData": "",
                 "dataRepositoryConfiguration": {
                     "id": dataRepositoryConfigurationId,
@@ -109,17 +126,18 @@ def dbpush(data_to_push):
                             headers=headers)
         print(r.status_code)
         print(r.content)
+        files = glob.glob('/DataTask/datapush/pushed_datasets')
+        for f in files:
+            os.remove(f)
         if r.status_code != 200:
             print("FAILED TO UPDATE DataPush WITH OUTPUT")
+        else:
+            print("SUCCESSFULLY UPLOADED DATAPUSH OBJECT TO CLOUD OBJECT STORAGE")
     
     except Exception as e:
         print("FAILED TO UPLOAD FILE TO CLOUD OBJECT STORAGE {0}".format(e))
         # TODO: DO A WORK AROUND THIS AND HOW BEST TO HANDLE ERRORS
+        
 
-# Get data
-with open('empty.json') as f:
-    data_to_push = json.load(f)
-    print(data_to_push)
-
-
-dbpush(data_to_push)
+if __name__ == '__main__':
+    app.run(debug=True)
