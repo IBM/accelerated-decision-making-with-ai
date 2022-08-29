@@ -47,7 +47,7 @@ class CollectData(Resource):
         file = args.get('file')
         data_repository_configuration_ID = args.get('data_repository_configuration_ID')
 
-        UPLOAD_FOLDER = '/Users/dorcasawino/Documents/dev/open-source/accelerated-decision-making-with-ai/DataTask/datapush/pushed_datasets'
+        UPLOAD_FOLDER = 'DataTask/datapush/pushed_datasets'
         randID = str(uuid.uuid4())
         appendRand = "datapush-"+str(randID)
         appendNewname = str(appendRand)+"-"+file.filename
