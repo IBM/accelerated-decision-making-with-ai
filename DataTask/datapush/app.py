@@ -47,7 +47,7 @@ class CollectData(Resource):
         file = args.get('file')
         data_repository_configuration_ID = args.get('data_repository_configuration_ID')
 
-        UPLOAD_FOLDER = 'DataTask/datapush/pushed_datasets'
+        UPLOAD_FOLDER = 'pushed_datasets'
         randID = str(uuid.uuid4())
         appendRand = "datapush-"+str(randID)
         appendNewname = str(appendRand)+"-"+file.filename
@@ -125,7 +125,7 @@ def dbpush(url, data_repository_configuration_ID,appendNewname):
                             headers=headers)
         print(r.status_code)
         print(r.content)
-        files = glob.glob('/DataTask/datapush/pushed_datasets')
+        files = glob.glob('pushed_datasets')
         for f in files:
             os.remove(f)
         if r.status_code != 200:
