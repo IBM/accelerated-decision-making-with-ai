@@ -1120,6 +1120,15 @@
         <note priority="1" from="description">Territories covered</note>
         <note priority="1" from="meaning">Territories covered</note>
       </trans-unit>
+      <trans-unit id="notificationsHeader" datatype="html">
+        <source>Notifications (coming soon)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+        <note priority="1" from="description">Notifications header</note>
+        <note priority="1" from="meaning">notifications header</note>
+      </trans-unit>
       <trans-unit id="pleaseConfirmDialog" datatype="html">
         <source>Please confirm...</source>
         <target>Veuillez confirmer...</target>
@@ -1846,12 +1855,82 @@
           <context context-type="linenumber">245</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="logout" datatype="html">
+        <source>Logout</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">247</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="no_data_available" datatype="html">
         <source>No data available</source>
         <target>Pas de données disponibles</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
-          <context context-type="linenumber">250</context>
+          <context context-type="linenumber">251</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experimentsNotification" datatype="html">
+        <source>Experiments</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">255</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experimentsNotificationId" datatype="html">
+        <source>ab1234</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">256</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experimentsCompletionDetails" datatype="html">
+        <source> completed on Mar 4, 2021 1223hrs EAT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">257</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resultsNotification" datatype="html">
+        <source>Results</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">258</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resultsNotificationId" datatype="html">
+        <source>cd5678</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">259</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resultsCompletionDetails" datatype="html">
+        <source> completed on Mar 4, 2021 0907hrs EAT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">260</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="modelsNotification" datatype="html">
+        <source>Models</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">261</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="modelOnboardingDetails" datatype="html">
+        <source>New malaria model onboarded on Mar 4, 2021 0814hrs EAT, </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">262</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="modelLink" datatype="html">
+        <source>model</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">263</context>
         </context-group>
       </trans-unit>
       <trans-unit id="newCases" datatype="html">

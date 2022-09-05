@@ -1124,6 +1124,16 @@
         <note priority="1" from="description">Territories covered</note>
         <note priority="1" from="meaning">Territories covered</note>
       </trans-unit>
+     <trans-unit id="notificationsHeader" datatype="html">
+        <source>Notifications (coming soon)</source>
+        <target>Taarifa (zijayo)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/components/app/app.component.html</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+        <note priority="1" from="description">Notifications header</note>
+        <note priority="1" from="meaning">notifications header</note>
+      </trans-unit>
       <trans-unit id="pleaseConfirmDialog" datatype="html">
         <source>Please confirm...</source>
         <target>Tafadhali hakikisha...</target>
@@ -1166,7 +1176,7 @@
       </trans-unit>
       <trans-unit id="platformPurpose" datatype="html">
         <source>Providing a platform for sharing, optimizing and running domain models at scale.</source>
-        <target>Ambayo inafadhili jukwaa la kushiriki, kuboresha na kuendesha modeli za kikoa.</target>
+        <target>Ambayo inafadhili jukwaa la kushiriki, kuboresha na kuendesha vikoa ya modeli.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/components/login/login.component.html</context>
           <context context-type="linenumber">20</context>
@@ -1849,12 +1859,90 @@
           <context context-type="linenumber">245</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="logout" datatype="html">
+        <source>Logout</source>
+        <target>Ondoka</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">247</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="no_data_available" datatype="html">
         <source>No data available</source>
         <target>Hakuna data inayopatikana</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
-          <context context-type="linenumber">250</context>
+          <context context-type="linenumber">251</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experimentsNotification" datatype="html">
+        <source>Experiments</source>
+        <target>Majaribio</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">255</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experimentsNotificationId" datatype="html">
+        <source>ab1234</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">256</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experimentsCompletionDetails" datatype="html">
+        <source> completed on Mar 4, 2021 1223hrs EAT</source>
+        <target> imekamilika tarehe Mar 4, 2021 1223hrs EAT</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">257</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resultsNotification" datatype="html">
+        <source>Results</source>
+        <target>Matokeo</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">258</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resultsNotificationId" datatype="html">
+        <source>cd5678</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">259</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resultsCompletionDetails" datatype="html">
+        <source> completed on Mar 4, 2021 0907hrs EAT</source>
+        <target> imekamilika tarehe Mar 4, 2021 0907hrs EAT</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">260</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="modelsNotification" datatype="html">
+        <source>Models</source>
+        <target>Modeli</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">261</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="modelOnboardingDetails" datatype="html">
+        <source>New malaria model onboarded on Mar 4, 2021 0814hrs EAT, </source>
+        <target>Modeli mpya ya malaria imewekwa tarehe Mar 4, 2021 0814hrs EAT, </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">262</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="modelLink" datatype="html">
+        <source>model</source>
+        <target>modeli</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
+          <context context-type="linenumber">263</context>
         </context-group>
       </trans-unit>
        <trans-unit id="newCases" datatype="html">
@@ -2649,7 +2737,7 @@ Je ungependa kubadilisha jaribio hili na kutengeneza jaribio jipya?</target>
       </trans-unit>
       <trans-unit id="summaryParagraphOne" datatype="html">
         <source> Policy Making with AI is a decision support platform that harnesses the power of domain models using AI in a trusted environment, bringing together policy- and decision- makers, modelers, and AI practitioners to support complex decision-making. </source>
-        <target> "Utengenezaji sera kwa kutumia AI" ni jukwaa la kusaidia katika kufanya maamuzi, linalotumia nguvu za vikoa vya modeli vya AI katika mazingira yanayoaminika, ili kuleta pamoja watu wanaotengeneza sera, wanaofanya maamuzi mbalimbali, wanaotengeneza modeli na wanaotengeneza AI kwa ajili ya kusaidia maamuzi magumu kufanywa. </target>
+        <target> "Utengenezaji sera kwa kutumia AI"(ADMAI) ni jukwaa la kusaidia katika kufanya maamuzi, linalotumia nguvu za vikoa vya modeli vya AI katika mazingira ya kuaminika, ili kuleta pamoja watu wanaotengeneza sera, wanaofanya maamuzi mbalimbali, wanaotengeneza modeli na wanaotengeneza AI kwa ajili ya kusaidia maamuzi magumu kufanywa. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">37,40</context>
@@ -2669,7 +2757,7 @@ Je ungependa kubadilisha jaribio hili na kutengeneza jaribio jipya?</target>
       </trans-unit>
       <trans-unit id="summaryParagraphThree" datatype="html">
         <source> Policymaking with AI (PMAI) contains a core AI decisioning library using algorithms from the sub-disciplines of Planning, Reinforcement Learning and Optimization to enable uncertainty quantification, impact analysis, and exploration of the full space of possible options to inform decision making. Further, PMAI is built on top of Hyperledger fabric to support model and data governance and provide trust and transparency for understanding the provenance of data, models, and results generated by end-users </source>
-        <target> "Utengenezaji sera kwa kutumia AI"(PMAI) una maktaba ya uamuzi wa AI kutokana na taaluma ndogo ndogo za kupanga, kujifunza kwa kujimarisha na kuboresha ndivyo kuwezesha upimaji wa athari na uhakika na uchunguzaji wa namna mbalimbali za kusaidia uamuzi kufanywa. Aidha, PMAI imetengenezwa juu ya fabric ya Hyperledger kusaidia modeli, upangaji wa data na kuhakikisha kuwa kuna uaminifu wa data, modeli na matokeo watumiaji wa dashibodi hupata </target>
+        <target> "Utengenezaji sera kwa kutumia AI"(ADMAI) una maktaba ya uamuzi wa AI kutokana na taaluma ndogo ndogo za kupanga, kujifunza kwa kujimarisha na kuboresha ndivyo kuwezesha upimaji wa athari na uhakika wa uchunguzaji wa namna mbalimbali za kusaidia uamuzi kufanywa. Aidha, ADMAI imetengenezwa juu ya fabric ya Hyperledger ili kusaidia modeli, upangaji wa data na kuhakikisha kuwa kuna uaminifu wa data, modeli na matokeo watumiaji wa dashibodi hupata. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">52,58</context>
@@ -2679,6 +2767,7 @@ Je ungependa kubadilisha jaribio hili na kutengeneza jaribio jipya?</target>
       </trans-unit>
       <trans-unit id="summaryParagraphFour" datatype="html">
         <source> PMAI provides decision-makers with easy navigation through complex intervention spaces in a timely manner is required to generate the most optimal and context-relevant intervention programs, including: 1.) An interactive decision dashboard to fine-tune what is important for their context (including what-if analysis, and adding constraints). 2.) The ability to combine, learn, and compare multiple models. 3.) Calibration and uncertainty quantification which are essential to decision-making based on the real-world observational data, as misleading information could be catastrophic for high stakes decisions (e.g. healthcare). </source>
+        <target> ADMAI husaidia wanaofanya maamuzi kuelewa nafasi za intervention ngumu kwa haraka ndivyo kuzalisha programu za intervention zilizo bora zaidi, kwa mfano: 1.) Dashibodi ya uamuzi inayofanya uchambuzi wa mambo muhimu kutokana na uchambuzi wa "what if" na uongezeko wa vikwazo. 2.) Uwezo wa kuchanganya, kujifunza na kulinganisha modeli mbalimbali. 3.) Kalibration na kupima kiasi ambacho hakina uhakika ni muhimu amabapo maamuzi yanafanywa kutokana na data inayochunguza maisha halisi, kwa sababu habari za kupotosha zaweza kudhulumu ufanyaji wa maamuzi muhimu (Kwa mfano: Maamuzi yanayofanywa katika huduma za afya).</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">61,69</context>
@@ -2688,6 +2777,7 @@ Je ungependa kubadilisha jaribio hili na kutengeneza jaribio jipya?</target>
       </trans-unit>
       <trans-unit id="summaryParagraphFive" datatype="html">
         <source> Specifically, there are three ways in which what if analysis is performed using PMAI: 1.) What if analysis where a decision maker defines intervention packages of interest and the platform runs them and generates predictions. 2.) What if analysis where a decision maker defines a desired outcome trajectory and the platform uses AI algorithms to find intervention packages that meet the desired outcome trajectory. 3.) Algorithm controlled what-if analysis within the constraints set by a modeler with the goal of interrogating the intervention space to reach at candidate intervention packages that a decision maker can filter through depending on their needs. To perform each of the above what-if analyses, experiments – a group of model simulation with common properties defined by the user - are performed where the user defines the required inputs for each of the methods as indicated above. </source>
+        <target> Kuna njia tatu ambazo uchambuzi wa "what if" unaweza kufanywa: 1) Uchambuzi wa "what if" ambao mtu anayefanya maamuzi hufafanua vifurushi vya intervention vinavyompendeza na jukwaa litakalotumiwa kuzalisha utabiri. 2.) Uchambuzi wa "what if" ambao mtu anayefanya maamuzi hufafanua matokeo anayotaka na jukwaa hilo kutumiwa na algorithimu za AI kupata vifurushi vya AI ambavyo hutoa matokeo yanayostahili. 3.) Uchambuzi wa "what if" unaotumia algorithimu katika vikwazo vilivyowekwa na mtengenezaji wa modeli kwa lengo la kuhoji kama nafasi ya intervention itafika vifurushi vya intervention ambavyo mtu afanye maamuzi anaweza kuchambua kulingana na mahitaji yake. Kufanya uchambuzi huu, majaribio hufanywa ambapo mtu anafafanua 'inputs' zinazotakikana kwa kila mbinu kama ilivyoonyeshwa hapa juu. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">72,83</context>
@@ -2697,6 +2787,7 @@ Je ungependa kubadilisha jaribio hili na kutengeneza jaribio jipya?</target>
       </trans-unit>
       <trans-unit id="summaryParagraphSix" datatype="html">
         <source> Our algorithms are developed to learn in the presence of uncertainty and sample the huge intervention space while optimizing the user defined goal. In the real world there are many sources of uncertainty, accordingly, to generate recommendations which are robust the algorithms must be able to learn in the presence of uncertainty. </source>
+        <target> Algorithimu zilizopo zimetengenezwa kujifunza kusipokuwa na uhakika na kutoa sampuli za nafasi ya intervention huku zikiboresha lengo linalobainishwa na mtumiaji wa dashibodi. Katika ulimwengu wa kweli kuna vyanzo vingi visivyo na uhakika. Kwa mnajili wa kuweza kutoa mapendekezo mema, algorithimu hizi zinastahili kujifunza kusipokuwa na uhakika.  </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">86,90</context>
@@ -2706,6 +2797,7 @@ Je ungependa kubadilisha jaribio hili na kutengeneza jaribio jipya?</target>
       </trans-unit>
       <trans-unit id="summaryParagraphSeven" datatype="html">
         <source> With trust at its core, this decision support platform is designed to amplify the value from domain models and data, and it is a demonstration of the value which can be derived from AI and Hybrid Cloud technologies. </source>
+        <target> Uaminifu ukiwa msingi wake, jukwaa hili la kufanya uaamuzi limetengenezwa kukuza thamani kutokana na vikoa vya modeli na data, na ni onyesho la thamani ya AI na Teknologia ya Hybrid Cloud</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/howto/components/how-to/how-to.component.html</context>
           <context context-type="linenumber">93,96</context>
