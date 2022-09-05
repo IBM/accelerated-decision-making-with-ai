@@ -58,7 +58,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterContentChecked {
   subscribeUser: any;
   private who: User;
 
-  siteLanguage:string = 'English';
+  siteLanguage;
   siteLocale: string;
 
   languageList = [
