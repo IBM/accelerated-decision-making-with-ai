@@ -244,10 +244,23 @@ export const FEEDBACK_CONSTANTS = {
 export const LOGIN_CONSTANTS = {
   USER_ROLE_MISSING: $localize`:@@user_role_missing:User Role Missing! Contact the system admin at charles.wachira1@ibm.com.`,
   CLOSE:$localize`:@@close:Close`,
+  LOGOUT:$localize`:@@logout:Logout`,
 };
 
 export const MAP_CONSTANTS = {
   NO_DATA_AVAILABLE: $localize`:@@no_data_available:No data available`,
+};
+
+export const NOTIFICATION_CONSTANTS = {
+  EXPERIMENTS: $localize`:@@experimentsNotification:Experiments`,
+  EXPERIMENTS_ID: $localize`:@@experimentsNotificationId:ab1234`,
+  EXPERIMENTS_COMPLETION_DETAILS: $localize`:@@experimentsCompletionDetails: completed on Mar 4, 2021 1223hrs EAT`,
+  RESULTS: $localize`:@@resultsNotification:Results`,
+  RESULTS_ID: $localize`:@@resultsNotificationId:cd5678`,
+  RESULTS_COMPLETION_DETAILS: $localize`:@@resultsCompletionDetails: completed on Mar 4, 2021 0907hrs EAT`,
+  MODELS: $localize`:@@modelsNotification:Models`,
+  MODEL_ONBOARDING_DETAILS: $localize`:@@modelOnboardingDetails:New malaria model onboarded on Mar 4, 2021 0814hrs EAT, `,
+  MODEL_LINK: $localize`:@@modelLink:model`,
 };
 
 
