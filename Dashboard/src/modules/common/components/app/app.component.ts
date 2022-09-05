@@ -20,7 +20,7 @@ import 'rxjs/add/operator/filter';
 import {ApiService, CacheService, DataService, UserService} from '../../services';
 import {Observable} from 'rxjs';
 import {User} from '../../models';
-import {APP_CONSTANTS, USER_ROLES} from '../../constants';
+import {APP_CONSTANTS, LOGIN_CONSTANTS, NOTIFICATION_CONSTANTS, USER_ROLES} from '../../constants';
 import { isNotNullOrUndefined } from 'codelyzer/util/isNotNullOrUndefined';
 
 @Component({
@@ -35,10 +35,13 @@ export class AppComponent implements OnInit, OnDestroy, AfterContentChecked {
     { title: APP_CONSTANTS.FEEDBACK, path: '/feedback'},
   ];
   activeNgbNav;
-  completedRequestsNotification = {popOverMsg: `<b>Experiments</b><br><a href='/experiments'>ab1234</a><i>`
-    + ` completed on Mar 4, 2021 1223hrs EAT</i><br><br><b>Results</b><br><a href='/results'>cd5678</a><i>`
-    + ` completed on Mar 4, 2021 0907hrs EAT</i><br><br><b>Models</b><br><i>New malaria model onboarded on Mar 4, 2021 0814hrs EAT, </i>`
-    + `<a href='/models'>model</a>`,
+  completedRequestsNotification = {popOverMsg: `<b>`+ NOTIFICATION_CONSTANTS.EXPERIMENTS
+    +`</b><br><a href='/experiments'>`+ NOTIFICATION_CONSTANTS.EXPERIMENTS_ID + `</a><i>`
+    + NOTIFICATION_CONSTANTS.EXPERIMENTS_COMPLETION_DETAILS +`</i><br><br><b>`+ NOTIFICATION_CONSTANTS.RESULTS
+    +`</b><br><a href='/results'>`+ NOTIFICATION_CONSTANTS.RESULTS_ID +`</a><i>`
+    + NOTIFICATION_CONSTANTS.RESULTS_COMPLETION_DETAILS + `</i><br><br><b>`+ NOTIFICATION_CONSTANTS.MODELS + `</b><br><i>`
+    + NOTIFICATION_CONSTANTS.MODEL_ONBOARDING_DETAILS + `</i>`
+    + `<a href='/models'>`+ NOTIFICATION_CONSTANTS.MODEL_LINK +`</a>`,
     disabledButton: false, noOfNotifications: 3};
   userPop = {msg: ``, icon: ``};
   locationStats = 0;
@@ -54,6 +57,15 @@ export class AppComponent implements OnInit, OnDestroy, AfterContentChecked {
   user: Observable<User>;
   subscribeUser: any;
   private who: User;
+
+  siteLanguage:string = 'English';
+  siteLocale: string;
+
+  languageList = [
+    { code: 'en-US', label: 'English' },
+    { code: 'sw', label: 'Kiswahili' },
+    { code: 'fr', label: 'Français' },
+  ];
 
   constructor(public router: Router,
               private cacheService: CacheService,
@@ -85,6 +97,14 @@ export class AppComponent implements OnInit, OnDestroy, AfterContentChecked {
     if (this.loggedIn) {
       this.loadStats();
     }
+
+    const url = window.location.pathname;
+    console.log(url)
+    this.siteLocale = url.split('/')[1];
+    if (this.siteLocale !== null && this.siteLocale !== '') {
+      this.siteLanguage = this.languageList.find(f => f.code === this.siteLocale).label;
+    }
+
     this.subscribeUser = this.user.subscribe(whoami => {
       if (!isNotNullOrUndefined(whoami)) { return; }
       this.who = whoami;
@@ -94,7 +114,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterContentChecked {
       this.userPop = {msg: ``
           + `` + whoami.name + `<br>` + `<hr>`
           + `` + USER_ROLES[whoami.type] + `<br>` + `<hr>`
-          + `` + `<a href='/logout' i18n="@@logout">Log Out</a>` + ``
+          + `` + `<a href='/logout'>`+ LOGIN_CONSTANTS.LOGOUT + `</a>` + ``
           + ``, icon: whoami.name.charAt(0).toUpperCase()};
     });
     this.subscribeDomain = this.dataService.domainObservable.subscribe(domain => {

@@ -76,11 +76,25 @@
                     <span class="sub-text" i18n="Territories covered|Territories covered@@territoriesCovered">Territories Covered</span>
                   </div>
                 </div>
-                <div class="col-4">
+                <div class="col-2 spacing" *ngIf="siteLanguage">
+                  <ng-container>
+                    <mat-icon>language</mat-icon>
+                    <button mat-button [matMenuTriggerFor]="menu">
+                      {{siteLanguage}}
+                      <mat-icon>arrow_drop_down</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                      <a mat-menu-item href="/en-US">English</a>
+                      <a mat-menu-item href="/sw">Kiswahili</a>
+                      <a mat-menu-item href="/fr">Français</a>
+                    </mat-menu>
+                  </ng-container>
+                </div>
+                <div class="col-2">
                   <div class="profile-stats">
                     <span><p></p></span>
                     <ng-template #popContent><div class="popover-body" [innerHTML]=completedRequestsNotification.popOverMsg></div></ng-template>
-                    <ng-template #popTitle><div class="popover-title"><b>Notifications (coming soon)</b></div></ng-template>
+                    <ng-template #popTitle><div class="popover-title"><b i18n="notifications header|Notifications header@@notificationsHeader">Notifications (coming soon)</b></div></ng-template>
                     <button type="button" class="btn btn-light" placement="bottom-right" [ngbPopover]="popContent"
                             [popoverTitle]="popTitle" [disabled]="completedRequestsNotification.disabledButton">
                       <mat-icon matBadge={{completedRequestsNotification.noOfNotifications}} matBadgeColor="accent">notifications</mat-icon>
