@@ -1,6 +1,8 @@
 ### STAGE 1: Build ###
 FROM node:12.22-alpine3.14 AS build
 WORKDIR /usr/src/app
+ARG MAPBOX_API_KEY=MAPBOX_API_KEY
+ENV MAPBOX_API_KEY=$MAPBOX_API_KEY
 COPY package.json package-lock.json ./
 RUN npm install
 COPY . .
