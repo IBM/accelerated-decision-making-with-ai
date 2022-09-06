@@ -51,7 +51,6 @@ jobs:
           FUNC_ID_BLUEMIX_API_KEY: ${{ secrets.FUNC_ID_BLUEMIX_API_KEY }}
           MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
 
-jobs:
   website:
     runs-on: ubuntu-latest
     environment: main
