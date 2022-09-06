@@ -32,7 +32,7 @@ jobs:
         run: echo "DEPLOY_CONDITION=$(../.github/scripts/build-condition.sh main Dashboard)" >> $GITHUB_ENV
         shell: bash
 
-      - if: ${ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }
+      - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
         name: Deploy
         run: ./scripts/main.sh
         shell: bash
