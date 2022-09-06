@@ -147,6 +147,9 @@ jobs:
           mvn install -Dmaven.test.skip=true
           mvn test -B
           mvn clean package -Dmaven.test.skip=true
+        env:
+          FUNC_ID_USERNAME: ${{ secrets.FUNC_ID_USERNAME }}
+          FUNC_ID_PASSWORD: ${{ secrets.FUNC_ID_PASSWORD }}
 
       - name: Deploy timestamp
         run: echo "DEPLOY_TIMESTAMP=$(date +"%Y%m%d-%H%M%S")" >> $GITHUB_ENV
@@ -169,7 +172,6 @@ jobs:
           TRAVIS_BUILD_NUMBER: ${{ github.run.id }}
           GITHUB_REF_NAME: ${{ github.ref.name }}
           FUNC_ID_BLUEMIX_API_KEY: ${{ secrets.FUNC_ID_BLUEMIX_API_KEY }}
-          MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
           FUNC_ID_USERNAME: ${{ secrets.FUNC_ID_USERNAME }}
           FUNC_ID_PASSWORD: ${{ secrets.FUNC_ID_PASSWORD }}
           APP_VERSION: ${{ secrets.APP_VERSION }}
