@@ -63,6 +63,8 @@ jobs:
       - name: Output
         run: |
           echo "1: ${BUILD_CONDITION}"
+          echo $DEPLOY_BRANCH
+          echo ${ github.ref }
 
       - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
         name: Deploy
