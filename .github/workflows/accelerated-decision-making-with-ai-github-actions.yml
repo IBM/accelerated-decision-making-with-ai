@@ -19,6 +19,9 @@ jobs:
         run: sh ./scripts/set-dotenv.sh
         shell: bash
 
+      - name: Run npm install
+        run: npm install
+
       - name: Run Lint
         run: npm run lint
 
@@ -29,12 +32,12 @@ jobs:
         run: docker build -t pmai-dashboard:$DEPLOY_TIMESTAMP-$GITHUB_RUN_ID-$GITHUB_REF_NAME -t pmai-dashboard:latest .
 
       - name: Set build condition env variable
-        run: echo "DEPLOY_CONDITION=$(../.github/scripts/build-condition.sh main Dashboard)" >> $GITHUB_ENV
+        run: echo "DEPLOY_CONDITION=$(sh ../.github/scripts/build-condition.sh main Dashboard)" >> $GITHUB_ENV
         shell: bash
 
       - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
         name: Deploy
-        run: ./scripts/main.sh
+        run: sh ./scripts/main.sh
         shell: bash
         env:
           DEPLOY_TIMESTAMP: $DEPLOY_TIMESTAMP
