@@ -39,7 +39,7 @@ jobs:
           git pull
           git branch
           git status
-          git diff --name-only main...
+          git --no-pager diff --name-only HEAD origin/main
         shell: bash
 
       - name: Set build condition env variable
