@@ -32,7 +32,7 @@ jobs:
         run: echo "DEPLOY_TIMESTAMP=$(date +"%Y%m%d-%H%M%S")" >> $GITHUB_ENV
       
       - name: Docker build
-        run: docker build -t pmai-dashboard:$DEPLOY_TIMESTAMP-$GITHUB_RUN_ID-$GITHUB_REF_NAME -t pmai-dashboard:latest .
+        run: docker build -t pmai-dashboard:$DEPLOY_TIMESTAMP-$GITHUB_RUN_ID -t pmai-dashboard:latest .
 
       - name: Set build condition env variable
         run: |
@@ -123,3 +123,64 @@ jobs:
         env:
           FUNC_ID_USERNAME: ${{ secrets.FUNC_ID_USERNAME }}
           FUNC_ID_PASSWORD: ${{ secrets.FUNC_ID_PASSWORD }}
+
+  appserver:
+    runs-on: ubuntu-latest
+    environment: main
+    defaults:
+      run:
+        working-directory: Appserver
+    env:
+      DEPLOY_BRANCH: ${{ github.ref.type == 'tag' || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/github-actions' }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+
+      - name: Build with Maven
+        run: |
+          cp settings.xml $HOME/.m2/settings.xml
+          mvn install -Dmaven.test.skip=true
+          mvn test -B
+          mvn clean package -Dmaven.test.skip=true
+
+      - name: Deploy timestamp
+        run: echo "DEPLOY_TIMESTAMP=$(date +"%Y%m%d-%H%M%S")" >> $GITHUB_ENV
+      
+      - name: Docker build
+        run: docker build -t pmai-taskclerk:latest -t pmai-taskclerk:$DEPLOY_TIMESTAMP-$GITHUB_RUN_ID --build-arg SPRING_ENV=$SPRING_ENV --build-arg APP_VERSION=$APP_VERSION --build-arg POSTGRES_PASS=$POSTGRES_PASS --build-arg KEY_64=$KEY_64 --build-arg KEY_64N=$KEY_64N --build-arg POSTGRES_USERNAME=$POSTGRES_USERNAME --build-arg ENCRYPTION_KEY=$ENCRYPTION_KEY --build-arg HOSTNAME=$HOSTNAME --build-arg POSTGRES_URL=$POSTGRES_URL --build-arg JAR_FILE=target/taskclerk-1.0.0.jar .
+
+      - name: Set build condition env variable
+        run: |
+          git pull
+          if sh ../.github/scripts/build-condition.sh origin/main Appserver; then echo "DEPLOY_CONDITION=true" >> $GITHUB_ENV; else echo "DEPLOY_CONDITION=false"; fi
+        shell: bash
+
+      - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
+        name: Deploy
+        run: sh ./scripts/main.sh
+        shell: bash
+        env:
+          DEPLOY_TIMESTAMP: ${{ env.DEPLOY_TIMESTAMP }}
+          TRAVIS_BUILD_NUMBER: ${{ github.run.id }}
+          GITHUB_REF_NAME: ${{ github.ref.name }}
+          FUNC_ID_BLUEMIX_API_KEY: ${{ secrets.FUNC_ID_BLUEMIX_API_KEY }}
+          MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
+          FUNC_ID_USERNAME: ${{ secrets.FUNC_ID_USERNAME }}
+          FUNC_ID_PASSWORD: ${{ secrets.FUNC_ID_PASSWORD }}
+          APP_VERSION: ${{ secrets.APP_VERSION }}
+          COS_STORAGE: ${{ secrets.COS_STORAGE }}
+          ENCRYPTION_KEY: ${{ secrets.ENCRYPTION_KEY }}
+          ENVIRONMENT_COMMAND_NAME: ${{ secrets.ENVIRONMENT_COMMAND_NAME }}
+          GTHB_OAUTH_TOKEN: ${{ secrets.GTHB_OAUTH_TOKEN }}
+          HOSTNAME: ${{ secrets.HOSTNAME }}
+          KEY_64: ${{ secrets.KEY_64 }}
+          KEY_64N: ${{ secrets.KEY_64N }}
+          POSTGRES_PASS: ${{ secrets.POSTGRES_PASS }}
+          POSTGRES_URL: ${{ secrets.POSTGRES_URL }}
+          POSTGRES_USERNAME: ${{ secrets.POSTGRES_USERNAME }}
+
