@@ -34,6 +34,12 @@ jobs:
       # - name: Docker build
       #   run: docker build -t pmai-dashboard:$DEPLOY_TIMESTAMP-$GITHUB_RUN_ID-$GITHUB_REF_NAME -t pmai-dashboard:latest .
 
+      - name: Test
+        run: |
+          git branch
+          git status
+        shell: bash
+
       - name: Set build condition env variable
         run: echo "DEPLOY_CONDITION=$(sh ../.github/scripts/build-condition.sh origin/main Dashboard)" >> $GITHUB_ENV
         shell: bash
