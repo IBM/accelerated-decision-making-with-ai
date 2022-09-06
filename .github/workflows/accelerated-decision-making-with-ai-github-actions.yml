@@ -30,6 +30,8 @@ jobs:
       
       - name: Docker build
         run: docker build -t pmai-dashboard:$DEPLOY_TIMESTAMP-$GITHUB_RUN_ID-$GITHUB_REF_NAME -t pmai-dashboard:latest .
+        env:
+          MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
 
       - name: Set build condition env variable
         run: echo "DEPLOY_CONDITION=$(sh ../.github/scripts/build-condition.sh main Dashboard)" >> $GITHUB_ENV
