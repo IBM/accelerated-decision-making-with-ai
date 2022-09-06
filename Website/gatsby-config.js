@@ -37,12 +37,6 @@ module.exports = {
       resolve: 'gatsby-theme-carbon',
       options: {
         mediumAccount: 'carbondesign',
-        // repository: {
-        //   baseUrl:
-        //     'https://github.com/IBM/accelerated-decision-making-with-ai',
-        //   subDirectory: '/Website',
-        //   branch: 'main',
-        // },
       },
     },
     {
