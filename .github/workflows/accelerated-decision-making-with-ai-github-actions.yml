@@ -55,6 +55,9 @@ jobs:
   website:
     runs-on: ubuntu-latest
     environment: main
+    defaults:
+      run:
+        working-directory: Website
     env:
       DEPLOY_BRANCH: ${{ github.ref.type == 'tag' || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/github-actions' }}
     steps:
