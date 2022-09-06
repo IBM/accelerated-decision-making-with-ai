@@ -26,7 +26,7 @@ jobs:
         run: npm run lint
 
       - name: Deploy timestamp
-        run: echo "DEPLOY_TIMESTAMP=$(date "%Y%m%d-%H%M%S")" >> $GITHUB_ENV
+        run: echo "DEPLOY_TIMESTAMP=$(date +"%Y%m%d-%H%M%S")" >> $GITHUB_ENV
       
       - name: Docker build
         run: docker build -t pmai-dashboard:$DEPLOY_TIMESTAMP-$GITHUB_RUN_ID-$GITHUB_REF_NAME -t pmai-dashboard:latest .
