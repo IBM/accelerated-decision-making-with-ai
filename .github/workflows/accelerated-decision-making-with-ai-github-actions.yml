@@ -34,59 +34,19 @@ jobs:
       - name: Docker build
         run: docker build -t pmai-dashboard:$DEPLOY_TIMESTAMP-$GITHUB_RUN_ID-$GITHUB_REF_NAME -t pmai-dashboard:latest .
 
-      # - name: Test
-      #   run: |
-      #     git pull
-      #     git branch
-      #     git status
-      #     git --no-pager diff --name-only HEAD origin/main | sort -u | uniq | grep Dashboard > /dev/null
-      #   shell: bash
-
-      # - name: tet build condition env variable
-      #   run: sh ../.github/scripts/build-condition.sh origin/main Dashboard
-      #   shell: bash
-
       - name: Set build condition env variable
         run: |
           git pull
           if sh ../.github/scripts/build-condition.sh origin/main Dashboard; then echo "DEPLOY_CONDITION=true" >> $GITHUB_ENV; else echo "DEPLOY_CONDITION=false"; fi
         shell: bash
 
-      # - name: More true
-      #   run: if sh ../.github/scripts/build-condition.sh origin/main Dashboard; then echo "BUILD_CONDITION1=true" >> $GITHUB_ENV; else echo "BUILD_CONDITION1=false"; fi
-      #   shell: bash
-
-      # - name: More false
-      #   run: if sh ../.github/scripts/build-condition.sh origin/main Dshoard; then echo "BUILD_CONDITION2=true" >> $GITHUB_ENV; else echo "BUILD_CONDITION2=false"; fi
-      #   shell: bash
-
-      # - name: Output
-      #   run: |
-      #     echo $DEPLOY_CONDITION
-      #     echo $DEPLOY_BRANCH
-
-      # - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
-      #   name: Deploy
-      #   run: echo "AWESOME"
-      #   shell: bash
-
-      # - if: ${{ env.DEPLOY_BRANCH }}
-      #   name: Deploy1
-      #   run: echo "AWESOME1"
-      #   shell: bash
-
-      # - if: ${{ env.DEPLOY_CONDITION }}
-      #   name: Deploy2
-      #   run: echo "AWESOME2"
-      #   shell: bash
-
       - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
         name: Deploy
         run: sh ./scripts/main.sh
         shell: bash
         env:
-          DEPLOY_TIMESTAMP: $DEPLOY_TIMESTAMP
-          TRAVIS_BUILD_NUMBER: $GITHUB_RUN_ID
-          GITHUB_REF_NAME: $GITHUB_REF_NAME
+          DEPLOY_TIMESTAMP: ${{ env.DEPLOY_TIMESTAMP }}
+          TRAVIS_BUILD_NUMBER: ${{ env.GITHUB_RUN_ID }}
+          GITHUB_REF_NAME: ${{ env.GITHUB_REF_NAME }}
           FUNC_ID_BLUEMIX_API_KEY: ${{ secrets.FUNC_ID_BLUEMIX_API_KEY }}
           MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
