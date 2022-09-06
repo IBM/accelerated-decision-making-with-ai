@@ -34,13 +34,13 @@ jobs:
       # - name: Docker build
       #   run: docker build -t pmai-dashboard:$DEPLOY_TIMESTAMP-$GITHUB_RUN_ID-$GITHUB_REF_NAME -t pmai-dashboard:latest .
 
-      - name: Test
-        run: |
-          git pull
-          git branch
-          git status
-          git --no-pager diff --name-only HEAD origin/main | sort -u | uniq | grep Dashboard > /dev/null
-        shell: bash
+      # - name: Test
+      #   run: |
+      #     git pull
+      #     git branch
+      #     git status
+      #     git --no-pager diff --name-only HEAD origin/main | sort -u | uniq | grep Dashboard > /dev/null
+      #   shell: bash
 
       - name: tet build condition env variable
         run: sh ../.github/scripts/build-condition.sh origin/main Dashboard
