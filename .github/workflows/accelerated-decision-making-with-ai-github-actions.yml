@@ -109,7 +109,6 @@ jobs:
           cp settings.xml $HOME/.m2/settings.xml
           mvn -s settings.xml clean package
           mvn -s settings.xml test
-          mvn cobertura:cobertura
 
       - name: Set build condition env variable
         run: |
