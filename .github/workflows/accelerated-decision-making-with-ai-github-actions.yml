@@ -20,33 +20,31 @@ jobs:
         shell: bash
         env: 
           MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
-        run: |
-          sh ./scripts/set-dotenv.sh
-          echo "$MAPBOX_API_KEY"
+        run: sh ./scripts/set-dotenv.sh
 
-      # - name: Run npm install
-      #   run: npm install
+      - name: Run npm install
+        run: npm install
 
-      # - name: Run Lint
-      #   run: npm run lint
+      - name: Run Lint
+        run: npm run lint
 
-      # - name: Deploy timestamp
-      #   run: echo "DEPLOY_TIMESTAMP=$(date +"%Y%m%d-%H%M%S")" >> $GITHUB_ENV
+      - name: Deploy timestamp
+        run: echo "DEPLOY_TIMESTAMP=$(date +"%Y%m%d-%H%M%S")" >> $GITHUB_ENV
       
-      # - name: Docker build
-      #   run: docker build -t pmai-dashboard:$DEPLOY_TIMESTAMP-$GITHUB_RUN_ID-$GITHUB_REF_NAME -t pmai-dashboard:latest .
+      - name: Docker build
+        run: docker build -t pmai-dashboard:$DEPLOY_TIMESTAMP-$GITHUB_RUN_ID-$GITHUB_REF_NAME -t pmai-dashboard:latest .
 
-      # - name: Set build condition env variable
-      #   run: echo "DEPLOY_CONDITION=$(sh ../.github/scripts/build-condition.sh main Dashboard)" >> $GITHUB_ENV
-      #   shell: bash
+      - name: Set build condition env variable
+        run: echo "DEPLOY_CONDITION=$(sh ../.github/scripts/build-condition.sh main Dashboard)" >> $GITHUB_ENV
+        shell: bash
 
-      # - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
-      #   name: Deploy
-      #   run: sh ./scripts/main.sh
-      #   shell: bash
-      #   env:
-      #     DEPLOY_TIMESTAMP: $DEPLOY_TIMESTAMP
-      #     TRAVIS_BUILD_NUMBER: $GITHUB_RUN_ID
-      #     GITHUB_REF_NAME: $GITHUB_REF_NAME
-      #     FUNC_ID_BLUEMIX_API_KEY: ${{ secrets.FUNC_ID_BLUEMIX_API_KEY }}
-      #     MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
+      - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
+        name: Deploy
+        run: sh ./scripts/main.sh
+        shell: bash
+        env:
+          DEPLOY_TIMESTAMP: $DEPLOY_TIMESTAMP
+          TRAVIS_BUILD_NUMBER: $GITHUB_RUN_ID
+          GITHUB_REF_NAME: $GITHUB_REF_NAME
+          FUNC_ID_BLUEMIX_API_KEY: ${{ secrets.FUNC_ID_BLUEMIX_API_KEY }}
+          MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
