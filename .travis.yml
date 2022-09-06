@@ -1,243 +1,243 @@
-jobs:
-  include:
-    - language: node_js
+# jobs:
+#   include:
+#     - language: node_js
 
-      name: "Dashboard"
+#       name: "Dashboard"
 
-      group: bluezone
+#       group: bluezone
 
-      sudo: required
+#       sudo: required
 
-      node_js: "12.18.4"
+#       node_js: "12.18.4"
 
-      addons:
-        chrome: stable
+#       addons:
+#         chrome: stable
 
-      services: docker
+#       services: docker
 
-      cache:
-        directories:
-          - ./node_modules
+#       cache:
+#         directories:
+#           - ./node_modules
 
-      before_install:
-        - cd Dashboard
+#       before_install:
+#         - cd Dashboard
 
-      script:
-        - npm run lint
-        - if sh ../.travis/build-condition.sh $TRAVIS_COMMIT_RANGE Dashboard; then export BUILD_CONDITION=true; else echo "BUILD_CONDITION=false"; fi
-        - sh scripts/set-dotenv.sh
+#       script:
+#         - npm run lint
+#         - if sh ../.travis/build-condition.sh $TRAVIS_COMMIT_RANGE Dashboard; then export BUILD_CONDITION=true; else echo "BUILD_CONDITION=false"; fi
+#         - sh scripts/set-dotenv.sh
 
-      after_success:
-        - echo $BUILD_CONDITION
-        - export DEPLOY_TIMESTAMP=`date +'%Y%m%d-%H%M%S'`
-        - travis_wait 60 docker build -t pmai-dashboard:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH -t pmai-dashboard:latest .
+#       after_success:
+#         - echo $BUILD_CONDITION
+#         - export DEPLOY_TIMESTAMP=`date +'%Y%m%d-%H%M%S'`
+#         - travis_wait 60 docker build -t pmai-dashboard:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH -t pmai-dashboard:latest .
 
-      deploy:
-        - provider: script
-          skip_cleanup: true
-          script: sh scripts/main.sh
-          on:
-            branch: main
-            condition: $BUILD_CONDITION
+#       deploy:
+#         - provider: script
+#           skip_cleanup: true
+#           script: sh scripts/main.sh
+#           on:
+#             branch: main
+#             condition: $BUILD_CONDITION
 
-        - provider: script
-          skip_cleanup: true
-          script: sh scripts/main.sh
-          on:
-            tags: true
+#         - provider: script
+#           skip_cleanup: true
+#           script: sh scripts/main.sh
+#           on:
+#             tags: true
 
-    - language: node_js
+#     - language: node_js
 
-      name: "Website"
+#       name: "Website"
 
-      node_js: "12.18.4"
-      cache:
-        directories:
-          - node_modules
+#       node_js: "12.18.4"
+#       cache:
+#         directories:
+#           - node_modules
 
-      before_install:
-        - cd Website
+#       before_install:
+#         - cd Website
 
-      before_script:
-        - "npm i -g gatsby"
-        - "npm i"
-      script:
-        - "npm run test"
-        - "npm run preDeploy"
-        - if sh ../.travis/build-condition.sh $TRAVIS_COMMIT_RANGE Website; then export BUILD_CONDITION=true; else echo "BUILD_CONDITION=false"; fi
+#       before_script:
+#         - "npm i -g gatsby"
+#         - "npm i"
+#       script:
+#         - "npm run test"
+#         - "npm run preDeploy"
+#         - if sh ../.travis/build-condition.sh $TRAVIS_COMMIT_RANGE Website; then export BUILD_CONDITION=true; else echo "BUILD_CONDITION=false"; fi
 
-      after_success:
-        - echo $BUILD_CONDITION
+#       after_success:
+#         - echo $BUILD_CONDITION
 
-      deploy:
-        provider: pages
-        skip_cleanup: true
-        github_token: $GITHUB_OAUTH_TOKEN # Set in the settings page of your repository, as a secure variable
-        github_url: github.com
-        local_dir: Website/public
-        keep_history: true
-        on:
-          branch: main
-          condition: $BUILD_CONDITION
+#       deploy:
+#         provider: pages
+#         skip_cleanup: true
+#         github_token: $GITHUB_OAUTH_TOKEN # Set in the settings page of your repository, as a secure variable
+#         github_url: github.com
+#         local_dir: Website/public
+#         keep_history: true
+#         on:
+#           branch: main
+#           condition: $BUILD_CONDITION
 
-    - language: java
+#     - language: java
 
-      name: "DataModels"
+#       name: "DataModels"
 
-      jdk: openjdk8
+#       jdk: openjdk8
 
-      before_install:
-        - cd DataModels
-        # copy our settings so that all maven commands implicitly use them
-        - cp settings.xml $HOME/.m2/settings.xml
+#       before_install:
+#         - cd DataModels
+#         # copy our settings so that all maven commands implicitly use them
+#         - cp settings.xml $HOME/.m2/settings.xml
 
-      script:
-        - mvn -s settings.xml clean package
-        - mvn -s settings.xml test
-        - mvn cobertura:cobertura
-        - if sh ../.travis/build-condition.sh $TRAVIS_COMMIT_RANGE DataModels; then export BUILD_CONDITION=true; else echo "BUILD_CONDITION=false"; fi
+#       script:
+#         - mvn -s settings.xml clean package
+#         - mvn -s settings.xml test
+#         - mvn cobertura:cobertura
+#         - if sh ../.travis/build-condition.sh $TRAVIS_COMMIT_RANGE DataModels; then export BUILD_CONDITION=true; else echo "BUILD_CONDITION=false"; fi
 
-      after_success:
-        - echo $BUILD_CONDITION
+#       after_success:
+#         - echo $BUILD_CONDITION
 
-      deploy:
-        - provider: script
-          script: mvn deploy --settings=settings.xml
-          skip_cleanup: true
-          on:
-            branch: main
-            condition: $BUILD_CONDITION
+#       deploy:
+#         - provider: script
+#           script: mvn deploy --settings=settings.xml
+#           skip_cleanup: true
+#           on:
+#             branch: main
+#             condition: $BUILD_CONDITION
 
-    - language: java
+#     - language: java
 
-      name: "Appserver"
+#       name: "Appserver"
 
-      sudo: true
+#       sudo: true
 
-      services: docker
+#       services: docker
 
-      jdk: openjdk8
+#       jdk: openjdk8
 
-      before_install:
-        - cd Appserver
-        - cp settings.xml $HOME/.m2/settings.xml
+#       before_install:
+#         - cd Appserver
+#         - cp settings.xml $HOME/.m2/settings.xml
 
-      install:
-        - mvn install -Dmaven.test.skip=true
+#       install:
+#         - mvn install -Dmaven.test.skip=true
 
-      script:
-        - mvn test -B
-        - mvn clean package -Dmaven.test.skip=true
-        - if sh ../.travis/build-condition.sh $TRAVIS_COMMIT_RANGE Appserver; then export BUILD_CONDITION=true; else echo "BUILD_CONDITION=false"; fi
+#       script:
+#         - mvn test -B
+#         - mvn clean package -Dmaven.test.skip=true
+#         - if sh ../.travis/build-condition.sh $TRAVIS_COMMIT_RANGE Appserver; then export BUILD_CONDITION=true; else echo "BUILD_CONDITION=false"; fi
 
-      after_success:
-        - echo $BUILD_CONDITION
-        - export DEPLOY_TIMESTAMP=`date +'%Y%m%d-%H%M%S'`
-        - docker build -t pmai-taskclerk:latest -t pmai-taskclerk:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER
-          --build-arg SPRING_ENV=$SPRING_ENV --build-arg APP_VERSION=$APP_VERSION --build-arg
-          POSTGRES_PASS=$POSTGRES_PASS --build-arg KEY_64=$KEY_64 --build-arg KEY_64N=$KEY_64N
-          --build-arg POSTGRES_USERNAME=$POSTGRES_USERNAME --build-arg ENCRYPTION_KEY=$ENCRYPTION_KEY --build-arg
-          HOSTNAME=$HOSTNAME --build-arg POSTGRES_URL=$POSTGRES_URL --build-arg=JAR_FILE=target/taskclerk-1.0.0.jar
-          .
-      cache:
-        directories:
-          - "$HOME/.m2"
+#       after_success:
+#         - echo $BUILD_CONDITION
+#         - export DEPLOY_TIMESTAMP=`date +'%Y%m%d-%H%M%S'`
+#         - docker build -t pmai-taskclerk:latest -t pmai-taskclerk:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER
+#           --build-arg SPRING_ENV=$SPRING_ENV --build-arg APP_VERSION=$APP_VERSION --build-arg
+#           POSTGRES_PASS=$POSTGRES_PASS --build-arg KEY_64=$KEY_64 --build-arg KEY_64N=$KEY_64N
+#           --build-arg POSTGRES_USERNAME=$POSTGRES_USERNAME --build-arg ENCRYPTION_KEY=$ENCRYPTION_KEY --build-arg
+#           HOSTNAME=$HOSTNAME --build-arg POSTGRES_URL=$POSTGRES_URL --build-arg=JAR_FILE=target/taskclerk-1.0.0.jar
+#           .
+#       cache:
+#         directories:
+#           - "$HOME/.m2"
 
-      before_deploy:
-        - export TRAVIS_TAG=$TRAVIS_TAG
-        - echo $TRAVIS_TAG
+#       before_deploy:
+#         - export TRAVIS_TAG=$TRAVIS_TAG
+#         - echo $TRAVIS_TAG
 
-      deploy:
-        - provider: script
-          skip_cleanup: true
-          script: chmod +x ./scripts/* && ./scripts/main.sh
-          on:
-            branch: main
-            condition: $BUILD_CONDITION
+#       deploy:
+#         - provider: script
+#           skip_cleanup: true
+#           script: chmod +x ./scripts/* && ./scripts/main.sh
+#           on:
+#             branch: main
+#             condition: $BUILD_CONDITION
 
-        - provider: script
-          skip_cleanup: true
-          script: chmod +x ./scripts/* && ./scripts/main.sh
-          on:
-            tags: true
+#         - provider: script
+#           skip_cleanup: true
+#           script: chmod +x ./scripts/* && ./scripts/main.sh
+#           on:
+#             tags: true
 
-    - language: python
+#     - language: python
 
-      name: "JobDeploymentService"
+#       name: "JobDeploymentService"
 
-      python: "3.8.10"
+#       python: "3.8.10"
 
-      sudo: true
+#       sudo: true
 
-      services: docker
+#       services: docker
 
-      before_install:
-        - cd JobDeploymentService
+#       before_install:
+#         - cd JobDeploymentService
 
-      install:
-        - pip install -r requirements.txt
+#       install:
+#         - pip install -r requirements.txt
 
-      script:
-        - python --version
-        - if sh ../.travis/build-condition.sh $TRAVIS_COMMIT_RANGE JobDeploymentService; then export BUILD_CONDITION=true; else echo "BUILD_CONDITION=false"; fi
+#       script:
+#         - python --version
+#         - if sh ../.travis/build-condition.sh $TRAVIS_COMMIT_RANGE JobDeploymentService; then export BUILD_CONDITION=true; else echo "BUILD_CONDITION=false"; fi
 
-      after_success:
-        - echo $BUILD_CONDITION
-        - export DEPLOY_TIMESTAMP=`date +'%Y%m%d-%H%M%S'`
-        - docker build -t jds:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH -t jds:latest .
+#       after_success:
+#         - echo $BUILD_CONDITION
+#         - export DEPLOY_TIMESTAMP=`date +'%Y%m%d-%H%M%S'`
+#         - docker build -t jds:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH -t jds:latest .
 
-      deploy:
-        - provider: script
-          skip_cleanup: true
-          script: sh scripts/main.sh
-          on:
-            branch: main
-            condition: $BUILD_CONDITION
+#       deploy:
+#         - provider: script
+#           skip_cleanup: true
+#           script: sh scripts/main.sh
+#           on:
+#             branch: main
+#             condition: $BUILD_CONDITION
 
-        - provider: script
-          skip_cleanup: true
-          script: sh scripts/main.sh
-          on:
-            tags: true
+#         - provider: script
+#           skip_cleanup: true
+#           script: sh scripts/main.sh
+#           on:
+#             tags: true
 
-    - language: python
+#     - language: python
 
-      name: "OptimizationEngine"
+#       name: "OptimizationEngine"
 
-      python: "3.8.10"
+#       python: "3.8.10"
 
-      sudo: true
+#       sudo: true
 
-      services: docker
+#       services: docker
 
-      before_install:
-        - cd OptimizationEngine
+#       before_install:
+#         - cd OptimizationEngine
 
-      install:
-        - pip install -r requirements.txt
+#       install:
+#         - pip install -r requirements.txt
 
-      script:
-        - python --version
-        - if sh ../.travis/build-condition.sh $TRAVIS_COMMIT_RANGE OptimizationEngine; then export BUILD_CONDITION=true; else echo "BUILD_CONDITION=false"; fi
+#       script:
+#         - python --version
+#         - if sh ../.travis/build-condition.sh $TRAVIS_COMMIT_RANGE OptimizationEngine; then export BUILD_CONDITION=true; else echo "BUILD_CONDITION=false"; fi
 
-      after_success:
-        - echo $BUILD_CONDITION
-        - export DEPLOY_TIMESTAMP=`date +'%Y%m%d-%H%M%S'`
-        - docker build -t optimization-engine:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH -t optimization-engine:latest .
+#       after_success:
+#         - echo $BUILD_CONDITION
+#         - export DEPLOY_TIMESTAMP=`date +'%Y%m%d-%H%M%S'`
+#         - docker build -t optimization-engine:$DEPLOY_TIMESTAMP-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH -t optimization-engine:latest .
 
-      deploy:
-        - provider: script
-          skip_cleanup: true
-          script: sh scripts/main.sh
-          on:
-            branch: main
-            condition: $BUILD_CONDITION
+#       deploy:
+#         - provider: script
+#           skip_cleanup: true
+#           script: sh scripts/main.sh
+#           on:
+#             branch: main
+#             condition: $BUILD_CONDITION
 
-        - provider: script
-          skip_cleanup: true
-          script: sh scripts/main.sh
-          on:
-            tags: true
+#         - provider: script
+#           skip_cleanup: true
+#           script: sh scripts/main.sh
+#           on:
+#             tags: true
 
-# notifications:
-#   slack: TODO: Add slack url
+# # notifications:
+# #   slack: TODO: Add slack url
