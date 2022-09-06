@@ -49,7 +49,7 @@ jobs:
       - name: Set build condition env variable
         run: |
           git pull
-          if sh ../.github/scripts/build-condition.sh origin/main Dashboard; then echo "BUILD_CONDITION=true" >> $GITHUB_ENV; else echo "BUILD_CONDITION=false"; fi
+          if sh ../.github/scripts/build-condition.sh origin/main Dashboard; then echo "DEPLOY_CONDITION=true" >> $GITHUB_ENV; else echo "DEPLOY_CONDITION=false"; fi
         shell: bash
 
       # - name: More true
@@ -62,9 +62,8 @@ jobs:
 
       - name: Output
         run: |
-          echo "1: ${BUILD_CONDITION}"
+          echo $DEPLOY_CONDITION
           echo $DEPLOY_BRANCH
-          echo ${{ github.ref }}
 
       - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
         name: Deploy
