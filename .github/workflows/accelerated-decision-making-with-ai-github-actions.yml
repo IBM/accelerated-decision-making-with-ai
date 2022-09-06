@@ -14,6 +14,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '12.18.4'
+          cache: npm
 
       - name: Run set dotenv script
         run: sh ./scripts/set-dotenv.sh
@@ -29,7 +30,7 @@ jobs:
         run: echo "DEPLOY_TIMESTAMP=$(date +"%Y%m%d-%H%M%S")" >> $GITHUB_ENV
       
       - name: Docker build
-        run: docker build -t pmai-dashboard:$DEPLOY_TIMESTAMP-$GITHUB_RUN_ID-$GITHUB_REF_NAME -t pmai-dashboard:latest .
+        run: docker build -e MAPBOX_API_KEY=${{ secrets.MAPBOX_API_KEY }} -t pmai-dashboard:$DEPLOY_TIMESTAMP-$GITHUB_RUN_ID-$GITHUB_REF_NAME -t pmai-dashboard:latest .
         env:
           MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
 
