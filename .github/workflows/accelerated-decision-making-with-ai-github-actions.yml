@@ -186,3 +186,88 @@ jobs:
           POSTGRES_URL: ${{ secrets.POSTGRES_URL }}
           POSTGRES_USERNAME: ${{ secrets.POSTGRES_USERNAME }}
 
+  jobdeploymentservice:
+    runs-on: ubuntu-latest
+    environment: main
+    defaults:
+      run:
+        working-directory: JobDeploymentService
+    env:
+      DEPLOY_BRANCH: ${{ github.ref.type == 'tag' || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/github-actions' }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Deploy timestamp
+        run: echo "DEPLOY_TIMESTAMP=$(date +"%Y%m%d-%H%M%S")" >> $GITHUB_ENV
+      
+      - name: Docker build
+        run: docker build -t jds:$DEPLOY_TIMESTAMP-$GITHUB_RUN_ID -t jds:latest .
+
+      - name: Set build condition env variable
+        run: |
+          git pull
+          if sh ../.github/scripts/build-condition.sh origin/main JobDeploymentService; then echo "DEPLOY_CONDITION=true" >> $GITHUB_ENV; else echo "DEPLOY_CONDITION=false"; fi
+        shell: bash
+
+      - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
+        name: Deploy
+        run: sh ./scripts/main.sh
+        shell: bash
+        env:
+          DEPLOY_TIMESTAMP: ${{ env.DEPLOY_TIMESTAMP }}
+          TRAVIS_BUILD_NUMBER: ${{ github.run.id }}
+          GITHUB_REF_NAME: ${{ github.ref.name }}
+          FUNC_ID_BLUEMIX_API_KEY: ${{ secrets.FUNC_ID_BLUEMIX_API_KEY }}
+
+  optimizationengine:
+    runs-on: ubuntu-latest
+    environment: main
+    defaults:
+      run:
+        working-directory: OptimizationEngine
+    env:
+      DEPLOY_BRANCH: ${{ github.ref.type == 'tag' || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/github-actions' }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Deploy timestamp
+        run: echo "DEPLOY_TIMESTAMP=$(date +"%Y%m%d-%H%M%S")" >> $GITHUB_ENV
+      
+      - name: Docker build
+        run: docker build -t optimization-engine:$DEPLOY_TIMESTAMP-$GITHUB_RUN_ID -t optimization-engine:latest .
+
+      - name: Set build condition env variable
+        run: |
+          git pull
+          if sh ../.github/scripts/build-condition.sh origin/main OptimizationEngine; then echo "DEPLOY_CONDITION=true" >> $GITHUB_ENV; else echo "DEPLOY_CONDITION=false"; fi
+        shell: bash
+
+      - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
+        name: Deploy
+        run: sh ./scripts/main.sh
+        shell: bash
+        env:
+          DEPLOY_TIMESTAMP: ${{ env.DEPLOY_TIMESTAMP }}
+          TRAVIS_BUILD_NUMBER: ${{ github.run.id }}
+          GITHUB_REF_NAME: ${{ github.ref.name }}
+          FUNC_ID_BLUEMIX_API_KEY: ${{ secrets.FUNC_ID_BLUEMIX_API_KEY }}
