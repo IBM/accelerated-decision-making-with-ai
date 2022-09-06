@@ -86,22 +86,3 @@ jobs:
           deploy-branch: gh-pages
           gatsby-args: --prefix-paths
           working-dir: Website
-
-      # - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
-      #   name: Deploy
-      #   run: |
-      #     cd public
-      #     git init
-      #     git add -A
-      #     git config --local user.email "action@github.com"
-      #     git config --local user.name "GitHub Action"
-      #     git commit -m 'deploy'
-      #     git push -f git@github.com:<USERNAME>/<REPO>.git main:gh-pages
-      #     cd ..
-      #   shell: bash
-      #   env:
-      #     DEPLOY_TIMESTAMP: ${{ env.DEPLOY_TIMESTAMP }}
-      #     TRAVIS_BUILD_NUMBER: ${{ env.GITHUB_RUN_ID }}
-      #     GITHUB_REF_NAME: ${{ env.GITHUB_REF_NAME }}
-      #     FUNC_ID_BLUEMIX_API_KEY: ${{ secrets.FUNC_ID_BLUEMIX_API_KEY }}
-      #     MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
