@@ -71,6 +71,16 @@ jobs:
         run: echo "AWESOME"
         shell: bash
 
+      - if: ${{ env.DEPLOY_BRANCH }}
+        name: Deploy1
+        run: echo "AWESOME1"
+        shell: bash
+
+      - if: ${{ env.DEPLOY_CONDITION }}
+        name: Deploy2
+        run: echo "AWESOME2"
+        shell: bash
+
       # - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
       #   name: Deploy
       #   run: sh ./scripts/main.sh
