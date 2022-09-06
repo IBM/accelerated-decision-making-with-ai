@@ -16,7 +16,7 @@ jobs:
           node-version: '12.18.4'
 
       - name: Run set dotenv script
-        run: ./scripts/set-dotenv.sh
+        run: sh ./scripts/set-dotenv.sh
         shell: bash
 
       - name: Run Lint
