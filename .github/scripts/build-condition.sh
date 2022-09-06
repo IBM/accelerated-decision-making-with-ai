@@ -28,4 +28,4 @@ echo "CODE_DIRECTORY: $CODE_DIRECTORY"
 ############################################################################
 # Git diff to check whether the provided code directory is among the diff  #
 ############################################################################
-git --no-pager diff --name-only $1...HEAD | sort -u | uniq | grep $2 > /dev/null
+git --no-pager diff --name-only $1..HEAD | sort -u | uniq | grep $2 > /dev/null
