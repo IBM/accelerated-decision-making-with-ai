@@ -16,9 +16,12 @@ jobs:
           node-version: '12.18.4'
 
       - name: Run set dotenv script
-        run: sh ./scripts/set-dotenv.sh
+        shell: bash
         env: 
           MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
+        run: |
+          sh ./scripts/set-dotenv.sh
+          echo "$MAPBOX_API_KEY"
 
       # - name: Run npm install
       #   run: npm install
