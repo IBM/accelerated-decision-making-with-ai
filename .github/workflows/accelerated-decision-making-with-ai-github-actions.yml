@@ -17,7 +17,6 @@ jobs:
 
       - name: Run set dotenv script
         run: sh ./scripts/set-dotenv.sh
-        shell: bash
         env: 
           MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
 
