@@ -46,8 +46,8 @@ jobs:
         shell: bash
         env:
           DEPLOY_TIMESTAMP: ${{ env.DEPLOY_TIMESTAMP }}
-          TRAVIS_BUILD_NUMBER: ${{ env.GITHUB_RUN_ID }}
-          GITHUB_REF_NAME: ${{ env.GITHUB_REF_NAME }}
+          TRAVIS_BUILD_NUMBER: ${{ github.run.id }}
+          GITHUB_REF_NAME: ${{ github.ref.name }}
           FUNC_ID_BLUEMIX_API_KEY: ${{ secrets.FUNC_ID_BLUEMIX_API_KEY }}
           MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
 
@@ -86,3 +86,41 @@ jobs:
           deploy-branch: gh-pages
           gatsby-args: --prefix-paths
           working-dir: Website
+
+  datamodels:
+    runs-on: ubuntu-latest
+    environment: main
+    defaults:
+      run:
+        working-directory: DataModels
+    env:
+      DEPLOY_BRANCH: ${{ github.ref.type == 'tag' || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/github-actions' }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+
+      - name: Build with Maven
+        run: |
+          cp settings.xml $HOME/.m2/settings.xml
+          mvn -s settings.xml clean package
+          mvn -s settings.xml test
+          mvn cobertura:cobertura
+
+      - name: Set build condition env variable
+        run: |
+          git pull
+          if sh ../.github/scripts/build-condition.sh origin/main DataModels; then echo "DEPLOY_CONDITION=true" >> $GITHUB_ENV; else echo "DEPLOY_CONDITION=false"; fi
+        shell: bash
+
+      - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
+        name: Deploy
+        run: mvn deploy --settings=settings.xml
+        shell: bash
+        env:
+          FUNC_ID_USERNAME: ${{ secrets.FUNC_ID_USERNAME }}
+          FUNC_ID_PASSWORD: ${{ secrets.FUNC_ID_PASSWORD }}
