@@ -39,8 +39,7 @@ jobs:
           git pull
           git branch
           git status
-          git --no-pager diff --name-only HEAD origin/main
-          git --no-pager diff --name-only HEAD origin/main | sort -u | uniq | grep Dashboard
+          git --no-pager diff --name-only HEAD origin/main | sort -u | uniq | grep Dashboard > /dev/null
         shell: bash
 
       - name: tet build condition env variable
@@ -48,9 +47,7 @@ jobs:
         shell: bash
 
       - name: Set build condition env variable
-        run: |
-          echo "DEPLOY_CONDITION=$(git --no-pager diff --name-only HEAD origin/main | sort -u | uniq | grep Dashboard)" >> $GITHUB_ENV
-          echo $DEPLOY_CONDITION
+        run: echo "DEPLOY_CONDITION=$(sh ../.github/scripts/build-condition.sh origin/main Dashboad)" >> $GITHUB_ENV
         shell: bash
 
       # - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
