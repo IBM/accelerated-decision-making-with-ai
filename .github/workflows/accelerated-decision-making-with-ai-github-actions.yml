@@ -42,26 +42,32 @@ jobs:
       #     git --no-pager diff --name-only HEAD origin/main | sort -u | uniq | grep Dashboard > /dev/null
       #   shell: bash
 
-      - name: tet build condition env variable
-        run: sh ../.github/scripts/build-condition.sh origin/main Dashboard
-        shell: bash
+      # - name: tet build condition env variable
+      #   run: sh ../.github/scripts/build-condition.sh origin/main Dashboard
+      #   shell: bash
 
       - name: Set build condition env variable
-        run: echo "DEPLOY_CONDITION=$(sh ../.github/scripts/build-condition.sh origin/main Dashboard)" >> $GITHUB_ENV
+        run: |
+          git pull
+          if sh ../.github/scripts/build-condition.sh origin/main Dashboard; then echo "BUILD_CONDITION=true" >> $GITHUB_ENV; else echo "BUILD_CONDITION=false"; fi
         shell: bash
 
-      - name: More true
-        run: if sh ../.github/scripts/build-condition.sh origin/main Dashboard; then echo "BUILD_CONDITION1=true" >> $GITHUB_ENV; else echo "BUILD_CONDITION1=false"; fi
-        shell: bash
+      # - name: More true
+      #   run: if sh ../.github/scripts/build-condition.sh origin/main Dashboard; then echo "BUILD_CONDITION1=true" >> $GITHUB_ENV; else echo "BUILD_CONDITION1=false"; fi
+      #   shell: bash
 
-      - name: More false
-        run: if sh ../.github/scripts/build-condition.sh origin/main Dshoard; then echo "BUILD_CONDITION2=true" >> $GITHUB_ENV; else echo "BUILD_CONDITION2=false"; fi
-        shell: bash
+      # - name: More false
+      #   run: if sh ../.github/scripts/build-condition.sh origin/main Dshoard; then echo "BUILD_CONDITION2=true" >> $GITHUB_ENV; else echo "BUILD_CONDITION2=false"; fi
+      #   shell: bash
 
       - name: Output
         run: |
-          echo "1: ${BUILD_CONDITION1}"
-          echo "2: ${BUILD_CONDITION2}"
+          echo "1: ${BUILD_CONDITION}"
+
+      - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
+        name: Deploy
+        run: echo "AWESOME"
+        shell: bash
 
       # - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
       #   name: Deploy
