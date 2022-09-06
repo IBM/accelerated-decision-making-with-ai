@@ -20,6 +20,5 @@ cat > .env << EOF
 export MAPBOX_API_KEY=$MAPBOX_API_KEY
 EOF
 pwd
-ls -la
-ls -ltr
+cat .env
 echo "DONE CREATING A DOTENV FILE WITH MAPBOX_API_KEY"
