@@ -8,7 +8,7 @@ jobs:
       run:
         working-directory: Dashboard
     env:
-      DEPLOY_BRANCH: ${ github.ref.type == 'tag' || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/github-actions' }
+      DEPLOY_BRANCH: ${{ github.ref.type == 'tag' || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/github-actions' }}
     steps:
       - uses: actions/checkout@v3
 
@@ -64,7 +64,7 @@ jobs:
         run: |
           echo "1: ${BUILD_CONDITION}"
           echo $DEPLOY_BRANCH
-          echo ${ github.ref }
+          echo ${{ github.ref }}
 
       - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
         name: Deploy
