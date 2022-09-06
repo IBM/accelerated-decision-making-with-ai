@@ -1,0 +1,44 @@
+name: accelerated-decision-making-with-ai-github-actions
+on: [push]
+jobs:
+  dashboard:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Dashboard
+    env:
+      DEPLOY_BRANCH: ${ github.ref.type == 'tag' || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/github-actions' }
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '12.18.4'
+
+      - name: Run set dotenv script
+        run: ./scripts/set-dotenv.sh
+        shell: bash
+
+      - name: Run Lint
+        run: npm run lint
+
+      - name: Deploy timestamp
+        run: echo "DEPLOY_TIMESTAMP=$(date "%Y%m%d-%H%M%S")" >> $GITHUB_ENV
+      
+      - name: Docker build
+        run: docker build -t pmai-dashboard:$DEPLOY_TIMESTAMP-$GITHUB_RUN_ID-$GITHUB_REF_NAME -t pmai-dashboard:latest .
+
+      - name: Set build condition env variable
+        run: echo "DEPLOY_CONDITION=$(../.github/scripts/build-condition.sh main Dashboard)" >> $GITHUB_ENV
+        shell: bash
+
+      - if: ${ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }
+        name: Deploy
+        run: ./scripts/main.sh
+        shell: bash
+        env:
+          DEPLOY_TIMESTAMP: $DEPLOY_TIMESTAMP
+          TRAVIS_BUILD_NUMBER: $GITHUB_RUN_ID
+          GITHUB_REF_NAME: $GITHUB_REF_NAME
+          FUNC_ID_BLUEMIX_API_KEY: ${{ secrets.FUNC_ID_BLUEMIX_API_KEY }}
+          MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
