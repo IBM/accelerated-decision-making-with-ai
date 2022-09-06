@@ -48,7 +48,9 @@ jobs:
         shell: bash
 
       - name: Set build condition env variable
-        run: echo "DEPLOY_CONDITION=$(git --no-pager diff --name-only HEAD origin/main | sort -u | uniq | grep Dashboard > /dev/null)" >> $GITHUB_ENV
+        run: |
+          echo "DEPLOY_CONDITION=$(git --no-pager diff --name-only HEAD origin/main | sort -u | uniq | grep Dashboard > /dev/null)" >> $GITHUB_ENV
+          echo $DEPLOY_CONDITION
         shell: bash
 
       # - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
