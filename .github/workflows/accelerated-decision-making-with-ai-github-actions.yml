@@ -51,16 +51,17 @@ jobs:
         shell: bash
 
       - name: More true
-        run: |
-          if sh ../.github/scripts/build-condition.sh origin/main Dashboard; then echo "BUILD_CONDITION=true" >> $GITHUB_ENV; else echo "BUILD_CONDITION=false"; fi
-          echo $BUILD_CONDITION
+        run: if sh ../.github/scripts/build-condition.sh origin/main Dashboard; then echo "BUILD_CONDITION1=true" >> $GITHUB_ENV; else echo "BUILD_CONDITION1=false"; fi
         shell: bash
 
       - name: More false
-        run: |
-          if sh ../.github/scripts/build-condition.sh origin/main Dshoard; then echo "BUILD_CONDITION=true" >> $GITHUB_ENV; else echo "BUILD_CONDITION=false"; fi
-          echo $BUILD_CONDITION
+        run: if sh ../.github/scripts/build-condition.sh origin/main Dshoard; then echo "BUILD_CONDITION2=true" >> $GITHUB_ENV; else echo "BUILD_CONDITION2=false"; fi
         shell: bash
+
+      - name: Output
+        run: |
+          echo "1: ${BUILD_CONDITION1}"
+          echo "2: ${BUILD_CONDITION2}"
 
       # - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
       #   name: Deploy
