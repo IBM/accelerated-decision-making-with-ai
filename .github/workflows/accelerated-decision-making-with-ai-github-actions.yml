@@ -62,16 +62,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      # - uses: actions/setup-node@v3
-      #   with:
-      #     node-version: '12.18.4'
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '12.18.4'
         
-      # - name: Run npm install/test/deploy
-      #   run: |
-      #     npm i -g gatsby
-      #     npm i
-      #     npm run test
-      #     npm run preDeploy
+      - name: Run npm install/test/deploy
+        run: |
+          npm i -g gatsby
+          npm i
+          npm run test
+          npm run preDeploy
 
       - name: Set build condition env variable
         run: |
