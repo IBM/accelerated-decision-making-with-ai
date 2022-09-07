@@ -1,5 +1,6 @@
 name: accelerated-decision-making-with-ai-github-actions
-on: [push]
+on: [push pull_request]
+
 jobs:
   dashboard:
     runs-on: ubuntu-latest
