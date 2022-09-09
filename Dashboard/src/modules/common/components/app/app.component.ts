@@ -80,7 +80,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterContentChecked {
     router.events
       .filter(event => event instanceof NavigationEnd)
       .subscribe((event: NavigationEnd) => {
-        const indexOf = event.url.indexOf('/', 1);
+        const indexOf = event.url.indexOf('/', 2);
         if (indexOf === -1) {
           const indexOfQueryParams = event.url.indexOf('?', 0);
           if (indexOfQueryParams === -1) {

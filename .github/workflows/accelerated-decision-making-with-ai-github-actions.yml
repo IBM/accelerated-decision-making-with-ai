@@ -9,7 +9,7 @@ jobs:
       run:
         working-directory: Dashboard
     env:
-      DEPLOY_BRANCH: ${{ github.ref.type == 'tag' || github.ref == 'refs/heads/main' }}
+      DEPLOY_BRANCH: ${{ github.ref.type == 'tag' || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/internationalization-chelsea' }}
     steps:
       - uses: actions/checkout@v3
 
