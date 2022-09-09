@@ -9,7 +9,7 @@ jobs:
       run:
         working-directory: Dashboard
     env:
-      DEPLOY_BRANCH: ${{ github.ref.type == 'tag' || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/internationalization-chelsea' }}
+      DEPLOY_BRANCH: ${{ github.ref.type == 'tag' || github.ref == 'refs/heads/main' }}
     steps:
       - uses: actions/checkout@v3
 
@@ -47,7 +47,7 @@ jobs:
         shell: bash
         env:
           DEPLOY_TIMESTAMP: ${{ env.DEPLOY_TIMESTAMP }}
-          TRAVIS_BUILD_NUMBER: ${GITHUB_RUN_ID}
+          TRAVIS_BUILD_NUMBER: ${{env.GITHUB_RUN_ID}}
           GITHUB_REF_NAME: ${GITHUB_REF_NAME}
           FUNC_ID_BLUEMIX_API_KEY: ${{ secrets.FUNC_ID_BLUEMIX_API_KEY }}
           MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
@@ -170,7 +170,7 @@ jobs:
         shell: bash
         env:
           DEPLOY_TIMESTAMP: ${{ env.DEPLOY_TIMESTAMP }}
-          TRAVIS_BUILD_NUMBER: ${GITHUB_RUN_ID}
+          TRAVIS_BUILD_NUMBER: ${{env.GITHUB_RUN_ID}}
           GITHUB_REF_NAME: ${GITHUB_REF_NAME}
           FUNC_ID_BLUEMIX_API_KEY: ${{ secrets.FUNC_ID_BLUEMIX_API_KEY }}
           FUNC_ID_USERNAME: ${{ secrets.FUNC_ID_USERNAME }}
@@ -226,7 +226,7 @@ jobs:
         shell: bash
         env:
           DEPLOY_TIMESTAMP: ${{ env.DEPLOY_TIMESTAMP }}
-          TRAVIS_BUILD_NUMBER: ${GITHUB_RUN_ID}
+          TRAVIS_BUILD_NUMBER: ${{env.GITHUB_RUN_ID}}
           GITHUB_REF_NAME: ${GITHUB_REF_NAME}
           FUNC_ID_BLUEMIX_API_KEY: ${{ secrets.FUNC_ID_BLUEMIX_API_KEY }}
 
@@ -269,6 +269,6 @@ jobs:
         shell: bash
         env:
           DEPLOY_TIMESTAMP: ${{ env.DEPLOY_TIMESTAMP }}
-          TRAVIS_BUILD_NUMBER: ${GITHUB_RUN_ID}
+          TRAVIS_BUILD_NUMBER: ${{env.GITHUB_RUN_ID}}
           GITHUB_REF_NAME: ${GITHUB_REF_NAME}
           FUNC_ID_BLUEMIX_API_KEY: ${{ secrets.FUNC_ID_BLUEMIX_API_KEY }}
