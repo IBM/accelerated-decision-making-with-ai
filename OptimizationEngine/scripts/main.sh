@@ -19,8 +19,8 @@
 echo "--------------------------------------------------------------"
 echo 'Main Script for Image Registry and Deployment!'
 
-chmod +x ../.travis/*
+chmod +x ../.github/scripts/*
 
 echo "Start by pushing the docker image to the container registry"
-sh ../.travis/pushToRegistry.sh https://cloud.ibm.com us-south 'IBM Research Kenya Healthcare' us.icr.io admai optimization-engine latest
+sh ../.github/scripts/pushToRegistry.sh https://cloud.ibm.com us-south 'IBM Research Kenya Healthcare' us.icr.io admai optimization-engine latest
 

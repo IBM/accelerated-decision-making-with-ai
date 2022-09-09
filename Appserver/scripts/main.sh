@@ -25,7 +25,7 @@ export SPRING_ENV="dev"
 export APP_VERSION="dev"
 
 echo "Start by pushing the docker image to the container registry"
-sh ../.travis/pushToRegistry.sh https://cloud.ibm.com us-south 'IBM Research Kenya Healthcare' us.icr.io admai pmai-taskclerk latest
+sh ../.github/scripts/pushToRegistry.sh https://cloud.ibm.com us-south 'IBM Research Kenya Healthcare' us.icr.io admai pmai-taskclerk latest
 
 echo "Then we deploy the application in to Code Engine"
-sh ../.travis/deploymentCE.sh https://cloud.ibm.com us-south "IBM Research Kenya Healthcare" ADMAI us.icr.io admai pmai-taskclerk latest 8080 project
+sh ../.github/scripts/deploymentCE.sh https://cloud.ibm.com us-south "IBM Research Kenya Healthcare" ADMAI us.icr.io admai pmai-taskclerk latest 8080 project

@@ -8,6 +8,7 @@ RUN npm run post-install-ibm-plex
 RUN > ./src/environments/environment.prod.ts
 RUN > ./src/environments/environment.ts
 RUN npm run build-production
+
 ### STAGE 2: Run ####
 FROM nginx:latest
 COPY nginx.conf /etc/nginx/nginx.conf
