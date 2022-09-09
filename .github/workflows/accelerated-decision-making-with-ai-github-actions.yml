@@ -33,7 +33,7 @@ jobs:
         run: echo "DEPLOY_TIMESTAMP=$(date +"%Y%m%d-%H%M%S")" >> $GITHUB_ENV
       
       - name: Docker build
-        run: docker build -t pmai-dashboard:$DEPLOY_TIMESTAMP-$GITHUB_RUN_ID -t pmai-dashboard:latest .
+        run: docker build -t admai-dashboard:$DEPLOY_TIMESTAMP-$GITHUB_RUN_ID -t admai-dashboard:latest .
 
       - name: Set build condition env variable
         run: |
@@ -47,8 +47,8 @@ jobs:
         shell: bash
         env:
           DEPLOY_TIMESTAMP: ${{ env.DEPLOY_TIMESTAMP }}
-          TRAVIS_BUILD_NUMBER: ${{ github.run.id }}
-          GITHUB_REF_NAME: ${{ github.ref.name }}
+          TRAVIS_BUILD_NUMBER: ${GITHUB_RUN_ID}
+          GITHUB_REF_NAME: ${GITHUB_REF_NAME}
           FUNC_ID_BLUEMIX_API_KEY: ${{ secrets.FUNC_ID_BLUEMIX_API_KEY }}
           MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
 
@@ -170,8 +170,8 @@ jobs:
         shell: bash
         env:
           DEPLOY_TIMESTAMP: ${{ env.DEPLOY_TIMESTAMP }}
-          TRAVIS_BUILD_NUMBER: ${{ github.run.id }}
-          GITHUB_REF_NAME: ${{ github.ref.name }}
+          TRAVIS_BUILD_NUMBER: ${GITHUB_RUN_ID}
+          GITHUB_REF_NAME: ${GITHUB_REF_NAME}
           FUNC_ID_BLUEMIX_API_KEY: ${{ secrets.FUNC_ID_BLUEMIX_API_KEY }}
           FUNC_ID_USERNAME: ${{ secrets.FUNC_ID_USERNAME }}
           FUNC_ID_PASSWORD: ${{ secrets.FUNC_ID_PASSWORD }}
@@ -226,8 +226,8 @@ jobs:
         shell: bash
         env:
           DEPLOY_TIMESTAMP: ${{ env.DEPLOY_TIMESTAMP }}
-          TRAVIS_BUILD_NUMBER: ${{ github.run.id }}
-          GITHUB_REF_NAME: ${{ github.ref.name }}
+          TRAVIS_BUILD_NUMBER: ${GITHUB_RUN_ID}
+          GITHUB_REF_NAME: ${GITHUB_REF_NAME}
           FUNC_ID_BLUEMIX_API_KEY: ${{ secrets.FUNC_ID_BLUEMIX_API_KEY }}
 
   optimizationengine:
@@ -269,6 +269,6 @@ jobs:
         shell: bash
         env:
           DEPLOY_TIMESTAMP: ${{ env.DEPLOY_TIMESTAMP }}
-          TRAVIS_BUILD_NUMBER: ${{ github.run.id }}
-          GITHUB_REF_NAME: ${{ github.ref.name }}
+          TRAVIS_BUILD_NUMBER: ${GITHUB_RUN_ID}
+          GITHUB_REF_NAME: ${GITHUB_REF_NAME}
           FUNC_ID_BLUEMIX_API_KEY: ${{ secrets.FUNC_ID_BLUEMIX_API_KEY }}

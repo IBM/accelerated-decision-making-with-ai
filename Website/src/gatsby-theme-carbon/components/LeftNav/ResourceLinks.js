@@ -20,7 +20,7 @@ import ResourceLinks from 'gatsby-theme-carbon/src/components/LeftNav/ResourceLi
 const links = [
   {
     title: 'Dashboard',
-    href: 'https://pmai-dashboard.9xxws07e6gx.us-south.codeengine.appdomain.cloud/',
+    href: 'https://admai-dashboard.9xxws07e6gx.us-south.codeengine.appdomain.cloud/',
   },
   // {
   //   title: 'Dashboard',

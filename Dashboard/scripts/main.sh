@@ -22,7 +22,7 @@ echo 'Main Script for Image Registry and Deployment!'
 chmod +x ../.github/scripts/*
 
 echo "Start by pushing the docker image to the container registry"
-sh ../.github/scripts/pushToRegistry.sh https://cloud.ibm.com us-south 'IBM Research Kenya Healthcare' us.icr.io admai pmai-dashboard latest
+sh ../.github/scripts/pushToRegistry.sh https://cloud.ibm.com us-south 'IBM Research Kenya Healthcare' us.icr.io admai admai-dashboard latest
 
 echo "Then we deploy the application in to Code Engine"
-sh ../.github/scripts/deploymentCE.sh https://cloud.ibm.com us-south "IBM Research Kenya Healthcare" ADMAI us.icr.io admai pmai-dashboard latest 80 public
+sh ../.github/scripts/deploymentCE.sh https://cloud.ibm.com us-south "IBM Research Kenya Healthcare" ADMAI us.icr.io admai admai-dashboard latest 80 public
