@@ -16,16 +16,17 @@
 # limitations under the License.
 #
 
-echo "--------------------------------------------------------------"
-echo 'Commencing determining the build condition!'
+# echo "--------------------------------------------------------------"
+# echo 'Commencing determining the build condition!'
 
-COMMIT_RANGE=$1
-CODE_DIRECTORY=$2
+# COMMIT_RANGE=$1
+# CODE_DIRECTORY=$2
 
-echo "COMMIT_RANGE: $COMMIT_RANGE"
-echo "CODE_DIRECTORY: $CODE_DIRECTORY"
+# echo "COMMIT_RANGE: $COMMIT_RANGE"
+# echo "CODE_DIRECTORY: $CODE_DIRECTORY"
 
 ############################################################################
 # Git diff to check whether the provided code directory is among the diff  #
 ############################################################################
-git diff --name-only $1 | sort -u | uniq | grep $2 > /dev/null
+git --no-pager diff --name-only HEAD $1 | sort -u | uniq | grep $2 > /dev/null
+# git diff --name-only $1 | sort -u | uniq | grep $2 > /dev/null
