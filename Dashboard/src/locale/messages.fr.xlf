@@ -1857,6 +1857,7 @@
       </trans-unit>
       <trans-unit id="logout" datatype="html">
         <source>Logout</source>
+        <target>Se Déconnecter</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">247</context>
@@ -1872,6 +1873,7 @@
       </trans-unit>
       <trans-unit id="experimentsNotification" datatype="html">
         <source>Experiments</source>
+        <target>Expérimentations</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">255</context>
@@ -1879,6 +1881,7 @@
       </trans-unit>
       <trans-unit id="experimentsNotificationId" datatype="html">
         <source>ab1234</source>
+        <target>ab1234</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">256</context>
@@ -1886,6 +1889,7 @@
       </trans-unit>
       <trans-unit id="experimentsCompletionDetails" datatype="html">
         <source> completed on Mar 4, 2021 1223hrs EAT</source>
+        <target> effectué le 4 Mar, 2021 12:23hrs EAT</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">257</context>
@@ -1893,6 +1897,7 @@
       </trans-unit>
       <trans-unit id="resultsNotification" datatype="html">
         <source>Results</source>
+        <target>Résultats</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">258</context>
@@ -1900,6 +1905,7 @@
       </trans-unit>
       <trans-unit id="resultsNotificationId" datatype="html">
         <source>cd5678</source>
+        <target>cd5678</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">259</context>
@@ -1907,6 +1913,7 @@
       </trans-unit>
       <trans-unit id="resultsCompletionDetails" datatype="html">
         <source> completed on Mar 4, 2021 0907hrs EAT</source>
+        <target> effectué le 4 Mar, 2021 09:07hrs EAT</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">260</context>
@@ -1914,6 +1921,7 @@
       </trans-unit>
       <trans-unit id="modelsNotification" datatype="html">
         <source>Models</source>
+        <target>Modèles</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">261</context>
@@ -1921,6 +1929,7 @@
       </trans-unit>
       <trans-unit id="modelOnboardingDetails" datatype="html">
         <source>New malaria model onboarded on Mar 4, 2021 0814hrs EAT, </source>
+        <target>Nouveau modèle de paludisme intégré le 4 Mars 2021 à 08:14hrs EAT,</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">262</context>
@@ -1928,6 +1937,7 @@
       </trans-unit>
       <trans-unit id="modelLink" datatype="html">
         <source>model</source>
+        <target></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/modules/common/constants/general.constants.ts</context>
           <context context-type="linenumber">263</context>
