@@ -8,7 +8,7 @@
     "required": "true",
     "hidden": "false",
     "readonly": "true",
-    "description": "the start date for calibration"
+    "description": "Date de début du calibrage"
   },
   {
     "name": "end_date",
@@ -18,7 +18,7 @@
     "required": "true",
     "hidden": "false",
     "readonly": "false",
-    "description": "the end date for calibration"
+    "description": "Date de fin du calibrage"
   },
   {
     "name": "startpt",
@@ -28,7 +28,7 @@
     "required": "true",
     "hidden": "false",
     "readonly": "false",
-    "description": "number of days to exempt from the calibration start date"
+    "description": "Nombre de jours d'exemption à partir de la date de début du calibrage"
   },
   {
     "name": "numdays",
@@ -38,7 +38,7 @@
     "required": "true",
     "hidden": "false",
     "readonly": "false",
-    "description": "the calibration window length in days"
+    "description": "Durée de la fenêtre du calibrage en jours"
   },
   {
     "name": "episode_num",
@@ -48,7 +48,7 @@
     "required": "true",
     "hidden": "false",
     "readonly": "false",
-    "description": "the number of calibration episodes"
+    "description": "Nombre d'épisodes de calibrage"
   },
   {
     "name": "maxpop",
@@ -59,7 +59,7 @@
     "required": "true",
     "hidden": "false",
     "readonly": "true",
-    "description": "the maximum population"
+    "description": "Population maximale"
   },
   {
     "name": "beta",
@@ -69,7 +69,7 @@
     "required": "true",
     "hidden": "false",
     "readonly": "false",
-    "description": "the effective transmission rate parameter",
+    "description": "Paramètre du taux de transmission effectif",
     "optimizationEnvelope": {
       "startDate": "2020-04-01",
       "endDate": "",
@@ -87,7 +87,7 @@
     "required": "true",
     "hidden": "false",
     "readonly": "false",
-    "description": "recovery rate parameter",
+    "description": "Paramètre du taux de guérison",
     "optimizationEnvelope": {
       "startDate": "2020-04-01",
       "endDate": "",
@@ -103,7 +103,7 @@
     "required": "true",
     "hidden": "false",
     "readonly": "false",
-    "description": "death rate parameter",
+    "description": "Paramètre du taux de mortalité",
     "optimizationEnvelope": {
       "startDate": "2020-04-01",
       "endDate": "",
