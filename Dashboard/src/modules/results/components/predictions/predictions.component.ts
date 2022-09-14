@@ -43,6 +43,7 @@ import {
   Location,
   ResultsRequest,
 } from '../../../common';
+import { PREDICTION_CONSTANTS } from '../../constants/results.constants';
 
 @Component({
   selector: 'app-predictions',
@@ -225,9 +226,9 @@ export class PredictionsComponent
 
   getStatus(status) {
     if (status) {
-      return 'Completed';
+      return PREDICTION_CONSTANTS.STATUS_COMPLETED;
     } else {
-      return 'In-progress';
+      return PREDICTION_CONSTANTS.STATUS_IN_PROGRESS;
     }
   }
 

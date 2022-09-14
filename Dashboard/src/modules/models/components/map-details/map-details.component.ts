@@ -42,6 +42,7 @@ import {
 import { LocationDialogService } from '../../services/location-dialog/location-dialog.service';
 import { ModelMetadata, User } from 'src/modules/common/models';
 import { SNACK_BAR_DURATION } from 'src/modules/common/constants';
+import { MAP_DETAILS_CONSTANTS } from '../../constants/models.constants';
 
 @Component({
   selector: 'app-map-details',
@@ -123,7 +124,7 @@ export class MapDetailsComponent implements OnInit, OnChanges, OnDestroy {
         },
         (error) => {
           console.log(error);
-          this.snackBar.open('Entered Location update failed', 'close', {
+          this.snackBar.open(MAP_DETAILS_CONSTANTS.LOCATION_UPDATE_FAILED, MAP_DETAILS_CONSTANTS.CLOSE, {
             duration: SNACK_BAR_DURATION,
           });
         }

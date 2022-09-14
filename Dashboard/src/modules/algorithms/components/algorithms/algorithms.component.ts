@@ -32,6 +32,13 @@ import {
   User,
   UserService,
 } from '../../../common';
+import { ALGORITHM_CREATION_FAILED,
+  ALGORITHM_CREATION_SUCCESSFUL,
+  ALGORITHM_UPDATE_FAILED,
+  ALGORITHM_UPDATE_SUCCESSFUL,
+  CLOSE, ENTERED_ALGORITHM_UPDATE_FAILED,
+  LEARNING_RESULTS_NOT_FOUND, LOAD_ALGO_ENVS_LOCS_FAILED,
+  PROVISIONED_STATUS, PROVISIONING_STATUS } from '../../constants/algorithms.constants';
 import { AlgorithmDialogService } from '../../services';
 
 @Component({
@@ -146,7 +153,7 @@ export class AlgorithmsComponent implements OnInit, OnDestroy, AfterViewInit {
           this.learningResults = data;
         },
         (error) => {
-          this.snackBar.open('Could not find learning results : ', 'close', {
+          this.snackBar.open(LEARNING_RESULTS_NOT_FOUND, CLOSE , {
             duration: SNACK_BAR_DURATION,
           });
         }
@@ -193,8 +200,8 @@ export class AlgorithmsComponent implements OnInit, OnDestroy, AfterViewInit {
                   this.algorithms.push(outcome['entity']);
                   this.currentAlgorithm = outcome['entity'];
                   this.snackBar.open(
-                    'Algorithm Creation Successful: ' + algorithm['name'],
-                    'close',
+                    ALGORITHM_CREATION_SUCCESSFUL + algorithm['name'],
+                    CLOSE,
                     {
                       duration: SNACK_BAR_DURATION,
                     }
@@ -203,8 +210,8 @@ export class AlgorithmsComponent implements OnInit, OnDestroy, AfterViewInit {
                 (error) => {
                   console.log(error);
                   this.snackBar.open(
-                    'Could not create algorithm!: ' + algorithm['name'],
-                    'close',
+                    ALGORITHM_CREATION_FAILED + algorithm['name'],
+                    CLOSE,
                     {
                       duration: SNACK_BAR_DURATION,
                     }
@@ -225,8 +232,8 @@ export class AlgorithmsComponent implements OnInit, OnDestroy, AfterViewInit {
                   this.algorithms = temp;
                   this.currentAlgorithm = outcome['entity'];
                   this.snackBar.open(
-                    'Algorithm Update Successful: ' + algorithm['id'],
-                    'close',
+                    ALGORITHM_UPDATE_SUCCESSFUL + algorithm['id'],
+                    CLOSE ,
                     {
                       duration: SNACK_BAR_DURATION,
                     }
@@ -235,8 +242,8 @@ export class AlgorithmsComponent implements OnInit, OnDestroy, AfterViewInit {
                 (error) => {
                   console.log(error);
                   this.snackBar.open(
-                    'Could not update algorithm!: ' + algorithm['id'],
-                    'close',
+                    ALGORITHM_UPDATE_FAILED + algorithm['id'],
+                    CLOSE,
                     {
                       duration: SNACK_BAR_DURATION,
                     }
@@ -246,7 +253,7 @@ export class AlgorithmsComponent implements OnInit, OnDestroy, AfterViewInit {
           }
         },
         (error) => {
-          this.snackBar.open('Entered Algorithm update failed', 'close', {
+          this.snackBar.open(ENTERED_ALGORITHM_UPDATE_FAILED, CLOSE, {
             duration: SNACK_BAR_DURATION,
           });
         }
@@ -255,9 +262,9 @@ export class AlgorithmsComponent implements OnInit, OnDestroy, AfterViewInit {
 
   getStatus(provisioned: boolean) {
     if (provisioned) {
-      return 'Provisioned';
+      return PROVISIONED_STATUS;
     } else {
-      return 'Provisioning';
+      return PROVISIONING_STATUS;
     }
   }
 
@@ -288,8 +295,8 @@ export class AlgorithmsComponent implements OnInit, OnDestroy, AfterViewInit {
       },
       (error) => {
         this.snackBar.open(
-          'Could not algorithms, locations and/or environments data : ',
-          'close',
+          LOAD_ALGO_ENVS_LOCS_FAILED,
+          CLOSE,
           {
             duration: SNACK_BAR_DURATION,
           }

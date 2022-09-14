@@ -25,7 +25,7 @@
             <div class="col-xl-9 card-inner">
               <form [formGroup]="formGroup" validate>
                 <div id="page-header-wrap">
-                  <h1>
+                  <h1 i18n="new experiment|new experiment header@@newExperimentHeader">
                     New Experiment
                   </h1>
                   <!-- <span class="fill-remaining-space"></span> -->
@@ -33,56 +33,56 @@
                   <div formGroupName="staticGroup" class="row">
                     <div class="col-xl-9" *ngIf="selectedValue == '' ">
                       <mat-form-field class="settings-select">
-                        <mat-label>Select model</mat-label>
+                        <mat-label i18n="select model label|select model label@@selectModel">Select model</mat-label>
                         <mat-select formControlName="executor" (selectionChange)="currentModelDropdownChangeListener($event)" required [(ngModel)]="selectedValue">
                           <mat-option *ngFor="let model of models" [value]="model">{{model.title}}</mat-option>
                         </mat-select>
-                        <mat-error>This field is required</mat-error>
+                        <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
                       </mat-form-field>
                     </div>
                     <div class="col-xl-3" *ngIf="selectedValue != '' ">
                       <mat-form-field class="settings-select">
-                        <mat-label>Select model</mat-label>
+                        <mat-label i18n="select model label|select model label@@selectModel">Select model</mat-label>
                         <mat-select formControlName="executor" (selectionChange)="currentModelDropdownChangeListener($event)" required [(ngModel)]="selectedValue">
                           <mat-option *ngFor="let model of models" [value]="model">{{model.title}}</mat-option>
                         </mat-select>
-                        <mat-error>This field is required</mat-error>
+                        <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
                       </mat-form-field>
                     </div>
                     <div class="col-xl-3" *ngIf="selectedValue != '' ">
                       <mat-form-field class="settings-select">
-                        <mat-label>Select default executors</mat-label>
+                        <mat-label i18n="select default executors label|select default executors label@@defaultExecutors">Select default executors</mat-label>
                         <mat-select formControlName="selectedPostExecutor" required>
                           <mat-option *ngFor="let obj of defaultExecutors" [value]="obj" (click)="defaultExecutorsChangeListener(obj)">{{obj.title}}</mat-option>
                         </mat-select>
-                       <mat-error>This field is required</mat-error>
+                       <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
                       </mat-form-field>
                     </div>
                     <div class="col-xl-3" *ngIf="selectedValue != '' ">
                       <mat-form-field class="settings-select">
-                        <mat-label>Select location</mat-label>
+                        <mat-label i18n="select location label|select location label@@selectLocation">Select location</mat-label>
                         <input #location type="text" matInput formControlName="location" required [matAutocomplete]="autoLocation" (keyup.enter)="locationSelectionChange(autoLocation.options.first.value)">
                         <mat-autocomplete autoActiveFirstOption #autoLocation="matAutocomplete">
                           <mat-option *ngFor="let location of filteredLocationOptions | async" [value]="location.names" (click)="locationSelectionChange(location)">
                             {{location.names}}
                           </mat-option>
                         </mat-autocomplete>
-                        <mat-error>This field is required</mat-error>
+                        <mat-error i18n="required field|required field error@@fieldRequiredError">This field is required</mat-error>
                       </mat-form-field>
                     </div>
                     <div class="col-xl-3 button-wrap" *ngIf="selectedValue != '' ">
-                      <button mat-raised-button color="primary" [disabled]="!(formGroup.get('dynamicGroup')) || (formGroup.get('dynamicGroup').invalid) || !(formGroup.get('staticGroup')) || (formGroup.get('staticGroup').invalid)" align="right" (click)="runExperiment(formGroup.value)" >Submit</button>
+                      <button mat-raised-button color="primary" [disabled]="!(formGroup.get('dynamicGroup')) || (formGroup.get('dynamicGroup').invalid) || !(formGroup.get('staticGroup')) || (formGroup.get('staticGroup').invalid)" align="right" (click)="runExperiment(formGroup.value)" i18n="submit button|submit button@@submitButton">Submit </button>
                       <!-- <button mat-raised-button color="primary" [disabled]="(formGroup.invalid)" align="right" (click)="runExperiment(formGroup.value)" >Submit</button> -->
                     </div>
                   </div>
                 </div>
                 <ng-template #none_detected_template>
-                  <div class="none-detected-div">None detected!</div>
+                  <div class="none-detected-div" i18n="none detected div|none detected div@@noneDetected">None detected!</div>
                 </ng-template>
                 <div class="row">
                   <div class="col-xl-6">
                     <div id="page-header-wrap">
-                      <h2>
+                      <h2 i18n="general info header|general info header@@generalInfoHeader">
                         General info
                       </h2>
                       <span class="fill-remaining-space"></span>
@@ -95,7 +95,7 @@
                       </div>
                     </ng-template>
                     <div id="page-header-wrap">
-                      <h2>
+                      <h2 i18n="parameters header|parameters header@@parametersHeader">
                         Parameters
                       </h2>
                       <span class="fill-remaining-space"></span>
@@ -110,7 +110,7 @@
                   </div>
                   <div class="col-xl-6">
                     <div id="page-header-wrap">
-                      <h2>
+                      <h2 i18n="optimization parameters header|optimization parameters header@@optimizationParametersHeader">
                         Optimization Parameters
                       </h2>
                       <span class="fill-remaining-space"></span>
@@ -148,7 +148,7 @@
             <div class="col-xl-3">
               <div>
                 <div id="page-header-wrap">
-                  <h1>
+                  <h1 i18n="past experiments header|past experiments header@@pastExperimentsHeader">
                     Past Experiments
                     <span *ngIf="itemsDataSource && itemsDataSource.data" class="models-number">({{itemsDataSource.data.length}})</span>
                   </h1>
@@ -156,12 +156,12 @@
                 </div>
                 <mat-table #itemsSort="matSort" [dataSource]="itemsDataSource" matSort id="clusters-table">
                   <ng-container matColumnDef="id">
-                    <mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell>
+                    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="id|id of the past experiment@@idOfPastExperiment">ID</mat-header-cell>
                     <mat-cell *matCellDef="let item"> {{item.id}}</mat-cell>
                   </ng-container>
 
                   <ng-container matColumnDef="name">
-                    <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+                    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="name|name of the past experiment@@nameOfPastExperiment">Name</mat-header-cell>
                     <mat-cell *matCellDef="let item">
                       <span class="custom-text-overflow" *ngIf="item.name">{{item.name}}</span>
                       <span class="custom-text-overflow" *ngIf="!item.name">-</span>
@@ -169,7 +169,7 @@
                   </ng-container>
 
                   <ng-container matColumnDef="description">
-                    <mat-header-cell *matHeaderCellDef mat-sort-header>Description</mat-header-cell>
+                    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="description|description of the past experiment@@descriptionOfPastExperiment">Description</mat-header-cell>
                     <mat-cell *matCellDef="let item">
                       <span class="custom-text-overflow" *ngIf="item.description">{{item.description}}</span>
                       <span class="custom-text-overflow" *ngIf="!item.description">-</span>
@@ -177,10 +177,10 @@
                   </ng-container>
 
                   <ng-container matColumnDef="action">
-                    <mat-header-cell *matHeaderCellDef mat-sort-header>Action</mat-header-cell>
+                    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="action|view the past experiment@@pastExperimentAction">Action</mat-header-cell>
                     <mat-cell *matCellDef="let item" (click)="$event.stopPropagation()">
                       <button class="btn btn-link" matTooltip="View" [routerLink]="['/results']" [queryParams]="{experimentId: item.id, locationId: item.location.id, modelId: item.executor.id}">
-                        <i class="material-icons default-color" >visibility</i>
+                        <i class="material-icons default-color">visibility</i>
                       </button>
                     </mat-cell>
                   </ng-container>
@@ -194,7 +194,7 @@
               </div>
               <div *ngIf="duplicateExperimentsDataSource && duplicateExperimentsDataSource.data">
                 <div id="page-header-wrap">
-                  <h1>
+                  <h1 i18n="duplicate experiments header|duplicate experiments header@@duplicateExperimentsHeader">
                     Duplicate Experiments
                     <span *ngIf="duplicateExperimentsDataSource && duplicateExperimentsDataSource.data" class="models-number">({{duplicateExperimentsDataSource.data.length}})</span>
                   </h1>
@@ -202,12 +202,12 @@
                 </div>
                 <mat-table #duplicateExperimentsSort="matSort" [dataSource]="duplicateExperimentsDataSource" matSort id="clusters-table">
                   <ng-container matColumnDef="id">
-                    <mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell>
+                    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="id of the duplicate experiment|id of the duplicate experiment@@duplicateExperimentId">ID</mat-header-cell>
                     <mat-cell *matCellDef="let item"> {{item.id}}</mat-cell>
                   </ng-container>
 
                   <ng-container matColumnDef="name">
-                    <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+                    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="name of the duplicate experiment|name of the duplicate experiment@@duplicateExperimentName">Name</mat-header-cell>
                     <mat-cell *matCellDef="let item">
                       <span class="custom-text-overflow" *ngIf="item.name">{{item.name}}</span>
                       <span class="custom-text-overflow" *ngIf="!item.name">-</span>
@@ -215,7 +215,7 @@
                   </ng-container>
 
                   <ng-container matColumnDef="description">
-                    <mat-header-cell *matHeaderCellDef mat-sort-header>Description</mat-header-cell>
+                    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="description of the duplicate experiment|description of the duplicate experiment@@duplicateExperimentDescription">Description</mat-header-cell>
                     <mat-cell *matCellDef="let item">
                       <span class="custom-text-overflow" *ngIf="item.description">{{item.description}}</span>
                       <span class="custom-text-overflow" *ngIf="!item.description">-</span>
@@ -223,10 +223,10 @@
                   </ng-container>
 
                   <ng-container matColumnDef="action">
-                    <mat-header-cell *matHeaderCellDef mat-sort-header>Action</mat-header-cell>
+                    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="action|view the duplicate experiments@@duplicateExperimentAction">Action</mat-header-cell>
                     <mat-cell *matCellDef="let item" (click)="$event.stopPropagation()">
                       <button class="btn btn-link" matTooltip="View" [routerLink]="['/results']" [queryParams]="{experimentId: item.id, locationId: item.location.id, modelId: item.executor.id}">
-                        <i class="material-icons default-color" >visibility</i>
+                        <i class="material-icons default-color">visibility</i>
                       </button>
                     </mat-cell>
                   </ng-container>

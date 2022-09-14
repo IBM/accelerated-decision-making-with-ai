@@ -111,3 +111,7 @@ export const CHART_INTERVENTIONS_ABBREV = {
   itn: 'Insecticide-Treated Nets',
   irs: 'Indoor Residual Spraying'
 };
+
+export const CONFIRMED_CASES = $localize`:confirmed cases|confirmed cases@@casesConfirmed:Confirmed cases`;
+export const DATE = $localize`:Date|Date@@dateHoverLabel:Date`;
+export const DAYS = $localize`:Days|Days@@daysHoverLabel:Days`;

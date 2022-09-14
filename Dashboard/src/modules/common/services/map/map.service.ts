@@ -21,7 +21,8 @@ import {
   GLYPHS,
   MAP_COLORS_OUTCOMES,
   MAP_DATA,
-  MAP_POPUP_OPTIONS
+  MAP_POPUP_OPTIONS,
+  NO_DATA
 } from '../../constants';
 import {MapParameters} from '../../models';
 import * as L from 'leaflet';
@@ -180,8 +181,8 @@ export class MapService {
     }
     return `` +
       `<div class="popup-region-name">${ admin }</div>` +
-      `<div>${isNotNullOrUndefined(densityFeature) ? densityFeature : 'No data'}: ${(isNotNullOrUndefined(density) && density !== '')
-        ? +density.toFixed(2) : 'No data'}</div>`;
+      `<div>${isNotNullOrUndefined(densityFeature) ? densityFeature : NO_DATA}: ${(isNotNullOrUndefined(density) && density !== '')
+        ? +density.toFixed(2) : NO_DATA}</div>`;
   }
 
   private getDensityPartitionArrayForLinearScale(maxDensitiesArray, minDensitiesArray) {

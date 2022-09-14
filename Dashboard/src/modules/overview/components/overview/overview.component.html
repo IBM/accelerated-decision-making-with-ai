@@ -28,7 +28,7 @@
                 <div class="control-panel-form form-group">
                   <div class="form-control-wrap">
                     <mat-form-field class="settings-select" id="admin-0-select">
-                      <mat-label>Select admin 0 (Country)</mat-label>
+                      <mat-label i18n="select admin 0|select a country@@selectCountry">Select admin 0 (Country)</mat-label>
                       <input #admin0 type="text" matInput formControlName="admin0" [matAutocomplete]="auto0" (keyup.enter)="admin0SelectionChange(auto0.options.first.value)">
                       <mat-autocomplete autoActiveFirstOption #auto0="matAutocomplete">
                         <mat-option *ngFor="let admin0 of filteredAdmin0Options | async" [value]="admin0.fullname" (click)="admin0SelectionChange(admin0)">
@@ -44,7 +44,7 @@
                 <div class="control-panel-form form-group">
                   <div class="form-control-wrap">
                     <mat-form-field class="settings-select" id="admin-1-select">
-                      <mat-label>Select admin 1 (Provinces/States/District/Counties)</mat-label>
+                      <mat-label i18n="select admin 1|select a province or state or district or county @@selectState">Select admin 1 (Provinces/States/District/Counties)</mat-label>
                       <input #admin1 type="text" matInput formControlName="admin1" [matAutocomplete]="auto1" (keyup.enter)="admin1SelectionChange(auto1.options.first.value)">
                       <mat-autocomplete autoActiveFirstOption #auto1="matAutocomplete">
                         <mat-option *ngFor="let admin1 of filteredAdmin1Options | async" [value]="admin1.fullname" (click)="admin1SelectionChange(admin1)">
@@ -64,7 +64,7 @@
           <div class="control-panel-form form-group">
             <div class="form-control-wrap">
               <mat-form-field class="settings-select">
-                <mat-label>Index (NPI-Index, Compliance Score, Stringency Index)</mat-label>
+                <mat-label i18n="index label|NPI Compliance and Stringency index@@indexNPI">Index (NPI-Index, Compliance Score, Stringency Index)</mat-label>
                 <mat-select [(ngModel)]="CURRENT_DROPDOWN_ITEMS_INDEX" (selectionChange)="indexDropdownChangeListener($event)">
                   <mat-option *ngFor="let obj of DROPDOWN_ITEMS_INDEX" [value]="obj">{{obj}}</mat-option>
                 </mat-select>
@@ -77,7 +77,7 @@
           <div class="control-panel-form form-group">
             <div class="form-control-wrap">
               <mat-form-field class="settings-select">
-                <mat-label>Mobility Type (workplaces, retail_and_recreation, grocery_and_pharmacy, parks, transit_stations, residential)</mat-label>
+                <mat-label i18n="mobility type|Mobility type@@mobilityType">Mobility Type (workplaces, retail_and_recreation, grocery_and_pharmacy, parks, transit_stations, residential)</mat-label>
                 <mat-select [(ngModel)]="CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE" (selectionChange)="mobilityTypeDropdownChangeListener($event)">
                   <mat-option *ngFor="let obj of DROPDOWN_ITEMS_MOBILITY_TYPE" [value]="obj">{{obj}}</mat-option>
                 </mat-select>
@@ -88,7 +88,7 @@
 
         <div class="col-xl-3 not_responsive">
           <div *ngIf="ceilEpoch" class="custom-slider">
-            <button id="play-pause-button" class="btn btn-link" matTooltip="Play/Pause" (click)="playPause()" style="float: left!important; margin-top: 9px;">
+            <button id="play-pause-button" class="btn btn-link" i18n-matTooltip="play pause button |play pause button@@playPause" matTooltip="Play/Pause" (click)="playPause()" style="float: left!important; margin-top: 9px;">
               <i class="material-icons play-btn" >{{playPauseButton}}</i>
             </button>
             <ng5-slider [(value)]="value"  [options]="options" (valueChange)="valueChange($event)" style="width: 80%;margin:35px 0px 15px;"></ng5-slider>
@@ -97,7 +97,7 @@
 
         <div class="col-xl-1 wwcc-block-between rem-wrap align-start">
           <div>
-            <button id="reset-countries-btn" type="button" #tooltip="matTooltip" matTooltip = "Load countries data" class="btn btn-secondary" (click)="resetAdmin(-1)">
+            <button id="reset-countries-btn" type="button" #tooltip="matTooltip" i18n-matTooltip="load countries data|load countries data@@loadCountriesData" matTooltip = "Load countries data" class="btn btn-secondary" (click)="resetAdmin(-1)">
               <span class="material-icons">autorenew</span>
             </button>
             <button id="config-btn" type="button" class="btn btn-secondary" (click)="open(config)">
@@ -127,7 +127,7 @@
 
 <ng-template #config let-modal>
   <div class="modal-header">
-    <h5 class="modal-title">Configure Data & Data Sources</h5>
+    <h5 class="modal-title" i18n="modalTitle|modalTitle@@modalTitle">Configure Data & Data Sources</h5>
     <button type="button" class="close" aria-label="Close" mat-dialog-close="Cross click">
       <span aria-hidden="true">×</span>
     </button>
@@ -136,14 +136,14 @@
     <div class="example-container">
 
       <div class="row">
-        <div class="col-md-6">
-          Domain(Covid19):
+        <div class="col-md-6" i18n="covid 19 domain div|covid 19 domain div@@covid19.domain">
+        Domain(Covid19):
         </div>
         <div class="col-md-5 not_responsive">
           <div class="control-panel-form form-group">
             <div class="form-control-wrap">
               <mat-form-field class="settings-select" id="domain-select">
-                <mat-label>Domain(Covid19)</mat-label>
+                <mat-label i18n="@@covid19Domain">Domain(Covid19)</mat-label>
                 <mat-select [(ngModel)]="domain">
                   <mat-option value="covid19" >COVID19</mat-option>
                 </mat-select>
@@ -154,14 +154,14 @@
       </div>
 
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" i18n="NPIs dataset|NPIs dataset@@npi.dataset.list">
           NPIs Dataset (WNTRAC or OxCGRT):
         </div>
         <div class="col-md-5 not_responsive">
           <div class="control-panel-form form-group">
             <div class="form-control-wrap">
               <mat-form-field class="settings-select">
-                <mat-label>NPIs Dataset (WNTRAC or OxCGRT)</mat-label>
+                <mat-label i18n="@@npiDatasetList">NPIs Dataset (WNTRAC or OxCGRT)</mat-label>
                 <mat-select [(ngModel)]="CURRENT_DROPDOWN_ITEMS_NPI_DATASET" (selectionChange)="npiDatasetDropdownChangeListener($event)">
                   <mat-option *ngFor="let obj of DROPDOWN_ITEMS_NPI_DATASET" [value]="obj">{{obj}}</mat-option>
                 </mat-select>
@@ -172,7 +172,7 @@
       </div>
 
       <div class="row custom-spacer-k-cm">
-        <div class="col-md-6">
+        <div class="col-md-6" i18n="month range picker|month range picker@@monthRangePicker">
           Month range picker for data:
         </div>
         <div class="col-md-6">
@@ -185,6 +185,6 @@
     </div>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" mat-dialog-close="Save click">Save</button>
+    <button type="button" class="btn btn-outline-dark" mat-dialog-close="Save click" i18n="save button|save button@@saveButton">Save</button>
   </div>
 </ng-template>

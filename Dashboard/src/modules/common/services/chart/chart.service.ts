@@ -39,8 +39,12 @@ import {
 } from '../../models';
 import {
   CHART_INTERVENTIONS_SYMBOLS,
+  CONFIRMED_CASES,
+  DATE,
+  DAYS,
   DEFAULT_COLOR,
-  DROPDOWN_ITEMS_X_AXIS, INDEX_DATA_KEYS,
+  DROPDOWN_ITEMS_INDEX,
+  DROPDOWN_ITEMS_X_AXIS, HEADER, INDEX_DATA_KEYS,
   MAP_DATA,
   STROKE_DEFAULT_COLOR
 } from '../../constants';
@@ -59,12 +63,12 @@ export class ChartService {
   generateOverviewChartParameters(mapOutcomeData: any, overviewControlPanelParameters: OverviewControlPanelParameters,
                                   overviewMapParameters: OverviewParentParameters) {
     let xScaleType = 'date';
-    let hoverXLabel = 'Days';
+    let hoverXLabel = DAYS;
     let xLabel = '';
     if (overviewControlPanelParameters.xAxis === DROPDOWN_ITEMS_X_AXIS[0]) {
       xScaleType = 'date';
       xLabel = '';
-      hoverXLabel = 'Date';
+      hoverXLabel = DATE;
     } else {
       xScaleType = 'linear';
       xLabel = overviewControlPanelParameters.xAxis;
@@ -519,7 +523,7 @@ export class ChartService {
                                      currentDefaultExecutors: string[]): ChartParameters {
     const xScaleType = 'date';
     const yScaleType = 'linear';
-    const hoverXLabel = 'Date';
+    const hoverXLabel = DATE;
     const xLabel = '';
     const yLabel = (isNotNullOrUndefined(currentDefaultExecutors)
       && isNotNullOrUndefined(currentDefaultExecutors[0]))
@@ -1004,7 +1008,7 @@ export class ChartService {
 
   generateChartParameters(CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE: string, value, indexData: any, geo, innerHeight: number) {
     const xScaleType = 'date';
-    const hoverXLabel = 'Date';
+    const hoverXLabel = DATE;
     const xLabel = '';
 
     const chartConfig: ChartConfig = {
@@ -1032,7 +1036,7 @@ export class ChartService {
     const chartLayoutYAxis: ChartLayoutAxis = {
       type: 'linear',
       ticks: '',
-      title: { text: 'New Cases', standoff: 15 },
+      title: { text: $localize`:new cases|new cases@@newCases:New Cases`, standoff: 15 },
       gridcolor: '#F2F2F2',
       linecolor: '#E5E5E5',
       automargin: true,
@@ -1046,7 +1050,7 @@ export class ChartService {
     const chartLayoutYAxis2: ChartLayoutAxis = {
       type: 'linear',
       ticks: '',
-      title: { text: 'Index Value', standoff: 15 },
+      title: { text: $localize`:index value|index value@@indexValue:Index Value`, standoff: 15 },
       gridcolor: '#F2F2F2',
       linecolor: '#E5E5E5',
       automargin: true,
@@ -1105,7 +1109,7 @@ export class ChartService {
     };
 
     const chartParameters: ChartParameters = {
-      chartHeader: !isNotNullOrUndefined(geo) ? 'Select a region on the map'
+      chartHeader: !isNotNullOrUndefined(geo) ? $localize`:Select a region on the map|Select a region on the map@@selectARegionOnTheMap:Select a region on the map`
         : geo['fullname'] + ' ' + '(' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE + ')',
       data: [],
       layout: chartLayout,
@@ -1130,29 +1134,29 @@ export class ChartService {
         x.push(xValue);
         ycc.push((thisAdminIndexData[epoch][0] < 0) ? 0 : thisAdminIndexData[epoch][0]);
         ywsi.push((thisAdminIndexData[epoch]
-          [INDEX_DATA_KEYS['stringency index_wntrac_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
-          thisAdminIndexData[epoch][INDEX_DATA_KEYS['stringency index_wntrac_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
+          [INDEX_DATA_KEYS[HEADER.STRINGENCY_INDEX_WNTRAC + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
+          thisAdminIndexData[epoch][INDEX_DATA_KEYS[HEADER.STRINGENCY_INDEX_WNTRAC + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
         ywcs.push((thisAdminIndexData[epoch]
-          [INDEX_DATA_KEYS['compliance score_wntrac_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
-          thisAdminIndexData[epoch][INDEX_DATA_KEYS['compliance score_wntrac_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
+          [INDEX_DATA_KEYS[HEADER.COMPLIANCE_SCORE_WNTRAC + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
+          thisAdminIndexData[epoch][INDEX_DATA_KEYS[HEADER.COMPLIANCE_SCORE_WNTRAC + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
         ywni.push((thisAdminIndexData[epoch]
-          [INDEX_DATA_KEYS['npi-index_wntrac_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
-          thisAdminIndexData[epoch][INDEX_DATA_KEYS['npi-index_wntrac_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
+          [INDEX_DATA_KEYS[HEADER.NPI_INDEX_WNTRAC + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
+          thisAdminIndexData[epoch][INDEX_DATA_KEYS[HEADER.NPI_INDEX_WNTRAC + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
         yosi.push((thisAdminIndexData[epoch]
-          [INDEX_DATA_KEYS['stringency index_oxcgrt_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
-          thisAdminIndexData[epoch][INDEX_DATA_KEYS['stringency index_oxcgrt_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
+          [INDEX_DATA_KEYS[HEADER.STRINGENCY_INDEX_OXCGRT + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
+          thisAdminIndexData[epoch][INDEX_DATA_KEYS[HEADER.STRINGENCY_INDEX_OXCGRT + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
         yocs.push((thisAdminIndexData[epoch]
-          [INDEX_DATA_KEYS['compliance score_oxcgrt_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
-          thisAdminIndexData[epoch][INDEX_DATA_KEYS['compliance score_oxcgrt_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
+          [INDEX_DATA_KEYS[HEADER.COMPLIANCE_SCORE_OXCGRT + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
+          thisAdminIndexData[epoch][INDEX_DATA_KEYS[HEADER.COMPLIANCE_SCORE_OXCGRT + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
         yoni.push((thisAdminIndexData[epoch]
-          [INDEX_DATA_KEYS['npi-index_oxcgrt_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
-          thisAdminIndexData[epoch][INDEX_DATA_KEYS['npi-index_oxcgrt_' + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
+          [INDEX_DATA_KEYS[HEADER.NPI_INDEX_OXCGRT + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]] < 0) ? 0 :
+          thisAdminIndexData[epoch][INDEX_DATA_KEYS[HEADER.NPI_INDEX_OXCGRT + CURRENT_DROPDOWN_ITEMS_MOBILITY_TYPE.toLowerCase()]]);
       }
     });
 
     const trace: ChartData = {
       mode: 'lines',
-      name: 'New cases',
+      name: $localize`:@@newCasesYAxis:New cases`,
       type: 'scatter',
       x,
       y: ycc,
@@ -1163,7 +1167,7 @@ export class ChartService {
       },
       fill: 'tozeroy',
       fillcolor: transparentize('' + '#33adff', 0.9),
-      meta: {fullName: geo['fullname'], hoverXLabel, yLabel: 'Confirmed cases'},
+      meta: {fullName: geo['fullname'], hoverXLabel, yLabel: CONFIRMED_CASES},
       hovertemplate: '<b>%{meta.fullName}</b>' + '<br><b>%{meta.hoverXLabel}:</b> %{x}' + '<br>' +
         '<b>%{meta.yLabel}:</b> %{y:.2f}'
     };
@@ -1293,9 +1297,9 @@ export class ChartService {
       xanchor: 'left',
       y: 1.0,
       yanchor: 'center',
-      text: '<b>' + 'SI' + '</b>' + ' Stringency Index' + ' | '
-        + '<b>' + 'CS' + '</b>' + ' Compliance Score' + ' | '
-        + '<b>' + 'NI' + '</b>' + ' NPI Index',
+      text: '<b>' + 'SI' + '</b>' + ' ' + DROPDOWN_ITEMS_INDEX[2] + ' | '
+        + '<b>' + 'CS' + '</b>' + ' ' + DROPDOWN_ITEMS_INDEX[1] + ' | '
+        + '<b>' + 'NI' + '</b>' + ' ' + DROPDOWN_ITEMS_INDEX[0] ,
       font: {
         family: '"IBM Plex Sans", "Open Sans", verdana, arial, sans-serif',
         size: 10

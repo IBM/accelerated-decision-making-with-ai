@@ -20,7 +20,7 @@ import 'rxjs/add/operator/filter';
 import {ApiService, CacheService, DataService, UserService} from '../../services';
 import {Observable} from 'rxjs';
 import {User} from '../../models';
-import {USER_ROLES} from '../../constants';
+import {APP_CONSTANTS, LOGIN_CONSTANTS, NOTIFICATION_CONSTANTS, USER_ROLES} from '../../constants';
 import { isNotNullOrUndefined } from 'codelyzer/util/isNotNullOrUndefined';
 
 @Component({
@@ -30,15 +30,18 @@ import { isNotNullOrUndefined } from 'codelyzer/util/isNotNullOrUndefined';
 })
 export class AppComponent implements OnInit, OnDestroy, AfterContentChecked {
   links = [
-    { title: 'Overview', path: '/overview'},
-    { title: 'How to', path: '/how-to'},
-    { title: 'Feedback', path: '/feedback'},
+    { title: APP_CONSTANTS.OVERVIEW, path: '/overview'},
+    { title: APP_CONSTANTS.HOW_TO, path: '/how-to'},
+    { title: APP_CONSTANTS.FEEDBACK, path: '/feedback'},
   ];
   activeNgbNav;
-  completedRequestsNotification = {popOverMsg: `<b>Experiments</b><br><a href='/experiments'>ab1234</a><i>`
-    + ` completed on Mar 4, 2021 1223hrs EAT</i><br><br><b>Results</b><br><a href='/results'>cd5678</a><i>`
-    + ` completed on Mar 4, 2021 0907hrs EAT</i><br><br><b>Models</b><br><i>New malaria model onboarded on Mar 4, 2021 0814hrs EAT, </i>`
-    + `<a href='/models'>model</a>`,
+  completedRequestsNotification = {popOverMsg: `<b>`+ NOTIFICATION_CONSTANTS.EXPERIMENTS
+    +`</b><br><a href='/experiments'>`+ NOTIFICATION_CONSTANTS.EXPERIMENTS_ID + `</a><i>`
+    + NOTIFICATION_CONSTANTS.EXPERIMENTS_COMPLETION_DETAILS +`</i><br><br><b>`+ NOTIFICATION_CONSTANTS.RESULTS
+    +`</b><br><a href='/results'>`+ NOTIFICATION_CONSTANTS.RESULTS_ID +`</a><i>`
+    + NOTIFICATION_CONSTANTS.RESULTS_COMPLETION_DETAILS + `</i><br><br><b>`+ NOTIFICATION_CONSTANTS.MODELS + `</b><br><i>`
+    + NOTIFICATION_CONSTANTS.MODEL_ONBOARDING_DETAILS + `</i>`
+    + `<a href='/models'>`+ NOTIFICATION_CONSTANTS.MODEL_LINK +`</a>`,
     disabledButton: false, noOfNotifications: 3};
   userPop = {msg: ``, icon: ``};
   locationStats = 0;
@@ -55,6 +58,15 @@ export class AppComponent implements OnInit, OnDestroy, AfterContentChecked {
   subscribeUser: any;
   private who: User;
 
+  siteLanguage;
+  siteLocale: string;
+
+  languageList = [
+    { code: 'en-US', label: 'English' },
+    { code: 'sw', label: 'Kiswahili' },
+    { code: 'fr', label: 'Français' },
+  ];
+
   constructor(public router: Router,
               private cacheService: CacheService,
               private userService: UserService,
@@ -68,7 +80,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterContentChecked {
     router.events
       .filter(event => event instanceof NavigationEnd)
       .subscribe((event: NavigationEnd) => {
-        const indexOf = event.url.indexOf('/', 1);
+        const indexOf = event.url.indexOf('/', 2);
         if (indexOf === -1) {
           const indexOfQueryParams = event.url.indexOf('?', 0);
           if (indexOfQueryParams === -1) {
@@ -85,6 +97,14 @@ export class AppComponent implements OnInit, OnDestroy, AfterContentChecked {
     if (this.loggedIn) {
       this.loadStats();
     }
+
+    const url = window.location.pathname;
+    console.log(url)
+    this.siteLocale = url.split('/')[1];
+    if (this.siteLocale !== null && this.siteLocale !== '') {
+      this.siteLanguage = this.languageList.find(f => f.code === this.siteLocale).label;
+    }
+
     this.subscribeUser = this.user.subscribe(whoami => {
       if (!isNotNullOrUndefined(whoami)) { return; }
       this.who = whoami;
@@ -94,7 +114,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterContentChecked {
       this.userPop = {msg: ``
           + `` + whoami.name + `<br>` + `<hr>`
           + `` + USER_ROLES[whoami.type] + `<br>` + `<hr>`
-          + `` + `<a href='/logout'>Log Out</a>` + ``
+          + `` + `<a href='/logout'>`+ LOGIN_CONSTANTS.LOGOUT + `</a>` + ``
           + ``, icon: whoami.name.charAt(0).toUpperCase()};
     });
     this.subscribeDomain = this.dataService.domainObservable.subscribe(domain => {
@@ -147,43 +167,43 @@ export class AppComponent implements OnInit, OnDestroy, AfterContentChecked {
 
   private setTabs(type: string, overviewUrl: string) {
     this.links = (type === 'admai_admin') ? [
-      { title: 'Overview', path: overviewUrl},
-      { title: 'Algorithms', path: '/algorithms'},
-      { title: 'Models', path: '/models'},
-      { title: 'Experiments', path: '/experiments'},
-      { title: 'Results', path: '/results'},
-      { title: 'Apis', path: '/swagger'},
-      { title: 'How to', path: '/how-to'},
-      { title: 'Feedback', path: '/feedback'},
+      { title: APP_CONSTANTS.OVERVIEW, path: overviewUrl},
+      { title: APP_CONSTANTS.ALGORITHMS, path: '/algorithms'},
+      { title: APP_CONSTANTS.MODELS, path: '/models'},
+      { title: APP_CONSTANTS.EXPERIMENTS, path: '/experiments'},
+      { title: APP_CONSTANTS.RESULTS, path: '/results'},
+      { title: APP_CONSTANTS.APIS, path: '/swagger'},
+      { title: APP_CONSTANTS.HOW_TO, path: '/how-to'},
+      { title: APP_CONSTANTS.FEEDBACK, path: '/feedback'},
     ] : (type === 'admai_ds') ? [
-      { title: 'Overview', path: overviewUrl},
-      { title: 'Algorithms', path: '/algorithms'},
-      { title: 'Models', path: '/models'},
-      { title: 'Experiments', path: '/experiments'},
-      { title: 'Results', path: '/results'},
-      { title: 'Apis', path: '/swagger'},
-      { title: 'How to', path: '/how-to'},
-      { title: 'Feedback', path: '/feedback'},
+      { title: APP_CONSTANTS.OVERVIEW, path: overviewUrl},
+      { title: APP_CONSTANTS.ALGORITHMS, path: '/algorithms'},
+      { title: APP_CONSTANTS.MODELS, path: '/models'},
+      { title: APP_CONSTANTS.EXPERIMENTS, path: '/experiments'},
+      { title: APP_CONSTANTS.RESULTS, path: '/results'},
+      { title: APP_CONSTANTS.APIS, path: '/swagger'},
+      { title: APP_CONSTANTS.HOW_TO, path: '/how-to'},
+      { title: APP_CONSTANTS.FEEDBACK, path: '/feedback'},
     ] : (type === 'admai_ms') ? [
-      { title: 'Overview', path: overviewUrl},
-      { title: 'Models', path: '/models'},
-      // { title: 'Algorithms', path: '/algorithms'},
-      { title: 'Experiments', path: '/experiments'},
-      { title: 'Results', path: '/results'},
-      { title: 'Apis', path: '/swagger'},
-      { title: 'How to', path: '/how-to'},
-      { title: 'Feedback', path: '/feedback'},
+      { title: APP_CONSTANTS.OVERVIEW, path: overviewUrl},
+      { title: APP_CONSTANTS.MODELS, path: '/models'},
+      // { title: APP_CONSTANTS.ALGORITHMS, path: '/algorithms'},
+      { title: APP_CONSTANTS.EXPERIMENTS, path: '/experiments'},
+      { title: APP_CONSTANTS.RESULTS, path: '/results'},
+      { title: APP_CONSTANTS.APIS, path: '/swagger'},
+      { title: APP_CONSTANTS.HOW_TO, path: '/how-to'},
+      { title: APP_CONSTANTS.FEEDBACK, path: '/feedback'},
     ] : (type === 'admai_dm') ? [
-      { title: 'Overview', path: overviewUrl},
-      { title: 'Models', path: '/models'},
-      { title: 'Experiments', path: '/experiments'},
-      { title: 'Results', path: '/results'},
-      { title: 'How to', path: '/how-to'},
-      { title: 'Feedback', path: '/feedback'},
+      { title: APP_CONSTANTS.OVERVIEW, path: overviewUrl},
+      { title: APP_CONSTANTS.MODELS, path: '/models'},
+      { title: APP_CONSTANTS.EXPERIMENTS, path: '/experiments'},
+      { title: APP_CONSTANTS.RESULTS, path: '/results'},
+      { title: APP_CONSTANTS.HOW_TO, path: '/how-to'},
+      { title: APP_CONSTANTS.FEEDBACK, path: '/feedback'},
     ] : [
-      { title: 'Overview', path: overviewUrl},
-      { title: 'How to', path: '/how-to'},
-      { title: 'Feedback', path: '/feedback'},
+      { title: APP_CONSTANTS.OVERVIEW, path: overviewUrl},
+      { title: APP_CONSTANTS.HOW_TO, path: '/how-to'},
+      { title: APP_CONSTANTS.FEEDBACK, path: '/feedback'},
     ];
   }
 }

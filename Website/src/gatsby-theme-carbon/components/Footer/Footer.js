@@ -27,7 +27,7 @@ const ContentValue = () => (
             </a>
         </p>
         <p>
-            <OutboundLink href="https://pmai-dashboard.9xxws07e6gx.us-south.codeengine.appdomain.cloud/" rel="nofollow noopener noreferrer" target="_blank">
+            <OutboundLink href="https://admai-dashboard.9xxws07e6gx.us-south.codeengine.appdomain.cloud/" rel="nofollow noopener noreferrer" target="_blank">
                 Dashboard
             </OutboundLink>
         </p>

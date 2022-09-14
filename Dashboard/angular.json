@@ -7,6 +7,17 @@
   "newProjectRoot": "projects",
   "projects": {
     "PMAI-Interactive-Decisioning-Dashboard": {
+      "i18n":{
+        "sourceLocale":"en-US",
+        "locales": {
+          "fr":{
+            "translation":"src/locale/messages.fr.xlf"
+          },
+          "sw":{
+            "translation":"src/locale/messages.sw.xlf"
+          } 
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,6 +31,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize":true,
             "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -52,7 +64,8 @@
               "./node_modules/hammerjs/hammer.min.js",
               "./node_modules/swagger-ui-dist/swagger-ui-bundle.js",
               "./node_modules/swagger-ui-dist/swagger-ui-standalone-preset.js"
-            ]
+            ],
+            "i18nMissingTranslation": "warning"
           },
           "configurations": {
             "production": {
@@ -82,17 +95,41 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "development": {
+              "localize": false,
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            },
+            "fr": {
+              "localize": ["fr"]
+            },
+            "sw": {
+              "localize": ["sw"]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "PMAI-Interactive-Decisioning-Dashboard:build"
+            "browserTarget": "PMAI-Interactive-Decisioning-Dashboard:build:development"
           },
           "configurations": {
             "production": {
               "browserTarget": "PMAI-Interactive-Decisioning-Dashboard:build:production"
+            },
+            "development": {
+              "browserTarget": "PMAI-Interactive-Decisioning-Dashboard:build:development"
+            },
+            "fr": {
+              "browserTarget": "PMAI-Interactive-Decisioning-Dashboard:build:development,fr"
+            },
+            "sw": {
+              "browserTarget": "PMAI-Interactive-Decisioning-Dashboard:build:development,sw"
             }
           }
         },

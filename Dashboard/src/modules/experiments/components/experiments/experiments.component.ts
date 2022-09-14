@@ -34,6 +34,7 @@ import { Observable } from 'rxjs';
 import { concatMap, map, startWith } from 'rxjs/operators';
 import { Executor, User, ExecutorRequirement, Algorithms, ApiService, UserService, ConfirmDialogService,
   SNACK_BAR_DURATION, getDaysBetweenTimestampInDays, Experiments, Task, TaskInputs, Location } from 'src/modules/common';
+import { EXPERIMENTS_CONSTANTS } from '../../constants/experiments.constants';
 import { DynamicFormService } from '../../services/dynamic-form/dynamic-form.service';
 import { ExperimentDialogService } from '../../services/experiment-dialog/experiment-dialog.service';
 
@@ -60,8 +61,8 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
   filteredLocationOptions: Observable<any[]>;
   locations: Location[] = [];
   defaultExecutors: Executor[] = [];
-  expTypes: string[] = ['Prediction', 'Calibration'];
-  tasks: string[] = ['Single', 'Multiple', 'Continuous'];
+  expTypes: string[] = [EXPERIMENTS_CONSTANTS.EXPERIMENT_TYPES.PREDICTION, EXPERIMENTS_CONSTANTS.EXPERIMENT_TYPES.CALIBRATION];
+  tasks: string[] = [EXPERIMENTS_CONSTANTS.TASKS.SINGLE, EXPERIMENTS_CONSTANTS.TASKS.MULTIPLE, EXPERIMENTS_CONSTANTS.TASKS.CONTINUOUS];
   actionList: any[] = [];
   private locationIdentity;
   private locationDataIdentity;
@@ -83,7 +84,7 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
   subscribeUser: any;
   user: User;
   allRequements: ExecutorRequirement<any>[] | null = [];
-  infoRequements: ExecutorRequirement<any>[] | null = [{'id':'1','name':'experimentType','category':'info','type':'string','defaults':'','required':'true','hidden':'false','readonly':'false','description':'experiment type','options':[]},{'id':'0','name':'algorithmId','category':'info','type':'string','defaults':'','required':'true','hidden':'false','readonly':'false','description':'algorithm name','options':[]},{'id':'2','name':'name','category':'info','type':'string','defaults':'Calibration','required':'true','hidden':'false','readonly':'false','description':'experiment name'},{'id':'3','name':'description','category':'info','type':'string','defaults':'Calibrating x model to y data','required':'true','hidden':'false','readonly':'false','description':'Description of the experiment'}] as ExecutorRequirement<any>[];
+  infoRequements: ExecutorRequirement<any>[] | null = [{'id':'1','name':'experimentType','category':'info','type':'string','defaults':'','required':'true','hidden':'false','readonly':'false','description':$localize`:experiment type|experiment type@@experiment.type:experiment type`,'options':[]},{'id':'0','name':'algorithmId','category':'info','type':'string','defaults':'','required':'true','hidden':'false','readonly':'false','description': $localize`:algorithm name|algorithm name@@algorithm.name:algorithm name`,'options':[]},{'id':'2','name':'name','category':'info','type':'string','defaults':'Calibration','required':'true','hidden':'false','readonly':'false','description':$localize`:experiment name|experiment name@@experiment.name:experiment name`},{'id':'3','name':'description','category':'info','type':'string','defaults':'Calibrating x model to y data','required':'true','hidden':'false','readonly':'false','description':$localize`:Description of the experiment|Description of the experiment@@description.of.the.experiment:Description of the experiment`}] as ExecutorRequirement<any>[];
   optimizationEnvelopeRequiments: ExecutorRequirement<any>[] | null = [{'id':'value','name':'value','category':'parameter_attribute','type':'number','required':'true','hidden':'false','readonly':'false','description':'the actual value of the parameter'},{'id':'minValue','name':'minValue','category':'parameter_attribute','type':'number','required':'true','hidden':'false','readonly':'false','description':'the lowest value of the parameter that can be sampled'},{'id':'maxValue','name':'maxValue','category':'parameter_attribute','type':'number','required':'true','hidden':'false','readonly':'false','description':'the highest value of the parameter that can be sampled'},{'id':'stepValue','name':'stepValue','category':'parameter_attribute','type':'number','required':'true','hidden':'false','readonly':'false','description':'the lowest resolution of the sampling rate of the parameter'},{'id':'date','name':'date','category':'parameter_attribute','type':'date','required':'true','hidden':'false','readonly':'false','description':'the actual date that the parameter value is applied'},{'id':'startDate','name':'startDate','category':'parameter_attribute','type':'date','required':'true','hidden':'false','readonly':'false','description':'the start date from which parameters are sampled'},{'id':'endDate','name':'endDate','category':'parameter_attribute','type':'date','required':'true','hidden':'false','readonly':'false','description':'the end date up to which parameters are sampled'},{'id':'stepDays','name':'stepDays','category':'parameter_attribute','type':'number','required':'true','hidden':'false','readonly':'false','description':'the lowest time resolution in days of the sampling of the parameter'},{'id':'numberOfEpisodes','name':'numberOfEpisodes','category':'parameter_attribute','type':'number','required':'true','hidden':'false','readonly':'false','description':'the number of optimized parameters to be considered'}] as ExecutorRequirement<any>[];
   filteredOptimizationEnvelopeRequiments: any = {};
   experimentTypeSubscriber: any;
@@ -117,12 +118,12 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
       this.getAllExperiments();
       this.tasks =
         this.user.type === 'DM'
-          ? ['Single', 'Continuous']
-          : ['Single', 'Multiple', 'Continuous'];
+          ? [EXPERIMENTS_CONSTANTS.TASKS.SINGLE, EXPERIMENTS_CONSTANTS.TASKS.CONTINUOUS]
+          : [EXPERIMENTS_CONSTANTS.TASKS.SINGLE, EXPERIMENTS_CONSTANTS.TASKS.MULTIPLE, EXPERIMENTS_CONSTANTS.TASKS.CONTINUOUS];
       this.expTypes =
         this.user.type === 'DM'
-          ? ['Prediction']
-          : ['Prediction', 'Calibration'];
+          ? [EXPERIMENTS_CONSTANTS.EXPERIMENT_TYPES.PREDICTION]
+          : [EXPERIMENTS_CONSTANTS.EXPERIMENT_TYPES.PREDICTION, EXPERIMENTS_CONSTANTS.EXPERIMENT_TYPES.CALIBRATION];
     });
   }
 
@@ -233,11 +234,11 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
       $event.value.actions[0] === '';
     if (this.actionsAbsent) {
       this.snackBar.open(
-        'Actions missing in ' +
+        EXPERIMENTS_CONSTANTS.ACTION_MISSING_IN +
           $event.value.name +
-          ' model.' +
-          ' Consult the system admin!',
-        'close',
+          EXPERIMENTS_CONSTANTS.MODEL +
+          EXPERIMENTS_CONSTANTS.CONSULT_THE__SYSTEM_ADMIN,
+        EXPERIMENTS_CONSTANTS.CLOSE,
         {
           duration: SNACK_BAR_DURATION,
         }
@@ -333,13 +334,14 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
     let message = ``;
     if (param === 'date') {
       message = currentRequirement.optimizationEnvelope.date
-      ? `Date: ` + currentRequirement.optimizationEnvelope.date
+      ? EXPERIMENTS_CONSTANTS.DATE + currentRequirement.optimizationEnvelope.date
       : (currentRequirement.optimizationEnvelope.startDate && currentRequirement.optimizationEnvelope.endDate)
-      ? `Dates: ` + currentRequirement.optimizationEnvelope.startDate + ` - ` + currentRequirement.optimizationEnvelope.endDate
+      ? EXPERIMENTS_CONSTANTS.DATES + currentRequirement.optimizationEnvelope.startDate + ` - `
+      + currentRequirement.optimizationEnvelope.endDate
       : currentRequirement.optimizationEnvelope.startDate
-      ? `Dates: ` + currentRequirement.optimizationEnvelope.startDate + ` - `
+      ? EXPERIMENTS_CONSTANTS.DATES + currentRequirement.optimizationEnvelope.startDate + ` - `
       : currentRequirement.optimizationEnvelope.endDate
-      ? `Dates: - ` + currentRequirement.optimizationEnvelope.endDate
+      ? EXPERIMENTS_CONSTANTS.DATES_DASH + currentRequirement.optimizationEnvelope.endDate
       : ``;
     } else if (param === 'parameter') {
       message = currentRequirement.optimizationEnvelope.value
@@ -358,11 +360,11 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   expTypeDropdownChangeListener($event: MatSelectChange) {
     this.tasks =
-      $event.value === 'Calibration'
-        ? ['Multiple']
+      $event.value === EXPERIMENTS_CONSTANTS.EXPERIMENT_TYPES.CALIBRATION
+        ? [EXPERIMENTS_CONSTANTS.TASKS.MULTIPLE]
         : this.user.type === 'DM'
-        ? ['Single', 'Continuous']
-        : ['Single', 'Multiple', 'Continuous'];
+        ? [EXPERIMENTS_CONSTANTS.TASKS.SINGLE, EXPERIMENTS_CONSTANTS.TASKS.CONTINUOUS]
+        : [EXPERIMENTS_CONSTANTS.TASKS.SINGLE, EXPERIMENTS_CONSTANTS.TASKS.MULTIPLE, EXPERIMENTS_CONSTANTS.TASKS.CONTINUOUS];
     // this.formGroup.controls['tasks'].setValue('');
     this.actionList = [];
   }
@@ -384,24 +386,24 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
           if (!isNotNullOrUndefined(data) || data === '') {
             return;
           }
-          if (form['tasks'] === 'Single') {
+          if (form['tasks'] === EXPERIMENTS_CONSTANTS.TASKS.SINGLE) {
             this.actionList.push(this.getInterventionDate(data));
-          } else if (form['tasks'] === 'Multiple') {
-            if (form['experiment_type'] === 'Prediction') {
+          } else if (form['tasks'] === EXPERIMENTS_CONSTANTS.TASKS.MULTIPLE) {
+            if (form['experiment_type'] === EXPERIMENTS_CONSTANTS.EXPERIMENT_TYPES.PREDICTION) {
               this.actionList.push(this.getStartAndEndDates(data));
-            } else if (form['experiment_type'] === 'Calibration') {
+            } else if (form['experiment_type'] === EXPERIMENTS_CONSTANTS.EXPERIMENT_TYPES.CALIBRATION) {
               // data['coverageMinMax'] = [data['coverageMin'], data['coverageMax']];
               // this.actionList.push(data);
               data['location'] = 'UG';
               data['model_name'] = 'maksphcovid19modelv1';
               this.actionList.push(this.getInterventionDate(data));
             }
-          } else if (form['tasks'] === 'Continuous') {
+          } else if (form['tasks'] === EXPERIMENTS_CONSTANTS.TASKS.CONTINUOUS) {
             this.actionList.push(this.getContinuousInterventions(data));
           }
         },
         (error) => {
-          this.snackBar.open('Entered actions update failed', 'close', {
+          this.snackBar.open(EXPERIMENTS_CONSTANTS.ACTION_UPDATE_FAILED, EXPERIMENTS_CONSTANTS.CLOSE, {
             duration: SNACK_BAR_DURATION,
           });
         }
@@ -505,11 +507,11 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
                 currentModel[0].actions[0] === '';
               if (this.actionsAbsent) {
                 this.snackBar.open(
-                  'Actions missing in ' +
+                  EXPERIMENTS_CONSTANTS.ACTION_MISSING_IN +
                     currentModel[0].name +
-                    ' model.' +
-                    ' Consult the system admin!',
-                  'close',
+                    EXPERIMENTS_CONSTANTS.MODEL +
+                    EXPERIMENTS_CONSTANTS.CONSULT_THE__SYSTEM_ADMIN,
+                  EXPERIMENTS_CONSTANTS.CLOSE,
                   {
                     duration: SNACK_BAR_DURATION,
                   }
@@ -523,7 +525,7 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
           this.loadLocationsAndPostExecutors(modelId, locationId);
         },
         (error) => {
-          this.snackBar.open('Could not find models : ', 'close', {
+          this.snackBar.open(EXPERIMENTS_CONSTANTS.MODELS_NOT_FOUND, EXPERIMENTS_CONSTANTS.CLOSE, {
             duration: SNACK_BAR_DURATION,
           });
         }
@@ -557,7 +559,7 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
           }
         },
         (error) => {
-          this.snackBar.open('Could not find locations : ', 'close', {
+          this.snackBar.open(EXPERIMENTS_CONSTANTS.LOCATION_NOT_FOUND, EXPERIMENTS_CONSTANTS.CLOSE, {
             duration: SNACK_BAR_DURATION,
           });
         }
@@ -595,7 +597,7 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
       .subscribe((outcome) => {
         console.log(outcome);
         if (!outcome['entity'] || !outcome['entity'][0]) {
-          this.snackBar.open('Experiment Creation Failed: ' + experimentPayload['name'], 'close', {
+          this.snackBar.open(EXPERIMENTS_CONSTANTS.EXPERIMENT_CREATION_FAILED + experimentPayload['name'], EXPERIMENTS_CONSTANTS.CLOSE, {
             duration: SNACK_BAR_DURATION,
           });
           return;
@@ -603,7 +605,8 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
 
         if (outcome['status'] === 201) {
           this.itemsDataSource.data = [...outcome['entity'], ...this.itemsDataSource.data];
-          this.snackBar.open('Experiment Creation Successful: ' + experimentPayload['name'], 'close', {
+          this.snackBar.open(EXPERIMENTS_CONSTANTS.EXPERIMENT_CREATION_SUCCESSFUL
+            + experimentPayload['name'], EXPERIMENTS_CONSTANTS.CLOSE, {
               duration: SNACK_BAR_DURATION,
           });
           this.router.navigate(['/results'], {
@@ -615,20 +618,22 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
           });
         } else if (outcome['status'] === 200) {
           this.duplicateExperimentsDataSource.data = outcome['entity'];
-          this.confirmDialogService.openDialog('confirmation', 'A similar experiment for this location and environment has been returned,\ncheck the list of duplicate experiments to view the content.\nWould you like to override this and perform a new experiment?').subscribe(response => {
+          this.confirmDialogService.openDialog('confirmation',EXPERIMENTS_CONSTANTS.SIMILAR_EXPERIMENT_CONFIRMATION).subscribe(response => {
             if (response) {
               if (this.subscribePostExperiment) {
                 this.subscribePostExperiment.unsubscribe();
               }
               this.subscribePostExperiment = this.apiService.postExperiment(experimentPayload, false).subscribe(newOutcome => {
                 if (!newOutcome['entity'] || !newOutcome['entity'][0]) {
-                  this.snackBar.open('Experiment Creation Failed: ' + experimentPayload['name'], 'close', {
+                  this.snackBar.open(EXPERIMENTS_CONSTANTS.EXPERIMENT_CREATION_FAILED
+                    + experimentPayload['name'], EXPERIMENTS_CONSTANTS.CLOSE, {
                     duration: SNACK_BAR_DURATION,
                   });
                   return;
                 }
                 this.itemsDataSource.data = [...newOutcome['entity'], ...this.itemsDataSource.data];
-                this.snackBar.open('Experiment Creation Successiful: ' + experimentPayload['name'], 'close', {
+                this.snackBar.open(EXPERIMENTS_CONSTANTS.EXPERIMENT_CREATION_SUCCESSFUL
+                  + experimentPayload['name'], EXPERIMENTS_CONSTANTS.CLOSE, {
                   duration: SNACK_BAR_DURATION,
                 });
                 this.router.navigate(['/results'], {
@@ -639,7 +644,8 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
                   },
                 });
               }, newError => {
-                this.snackBar.open('Experiment Creation Failed: ' + experimentPayload['name'], 'close', {
+                this.snackBar.open(EXPERIMENTS_CONSTANTS.EXPERIMENT_CREATION_FAILED
+                  + experimentPayload['name'], EXPERIMENTS_CONSTANTS.CLOSE, {
                   duration: SNACK_BAR_DURATION,
                 });
               });

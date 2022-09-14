@@ -19,18 +19,18 @@
         <div *ngIf="!executorRequirement.options || executorRequirement.options.length === 0; then textbox else dropdown"></div>
         <ng-template #textbox>
             <mat-form-field class="settings-select">
-                <mat-label [attr.for]="executorRequirement.name">Enter {{executorRequirement.description || executorRequirement.name}}</mat-label>
+                <mat-label [attr.for]="executorRequirement.name" i18n="enter label|enter label@@enterLabel">Enter {{executorRequirement.description || executorRequirement.name}}</mat-label>
                 <input matInput [formControlName]="executorRequirement.name" [id]="executorRequirement.name" [type]="executorRequirement.type">
-                <mat-error>{{executorRequirement.name}} is required</mat-error>
+                <mat-error i18n="is required|is required@@isRequired">{{executorRequirement.name}} is required</mat-error>
             </mat-form-field>
         </ng-template>
         <ng-template #dropdown>
             <mat-form-field class="settings-select">
-                <mat-label [attr.for]="executorRequirement.name">Enter {{executorRequirement.description || executorRequirement.name}}</mat-label>
+                <mat-label [attr.for]="executorRequirement.name" i18n="enter label|enter label@@enterLabel">Enter {{executorRequirement.description || executorRequirement.name}}</mat-label>
                 <mat-select [id]="executorRequirement.name" [formControlName]="executorRequirement.name">
                   <mat-option *ngFor="let er of executorRequirement.options" [value]="er">{{er}}</mat-option>
                 </mat-select>
-                <mat-error>{{executorRequirement.name}} is required</mat-error>
+                <mat-error i18n="is required|is required@@isRequired">{{executorRequirement.name}} is required</mat-error>
             </mat-form-field>
         </ng-template>
     </div>
