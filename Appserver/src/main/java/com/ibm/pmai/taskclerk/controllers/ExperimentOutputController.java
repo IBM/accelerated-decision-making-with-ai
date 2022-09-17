@@ -442,4 +442,37 @@ public class ExperimentOutputController {
             throw new ApiException(Response.Status.BAD_REQUEST.getStatusCode(), "ExperimentOutput not fod");
         }
     }
+
+    /**
+     * get experiment output by locationId and postExecutorId
+     * @return {@link Response}
+     * @throws Exception
+     */
+    @GetMapping (value = "/by.location.id.and.post.executor.id/{locationId}/{postExecutorId}"  )
+    @Operation(summary = "get experiment output by locationId and postExecutorId",
+        tags = {"ExperimentOutput"},
+        description = "get experiment output by locationId and postExecutorId",
+        responses = {
+            @ApiResponse(description = "ExperimentOutput", content = @Content(schema = @Schema(implementation = ExperimentOutput.class))),
+            @ApiResponse(responseCode = "200", description = "OK"),
+            @ApiResponse(responseCode = "400", description = "Invalid request"),
+            @ApiResponse(responseCode = "401", description = "Authorization information is missing or invalid."),
+            @ApiResponse(responseCode = "5XX", description = "Unexpected error."),
+            @ApiResponse(responseCode = "404", description = "Not found"),
+            @ApiResponse(responseCode = "405", description = "Validation exception")
+        })
+    public Response getExperimentOutputByLocationIdAndPostExecutorId(
+        @Parameter(description = "location id", required = true)  @Valid @PathVariable("locationId") String locationId,
+        @Parameter(description = "post executor id", required = true)  @Valid @PathVariable("postExecutorId") String postExecutorId) throws Exception {
+
+        // get experiment output by locationId and postExecutorId
+        List<ExperimentOutput> experimentOutputList =  experimentOutputRepository.getByExperiment_ExperimentHash(Utils.getExperimentHash(locationId, postExecutorId));
+        if (experimentOutputList!=null) {
+            // Set ExperimentOutput as entity in response object
+            return Response.ok().entity(experimentOutputList).build();
+
+        } else  // Handle where ExperimentOutput is not available
+            throw new ApiException(Response.Status.BAD_REQUEST.getStatusCode(), "Missing experiment output");
+
+    }
 }
