@@ -63,6 +63,7 @@ export const STATS_API = `assets/data/outcome/monthly/stats.json`;
 export const POST_RESULTS_REQUEST = `${API_URL}/resultsrequest`;
 export const GET_RESULTS_REQUEST_STATUS = `${API_URL}/resultsrequest/status/`;
 export const ALGORITHMS = `${API_URL}/algorithms`;
+export const EXPERIMENT_OUTPUT = `${API_URL}/experimentOutput/`;
 
 @Injectable({
   providedIn: 'root'
@@ -387,6 +388,21 @@ export class ApiService {
       {headers: this.headers})
       .pipe(map(response => {
         return response;
+      }));
+  }
+
+  getExperimentOutputByLocationIdAndPostExecutorId(locationId: string, postExecutorId: string) {
+    return this.httpClient.get(`${EXPERIMENT_OUTPUT}by.location.id.and.post.executor.id/` + locationId + '/' + postExecutorId, {headers: this.headers})
+      .pipe(map(response => {
+        return response;
+      }));
+  }
+
+  getExperimentOutputByExperimentOutputId(experimentOutputId: string) {
+    return this.httpClient.get(`${EXPERIMENT_OUTPUT}by.experiment.output.id/` + experimentOutputId, {headers: this.headers})
+      .pipe(map(response => {
+        if (!isNotNullOrUndefined(response) || !isNotNullOrUndefined(response['entity'])) { return null; }
+        return response['entity'];
       }));
   }
 }
