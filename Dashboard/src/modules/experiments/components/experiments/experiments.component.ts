@@ -262,7 +262,6 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
   locationSelectionChange(value: any) {
     this.locationIdentity = value.id;
     this.locationDataIdentity = value.locationDataId;
-    console.log(this.formGroup);
   }
 
   private locationChange() {
@@ -348,7 +347,6 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
     .valueChanges.subscribe(value => {
       if (value === 'Model Evaluation') {
         // TODO: Check whether calibrated params exists and display them while hiding OptimizationEnvelope content
-        console.log(value);
         this.apiService.getExperimentOutputByLocationIdAndPostExecutorId(this.locationIdentity, rf.id).subscribe(
           output => {
             this.experimentOutputDataSource.data = output['entity'];
@@ -359,12 +357,9 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
         );
       } else {
         // TODO: Remove the calibrated params if any and show OptimizationEnvelope content
-        console.log(value);
         this.experimentOutputDataSource.data = [];
-
         Object.keys(this.formGroup.controls).forEach(control => {
-          if (['staticGroup'].indexOf(control) === -1) { 
-            console.log(control);
+          if (['staticGroup', 'dynamicGroup'].indexOf(control) === -1) { 
             this.formGroup.removeControl(control);
            }
         });
@@ -372,9 +367,14 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
         const optimizationParametersRequiments: ExecutorRequirement<any>[] = this.filterList(['optimization_parameter'], rf.executorRequirement, 'category');
         this.infoRequements[0].options = rf.actions;
         this.infoRequements[0].defaults = rf.actions[0]
-        this.allRequements = [];
         this.allRequements = [...this.infoRequements, ...rf.executorRequirement];
-        this.formGroup.controls['dynamicGroup'] = this.dynamicFormService.toFormGroup(this.allRequements as ExecutorRequirement<any>[]);
+
+        this.allRequements.forEach(requirement => {
+          if ((isNotNullOrUndefined(requirement.optimizationEnvelope) && Object.keys(requirement.optimizationEnvelope).length > 0) || requirement.name === 'experimentType') { return; }
+          (this.formGroup.get('dynamicGroup') as FormGroup).controls[requirement.name].setValue(requirement.value ? requirement.value : requirement.defaults);
+          requirement.readonly === 'true' ? (this.formGroup.get('dynamicGroup') as FormGroup).controls[requirement.name].disable({ onlySelf: true }) : (this.formGroup.get('dynamicGroup') as FormGroup).controls[requirement.name].enable()
+        });
+
         this.allRequements.forEach(requirement => {
           if (!isNotNullOrUndefined(requirement.optimizationEnvelope) || Object.keys(requirement.optimizationEnvelope).length < 1) { return; }
           const filteredFormsAndFormGroup = this.dynamicFormService.toFilteredFormGroup(
@@ -382,6 +382,7 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
           this.formGroup.controls[requirement.name] = filteredFormsAndFormGroup.formGroup;
           this.filteredOptimizationEnvelopeRequiments[requirement.name] = filteredFormsAndFormGroup.filteredForms;
         });
+        // window.location.reload();
       }
     });
   }
@@ -426,12 +427,10 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   tasksDropdownChangeListener($event: MatSelectChange) {
-    // console.log($event);
     this.actionList = [];
   }
 
   openActionsDialog(form) {
-    console.log(form);
     form['location'] = this.locationIdentity;
     this.formData = form;
 
@@ -651,7 +650,6 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
     this.subscribePostExperiment = this.apiService
       .postExperiment(experimentPayload, experimentPayload.experimentType === 'Model Evaluation' ? false : true)
       .subscribe((outcome) => {
-        console.log(outcome);
         if (!outcome['entity'] || !outcome['entity'][0]) {
           this.snackBar.open(EXPERIMENTS_CONSTANTS.EXPERIMENT_CREATION_FAILED + experimentPayload['name'], EXPERIMENTS_CONSTANTS.CLOSE, {
             duration: SNACK_BAR_DURATION,
@@ -718,35 +716,27 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   experimentOutput(item: ExperimentOutput) {
-    console.log(item);
-
     if (!isNotNullOrUndefined(item) || !isNotNullOrUndefined(item.experiment) || !isNotNullOrUndefined(item.experiment.data)) {
       console.log("Experiment data missing!");
       return;
     }
     const data = JSON.parse(item.experiment.data);
-    console.log(data);
     Object.keys((this.formGroup.get('dynamicGroup') as FormGroup).controls).forEach(control => {
-      console.log(control);
       if (control in data && control !== "experimentType" && control !== "end_date") {
-        console.log(data[control]);
         (this.formGroup.get('dynamicGroup') as FormGroup).controls[control].setValue(data[control]);
         (this.formGroup.get('dynamicGroup') as FormGroup).controls[control].disable({ onlySelf: true })   
       }
     });
     this.apiService.getExperimentOutputByExperimentOutputId(item.id).subscribe(
       output => {
-        console.log(output);
         if (!isNotNullOrUndefined(output) || !isNotNullOrUndefined(output['actions'])) { return; }
         Object.keys(this.formGroup.controls).forEach(control => {
-          console.log(control);
           if (['staticGroup', 'dynamicGroup'].indexOf(control) === -1) { 
             this.formGroup.removeControl(control);
            }
         });
         this.allRequements = this.filterList3(this.allRequements, 'optimizationEnvelope')
         for (let action of output['actions']) {
-          console.log(action);
           let executorRequirement: ExecutorRequirement<string> = new ExecutorRequirement({
             id: action['action_name'] + '-' + action['action_position'],
             name: action['action_name'] + '-' + action['action_position'],
@@ -768,7 +758,6 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
           optimizationEnvelope.endDate = action['action_end_date'];
 
           executorRequirement.optimizationEnvelope = optimizationEnvelope;
-          console.log(executorRequirement);
 
           this.allRequements.push(executorRequirement);
         }
@@ -780,8 +769,6 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
           this.formGroup.controls[requirement.name] = filteredFormsAndFormGroup.formGroup;
           this.filteredOptimizationEnvelopeRequiments[requirement.name] = filteredFormsAndFormGroup.filteredForms;
         });
-
-        console.log(this.formGroup);
       },
       error => {
         console.log(error);
