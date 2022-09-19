@@ -43,11 +43,9 @@ def install_requirements(requirements_uri, requements_type):
         subprocess.check_call(command)
 
 # Get data
-data_string = os.getenv("data")
-print("data: ", data_string)
+with open("../Researchproject/experiments/experiment19.json", 'r') as file:
+    data = json.load(file)
 
-data = json.loads(data_string)
-print(data)
 
 # Extract parameters
 episode_num = int(data["episode_num"]) if "episode_num" in data else 10
@@ -80,11 +78,8 @@ environment_class = getattr(environment_module, environment_name)
 predenv = environment_class(data=data)
 
 # Get calibration data
-calibration_data_string = os.getenv("data")
-print("data: ", calibration_data_string)
-
-calib_data = json.loads(calibration_data_string)
-print(calib_data)
+with open("../Researchproject/calibration_results/8969a9a98316c1540183180256420002-prediction.json", 'r') as file:
+    calib_data = json.load(file)
 
 optimal_params = []
 for x in calib_data:
