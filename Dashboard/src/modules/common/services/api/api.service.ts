@@ -392,7 +392,8 @@ export class ApiService {
   }
 
   getExperimentOutputByLocationIdAndPostExecutorId(locationId: string, postExecutorId: string) {
-    return this.httpClient.get(`${EXPERIMENT_OUTPUT}by.location.id.and.post.executor.id/` + locationId + '/' + postExecutorId, {headers: this.headers})
+    return this.httpClient.get(`${EXPERIMENT_OUTPUT}by.location.id.and.post.executor.id/`
+     + locationId + '/' + postExecutorId, {headers: this.headers})
       .pipe(map(response => {
         return response;
       }));

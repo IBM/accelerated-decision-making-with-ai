@@ -282,7 +282,7 @@
                   <mat-row *matRowDef="let row; columns: displayedColumnsForExperimentOutput;"></mat-row>
 
                 </mat-table>
-                <mat-paginator #experimentOutputPaginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20]"
+                <mat-paginator #experimentOutputPaginator="matPaginator" [pageSize]="5" [pageSizeOptions]="[5, 10, 20]"
                                [showFirstLastButtons]="true"></mat-paginator>
               </div>
             </div>

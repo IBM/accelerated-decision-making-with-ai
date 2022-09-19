@@ -49,11 +49,11 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('itemsSort', { static: true }) sort: MatSort;
   @ViewChild('itemsPaginator', { static: true }) paginator: MatPaginator;
 
-  @ViewChild('duplicateExperimentsSort', { static: true }) duplicateExperimentsSort: MatSort;
-  @ViewChild('duplicateExperimentsPaginator', { static: true }) duplicateExperimentsPaginator: MatPaginator;
+  @ViewChild('duplicateExperimentsSort', { static: false }) duplicateExperimentsSort: MatSort;
+  @ViewChild('duplicateExperimentsPaginator', { static: false }) duplicateExperimentsPaginator: MatPaginator;
 
-  @ViewChild('experimentOutputSort', { static: true }) experimentOutputSort: MatSort;
-  @ViewChild('experimentOutputPaginator', { static: true }) experimentOutputPaginator: MatPaginator;
+  @ViewChild('experimentOutputSort', { static: false }) experimentOutputSort: MatSort;
+  @ViewChild('experimentOutputPaginator', { static: false }) experimentOutputPaginator: MatPaginator;
 
   private subscribeExperiments: any;
   itemsDataSource = new MatTableDataSource();
@@ -135,12 +135,6 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     this.itemsDataSource.paginator = this.paginator;
     this.itemsDataSource.sort = this.sort;
-
-    this.duplicateExperimentsDataSource.paginator = this.duplicateExperimentsPaginator;
-    this.duplicateExperimentsDataSource.sort = this.duplicateExperimentsSort;
-
-    this.experimentOutputDataSource.paginator = this.experimentOutputPaginator;
-    this.experimentOutputDataSource.sort = this.experimentOutputSort;
 
     setTimeout(() => {
       this.loadMoreData();
@@ -262,6 +256,8 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
   locationSelectionChange(value: any) {
     this.locationIdentity = value.id;
     this.locationDataIdentity = value.locationDataId;
+    this.experimentOutputDataSource.data = [];
+    this.duplicateExperimentsDataSource.data = [];
   }
 
   private locationChange() {
@@ -346,10 +342,14 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
     this.experimentTypeSubscriber = (this.formGroup.get('dynamicGroup') as FormGroup).controls['experimentType']
     .valueChanges.subscribe(value => {
       if (value === 'Model Evaluation') {
-        // TODO: Check whether calibrated params exists and display them while hiding OptimizationEnvelope content
+        this.duplicateExperimentsDataSource.data = [];
         this.apiService.getExperimentOutputByLocationIdAndPostExecutorId(this.locationIdentity, rf.id).subscribe(
           output => {
             this.experimentOutputDataSource.data = output['entity'];
+            setTimeout(() => {
+              this.experimentOutputDataSource.paginator = this.experimentOutputPaginator;
+              this.experimentOutputDataSource.sort = this.experimentOutputSort;
+            });
           },
           error => {
             console.log(error);
@@ -359,24 +359,29 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
         // TODO: Remove the calibrated params if any and show OptimizationEnvelope content
         this.experimentOutputDataSource.data = [];
         Object.keys(this.formGroup.controls).forEach(control => {
-          if (['staticGroup', 'dynamicGroup'].indexOf(control) === -1) { 
+          if (['staticGroup', 'dynamicGroup'].indexOf(control) === -1) {
             this.formGroup.removeControl(control);
            }
         });
 
-        const optimizationParametersRequiments: ExecutorRequirement<any>[] = this.filterList(['optimization_parameter'], rf.executorRequirement, 'category');
         this.infoRequements[0].options = rf.actions;
         this.infoRequements[0].defaults = rf.actions[0]
         this.allRequements = [...this.infoRequements, ...rf.executorRequirement];
 
         this.allRequements.forEach(requirement => {
-          if ((isNotNullOrUndefined(requirement.optimizationEnvelope) && Object.keys(requirement.optimizationEnvelope).length > 0) || requirement.name === 'experimentType') { return; }
-          (this.formGroup.get('dynamicGroup') as FormGroup).controls[requirement.name].setValue(requirement.value ? requirement.value : requirement.defaults);
-          requirement.readonly === 'true' ? (this.formGroup.get('dynamicGroup') as FormGroup).controls[requirement.name].disable({ onlySelf: true }) : (this.formGroup.get('dynamicGroup') as FormGroup).controls[requirement.name].enable()
+          if ((isNotNullOrUndefined(requirement.optimizationEnvelope)
+          && Object.keys(requirement.optimizationEnvelope).length > 0)
+          || requirement.name === 'experimentType') { return; }
+          (this.formGroup.get('dynamicGroup') as FormGroup).controls[requirement.name]
+          .setValue(requirement.value ? requirement.value : requirement.defaults);
+          requirement.readonly === 'true'
+          ? (this.formGroup.get('dynamicGroup') as FormGroup).controls[requirement.name].disable({ onlySelf: true })
+          : (this.formGroup.get('dynamicGroup') as FormGroup).controls[requirement.name].enable()
         });
 
         this.allRequements.forEach(requirement => {
-          if (!isNotNullOrUndefined(requirement.optimizationEnvelope) || Object.keys(requirement.optimizationEnvelope).length < 1) { return; }
+          if (!isNotNullOrUndefined(requirement.optimizationEnvelope)
+          || Object.keys(requirement.optimizationEnvelope).length < 1) { return; }
           const filteredFormsAndFormGroup = this.dynamicFormService.toFilteredFormGroup(
             this.optimizationEnvelopeRequiments as ExecutorRequirement<any>[], requirement.optimizationEnvelope);
           this.formGroup.controls[requirement.name] = filteredFormsAndFormGroup.formGroup;
@@ -672,6 +677,11 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
           });
         } else if (outcome['status'] === 200) {
           this.duplicateExperimentsDataSource.data = outcome['entity'];
+          setTimeout(() => {
+            this.duplicateExperimentsDataSource.paginator = this.duplicateExperimentsPaginator;
+            this.duplicateExperimentsDataSource.sort = this.duplicateExperimentsSort;
+          });
+
           this.confirmDialogService.openDialog('confirmation',EXPERIMENTS_CONSTANTS.SIMILAR_EXPERIMENT_CONFIRMATION).subscribe(response => {
             if (response) {
               if (this.subscribePostExperiment) {
@@ -717,27 +727,27 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   experimentOutput(item: ExperimentOutput) {
     if (!isNotNullOrUndefined(item) || !isNotNullOrUndefined(item.experiment) || !isNotNullOrUndefined(item.experiment.data)) {
-      console.log("Experiment data missing!");
+      console.log('Experiment data missing!');
       return;
     }
     const data = JSON.parse(item.experiment.data);
     Object.keys((this.formGroup.get('dynamicGroup') as FormGroup).controls).forEach(control => {
-      if (control in data && control !== "experimentType" && control !== "end_date") {
+      if (control in data && control !== 'experimentType' && control !== 'end_date') {
         (this.formGroup.get('dynamicGroup') as FormGroup).controls[control].setValue(data[control]);
-        (this.formGroup.get('dynamicGroup') as FormGroup).controls[control].disable({ onlySelf: true })   
+        (this.formGroup.get('dynamicGroup') as FormGroup).controls[control].disable({ onlySelf: true })
       }
     });
     this.apiService.getExperimentOutputByExperimentOutputId(item.id).subscribe(
       output => {
         if (!isNotNullOrUndefined(output) || !isNotNullOrUndefined(output['actions'])) { return; }
         Object.keys(this.formGroup.controls).forEach(control => {
-          if (['staticGroup', 'dynamicGroup'].indexOf(control) === -1) { 
+          if (['staticGroup', 'dynamicGroup'].indexOf(control) === -1) {
             this.formGroup.removeControl(control);
            }
         });
         this.allRequements = this.filterList3(this.allRequements, 'optimizationEnvelope')
-        for (let action of output['actions']) {
-          let executorRequirement: ExecutorRequirement<string> = new ExecutorRequirement({
+        for (const action of output['actions']) {
+          const executorRequirement: ExecutorRequirement<string> = new ExecutorRequirement({
             id: action['action_name'] + '-' + action['action_position'],
             name: action['action_name'] + '-' + action['action_position'],
             category: 'optimization_parameter',
@@ -752,7 +762,7 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
           executorRequirement.options = [];
           executorRequirement.metadataDetailsList = [];
 
-          let optimizationEnvelope: OptimizationEnvelope = {};
+          const optimizationEnvelope: OptimizationEnvelope = {};
           optimizationEnvelope.value = action['action_value'];
           optimizationEnvelope.startDate = action['action_start_date'];
           optimizationEnvelope.endDate = action['action_end_date'];
@@ -763,7 +773,8 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
         }
 
         this.allRequements.forEach(requirement => {
-          if (!isNotNullOrUndefined(requirement.optimizationEnvelope) || Object.keys(requirement.optimizationEnvelope).length < 1) { return; }
+          if (!isNotNullOrUndefined(requirement.optimizationEnvelope)
+          || Object.keys(requirement.optimizationEnvelope).length < 1) { return; }
           const filteredFormsAndFormGroup = this.dynamicFormService.toFilteredFormGroup(
             this.optimizationEnvelopeRequiments as ExecutorRequirement<any>[], requirement.optimizationEnvelope);
           this.formGroup.controls[requirement.name] = filteredFormsAndFormGroup.formGroup;
