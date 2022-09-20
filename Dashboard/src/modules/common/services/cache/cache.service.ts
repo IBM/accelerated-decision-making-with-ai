@@ -95,13 +95,13 @@ export class CacheService {
           }
         },
         (error1) => {
-          this.snackBar.open(
-            LOADING_ERROR_MESSAGE + ' favorite policies',
-            'close',
-            {
-              duration: SNACK_BAR_DURATION,
-            }
-          );
+          // this.snackBar.open(
+          //   LOADING_ERROR_MESSAGE + ' favorite policies',
+          //   'close',
+          //   {
+          //     duration: SNACK_BAR_DURATION,
+          //   }
+          // );
         }
       );
     }
