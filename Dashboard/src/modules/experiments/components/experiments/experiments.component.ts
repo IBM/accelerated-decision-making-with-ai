@@ -84,7 +84,6 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
   size = 10;
   private subscribePostTask: any;
   private subscribePostExperiment: any;
-  actionsAbsent = false;
   userObservable: Observable<User>;
   subscribeUser: any;
   user: User;
@@ -234,22 +233,6 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     (this.formGroup.get('staticGroup') as FormGroup).controls['location'].setValue('');
-    this.actionsAbsent =
-      !isNotNullOrUndefined($event.value.actions) ||
-      $event.value.actions.length < 1 ||
-      $event.value.actions[0] === '';
-    if (this.actionsAbsent) {
-      this.snackBar.open(
-        EXPERIMENTS_CONSTANTS.ACTION_MISSING_IN +
-          $event.value.name +
-          EXPERIMENTS_CONSTANTS.MODEL +
-          EXPERIMENTS_CONSTANTS.CONSULT_THE__SYSTEM_ADMIN,
-        EXPERIMENTS_CONSTANTS.CLOSE,
-        {
-          duration: SNACK_BAR_DURATION,
-        }
-      );
-    }
     this.loadLocationsAndPostExecutors($event.value.id);
   }
 
@@ -551,32 +534,6 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
               isNotNullOrUndefined(currentModel[0])
             ) {
               (this.formGroup.get('staticGroup') as FormGroup).controls['executor'].setValue(currentModel[0]);
-
-              // TODO: REMOVE BELOW THIS TEST CODE
-              if (currentModel[0].name === 'TEST3ROSS') {
-                currentModel[0].actions = ['itn', 'irs'];
-              }
-              // TODO: REMOVE ABOVE THIS TEST CODE
-
-              // this.formGroup.controls['interventions'].setValue(
-              //   currentModel[0].actions
-              // );
-              this.actionsAbsent =
-                !isNotNullOrUndefined(currentModel[0].actions) ||
-                currentModel[0].actions.length < 1 ||
-                currentModel[0].actions[0] === '';
-              if (this.actionsAbsent) {
-                this.snackBar.open(
-                  EXPERIMENTS_CONSTANTS.ACTION_MISSING_IN +
-                    currentModel[0].name +
-                    EXPERIMENTS_CONSTANTS.MODEL +
-                    EXPERIMENTS_CONSTANTS.CONSULT_THE__SYSTEM_ADMIN,
-                  EXPERIMENTS_CONSTANTS.CLOSE,
-                  {
-                    duration: SNACK_BAR_DURATION,
-                  }
-                );
-              }
               if (isNotNullOrUndefined(currentModel[0].defaultPostExecutor)) {
                 this.defaultExecutors = currentModel[0].defaultPostExecutor;
               }
