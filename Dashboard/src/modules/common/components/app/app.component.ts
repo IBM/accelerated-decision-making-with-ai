@@ -177,7 +177,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterContentChecked {
       { title: APP_CONSTANTS.FEEDBACK, path: '/feedback'},
     ] : (type === 'admai_ds') ? [
       { title: APP_CONSTANTS.OVERVIEW, path: overviewUrl},
-      { title: APP_CONSTANTS.ALGORITHMS, path: '/algorithms'},
+      // { title: APP_CONSTANTS.ALGORITHMS, path: '/algorithms'},
       { title: APP_CONSTANTS.MODELS, path: '/models'},
       { title: APP_CONSTANTS.EXPERIMENTS, path: '/experiments'},
       { title: APP_CONSTANTS.RESULTS, path: '/results'},
