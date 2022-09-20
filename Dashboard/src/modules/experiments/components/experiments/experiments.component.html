@@ -192,7 +192,7 @@
                 <mat-paginator #itemsPaginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20]"
                                [showFirstLastButtons]="true"></mat-paginator>
               </div>
-              <div *ngIf="duplicateExperimentsDataSource && duplicateExperimentsDataSource.data">
+              <div *ngIf="duplicateExperimentsDataSource && duplicateExperimentsDataSource.data && duplicateExperimentsDataSource.data.length > 0">
                 <div id="page-header-wrap">
                   <h1 i18n="duplicate experiments header|duplicate experiments header@@duplicateExperimentsHeader">
                     Duplicate Experiments
@@ -200,7 +200,7 @@
                   </h1>
                   <span class="fill-remaining-space"></span>
                 </div>
-                <mat-table #duplicateExperimentsSort="matSort" [dataSource]="duplicateExperimentsDataSource" matSort id="clusters-table">
+                <mat-table #duplicateExperimentsSort="matSort" [dataSource]="duplicateExperimentsDataSource" matSort id="duplicate-experiments-table">
                   <ng-container matColumnDef="id">
                     <mat-header-cell *matHeaderCellDef mat-sort-header i18n="id of the duplicate experiment|id of the duplicate experiment@@duplicateExperimentId">ID</mat-header-cell>
                     <mat-cell *matCellDef="let item"> {{item.id}}</mat-cell>
@@ -236,6 +236,53 @@
 
                 </mat-table>
                 <mat-paginator #duplicateExperimentsPaginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20]"
+                               [showFirstLastButtons]="true"></mat-paginator>
+              </div>
+
+              <div *ngIf="experimentOutputDataSource && experimentOutputDataSource.data && experimentOutputDataSource.data.length > 0">
+                <div id="page-header-wrap">
+                  <h1 i18n="experiment output header|experiment output header@@experimentOutputHeader">
+                    Experiment Output
+                    <span *ngIf="experimentOutputDataSource && experimentOutputDataSource.data" class="models-number">({{experimentOutputDataSource.data.length}})</span>
+                  </h1>
+                  <span class="fill-remaining-space"></span>
+                </div>
+                <mat-table #experimentOutputSort="matSort" [dataSource]="experimentOutputDataSource" matSort id="experiment-output-table">
+                  <ng-container matColumnDef="id">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="id of the experiment output|id of the experiment output@@experimentOutputId">ID</mat-header-cell>
+                    <mat-cell *matCellDef="let item"> {{item.id}}</mat-cell>
+                  </ng-container>
+
+                  <ng-container matColumnDef="name">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="name of the experiment output|name of the experiment output@@experimentOutputName">Name</mat-header-cell>
+                    <mat-cell *matCellDef="let item">
+                      <span class="custom-text-overflow" *ngIf="item.name">{{item.name}}</span>
+                      <span class="custom-text-overflow" *ngIf="!item.name">-</span>
+                    </mat-cell>
+                  </ng-container>
+
+                  <ng-container matColumnDef="description">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="description of the experiment output|description of the experiment output@@experimentOutputDescription">Description</mat-header-cell>
+                    <mat-cell *matCellDef="let item">
+                      <span class="custom-text-overflow" *ngIf="item.description">{{item.description}}</span>
+                      <span class="custom-text-overflow" *ngIf="!item.description">-</span>
+                    </mat-cell>
+                  </ng-container>
+
+                  <ng-container matColumnDef="action">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="action|view the experiment output@@experimentOutputAction">Action</mat-header-cell>
+                    <mat-cell *matCellDef="let item" (click)="$event.stopPropagation()">
+                      <button class="btn btn-link" matTooltip="View" (click)="experimentOutput(item)">
+                        <i class="material-icons default-color">visibility</i>
+                      </button>
+                    </mat-cell>
+                  </ng-container>
+
+                  <mat-header-row *matHeaderRowDef="displayedColumnsForExperimentOutput"></mat-header-row>
+                  <mat-row *matRowDef="let row; columns: displayedColumnsForExperimentOutput;"></mat-row>
+
+                </mat-table>
+                <mat-paginator #experimentOutputPaginator="matPaginator" [pageSize]="5" [pageSizeOptions]="[5, 10, 20]"
                                [showFirstLastButtons]="true"></mat-paginator>
               </div>
             </div>

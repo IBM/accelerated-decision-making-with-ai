@@ -47,7 +47,6 @@ data_string = os.getenv("data")
 print("data: ", data_string)
 
 data = json.loads(data_string)
-print(data)
 
 # Extract parameters
 episode_num = int(data["episode_num"]) if "episode_num" in data else 10
@@ -83,18 +82,25 @@ algorithm_class = getattr(algorithm_module, algorithm_name)
 # Instantiate an environment
 calibenv = environment_class(data=data)
 
+if experimentType == 'Calibration':
 # Instantiate an algorithm
-a = algorithm_class(calibenv, episode_num)
+    a = algorithm_class(calibenv, episode_num)
 
-# Run study trials with the algorithms
-results = a.generate()
-# print(results)
+    # Run study trials with the algorithms
+    results = a.generate()
+    # print(results)
 
-# Step once with the best results
-calibenv.step(results[0][-1])
-states_data_df = pd.DataFrame(calibenv.states, columns=["day", "susceptible", "infectious", "recovered", "deaths"])
+    # Step once with the best results
+    calibenv.step(results[0][-1])
 
-# save results 
-utils.dbpush(experimentID, experimentType, calibenv.actions_start_dates, calibenv.actions_end_dates, calibenv.action_names, a.study.trials_dataframe(), results, calibenv.states)
+    # save results 
+    utils.dbpush(experimentID, experimentType, calibenv.actions_start_dates, calibenv.actions_end_dates, calibenv.action_names, a.study.trials_dataframe(), results[0][-1], calibenv.states)
+
+elif experimentType == 'Model Evaluation':
+    calibenv.step(data["calibratedParams"])
+
+    # save results 
+    utils.dbpush(experimentID, experimentType, calibenv.actions_start_dates, calibenv.actions_end_dates, calibenv.action_names, None, calibenv.actions[0], calibenv.states)
+
 
 
