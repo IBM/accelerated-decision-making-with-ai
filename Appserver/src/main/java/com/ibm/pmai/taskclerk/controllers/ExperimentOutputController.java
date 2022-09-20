@@ -16,12 +16,15 @@
 
 package com.ibm.pmai.taskclerk.controllers;
 
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Optional;
 
 import javax.validation.Valid;
 import javax.ws.rs.core.Response;
 
+import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +40,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.ibm.cloud.objectstorage.services.s3.model.S3ObjectInputStream;
@@ -46,6 +50,7 @@ import com.ibm.pmai.taskclerk.configurations.ApplicationConfigurations;
 import com.ibm.pmai.taskclerk.exceptions.ApiException;
 import com.ibm.pmai.taskclerk.utils.Constants;
 import com.ibm.pmai.taskclerk.utils.PBEEncryption;
+import com.ibm.pmai.taskclerk.utils.Sha256DocumentHasher;
 import com.ibm.pmai.taskclerk.utils.Utils;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -72,6 +77,11 @@ public class ExperimentOutputController {
      */
     private PBEEncryption pbeEncryption;
 
+        /**
+     * Hashing util
+     */
+    private Sha256DocumentHasher sha256DocumentHasher;
+
     /**
      * Application configurations to access property values
      */
@@ -87,10 +97,11 @@ public class ExperimentOutputController {
      * @param experimentOutputRepository
      */
     @Autowired
-    public ExperimentOutputController(ExperimentOutputRepository experimentOutputRepository,PBEEncryption pbeEncryption,ApplicationConfigurations applicationConfigurations) {
+    public ExperimentOutputController(ExperimentOutputRepository experimentOutputRepository,PBEEncryption pbeEncryption,ApplicationConfigurations applicationConfigurations,Sha256DocumentHasher sha256DocumentHasher) {
         this.experimentOutputRepository = experimentOutputRepository;
         this.pbeEncryption =pbeEncryption;
         this.applicationConfigurations = applicationConfigurations;
+        this.sha256DocumentHasher = sha256DocumentHasher;
     }
 
     /**
@@ -441,5 +452,97 @@ public class ExperimentOutputController {
             // Handle where ExperimentOutput is not save - most probably due to bad request
             throw new ApiException(Response.Status.BAD_REQUEST.getStatusCode(), "ExperimentOutput not fod");
         }
+    }
+
+    /**
+     * get experiment output by locationId and postExecutorId
+     * @return {@link Response}
+     * @throws Exception
+     */
+    @GetMapping (value = "/by.location.id.and.post.executor.id/{locationId}/{postExecutorId}"  )
+    @Operation(summary = "get experiment output by locationId and postExecutorId",
+        tags = {"ExperimentOutput"},
+        description = "get experiment output by locationId and postExecutorId",
+        responses = {
+            @ApiResponse(description = "ExperimentOutput", content = @Content(schema = @Schema(implementation = ExperimentOutput.class))),
+            @ApiResponse(responseCode = "200", description = "OK"),
+            @ApiResponse(responseCode = "400", description = "Invalid request"),
+            @ApiResponse(responseCode = "401", description = "Authorization information is missing or invalid."),
+            @ApiResponse(responseCode = "5XX", description = "Unexpected error."),
+            @ApiResponse(responseCode = "404", description = "Not found"),
+            @ApiResponse(responseCode = "405", description = "Validation exception")
+        })
+    public Response getExperimentOutputByLocationIdAndPostExecutorId(
+        @Parameter(description = "location id", required = true)  @Valid @PathVariable("locationId") String locationId,
+        @Parameter(description = "post executor id", required = true)  @Valid @PathVariable("postExecutorId") String postExecutorId) throws Exception {
+
+        // get experiment output by locationId and postExecutorId
+        String experimentHash = sha256DocumentHasher.getHash(Utils.getExperimentHash(locationId, postExecutorId).getBytes());
+        logger.info(experimentHash);
+        List<ExperimentOutput> experimentOutputList =  experimentOutputRepository.getByExperiment_ExperimentHash(experimentHash);
+        if (experimentOutputList!=null) {
+            // Set ExperimentOutput as entity in response object
+            return Response.ok().entity(experimentOutputList).build();
+
+        } else  // Handle where ExperimentOutput is not available
+            throw new ApiException(Response.Status.BAD_REQUEST.getStatusCode(), "Missing experiment output");
+
+    }
+
+    /**
+     * get experiment output by experiment id
+     * @return {@link Response}
+     * @throws Exception
+     */
+    @GetMapping (value = "/by.experiment.output.id/{experimentOutputId}"  )
+    @Operation(summary = "get experiment output by experiment output id",
+        tags = {"ExperimentOutput"},
+        description = "get experiment output by experiment output id",
+        responses = {
+            @ApiResponse(description = "ExperimentOutput", content = @Content(schema = @Schema(implementation = ExperimentOutput.class))),
+            @ApiResponse(responseCode = "200", description = "OK"),
+            @ApiResponse(responseCode = "400", description = "Invalid request"),
+            @ApiResponse(responseCode = "401", description = "Authorization information is missing or invalid."),
+            @ApiResponse(responseCode = "5XX", description = "Unexpected error."),
+            @ApiResponse(responseCode = "404", description = "Not found"),
+            @ApiResponse(responseCode = "405", description = "Validation exception")
+        })
+    public Response getExperimentOutputByExperimentOutputId(
+        @Parameter(description = "experiment output Id", required = true)  @Valid @PathVariable("experimentOutputId") String experimentOutputId) throws Exception {
+
+        // get output by experiment id
+        List<ExperimentOutput> experimentOutputList =  experimentOutputRepository.getById(experimentOutputId);
+
+        ExperimentOutput experimentOutput =null;
+        if (experimentOutputList.size()>0) {
+            // The outputs are ordered by the updatedat time, so we get the first file
+            experimentOutput = experimentOutputList.get(0);
+        }
+        if (experimentOutput!=null && experimentOutput.getMetadataDetails()!=null && experimentOutput.getMetadataDetails().getDataRepositoryConfiguration()!=null) {
+            // decrypt credentials
+            String decryptedCredentials = pbeEncryption
+                .decrypt(applicationConfigurations.getAuthenticationEncryptionKey().toCharArray(), experimentOutput.getMetadataDetails().getDataRepositoryConfiguration().getCredentials());
+
+            JsonObject jsonObject = new JsonParser().parse(decryptedCredentials).getAsJsonObject();
+
+            String fileName =  experimentOutput.getMetadataDetails().getName();
+
+            S3ObjectInputStream s3ObjectInputStream = Utils.downloadFileFromCos(jsonObject.get("apikey").getAsString(),jsonObject.get("resource_instance_id").getAsString(),jsonObject.get("endpointUrl").getAsString()
+                ,jsonObject.get("bucketName").getAsString(),jsonObject.get("bucketRegion").getAsString(),jsonObject.get("iamEndpoint").getAsString(),fileName);
+
+            InputStream inputStream = s3ObjectInputStream.getDelegateStream();
+            String text = IOUtils.toString(inputStream, StandardCharsets.UTF_8.name());
+            ObjectMapper objectMapper = new ObjectMapper();
+
+            if (text!=null) {
+                // Set ExperimentOutput as entity in response object
+                return Response.ok().entity(objectMapper.readTree(text)).build();
+    
+            } else  // Handle where ExperimentOutput is not available
+                throw new ApiException(Response.Status.BAD_REQUEST.getStatusCode(), "Missing experiment output");
+
+        } else  // Handle where Experiment is not save - most probably due to bad request
+            throw new ApiException(Response.Status.BAD_REQUEST.getStatusCode(), "Missing experiment metadata details or data repository configurations");
+
     }
 }

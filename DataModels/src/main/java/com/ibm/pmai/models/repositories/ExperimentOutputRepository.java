@@ -38,6 +38,8 @@ public interface ExperimentOutputRepository extends JpaRepository<ExperimentOutp
 
     ExperimentOutput getByHashAndExperiment_Id(String hash, String experimentId);
 
+    List<ExperimentOutput> getByExperiment_ExperimentHash(String experimentHash);
+
     // List<ExperimentOutput> getByExperiment_AlgorithmIdAndAndTypeOrderByUpdatedAt(String algorithmId, String type);
 
     // List<ExperimentOutput> getByExperiment_ExperimentHashAndAndTypeOrderByUpdatedAt(String experimentHash, String type);

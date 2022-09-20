@@ -44,11 +44,11 @@ class CUSTOMModelEnv_betalist(gym.Env):
         location = data["location"] if "location" in data else "UG"
         baseuri = data["baseuri"] if "baseuri" in data else "https://link-to-my-source-of-case-data"
 
-        number_of_windows = int((datetime.datetime.strptime(end_date, "%Y-%m-%d") - datetime.datetime.strptime(start_date, "%Y-%m-%d")).days/self.window)
-        self.duration = self.window * number_of_windows
-        self.action_names = np.array(["beta"]*number_of_windows+["alpha"]+["d0"]+["gamma"])
-        self.actions_start_dates = [(datetime.datetime.strptime(start_date, "%Y-%m-%d") + datetime.timedelta(i * self.window)).strftime("%Y-%m-%d") for i in range(number_of_windows)]+[start_date]+[start_date]+[start_date]
-        self.actions_end_dates = [(datetime.datetime.strptime(start_date, "%Y-%m-%d") + datetime.timedelta(((i+1) * self.window)-1)).strftime("%Y-%m-%d") for i in range(number_of_windows)] \
+        self.number_of_windows = int((datetime.datetime.strptime(end_date, "%Y-%m-%d") - datetime.datetime.strptime(start_date, "%Y-%m-%d")).days/self.window)
+        self.duration = self.window * self.number_of_windows
+        self.action_names = np.array(["beta"]*self.number_of_windows+["alpha"]+["d0"]+["gamma"])
+        self.actions_start_dates = [(datetime.datetime.strptime(start_date, "%Y-%m-%d") + datetime.timedelta(i * self.window)).strftime("%Y-%m-%d") for i in range(self.number_of_windows)]+[start_date]+[start_date]+[start_date]
+        self.actions_end_dates = [(datetime.datetime.strptime(start_date, "%Y-%m-%d") + datetime.timedelta(((i+1) * self.window)-1)).strftime("%Y-%m-%d") for i in range(self.number_of_windows)] \
         +[(datetime.datetime.strptime(start_date, "%Y-%m-%d") + datetime.timedelta(self.duration-1)).strftime("%Y-%m-%d")] \
         +[(datetime.datetime.strptime(start_date, "%Y-%m-%d") + datetime.timedelta(self.duration-1)).strftime("%Y-%m-%d")] \
         +[(datetime.datetime.strptime(start_date, "%Y-%m-%d") + datetime.timedelta(self.duration-1)).strftime("%Y-%m-%d")]
@@ -57,8 +57,8 @@ class CUSTOMModelEnv_betalist(gym.Env):
         #d0, alpha, gamma
         #epis should be telling us the ranges here!
         self.action_space = gym.spaces.Box(
-            low=np.array([0.05]*number_of_windows+[0.1]+[0.0001]+[0.02]), 
-            high=np.array([.3]*number_of_windows+[0.4]+[0.002]+[.2]), dtype=float)
+            low=np.array([0.05]*self.number_of_windows+[0.1]+[0.0001]+[0.02]), 
+            high=np.array([.3]*self.number_of_windows+[0.4]+[0.002]+[.2]), dtype=float)
         self.observation_space = gym.spaces.Box(low=0, high=self.max_pop, shape=(6,), dtype=float)
 
         # self.parms = pd.read_json(baseuri+"modelbasedata/json/%s/"%model_name)
@@ -111,7 +111,19 @@ class CUSTOMModelEnv_betalist(gym.Env):
 
     def step(self, action):
         done = False
-        reward = None
+        reward = None 
+        #Preprocess the action values
+        length_of_beta_values = len(action) - 3
+        n = self.number_of_windows - length_of_beta_values
+        #Store the alpha, d0 and gamma in the action value
+        other_vals = action [-3:]
+        #Duplicate the last beta value and concatenate all values to form final action array
+        beta_vals = action[:-3]
+        if n > 0:
+            action = beta_vals + [beta_vals[-1]]* n + other_vals
+        elif n < 0:
+            action = beta_vals[:n] + other_vals
+        action = np.array(action)
         assert self.action_space.contains(action), "Invalid action: %s"%action
         if len(self.states) <= self.duration:
             self.actions.append(action)
@@ -134,6 +146,10 @@ class CUSTOMModelEnv_betalist(gym.Env):
 
             # self.states = gym.spaces.utils.np.array([[i['susceptible'],i['infectious'],i['recovered'],i['deaths']] for i in results])
             self.states = pd.DataFrame(results)
+
+            self.states['confirmed_cases'] = self.states[['infectious','recovered','deaths']].sum(axis=1).values
+            self.states['observed_confirmed_cases'] = self.output0[:self.duration]
+            self.states['observed_deaths'] = self.output1[:self.duration]
 
             model_data = gym.spaces.utils.np.array([self.states[['infectious','recovered','deaths']].sum(axis=1).values,self.states['deaths'].values]).T
             # model_data = gym.spaces.utils.np.array([self.states[:,1:].sum(axis=1), self.states[:,3]]).T

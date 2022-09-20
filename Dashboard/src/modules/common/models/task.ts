@@ -46,6 +46,16 @@ export interface Experiments {
   selectedPostExecutor?: Executor[]; // staticGroup
 }
 
+export interface ExperimentOutput {
+  id?: string;
+  name?: string;
+  type?: string;
+  description?: string;
+  hash?: string;
+  metadataDetails?: any;
+  experiment?: Experiments;
+}
+
 export interface Algorithms {
   id?: string;
   uri?: string;

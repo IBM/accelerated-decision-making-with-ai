@@ -25,17 +25,18 @@ def dbpush(job_name, job_type, action_start_dates, action_end_dates, action_name
     #prepare the data for upload/updating
     actions_df = pd.DataFrame({'action_position': list(range(0, len(action_names))), \
     'action_start_date': action_start_dates, 'action_end_date': action_end_dates, \
-    'action_name': action_names, 'action_value': results[0][-1]})
+    'action_name': action_names, 'action_value': results})
 
     # thedataframe.fillna("None",inplace=True)
     states_data_df.fillna("None",inplace=True)
 
     data = {
         'id': job_name + "-" + job_type.lower(), 
-        'study_trials': json.loads(thedataframe.to_json(orient='records')),
         'actions': json.loads(actions_df.to_json(orient='records')),
         'states': json.loads(states_data_df.to_json(orient='records'))
         }
+    if job_type == 'Calibration':
+        data['study_trials'] = json.loads(thedataframe.to_json(orient='records'))
 
     print(data)
 
