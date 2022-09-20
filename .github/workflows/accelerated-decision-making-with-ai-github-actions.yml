@@ -9,7 +9,7 @@ jobs:
       run:
         working-directory: Dashboard
     env:
-      DEPLOY_BRANCH: ${{ github.ref.type == 'tag' || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/prediction' }}
+      DEPLOY_BRANCH: ${{ github.ref.type == 'tag' || github.ref == 'refs/heads/main' }}
     steps:
       - uses: actions/checkout@v3
 
@@ -41,7 +41,7 @@ jobs:
           if sh ../.github/scripts/build-condition.sh origin/main Dashboard; then echo "DEPLOY_CONDITION=true" >> $GITHUB_ENV; else echo "DEPLOY_CONDITION=false"; fi
         shell: bash
 
-      - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
+      - if: ${{ env.DEPLOY_BRANCH }} # - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }} 
         name: Deploy
         run: sh ./scripts/main.sh
         shell: bash
@@ -80,7 +80,7 @@ jobs:
           if sh ../.github/scripts/build-condition.sh origin/main Website; then echo "DEPLOY_CONDITION=true" >> $GITHUB_ENV; else echo "DEPLOY_CONDITION=false"; fi
         shell: bash
 
-      - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
+      - if: ${{ env.DEPLOY_BRANCH }} # - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
         uses: enriikke/gatsby-gh-pages-action@v2
         with:
           access-token: ${{ secrets.GTHB_OAUTH_TOKEN }}
@@ -117,7 +117,7 @@ jobs:
           if sh ../.github/scripts/build-condition.sh origin/main DataModels; then echo "DEPLOY_CONDITION=true" >> $GITHUB_ENV; else echo "DEPLOY_CONDITION=false"; fi
         shell: bash
 
-      - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
+      - if: ${{ env.DEPLOY_BRANCH }} # - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
         name: Deploy
         run: mvn deploy --settings=settings.xml
         shell: bash
@@ -164,7 +164,7 @@ jobs:
           if sh ../.github/scripts/build-condition.sh origin/main Appserver; then echo "DEPLOY_CONDITION=true" >> $GITHUB_ENV; else echo "DEPLOY_CONDITION=false"; fi
         shell: bash
 
-      - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
+      - if: ${{ env.DEPLOY_BRANCH }} # - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
         name: Deploy
         run: sh ./scripts/main.sh
         shell: bash
@@ -220,7 +220,7 @@ jobs:
           if sh ../.github/scripts/build-condition.sh origin/main JobDeploymentService; then echo "DEPLOY_CONDITION=true" >> $GITHUB_ENV; else echo "DEPLOY_CONDITION=false"; fi
         shell: bash
 
-      - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
+      - if: ${{ env.DEPLOY_BRANCH }} # - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
         name: Deploy
         run: sh ./scripts/main.sh
         shell: bash
@@ -263,7 +263,7 @@ jobs:
           if sh ../.github/scripts/build-condition.sh origin/main OptimizationEngine; then echo "DEPLOY_CONDITION=true" >> $GITHUB_ENV; else echo "DEPLOY_CONDITION=false"; fi
         shell: bash
 
-      - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
+      - if: ${{ env.DEPLOY_BRANCH }} # - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
         name: Deploy
         run: sh ./scripts/main.sh
         shell: bash
