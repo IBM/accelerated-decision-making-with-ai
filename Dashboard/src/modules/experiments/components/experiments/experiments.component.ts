@@ -631,11 +631,16 @@ export class ExperimentsComponent implements OnInit, AfterViewInit, OnDestroy {
     const formPayload = this.formGroup.getRawValue();
 
     const experimentData = formPayload['dynamicGroup'];
+    const calibratedParams = [];
     Object.keys(formPayload).forEach(key => {
       if (key !== 'dynamicGroup' && key !== 'staticGroup') {
         experimentData[key] = formPayload[key];
+        isNotNullOrUndefined(experimentData[key]['value']) ? calibratedParams.push(experimentData[key]['value']) : console.log();
       }
     });
+    if (experimentData['experimentType'] === 'Model Evaluation') {
+      experimentData['calibratedParams'] = calibratedParams;
+    }
     const experimentPayload: Experiments = {};
     experimentPayload.name = formPayload['dynamicGroup']['name'];
     experimentPayload.userId = (this.user && this.user['sub']) ? this.user['sub'] : 'guest';
