@@ -97,10 +97,10 @@
                   </ng-container>
 
                   <ng-container matColumnDef="type">
-                    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="type|request type@@requestType">Type</mat-header-cell>
+                    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="type|request type@@requestType">Id</mat-header-cell>
                     <mat-cell *matCellDef="let item">
-                      <span class="custom-text-overflow" *ngIf="item.requestName">{{item.requestName}}</span>
-                      <span class="custom-text-overflow" *ngIf="!item.requestName">-</span>
+                      <span class="custom-text-overflow" *ngIf="item.id">{{item.id}}</span>
+                      <span class="custom-text-overflow" *ngIf="!item.id">-</span>
                     </mat-cell>
                   </ng-container>
 
@@ -111,7 +111,7 @@
                         'badge-demo-scheduled': !item.status,
                         'badge-demo-completed': item.status
                       }">
-                        {{getStatus(item.status)}}
+                        {{item.requestName}}
                       </span>
                     </mat-cell>
                   </ng-container>
