@@ -84,7 +84,7 @@ with open("../Researchproject/calibration_results/8969a9a98316c15401831802564200
 optimal_params = []
 for x in calib_data:
     if '-' in x:
-        optimal_params.append(data[x].get('value'))
+        optimal_params.append(calib_data[x].get('value'))
 print(optimal_params)
 
 
