@@ -328,7 +328,7 @@ public class ExperimentController {
         
         JobDeploymentRequest jobDeploymentRequest = new JobDeploymentRequest();
         jobDeploymentRequest.setArgs(args);
-        jobDeploymentRequest.setType(experiment.getExperimentType().toLowerCase());
+        jobDeploymentRequest.setType(experiment.getExperimentType().toLowerCase().replaceAll("\\s", ""));
 
         // post the experiment to the JDS
         JobDeploymentResponse jobDeploymentResponse = experimentService.postJDS(jobDeploymentRequest, executor.getExecutionEnvironmentCommand().getExecutionEnvironment().getHostEndpoint() + "/submit").getBody();
