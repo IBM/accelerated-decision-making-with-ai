@@ -132,7 +132,7 @@ jobs:
       run:
         working-directory: Appserver
     env:
-      DEPLOY_BRANCH: ${{ github.ref.type == 'tag' || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/21st-Sep-Workshop' }} # to be removed
+      DEPLOY_BRANCH: ${{ github.ref.type == 'tag' || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/21st-Sep-Workshop' }}
     steps:
       - uses: actions/checkout@v3
 
