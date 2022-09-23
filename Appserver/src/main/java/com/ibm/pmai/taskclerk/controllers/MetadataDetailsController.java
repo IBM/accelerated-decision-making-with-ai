@@ -16,6 +16,11 @@
 
 package com.ibm.pmai.taskclerk.controllers;
 
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.ibm.cloud.objectstorage.services.s3.model.S3ObjectInputStream;
+import com.ibm.pmai.taskclerk.utils.PBEEncryption;
+import com.ibm.pmai.taskclerk.configurations.ApplicationConfigurations;
 import com.ibm.pmai.models.core.MetadataDetails;
 import com.ibm.pmai.models.repositories.MetadataDetailsRepository;
 import com.ibm.pmai.taskclerk.exceptions.ApiException;
@@ -35,6 +40,9 @@ import javax.validation.Valid;
 import javax.ws.rs.core.Response;
 import java.util.List;
 import java.util.Optional;
+import com.ibm.pmai.taskclerk.utils.Utils;
+import org.springframework.http.ResponseEntity;
+import org.springframework.core.io.InputStreamResource;
 
 
 /**
@@ -46,6 +54,16 @@ import java.util.Optional;
 public class MetadataDetailsController {
 
 
+    /**
+     * Encryption key
+     */
+    private PBEEncryption pbeEncryption;
+
+    /**
+     * Application configurations to access property values
+     */
+    private ApplicationConfigurations applicationConfigurations;
+    
     /**
      * MetadataDetails repository declaration
      */
@@ -62,9 +80,12 @@ public class MetadataDetailsController {
      * @param metadataDetailsRepository
      */
     @Autowired
-    public MetadataDetailsController(MetadataDetailsRepository metadataDetailsRepository) {
+    public MetadataDetailsController(MetadataDetailsRepository metadataDetailsRepository,PBEEncryption pbeEncryption,ApplicationConfigurations applicationConfigurations) {
         this.metadataDetailsRepository = metadataDetailsRepository;
+        this.pbeEncryption =pbeEncryption;
+        this.applicationConfigurations = applicationConfigurations;
     }
+    
 
     /**
      * Returns metadataDetails
@@ -258,5 +279,58 @@ public class MetadataDetailsController {
             throw new ApiException(Response.Status.BAD_REQUEST.getStatusCode(), "Not found");
         }
     }
+     /**
+     * Returns all dataRepositoryconfigurations by category
+     * @param category
+     * @return {@link Response}
+     * @throws Exception
+     */
+    @GetMapping(value = "/source/{source}")
+    @Operation(summary = "Returns monthlydata by source",
+        tags = {"MetadataDetails"},
+        description = "Returns monthlydata by source",
+        responses = {
+            @ApiResponse(description = "MetadataDetails", content = @Content(schema = @Schema(implementation = MetadataDetails.class))),
+            @ApiResponse(responseCode = "200", description = "OK"),
+            @ApiResponse(responseCode = "400", description = "Invalid request"),
+            @ApiResponse(responseCode = "401", description = "Authorization information is missing or invalid."),
+            @ApiResponse(responseCode = "5XX", description = "Unexpected error."),
+            @ApiResponse(responseCode = "404", description = "Not found"),
+            @ApiResponse(responseCode = "405", description = "Validation exception")
+        })
+    
+        public ResponseEntity<InputStreamResource> getMetadataDetailsBySource(@Parameter(description = "Returns monthlydata by source", required = true)  @Valid @PathVariable("source") String source) throws Exception {
+    
+            
+            List<MetadataDetails> MonthlyDataList = metadataDetailsRepository.getBySource(source);
+    
+            if (MonthlyDataList!=null) {
+               MetadataDetails dataPush = MonthlyDataList.get(0);
 
-}
+                // decrypt credentials
+                String decryptedCredentials = pbeEncryption
+                    .decrypt(applicationConfigurations.getAuthenticationEncryptionKey().toCharArray(), dataPush.getDataRepositoryConfiguration().getCredentials());
+
+                JsonObject jsonObject = new JsonParser().parse(decryptedCredentials).getAsJsonObject();
+
+                String data_filename =  dataPush.getName();
+                //String cosCredentials = dataPush.getMetadataDetails().getDataRepositoryConfiguration().getCredentials();
+
+                S3ObjectInputStream s3ObjectInputStream = Utils.downloadFileFromCos(jsonObject.get("apikey").getAsString(),jsonObject.get("resource_instance_id").getAsString(),jsonObject.get("endpointUrl").getAsString()
+                    ,jsonObject.get("bucketName").getAsString(),jsonObject.get("bucketRegion").getAsString(),jsonObject.get("iamEndpoint").getAsString(),data_filename);
+                
+                return ResponseEntity.ok()
+                    .body(new InputStreamResource(s3ObjectInputStream));
+
+            } 
+            else  // Handle where Experiment is not save - most probably due to bad request
+                throw new ApiException(Response.Status.BAD_REQUEST.getStatusCode(), "Missing experiment metadata details or data repository configurations");
+
+                
+                //return Response.ok().entity(MonthlyDataList).build();
+    
+            }
+    
+        }
+
+

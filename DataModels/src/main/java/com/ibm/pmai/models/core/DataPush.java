@@ -24,7 +24,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name="dataPush")
+@Table(name="data_push_output")
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class DataPush extends Auditable<String> implements Serializable {
     @Schema(hidden = true)
@@ -34,7 +34,7 @@ public class DataPush extends Auditable<String> implements Serializable {
     @Column(name="id", columnDefinition = "VARCHAR(255)", insertable = false, updatable = false, nullable = false)
     private String id;
 
-    @Column
+    @Column(unique=true)
     private String name;
 
     @Column

@@ -334,16 +334,16 @@ public class DataRepositoryConfigurationsController {
     
     public Response getDataRepositoryConfigurationsByCategory(@Parameter(description = "data repository configuration list by category", required = true)  @Valid @PathVariable("category") String category) throws Exception {
     
-            // get output by experiment id
-           List<DataRepositoryConfiguration> dataRepositoryConfigurationList =  dataRepositoryConfigurationRepository.getByCategory(category);
+            
+            List<DataRepositoryConfiguration> dataRepositoryConfigurationList =  dataRepositoryConfigurationRepository.getByCategory(category);
     
             if (dataRepositoryConfigurationList!=null) {
     
-                // Set Experiment as entity in response object
+                
                 return Response.ok().entity(dataRepositoryConfigurationList).build();
     
             } else {
-                // Handle where Experiment is not save - most probably due to bad request
+                
                 throw new ApiException(Response.Status.BAD_REQUEST.getStatusCode(), "data repository configurations not found");
             }
     

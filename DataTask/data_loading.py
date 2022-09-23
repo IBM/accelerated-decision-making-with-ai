@@ -15,29 +15,743 @@ def load_territories_dict():
 
     territories_dict = [
         {
-            "admin0_iso_name": "Uganda",
-            "admin0_iso2": "UG",
-            "admin0_iso3": "UGA",
-            "Population": 45741000,
+            "admin0_iso_name": "Afghanistan",
+            "admin0_iso2": "AF",
+            "admin0_iso3": "AFG",
+            "Population": 38928341
         },
         {
-            "admin0_iso_name": "Congo (Kinshasa)",
-            "admin0_iso2": "CD",
-            "admin0_iso3": "COD",
-            "Population": 89561404,
+            "admin0_iso_name": "Angola",
+            "admin0_iso2": "AO",
+            "admin0_iso3": "AGO",
+            "Population": 32866268
         },
         {
-            "admin0_iso_name": "Senegal",
-            "admin0_iso2": "SN",
-            "admin0_iso3": "SEN",
-            "Population": 16743930,
+            "admin0_iso_name": "Antigua and Barbuda",
+            "admin0_iso2": "AG",
+            "admin0_iso3": "ATG",
+            "Population": 97928
+        },
+        {
+            "admin0_iso_name": "Argentina",
+            "admin0_iso2": "AR",
+            "admin0_iso3": "ARG",
+            "Population": 45195777
+        },
+        {
+            "admin0_iso_name": "Austria",
+            "admin0_iso2": "AT",
+            "admin0_iso3": "AUT",
+            "Population": 9006400
+        },
+        {
+            "admin0_iso_name": "Bahamas",
+            "admin0_iso2": "BS",
+            "admin0_iso3": "BHS",
+            "Population": 393248
+        },
+        {
+            "admin0_iso_name": "Bahrain",
+            "admin0_iso2": "BH",
+            "admin0_iso3": "BHR",
+            "Population": 1701583
+        },
+        {
+            "admin0_iso_name": "Bangladesh",
+            "admin0_iso2": "BD",
+            "admin0_iso3": "BGD",
+            "Population": 164689383
+        },
+        {
+            "admin0_iso_name": "Barbados",
+            "admin0_iso2": "BB",
+            "admin0_iso3": "BRB",
+            "Population": 287371
+        },
+        {
+            "admin0_iso_name": "Belarus",
+            "admin0_iso2": "BY",
+            "admin0_iso3": "BLR",
+            "Population": 9449321
+        },
+        {
+            "admin0_iso_name": "Belgium",
+            "admin0_iso2": "BE",
+            "admin0_iso3": "BEL",
+            "Population": 11589616
+        },
+        {
+            "admin0_iso_name": "Belize",
+            "admin0_iso2": "BZ",
+            "admin0_iso3": "BLZ",
+            "Population": 397621
+        },
+        {
+            "admin0_iso_name": "Benin",
+            "admin0_iso2": "BJ",
+            "admin0_iso3": "BEN",
+            "Population": 12123198
+        },
+        {
+            "admin0_iso_name": "Bolivia",
+            "admin0_iso2": "BO",
+            "admin0_iso3": "BOL",
+            "Population": 11673029
+        },
+        {
+            "admin0_iso_name": "Bosnia and Herzegovina",
+            "admin0_iso2": "BA",
+            "admin0_iso3": "BIH",
+            "Population": 3280815
+        },
+        {
+            "admin0_iso_name": "Botswana",
+            "admin0_iso2": "BW",
+            "admin0_iso3": "BWA",
+            "Population": 2351625
+        },
+        {
+            "admin0_iso_name": "Brazil",
+            "admin0_iso2": "BR",
+            "admin0_iso3": "BRA",
+            "Population": 212559409
+        },
+        {
+            "admin0_iso_name": "Bulgaria",
+            "admin0_iso2": "BG",
+            "admin0_iso3": "BGR",
+            "Population": 6948445
+        },
+        {
+            "admin0_iso_name": "Burkina Faso",
+            "admin0_iso2": "BF",
+            "admin0_iso3": "BFA",
+            "Population": 20903278
+        },
+        {
+            "admin0_iso_name": "Burma",
+            "admin0_iso2": "MM",
+            "admin0_iso3": "MMR",
+            "Population": 54409794
+        },
+        {
+            "admin0_iso_name": "Cabo Verde",
+            "admin0_iso2": "CV",
+            "admin0_iso3": "CPV",
+            "Population": 555988
+        },
+        {
+            "admin0_iso_name": "Cambodia",
+            "admin0_iso2": "KH",
+            "admin0_iso3": "KHM",
+            "Population": 16718971
+        },
+        {
+            "admin0_iso_name": "Cameroon",
+            "admin0_iso2": "CM",
+            "admin0_iso3": "CMR",
+            "Population": 26545864
+        },
+        {
+            "admin0_iso_name": "Chile",
+            "admin0_iso2": "CL",
+            "admin0_iso3": "CHL",
+            "Population": 19116209
+        },
+        {
+            "admin0_iso_name": "Colombia",
+            "admin0_iso2": "CO",
+            "admin0_iso3": "COL",
+            "Population": 50882884
+        },
+        {
+            "admin0_iso_name": "Costa Rica",
+            "admin0_iso2": "CR",
+            "admin0_iso3": "CRI",
+            "Population": 5094114
+        },
+        {
+            "admin0_iso_name": "Cote d'Ivoire",
+            "admin0_iso2": "CI",
+            "admin0_iso3": "CIV",
+            "Population": 26378275
+        },
+        {
+            "admin0_iso_name": "Croatia",
+            "admin0_iso2": "HR",
+            "admin0_iso3": "HRV",
+            "Population": 4105268
+        },
+        {
+            "admin0_iso_name": "Cuba",
+            "admin0_iso2": "CU",
+            "admin0_iso3": "CUB",
+            "Population": 11326616
+        },
+        {
+            "admin0_iso_name": "Cyprus",
+            "admin0_iso2": "CY",
+            "admin0_iso3": "CYP",
+            "Population": 1207361
+        },
+        {
+            "admin0_iso_name": "Czechia",
+            "admin0_iso2": "CZ",
+            "admin0_iso3": "CZE",
+            "Population": 10708982
+        },
+        {
+            "admin0_iso_name": "Denmark",
+            "admin0_iso2": "DK",
+            "admin0_iso3": "DNK",
+            "Population": 5792203
+        },
+        {
+            "admin0_iso_name": "Dominican Republic",
+            "admin0_iso2": "DO",
+            "admin0_iso3": "DOM",
+            "Population": 10847904
+        },
+        {
+            "admin0_iso_name": "Ecuador",
+            "admin0_iso2": "EC",
+            "admin0_iso3": "ECU",
+            "Population": 17643060
+        },
+        {
+            "admin0_iso_name": "Egypt",
+            "admin0_iso2": "EG",
+            "admin0_iso3": "EGY",
+            "Population": 102334403
+        },
+        {
+            "admin0_iso_name": "El Salvador",
+            "admin0_iso2": "SV",
+            "admin0_iso3": "SLV",
+            "Population": 6486201
+        },
+        {
+            "admin0_iso_name": "Eritrea",
+            "admin0_iso2": "ER",
+            "admin0_iso3": "ERI",
+            "Population": 3546427
+        },
+        {
+            "admin0_iso_name": "Finland",
+            "admin0_iso2": "FI",
+            "admin0_iso3": "FIN",
+            "Population": 5540718
+        },
+        {
+            "admin0_iso_name": "France",
+            "admin0_iso2": "FR",
+            "admin0_iso3": "FRA",
+            "Population": 65273512
+        },
+        {
+            "admin0_iso_name": "Gabon",
+            "admin0_iso2": "GA",
+            "admin0_iso3": "GAB",
+            "Population": 2225728
+        },
+        {
+            "admin0_iso_name": "Georgia",
+            "admin0_iso2": "GE",
+            "admin0_iso3": "GEO",
+            "Population": 3989175
+        },
+        {
+            "admin0_iso_name": "Germany",
+            "admin0_iso2": "DE",
+            "admin0_iso3": "DEU",
+            "Population": 83783945
+        },
+        {
+            "admin0_iso_name": "Ghana",
+            "admin0_iso2": "GH",
+            "admin0_iso3": "GHA",
+            "Population": 31072945
+        },
+        {
+            "admin0_iso_name": "Greece",
+            "admin0_iso2": "GR",
+            "admin0_iso3": "GRC",
+            "Population": 10423056
+        },
+        {
+            "admin0_iso_name": "Guatemala",
+            "admin0_iso2": "GT",
+            "admin0_iso3": "GTM",
+            "Population": 17915567
+        },
+        {
+            "admin0_iso_name": "Haiti",
+            "admin0_iso2": "HT",
+            "admin0_iso3": "HTI",
+            "Population": 11402533
+        },
+        {
+            "admin0_iso_name": "Honduras",
+            "admin0_iso2": "HN",
+            "admin0_iso3": "HND",
+            "Population": 9904608
+        },
+        {
+            "admin0_iso_name": "Hungary",
+            "admin0_iso2": "HU",
+            "admin0_iso3": "HUN",
+            "Population": 9660350
+        },
+        {
+            "admin0_iso_name": "India",
+            "admin0_iso2": "IN",
+            "admin0_iso3": "IND",
+            "Population": 1380004385
+        },
+        {
+            "admin0_iso_name": "Indonesia",
+            "admin0_iso2": "ID",
+            "admin0_iso3": "IDN",
+            "Population": 273523621
+        },
+        {
+            "admin0_iso_name": "Iraq",
+            "admin0_iso2": "IQ",
+            "admin0_iso3": "IRQ",
+            "Population": 40222503
+        },
+        {
+            "admin0_iso_name": "Ireland",
+            "admin0_iso2": "IE",
+            "admin0_iso3": "IRL",
+            "Population": 4937796
+        },
+        {
+            "admin0_iso_name": "Israel",
+            "admin0_iso2": "IL",
+            "admin0_iso3": "ISR",
+            "Population": 8655541
+        },
+        {
+            "admin0_iso_name": "Italy",
+            "admin0_iso2": "IT",
+            "admin0_iso3": "ITA",
+            "Population": 60461828
+        },
+        {
+            "admin0_iso_name": "Jamaica",
+            "admin0_iso2": "JM",
+            "admin0_iso3": "JAM",
+            "Population": 2961161
+        },
+        {
+            "admin0_iso_name": "Japan",
+            "admin0_iso2": "JP",
+            "admin0_iso3": "JPN",
+            "Population": 126476458
+        },
+        {
+            "admin0_iso_name": "Jordan",
+            "admin0_iso2": "JO",
+            "admin0_iso3": "JOR",
+            "Population": 10203140
+        },
+        {
+            "admin0_iso_name": "Kazakhstan",
+            "admin0_iso2": "KZ",
+            "admin0_iso3": "KAZ",
+            "Population": 18776707
+        },
+        {
+            "admin0_iso_name": "Kenya",
+            "admin0_iso2": "KE",
+            "admin0_iso3": "KEN",
+            "Population": 53771300
+        },
+        {
+            "admin0_iso_name": "Korea, South",
+            "admin0_iso2": "KR",
+            "admin0_iso3": "KOR",
+            "Population": 51269183
+        },
+        {
+            "admin0_iso_name": "Kuwait",
+            "admin0_iso2": "KW",
+            "admin0_iso3": "KWT",
+            "Population": 4270563
+        },
+        {
+            "admin0_iso_name": "Kyrgyzstan",
+            "admin0_iso2": "KG",
+            "admin0_iso3": "KGZ",
+            "Population": 6524191
+        },
+        {
+            "admin0_iso_name": "Latvia",
+            "admin0_iso2": "LV",
+            "admin0_iso3": "LVA",
+            "Population": 1886202
+        },
+        {
+            "admin0_iso_name": "Lebanon",
+            "admin0_iso2": "LB",
+            "admin0_iso3": "LBN",
+            "Population": 6825442
+        },
+        {
+            "admin0_iso_name": "Libya",
+            "admin0_iso2": "LY",
+            "admin0_iso3": "LBY",
+            "Population": 6871287
+        },
+        {
+            "admin0_iso_name": "Lithuania",
+            "admin0_iso2": "LT",
+            "admin0_iso3": "LTU",
+            "Population": 2722291
+        },
+        {
+            "admin0_iso_name": "Luxembourg",
+            "admin0_iso2": "LU",
+            "admin0_iso3": "LUX",
+            "Population": 625976
+        },
+        {
+            "admin0_iso_name": "Malaysia",
+            "admin0_iso2": "MY",
+            "admin0_iso3": "MYS",
+            "Population": 32365998
+        },
+        {
+            "admin0_iso_name": "Mali",
+            "admin0_iso2": "ML",
+            "admin0_iso3": "MLI",
+            "Population": 20250834
+        },
+        {
+            "admin0_iso_name": "Malta",
+            "admin0_iso2": "MT",
+            "admin0_iso3": "MLT",
+            "Population": 441539
+        },
+        {
+            "admin0_iso_name": "Mauritius",
+            "admin0_iso2": "MU",
+            "admin0_iso3": "MUS",
+            "Population": 1271767
+        },
+        {
+            "admin0_iso_name": "Mexico",
+            "admin0_iso2": "MX",
+            "admin0_iso3": "MEX",
+            "Population": 127792286
+        },
+        {
+            "admin0_iso_name": "Moldova",
+            "admin0_iso2": "MD",
+            "admin0_iso3": "MDA",
+            "Population": 4033963
+        },
+        {
+            "admin0_iso_name": "Morocco",
+            "admin0_iso2": "MA",
+            "admin0_iso3": "MAR",
+            "Population": 36910558
+        },
+        {
+            "admin0_iso_name": "Mozambique",
+            "admin0_iso2": "MZ",
+            "admin0_iso3": "MOZ",
+            "Population": 31255435
+        },
+        {
+            "admin0_iso_name": "Nepal",
+            "admin0_iso2": "NP",
+            "admin0_iso3": "NPL",
+            "Population": 29136808
+        },
+        {
+            "admin0_iso_name": "Netherlands",
+            "admin0_iso2": "NL",
+            "admin0_iso3": "NLD",
+            "Population": 17134873
+        },
+        {
+            "admin0_iso_name": "Aruba, Netherlands",
+            "admin0_iso2": "AW",
+            "admin0_iso3": "ABW",
+            "Population": 106766
+        },
+        {
+            "admin0_iso_name": "New Zealand",
+            "admin0_iso2": "NZ",
+            "admin0_iso3": "NZL",
+            "Population": 4822233
+        },
+        {
+            "admin0_iso_name": "Niger",
+            "admin0_iso2": "NE",
+            "admin0_iso3": "NER",
+            "Population": 24206636
         },
         {
             "admin0_iso_name": "Nigeria",
             "admin0_iso2": "NG",
             "admin0_iso3": "NGA",
-            "Population": 206139587,
+            "Population": 206139587
         },
+        {
+            "admin0_iso_name": "North Macedonia",
+            "admin0_iso2": "MK",
+            "admin0_iso3": "MKD",
+            "Population": 2083380
+        },
+        {
+            "admin0_iso_name": "Norway",
+            "admin0_iso2": "NO",
+            "admin0_iso3": "NOR",
+            "Population": 5421242
+        },
+        {
+            "admin0_iso_name": "Oman",
+            "admin0_iso2": "OM",
+            "admin0_iso3": "OMN",
+            "Population": 5106622
+        },
+        {
+            "admin0_iso_name": "Pakistan",
+            "admin0_iso2": "PK",
+            "admin0_iso3": "PAK",
+            "Population": 220892331
+        },
+        {
+            "admin0_iso_name": "Panama",
+            "admin0_iso2": "PA",
+            "admin0_iso3": "PAN",
+            "Population": 4314768
+        },
+        {
+            "admin0_iso_name": "Paraguay",
+            "admin0_iso2": "PY",
+            "admin0_iso3": "PRY",
+            "Population": 7132530
+        },
+        {
+            "admin0_iso_name": "Peru",
+            "admin0_iso2": "PE",
+            "admin0_iso3": "PER",
+            "Population": 32971846
+        },
+        {
+            "admin0_iso_name": "Philippines",
+            "admin0_iso2": "PH",
+            "admin0_iso3": "PHL",
+            "Population": 109581085
+        },
+        {
+            "admin0_iso_name": "Poland",
+            "admin0_iso2": "PL",
+            "admin0_iso3": "POL",
+            "Population": 37846605
+        },
+        {
+            "admin0_iso_name": "Portugal",
+            "admin0_iso2": "PT",
+            "admin0_iso3": "PRT",
+            "Population": 10196707
+        },
+        {
+            "admin0_iso_name": "Qatar",
+            "admin0_iso2": "QA",
+            "admin0_iso3": "QAT",
+            "Population": 2881060
+        },
+        {
+            "admin0_iso_name": "Romania",
+            "admin0_iso2": "RO",
+            "admin0_iso3": "ROU",
+            "Population": 19237682
+        },
+        {
+            "admin0_iso_name": "Russia",
+            "admin0_iso2": "RU",
+            "admin0_iso3": "RUS",
+            "Population": 145934460
+        },
+        {
+            "admin0_iso_name": "Rwanda",
+            "admin0_iso2": "RW",
+            "admin0_iso3": "RWA",
+            "Population": 12952209
+        },
+        {
+            "admin0_iso_name": "Saudi Arabia",
+            "admin0_iso2": "SA",
+            "admin0_iso3": "SAU",
+            "Population": 34813867
+        },
+        {
+            "admin0_iso_name": "Senegal",
+            "admin0_iso2": "SN",
+            "admin0_iso3": "SEN",
+            "Population": 16743930
+        },
+        {
+            "admin0_iso_name": "Serbia",
+            "admin0_iso2": "RS",
+            "admin0_iso3": "SRB",
+            "Population": 8737370
+        },
+        {
+            "admin0_iso_name": "Singapore",
+            "admin0_iso2": "SG",
+            "admin0_iso3": "SGP",
+            "Population": 5850343
+        },
+        {
+            "admin0_iso_name": "Slovakia",
+            "admin0_iso2": "SK",
+            "admin0_iso3": "SVK",
+            "Population": 5459643
+        },
+        {
+            "admin0_iso_name": "Slovenia",
+            "admin0_iso2": "SI",
+            "admin0_iso3": "SVN",
+            "Population": 2078932
+        },
+        {
+            "admin0_iso_name": "South Africa",
+            "admin0_iso2": "ZA",
+            "admin0_iso3": "ZAF",
+            "Population": 59308690
+        },
+        {
+            "admin0_iso_name": "Spain",
+            "admin0_iso2": "ES",
+            "admin0_iso3": "ESP",
+            "Population": 46754783
+        },
+        {
+            "admin0_iso_name": "Sri Lanka",
+            "admin0_iso2": "LK",
+            "admin0_iso3": "LKA",
+            "Population": 21413250
+        },
+        {
+            "admin0_iso_name": "Sweden",
+            "admin0_iso2": "SE",
+            "admin0_iso3": "SWE",
+            "Population": 10099270
+        },
+        {
+            "admin0_iso_name": "Switzerland",
+            "admin0_iso2": "CH",
+            "admin0_iso3": "CHE",
+            "Population": 8654618
+        },
+        {
+            "admin0_iso_name": "Tanzania",
+            "admin0_iso2": "TZ",
+            "admin0_iso3": "TZA",
+            "Population": 59734213
+        },
+        {
+            "admin0_iso_name": "Thailand",
+            "admin0_iso2": "TH",
+            "admin0_iso3": "THA",
+            "Population": 69799978
+        },
+        {
+            "admin0_iso_name": "Togo",
+            "admin0_iso2": "TG",
+            "admin0_iso3": "TGO",
+            "Population": 8278737
+        },
+        {
+            "admin0_iso_name": "Trinidad and Tobago",
+            "admin0_iso2": "TT",
+            "admin0_iso3": "TTO",
+            "Population": 1399491
+        },
+        {
+            "admin0_iso_name": "Turkey",
+            "admin0_iso2": "TR",
+            "admin0_iso3": "TUR",
+            "Population": 84339067
+        },
+        {
+            "admin0_iso_name": "Uganda",
+            "admin0_iso2": "UG",
+            "admin0_iso3": "UGA",
+            "Population": 45741000
+        },
+        {
+            "admin0_iso_name": "Ukraine",
+            "admin0_iso2": "UA",
+            "admin0_iso3": "UKR",
+            "Population": 43733759
+        },
+        {
+            "admin0_iso_name": "United Arab Emirates",
+            "admin0_iso2": "AE",
+            "admin0_iso3": "ARE",
+            "Population": 9890400
+        },
+        {
+            "admin0_iso_name": "United Kingdom",
+            "admin0_iso2": "GB",
+            "admin0_iso3": "GBR",
+            "Population": 67886004
+        },
+        {
+            "admin0_iso_name": "Uruguay",
+            "admin0_iso2": "UY",
+            "admin0_iso3": "URY",
+            "Population": 3473727
+        },
+        {
+            "admin0_iso_name": "Venezuela",
+            "admin0_iso2": "VE",
+            "admin0_iso3": "VEN",
+            "Population": 28435943
+        },
+        {
+            "admin0_iso_name": "Vietnam",
+            "admin0_iso2": "VN",
+            "admin0_iso3": "VNM",
+            "Population": 97338583
+        },
+        {
+            "admin0_iso_name": "Zambia",
+            "admin0_iso2": "ZM",
+            "admin0_iso3": "ZMB",
+            "Population": 18383956
+        },
+        {
+            "admin0_iso_name": "Australia",
+            "admin0_iso2": "AU",
+            "admin0_iso3": "AUS",
+            "Population": 25459700
+        },
+        {
+            "admin0_iso_name": "Canada",
+            "admin0_iso2": "CA",
+            "admin0_iso3": "CAN",
+            "Population": 37855702
+        },
+        {
+            "admin0_iso_name": "US",
+            "admin0_iso2": "US",
+            "admin0_iso3": "USA",
+            "Population": 329466283
+        },
+        {
+            "admin0_iso_name": "Puerto Rico, US",
+            "admin0_iso2": "PR",
+            "admin0_iso3": "PRI",
+            "Population": 2933408
+        }
     ]
 
     return territories_dict

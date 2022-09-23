@@ -27,7 +27,7 @@ import {
   Policy,
   Executor,
   Experiments,
-  Task, User, UsersResponseWrap, MetadataDetails, ResultsRequest, Feedback, Algorithms
+  Task, User, UsersResponseWrap, MetadataDetails, ResultsRequest, Feedback, Algorithms, MapData
 } from '../../models';
 import { isNotNullOrUndefined } from 'codelyzer/util/isNotNullOrUndefined';
 
@@ -36,6 +36,7 @@ export const FEEDBACK_API = `${API_URL}/feedback`;
 export const ADMIN1_GEOJSON_API = `assets/data/geojson/`;
 export const WORLD_GEOJSON_API = `assets/data/geojson/world.json`;
 export const GLOBAL_MAP_DATA_API = `assets/data/outcome/map.json`;
+export const MONTHLY_DATA = `${API_URL}/metadataDetails/source/monthly-data`;
 export const HOSPITALISATION_DATA_API = `assets/data/outcome/ug_facilities.json`;
 export const ALL_MODELS_DATA_API = `assets/data/demo/all_models.json`;
 export const ALL_REWARD_FUNCTION_DATA_API = `assets/data/demo/all_reward_functions.json`;
@@ -58,7 +59,6 @@ export const POST_TASK_API = `${API_URL}/task`;
 export const POST_EXPERIMENT_API = `${API_URL}/experiments/`;
 export const USERS_API = `assets/data/demo/users.json`;
 export const GET_METADATA_DETAILS = `${API_URL}/metadataDetails/`;
-export const MONTHLY_DATA = `assets/data/outcome/monthly/`;
 export const STATS_API = `assets/data/outcome/monthly/stats.json`;
 export const POST_RESULTS_REQUEST = `${API_URL}/resultsrequest`;
 export const GET_RESULTS_REQUEST_STATUS = `${API_URL}/resultsrequest/status/`;
@@ -335,14 +335,12 @@ export class ApiService {
   getThisMonthData(month: string, thisGeo: string, dataType: string) {
     const thisHeader = this.headers;
     const url = !isNotNullOrUndefined(thisGeo)
-      ? `${MONTHLY_DATA}` + dataType.toLowerCase() + `/` + month + `.json`
-      : `${MONTHLY_DATA}` + dataType.toLowerCase() + `/` + thisGeo.toLowerCase() + `/` + month + `.json`;
-    return this.httpClient
-      .get<any>(url, {headers: thisHeader})
+    return this.httpClient.get<MapData>(`${MONTHLY_DATA}`,
+       {headers: thisHeader})
       .pipe(
-        map(response => response),
-        catchError(error => of({}))
-      );
+        map(response => {
+          return response[dataType.toLowerCase()][thisGeo.toLowerCase()][month]
+        }));
   }
 
   getMonthlyIndicesData(thisGeo: string, selectedMonths: string[]) {
