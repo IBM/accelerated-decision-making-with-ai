@@ -46,7 +46,7 @@ if not os.path.isdir(UPLOAD_FOLDER):
     os.mkdir(UPLOAD_FOLDER)
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-ALLOWED_EXTENSIONS = {'csv'}
+ALLOWED_EXTENSIONS = {'csv', 'json'}
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -63,9 +63,10 @@ class CollectData(Resource):
         file = args.get('file')
         data_repository_configuration_ID = args.get('data_repository_configuration_ID')
 
-        randID = str(uuid.uuid4())
-        appendRand = str(randID)
-        appendNewname = str(appendRand)+"-"+file.filename
+        # randID = str(uuid.uuid4())
+        # appendRand = str(randID)
+        # appendNewname = str(appendRand)+"-"+file.filename
+        appendNewname = "monthly-data"
         url=os.path.join(UPLOAD_FOLDER,appendNewname)
 
         # check if the post request has the file part

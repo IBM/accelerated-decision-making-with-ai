@@ -111,8 +111,7 @@ public class DataPushController {
         // Check if the returned object is not null
         if (null != optionalDataPush  && optionalDataPush.isPresent())  {
             DataPush dataPush = optionalDataPush.get();
-
-            // Set DataPush as entity in response object
+        
             return Response.ok().entity(dataPush).build();
 
         } else {
@@ -251,5 +250,5 @@ public class DataPushController {
             // Handle where DataPush is not save - most probably due to bad request
             throw new ApiException(Response.Status.BAD_REQUEST.getStatusCode(), "DataPush not found");
         }
-    }
+    }   
 }

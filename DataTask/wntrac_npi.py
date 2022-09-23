@@ -121,7 +121,7 @@ def create_wntrac_npi_regions(ratios_name=""):
                     )
                 if "si" in wntrac_npi_index.columns:
                     wntrac_npi_index.rename(
-                        columns={"si": "si_" + ss + "_" + mt}, inplace=True
+                        columns={"si": "stringency index_" + ss + "_" + mt}, inplace=True
                     )
                 if "mobility_ratio" in wntrac_npi_index.columns:
                     wntrac_npi_index.rename(
@@ -129,11 +129,11 @@ def create_wntrac_npi_regions(ratios_name=""):
                     )
                 if "adherence" in wntrac_npi_index.columns:
                     wntrac_npi_index.rename(
-                        columns={"adherence": "cs_" + ss + "_" + mt}, inplace=True
+                        columns={"adherence": "compliance score_" + ss + "_" + mt}, inplace=True
                     )
                 if "npi_index" in wntrac_npi_index.columns:
                     wntrac_npi_index.rename(
-                        columns={"npi_index": "ni_" + ss + "_" + mt}, inplace=True
+                        columns={"npi_index": "npi-index_" + ss + "_" + mt}, inplace=True
                     )
                 if "anticipated_mobility" in wntrac_npi_index.columns:
                     wntrac_npi_index.rename(
