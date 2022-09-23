@@ -47,7 +47,11 @@ class CollectData(Resource):
         file = args.get('file')
         data_repository_configuration_ID = args.get('data_repository_configuration_ID')
 
+<<<<<<< HEAD
         UPLOAD_FOLDER = 'pushed_datasets'
+=======
+        UPLOAD_FOLDER = 'DataTask/datapush/pushed_datasets'
+>>>>>>> baaea5d (Update app.py)
         randID = str(uuid.uuid4())
         appendRand = "datapush-"+str(randID)
         appendNewname = str(appendRand)+"-"+file.filename
