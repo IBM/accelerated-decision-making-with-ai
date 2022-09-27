@@ -24,7 +24,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name="data_push_output")
+@Table(name="datapush")
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class DataPush extends Auditable<String> implements Serializable {
     @Schema(hidden = true)
