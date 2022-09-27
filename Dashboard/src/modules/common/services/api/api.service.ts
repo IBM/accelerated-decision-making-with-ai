@@ -36,7 +36,7 @@ export const FEEDBACK_API = `${API_URL}/feedback`;
 export const ADMIN1_GEOJSON_API = `assets/data/geojson/`;
 export const WORLD_GEOJSON_API = `assets/data/geojson/world.json`;
 export const GLOBAL_MAP_DATA_API = `assets/data/outcome/map.json`;
-export const MONTHLY_DATA = `${API_URL}/metadataDetails/source/monthly-data`;
+export const MONTHLY_DATA = `${API_URL}/metadataDetails/source/`;
 export const HOSPITALISATION_DATA_API = `assets/data/outcome/ug_facilities.json`;
 export const ALL_MODELS_DATA_API = `assets/data/demo/all_models.json`;
 export const ALL_REWARD_FUNCTION_DATA_API = `assets/data/demo/all_reward_functions.json`;
@@ -335,11 +335,11 @@ export class ApiService {
   getThisMonthData(month: string, thisGeo: string, dataType: string) {
     const thisHeader = this.headers;
     const url = !isNotNullOrUndefined(thisGeo)
-    return this.httpClient.get<MapData>(`${MONTHLY_DATA}`,
+    return this.httpClient.get<MapData>(`${MONTHLY_DATA}`+ thisGeo.toLowerCase() + '-' + month.toLowerCase(),
        {headers: thisHeader})
       .pipe(
         map(response => {
-          return response[dataType.toLowerCase()][thisGeo.toLowerCase()][month]
+          return response
         }));
   }
 
