@@ -27,4 +27,6 @@ public interface MetadataDetailsRepository extends JpaRepository<MetadataDetails
     List<MetadataDetails> getById(String id);
 
     List<MetadataDetails> getByLocationIdAndExecutorId(String locationId,String executorId);
+
+    List<MetadataDetails> getBySource(String source);
 }

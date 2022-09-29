@@ -253,7 +253,7 @@ public class DataRepositoryConfigurationsController {
 
         } else {
             // Handle where DataRepositoryConfigurationRepository is not save - most probably due to bad request
-            throw new ApiException(Response.Status.BAD_REQUEST.getStatusCode(), "DataRepositoryConfigurations not fod");
+            throw new ApiException(Response.Status.BAD_REQUEST.getStatusCode(), "DataRepositoryConfigurations not found");
         }
     }
 
@@ -311,15 +311,54 @@ public class DataRepositoryConfigurationsController {
         }
     }
 
+
+    /**
+     * Returns all dataRepositoryconfigurations by category
+     * @param category
+     * @return {@link Response}
+     * @throws Exception
+     */
+    @GetMapping(value = "category/{category}")
+    @Operation(summary = "Returns all dataRepositoryconfigurations by Category",
+        tags = {"DataRepositoryConfigurations"},
+        description = "Returns all dataRepositoryconfigurations  by category",
+        responses = {
+            @ApiResponse(description = "DataRepositoryConfigurations", content = @Content(schema = @Schema(implementation = DataRepositoryConfiguration.class))),
+            @ApiResponse(responseCode = "200", description = "OK"),
+            @ApiResponse(responseCode = "400", description = "Invalid request"),
+            @ApiResponse(responseCode = "401", description = "Authorization information is missing or invalid."),
+            @ApiResponse(responseCode = "5XX", description = "Unexpected error."),
+            @ApiResponse(responseCode = "404", description = "Not found"),
+            @ApiResponse(responseCode = "405", description = "Validation exception")
+        })
+    
+    public Response getDataRepositoryConfigurationsByCategory(@Parameter(description = "data repository configuration list by category", required = true)  @Valid @PathVariable("category") String category) throws Exception {
+    
+            
+            List<DataRepositoryConfiguration> dataRepositoryConfigurationList =  dataRepositoryConfigurationRepository.getByCategory(category);
+    
+            if (dataRepositoryConfigurationList!=null) {
+    
+                
+                return Response.ok().entity(dataRepositoryConfigurationList).build();
+    
+            } else {
+                
+                throw new ApiException(Response.Status.BAD_REQUEST.getStatusCode(), "data repository configurations not found");
+            }
+    
+        }
+
+
     /**
      * Returns all dataRepositoryconfigurations:  TODO: ADD PAGINATION
      * @return {@link Response}
      * @throws Exception
      */
-    @GetMapping(   )
+    @GetMapping( )
     @Operation(summary = "Returns all dataRepositoryconfigurations",
         tags = {"DataRepositoryConfigurations"},
-        description = "Returns all dataRepositoryconfigurations ",
+        description = "Returns all dataRepositoryconfigurations",
         responses = {
             @ApiResponse(description = "DataRepositoryConfigurations", content = @Content(schema = @Schema(implementation = DataRepositoryConfiguration.class))),
             @ApiResponse(responseCode = "200", description = "OK"),
@@ -346,5 +385,9 @@ public class DataRepositoryConfigurationsController {
         }
     }
 
+
+    
+
 }
+
 

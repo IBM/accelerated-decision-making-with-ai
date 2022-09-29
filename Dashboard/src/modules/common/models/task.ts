@@ -154,3 +154,7 @@ export interface ResultsResponse {
   actions?: any[];
   rewards?: any[];
 }
+
+export interface MapData{
+  json?: string;
+}

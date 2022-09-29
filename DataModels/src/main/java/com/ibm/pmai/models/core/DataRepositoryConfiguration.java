@@ -45,6 +45,9 @@ public class DataRepositoryConfiguration extends Auditable<String> implements Se
     @Column
     private String hostEndPoint;
 
+    @Column(columnDefinition = "VARCHAR(255)")
+    private String category;
+
     @Column(columnDefinition = "TEXT")
     private String credentials;
 
@@ -79,6 +82,14 @@ public class DataRepositoryConfiguration extends Auditable<String> implements Se
 
     public void setHostEndPoint(String hostEndPoint) {
         this.hostEndPoint = hostEndPoint;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public String getCredentials() {

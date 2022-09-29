@@ -28,4 +28,6 @@ public interface DataRepositoryConfigurationRepository extends JpaRepository<Dat
 
     DataRepositoryConfiguration getByName(String name);
 
+    List<DataRepositoryConfiguration> getByCategory(String category);
+
 }
