@@ -188,7 +188,7 @@ jobs:
           POSTGRES_USERNAME: ${{ secrets.POSTGRES_USERNAME }}
 
   jobdeploymentservice:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     environment: main
     defaults:
       run:
