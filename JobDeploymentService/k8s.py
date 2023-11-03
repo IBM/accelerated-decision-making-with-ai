@@ -216,21 +216,21 @@ def job_ce_statii():
                 namespace= JOB_NAMESPACE
             )
     ran_jobs = []
-    for job in jobs["items"]:
-        if job["status"]['conditions']:
-            num = len(job["status"]['conditions'])
-        else:
-            num = 0
-        if num == 1:
+    for job in jobs.items:
+        if job["status"]['requested'] is not None and job["status"]['requested'] >= 1:
+            status = "requested"
+        elif job["status"]['pending'] is not None and job["status"]['pending'] >= 1:
             status = "pending"
-        elif num == 2:
+        elif job["status"]['running'] is not None and job["status"]['running'] >= 1:
             status = "active"
-        elif num == 3:
-            status = "succeeded"
-        elif num == 0:
+        elif job["status"]['failed'] is not None and job["status"]['failed'] >= 1:
             status = "failed"
+        elif job["status"]['succeeded'] is not None and job["status"]['succeeded'] >= 1:
+            status = "succeeded"
+        elif job["status"]['unknown'] is not None and job["status"]['unknown'] >= 1:
+            status = "unknown"
         else:
-            raise ValueError(f"Unsupported job status {job['status']}. With {num} Check the logs.")
+            raise ValueError(f"Unsupported job status {job['status']}. Check the logs.")
         ran_jobs.append((job["metadata"]["name"], status))
 
     return ran_jobs

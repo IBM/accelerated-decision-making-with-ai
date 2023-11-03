@@ -103,7 +103,7 @@
             </div>
             <div class="col-md-6">
                 <mat-label i18n="environment requirement json file|environment requirement json file@environmentRequirementJsonFile">Environment requirement json file</mat-label>
-                <input formControlName="executorRequirement" type='file' accept='application/json' (change)="onFileSelected($event)">
+                <input id="filess" formControlName="executorRequirement" type='file' accept='application/json' (change)="onFileSelected($event)">
                 <mat-error>{{fileError}}</mat-error>
             </div>
           </div>
