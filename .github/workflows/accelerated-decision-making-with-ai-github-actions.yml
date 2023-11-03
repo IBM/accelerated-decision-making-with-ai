@@ -80,13 +80,13 @@ jobs:
           if sh ../.github/scripts/build-condition.sh origin/main Website; then echo "DEPLOY_CONDITION=true" >> $GITHUB_ENV; else echo "DEPLOY_CONDITION=false"; fi
         shell: bash
 
-      - if: ${{ env.DEPLOY_BRANCH }} # - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
-        uses: enriikke/gatsby-gh-pages-action@v2
-        with:
-          access-token: ${{ secrets.GTHB_OAUTH_TOKEN }}
-          deploy-branch: gh-pages
-          gatsby-args: --prefix-paths
-          working-dir: Website
+      # - if: ${{ env.DEPLOY_BRANCH }} # - if: ${{ env.DEPLOY_BRANCH && env.DEPLOY_CONDITION }}
+      #   uses: enriikke/gatsby-gh-pages-action@v2
+      #   with:
+      #     access-token: ${{ secrets.GTHB_OAUTH_TOKEN }}
+      #     deploy-branch: gh-pages
+      #     gatsby-args: --prefix-paths
+      #     working-dir: Website
 
   datamodels:
     runs-on: ubuntu-latest
