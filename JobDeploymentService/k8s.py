@@ -216,18 +216,18 @@ def job_ce_statii():
                 namespace= JOB_NAMESPACE
             )
     ran_jobs = []
-    for job in jobs.items:
-        if job["status"]['requested'] is not None and job["status"]['requested'] >= 1:
+    for job in jobs["items"]:
+        if job["status"]["requested"] is not None and job["status"]["requested"] >= 1:
             status = "requested"
-        elif job["status"]['pending'] is not None and job["status"]['pending'] >= 1:
+        elif job["status"]["pending"] is not None and job["status"]["pending"] >= 1:
             status = "pending"
-        elif job["status"]['running'] is not None and job["status"]['running'] >= 1:
+        elif job["status"]["running"] is not None and job["status"]["running"] >= 1:
             status = "active"
-        elif job["status"]['failed'] is not None and job["status"]['failed'] >= 1:
+        elif job["status"]["failed"] is not None and job["status"]["failed"] >= 1:
             status = "failed"
-        elif job["status"]['succeeded'] is not None and job["status"]['succeeded'] >= 1:
+        elif job["status"]["succeeded"] is not None and job["status"]["succeeded"] >= 1:
             status = "succeeded"
-        elif job["status"]['unknown'] is not None and job["status"]['unknown'] >= 1:
+        elif job["status"]["unknown"] is not None and job["status"]["unknown"] >= 1:
             status = "unknown"
         else:
             raise ValueError(f"Unsupported job status {job['status']}. Check the logs.")

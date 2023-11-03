@@ -5,3 +5,4 @@ PyYAML==5.4.1
 flask-swagger
 swagger_ui_bundle
 requests==2.25.1
+Werkzeug==2.2.2
